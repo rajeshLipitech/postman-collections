@@ -1,0 +1,4701 @@
+{
+	"info": {
+		"_postman_id": "a29408f5-d2aa-4dc9-9cf9-342be58bf83b",
+		"name": "RTC LMS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "telecmi",
+					"item": [
+						{
+							"name": "Enroll user",
+							"id": "338032e6-9475-422d-8ceb-426d9b5924ae",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}:{{port}}/api/v1/user/telecmi/enroll/:id",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"telecmi",
+										"enroll",
+										":id"
+									],
+									"variable": [
+										{
+											"id": "4b1d5d9d-247b-476e-bbca-2a1cf66e8210",
+											"key": "id",
+											"value": "6617e84e585b0d6881a18647"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete User",
+							"id": "f2ec4356-1380-4a8a-9e09-3fb2b91b8e65",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}:{{port}}/api/v1/user/telecmi/delete/:id",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"telecmi",
+										"delete",
+										":id"
+									],
+									"variable": [
+										{
+											"id": "2b27efd8-88cf-475b-94cf-1aa60cfd304d",
+											"key": "id",
+											"value": "6617e84e585b0d6881a18647"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Fetch password",
+							"id": "75520872-1739-4e70-9e71-09556149b98c",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{host}}:{{port}}/api/v1/user/telecmi/password/:id",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"telecmi",
+										"password",
+										":id"
+									],
+									"variable": [
+										{
+											"id": "fbe83b11-3cfa-4dcc-a6a3-a85cf4b3024e",
+											"key": "id",
+											"value": "6617e84e585b0d6881a18647"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "e1ea6e42-9a51-418c-94c5-9c6438347d13"
+				},
+				{
+					"name": "Target",
+					"item": [
+						{
+							"name": "Add target",
+							"id": "ecf790e6-69cf-4739-93ba-1a84b5b9e7ae",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"targets\": [\r\n        {\r\n            \"callType\": \"total\",\r\n            \"type\": \"daily\",\r\n            \"target\": 4\r\n        }\r\n    ],\r\n    \"month\": 10,\r\n    \"year\": 2024,\r\n    \"user\": \"66337f807d113c89d8b7c6f3\",\r\n    \"stageWiseTarget\": [\r\n        {\r\n            \"stage\": \"Hot\",\r\n            \"type\": \"daily\",\r\n            \"target\": 10\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{host}}:{{port}}/api/v1/user/target"
+							},
+							"response": []
+						},
+						{
+							"name": "Update target",
+							"id": "e99f4168-6217-4012-b8fb-f2a6d33123e4",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"password\": \"password\",\r\n    \"confirmPassword\": \"password\",\r\n    \"phone\": \"9874563210\",\r\n    \"altPhone\": \"8874563210\",\r\n    \"height\": \"6'5''\",\r\n    \"weight\": \"90\",\r\n    \"branch\": \"648b537f062978bb147b0556\",\r\n    \"reference\":\"Linkedin\",\r\n    \"gender\": \"M\",\r\n    \"firstName\": \"App\",\r\n    \"lastName\": \"User\",\r\n    \"email\": \"rajesh@gmail.com\",\r\n    \"state\": \"delhi\",\r\n    \"city\": \"delhi\",\r\n    \"designation\": \"653b9fb52619321c25d76ee7\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}:{{port}}/api/v1/user/target/:id",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"target",
+										":id"
+									],
+									"variable": [
+										{
+											"id": "1243c8c4-3dec-4d55-b1e1-5923016d946d",
+											"key": "id",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get User target",
+							"id": "80aec04b-c8b6-4182-8993-7e1cf3a4a8dc",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{host}}:{{port}}/api/v1/user/target/:userId?date=2024-07",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"target",
+										":userId"
+									],
+									"query": [
+										{
+											"key": "date",
+											"value": "2024-07"
+										}
+									],
+									"variable": [
+										{
+											"key": "userId",
+											"value": "6638bb1c075254e85269b8e5"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get My target",
+							"id": "28b6ace6-0818-4754-b67b-04c8de65b81f",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"url": "{{host}}:{{port}}/api/v1/user/target"
+							},
+							"response": []
+						}
+					],
+					"id": "50312755-480c-41e5-9e9e-b3c0091ec9fc"
+				},
+				{
+					"name": "Me",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "03499e48-5752-4076-b963-23a297d11e4f",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "df1ba2b4-8ed1-4e84-862c-6cb66cb7d629",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/user/me",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"me"
+							],
+							"query": [
+								{
+									"key": "populate",
+									"value": "image",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Get LoggedIn User Information"
+					},
+					"response": []
+				},
+				{
+					"name": "Patch me",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "03499e48-5752-4076-b963-23a297d11e4f",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "de67b9cc-139a-45ae-9b03-abad7d817a11",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"doDontaggrement\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}:{{port}}/api/v1/user/me",
+						"description": "Get LoggedIn User Information"
+					},
+					"response": []
+				},
+				{
+					"name": "Get List of users",
+					"id": "842d2174-db3f-48f4-8d6f-260f6fd4c8d6",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"phone\": \"9899999999\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/user",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"user"
+							],
+							"query": [
+								{
+									"key": "populate",
+									"value": "teams,roles_f=name",
+									"disabled": true
+								},
+								{
+									"key": "isRecent",
+									"value": "true",
+									"disabled": true
+								},
+								{
+									"key": "search",
+									"value": "rajesh",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "ACTIVE",
+									"description": "ACTIVE | INACTIVE",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User by id",
+					"id": "6b0b0197-b4c3-4ca9-95dd-b52f1e4be8b1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/user/:id",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								":id"
+							],
+							"variable": [
+								{
+									"id": "c74945f2-884d-4208-b07f-37d74fc43722",
+									"key": "id",
+									"value": "65787e1008c2bef7548b1324"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "fe9364eb-03ea-469a-9b5b-5775c9acd606",
+			"description": "## User Operations related API's"
+		},
+		{
+			"name": "Asset",
+			"item": [
+				{
+					"name": "Create Asset",
+					"id": "b0e720c2-3c45-4ced-9e91-bf27d2b9b07a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"fileNotInWorkingDirectoryWarning": "This file isn't in your working directory. Teammates you share this request with won't be able to use this file. To make collaboration easier you can setup your working directory in Settings.",
+									"filesNotInWorkingDirectory": [
+										"/C:/Users/rajes/Pictures/031.jpg"
+									],
+									"src": "/C:/Users/rajes/Pictures/031.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/asset/upload?private=true",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"asset",
+								"upload"
+							],
+							"query": [
+								{
+									"key": "private",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "c44c385c-dde7-4c91-886b-4d85e8de26a3",
+							"name": "Create Asset",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/C:/Users/rajes/Pictures/python.png"
+										}
+									]
+								},
+								"url": "{{host}}:{{port}}/api/v1/asset/upload"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "397"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"18d-UwxiHcf2yIaTbIlQt7cAFOBqIa0\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Aug 2023 17:07:18 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"data\": {\n        \"key\": \"28cfd432-3932-41e0-bd24-118891efa830.png\",\n        \"name\": \"python.png\",\n        \"type\": \"public\",\n        \"mimetype\": \"image/png\",\n        \"url\": \"https://crm-crmlocalhost.s3.ap-south-1.amazonaws.com/full/28cfd432-3932-41e0-bd24-118891efa830.png\",\n        \"_id\": \"64eb82c5491dd86ed6fe633d\",\n        \"createdAt\": \"2023-08-27T17:07:17.987Z\",\n        \"updatedAt\": \"2023-08-27T17:07:17.987Z\"\n    },\n    \"status\": \"Ok\",\n    \"message\": {\n        \"code\": \"AssetSuccessfullyUploaded\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Asset by id",
+					"id": "1555350e-981d-41aa-9335-3368ff193577",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/asset/:id",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"asset",
+								":id"
+							],
+							"variable": [
+								{
+									"id": "9185996f-660c-4a26-843e-085072a73982",
+									"key": "id",
+									"value": "64eb82c5491dd86ed6fe633d"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Asset List",
+					"id": "762113fa-5b60-4f76-a55d-679ca20ac208",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/asset?mimetype=image",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"asset"
+							],
+							"query": [
+								{
+									"key": "mimetype",
+									"value": "image",
+									"type": "text"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Private Asset",
+					"id": "07fe70a7-0253-438d-96e2-032116859795",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/asset/get/:id",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"asset",
+								"get",
+								":id"
+							],
+							"variable": [
+								{
+									"id": "228f9996-55b4-4045-a61e-193353171d90",
+									"key": "id",
+									"value": "65afa6f70d7996a77bd68bdf"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Asset",
+					"id": "fde0dcff-2168-455d-8b0e-ecd17680e029",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/asset/:id",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"asset",
+								":id"
+							],
+							"variable": [
+								{
+									"id": "4e5a67cb-1b8a-414c-ae20-6f840c66e7d6",
+									"key": "id",
+									"value": "65a3f5a8e4edd9b0c544d437"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "33c42b3b-c794-43d6-b715-4bc2fac3f56f",
+			"description": "## User Operations related API's"
+		},
+		{
+			"name": "Client",
+			"item": [
+				{
+					"name": "Create Client",
+					"id": "9209de01-0fc8-4abc-8109-ef51ecdb48ee",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Chat bot\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}:{{port}}/api/v1/client"
+					},
+					"response": [
+						{
+							"id": "0be1b0d8-10da-40dd-a719-6f23a419e0d0",
+							"name": "Create Asset",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/C:/Users/rajes/Pictures/python.png"
+										}
+									]
+								},
+								"url": "{{host}}:{{port}}/api/v1/asset/upload"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "397"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"18d-UwxiHcf2yIaTbIlQt7cAFOBqIa0\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Aug 2023 17:07:18 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"data\": {\n        \"key\": \"28cfd432-3932-41e0-bd24-118891efa830.png\",\n        \"name\": \"python.png\",\n        \"type\": \"public\",\n        \"mimetype\": \"image/png\",\n        \"url\": \"https://crm-crmlocalhost.s3.ap-south-1.amazonaws.com/full/28cfd432-3932-41e0-bd24-118891efa830.png\",\n        \"_id\": \"64eb82c5491dd86ed6fe633d\",\n        \"createdAt\": \"2023-08-27T17:07:17.987Z\",\n        \"updatedAt\": \"2023-08-27T17:07:17.987Z\"\n    },\n    \"status\": \"Ok\",\n    \"message\": {\n        \"code\": \"AssetSuccessfullyUploaded\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Client",
+					"id": "4ed23f04-980d-49a4-8ad3-1c83558db0af",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/client/:id",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"client",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "671c8c981754b16cff0a1bc2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get list of client",
+					"id": "845341fa-b2a6-4eb7-9e11-84dc0d9f30b2",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}:{{port}}/api/v1/client"
+					},
+					"response": []
+				}
+			],
+			"id": "d4d465b5-992c-46ac-866e-f1232b4cd8bf",
+			"description": "## User Operations related API's"
+		},
+		{
+			"name": "Widget",
+			"item": [
+				{
+					"name": "public route",
+					"item": [
+						{
+							"name": "Get widget",
+							"id": "99d0460d-bf3a-4db2-bd89-552c169c5afa",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}:{{port}}/api/v1/widget/wd/:id?origin=https://hadapsar.lipihipi.com/contact-us",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"v1",
+										"widget",
+										"wd",
+										":id"
+									],
+									"query": [
+										{
+											"key": "origin",
+											"value": "https://hadapsar.lipihipi.com/contact-us"
+										}
+									],
+									"variable": [
+										{
+											"id": "8c16132d-4a93-44a0-8c1d-eaf780f64be2",
+											"key": "id",
+											"value": "6534cf614e946b0a03353e58"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "f6a29de4-e8a8-4033-8241-ac8d9792f805"
+				},
+				{
+					"name": "Get Widget detail",
+					"id": "aae2678b-6c7a-489f-bd4a-1e989371a612",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/widget/:id",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"widget",
+								":id"
+							],
+							"variable": [
+								{
+									"id": "9d403115-9bf9-4977-a100-b26c530a9c30",
+									"key": "id",
+									"value": "64fe0ec2222f91f6b5d47364"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get widgetList",
+					"id": "cac60667-3c69-44a7-ac01-638d7e7c5c4d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/widget",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"widget"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "Disable",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Widget",
+					"id": "fc07ddf4-bee8-472e-a4f9-b1746d6901b1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"formSchema\": {\r\n        \"title\": \"A registration form\",\r\n        \"description\": \"A simple form example.\",\r\n        \"type\": \"object\",\r\n        \"required\": [\r\n            \"firstName\",\r\n            \"lastName\"\r\n        ],\r\n        \"properties\": {\r\n            \"firstName\": {\r\n                \"type\": \"string\",\r\n                \"title\": \"First name\",\r\n                \"default\": \"Chuck\"\r\n            },\r\n            \"lastName\": {\r\n                \"type\": \"string\",\r\n                \"title\": \"Last name\"\r\n            },\r\n            \"age\": {\r\n                \"type\": \"integer\",\r\n                \"title\": \"Age\"\r\n            },\r\n            \"bio\": {\r\n                \"type\": \"string\",\r\n                \"title\": \"Bio\"\r\n            },\r\n            \"password\": {\r\n                \"type\": \"string\",\r\n                \"title\": \"Password\",\r\n                \"minLength\": 3\r\n            },\r\n            \"telephone\": {\r\n                \"type\": \"string\",\r\n                \"title\": \"Telephone\",\r\n                \"minLength\": 10\r\n            }\r\n        }\r\n    },\r\n    \"site\": \"localhost.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}:{{port}}/api/v1/widget"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Widget",
+					"id": "c80b1d94-b125-4127-b791-5303bd6191f6",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"My form\",\n    \"status\": \"INACTIVE\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/widget/:id",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"widget",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "6662982c51f4d26eb62d2685"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "9c7a5da1-cb9e-48b0-81a0-79b3ba612416"
+		},
+		{
+			"name": "Lead",
+			"item": [
+				{
+					"name": "Followups",
+					"item": [
+						{
+							"name": "create lead followup",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "a7753cae-37cd-4593-be91-6d75c60eb513",
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"id": "b6bf73d8-d855-41c5-8dc1-37eea4d161c9",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"leadId\": \"6623ca395067f493b3729569\",\r\n    \"nextFollowUpDate\":\"2023-09-30\",\r\n    \"note\":\"note\",\r\n    \"stage\": \"Hot\",\r\n    \"stageType\": \"Relevant\",\r\n    \"status\": \"Verified\",\r\n    \"communicationStatus\": \"Connected\",\r\n    \"communicationSubStatus\": \"Answered\",\r\n    \"interestedIn\": \"\",\r\n    \"walkinDateTime\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{host}}:{{port}}/api/v1/lead/followup"
+							},
+							"response": []
+						},
+						{
+							"name": "get lead followups",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "a7753cae-37cd-4593-be91-6d75c60eb513",
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"id": "4594bccf-a0b5-4a16-b45a-d729105f147b",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{host}}:{{port}}/api/v1/lead/followup/:leadId",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"v1",
+										"lead",
+										"followup",
+										":leadId"
+									],
+									"variable": [
+										{
+											"id": "a4094874-4d48-44b0-b73d-82e0d6ef98d5",
+											"key": "leadId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "get lead followups Upcoming",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "a7753cae-37cd-4593-be91-6d75c60eb513",
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"id": "354f6805-dc45-43e3-94aa-62030c8759f4",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"url": "{{host}}:{{port}}/api/v1/lead/followup/upcoming"
+							},
+							"response": []
+						}
+					],
+					"id": "b1e9d1c3-0ad8-4ce9-aa7a-14ea1fc1cbc3"
+				},
+				{
+					"name": "Whatsapp chat",
+					"item": [
+						{
+							"name": "Send wa message",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "a7753cae-37cd-4593-be91-6d75c60eb513",
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"id": "03a9b0cc-e322-4de5-a0cf-251eb9d63658",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"leadId\": \"655cee9a4df13819b2b56420\",\r\n    \"text\": \"Hey, can we talk?\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{host}}:{{port}}/api/v1/lead/wa"
+							},
+							"response": []
+						},
+						{
+							"name": "Get wa message for a lead",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "a7753cae-37cd-4593-be91-6d75c60eb513",
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"id": "cbd6c6c3-ae4d-4f2c-bed5-a84ab50e464a",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{host}}:{{port}}/api/v1/lead/wa/:leadId",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"v1",
+										"lead",
+										"wa",
+										":leadId"
+									],
+									"variable": [
+										{
+											"id": "99f6a2c9-b898-4f83-8128-ea01cb5af8e2",
+											"key": "leadId",
+											"value": "655cee9a4df13819b2b56420"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "3cd61423-c983-4435-a5f5-dd8c9b6af4ae"
+				},
+				{
+					"name": "Get list of leads",
+					"id": "2d7cb32f-e633-424a-b336-605bc64ace34",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/lead/?status=TrialCompleted&isRecent=true",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"lead",
+								""
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "cxc@dc",
+									"disabled": true
+								},
+								{
+									"key": "phone",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "name",
+									"value": "gvbg",
+									"description": "it will filter in firstname and lastname",
+									"disabled": true
+								},
+								{
+									"key": "stage",
+									"value": "",
+									"description": "Initiated | Verified | Dead | Rejected | Hold",
+									"disabled": true
+								},
+								{
+									"key": "source",
+									"value": "",
+									"description": "Web | Telephone",
+									"disabled": true
+								},
+								{
+									"key": "from",
+									"value": "",
+									"description": "date in yyyy-mm-dd format",
+									"disabled": true
+								},
+								{
+									"key": "to",
+									"value": "",
+									"description": "date in yyyy-mm-dd format",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "pageSize",
+									"value": "50",
+									"disabled": true
+								},
+								{
+									"key": "followUpDate",
+									"value": "2023-10-27",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "TrialCompleted"
+								},
+								{
+									"key": "isRecent",
+									"value": "true",
+									"type": "text"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get details of lead",
+					"id": "6561573f-9cf5-454b-b402-23875f3cfab9",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/lead/:id",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"lead",
+								":id"
+							],
+							"variable": [
+								{
+									"id": "ed62ee32-6731-4345-bad6-a7974e043f83",
+									"key": "id",
+									"value": "650b29a37b5f195bc3792538"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lead followup report",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "3dacd283-8635-4851-b18e-4d669df34842",
+								"exec": [
+									"var template = `\r",
+									"<style type=\"text/css\">\r",
+									"    .tftable {font-size:14px;color:#333333;width:100%;border-width: 1px;border-color: #87ceeb;border-collapse: collapse;}\r",
+									"    .tftable th {font-size:18px;background-color:#87ceeb;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;text-align:left;}\r",
+									"    .tftable tr {background-color:#ffffff;}\r",
+									"    .tftable td {font-size:14px;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;}\r",
+									"    .tftable tr:hover {background-color:#e0ffff;}\r",
+									"</style>\r",
+									"\r",
+									"<table class=\"tftable\" border=\"1\">\r",
+									"    <tr>\r",
+									"        <th>Call Date Time</th>\r",
+									"        <th>Lead ID</th>\r",
+									"        <th>Mobile No</th>\r",
+									"        <th>Customer Name</th>\r",
+									"        <th>Email</th>\r",
+									"        <th>City</th>\r",
+									"        <th>Assign To</th>\r",
+									"        <th>Origin</th>\r",
+									"        <th>Source</th>\r",
+									"        <th>Current Stage</th>\r",
+									"        <th>Previous Stage</th>\r",
+									"        <th>Lead Status</th>\r",
+									"        <th>Campaign</th>\r",
+									"        <th>Call Duration</th>\r",
+									"        <th>Recording Path</th>\r",
+									"        <th>Communication Status</th>\r",
+									"        <th>Stage Type</th>\r",
+									"        <th>Remarks1</th>\r",
+									"        <th>Remarks2</th>\r",
+									"    </tr>\r",
+									"    \r",
+									"    {{#each response.data}}\r",
+									"        <tr>\r",
+									"            <td>{{CallDateTime}}</td>\r",
+									"            <td>{{leadId}}</td>\r",
+									"            <td>{{mobileNo}}</td>\r",
+									"            <td>{{customerName}}</td>\r",
+									"            <td>{{email}}</td>\r",
+									"            <td>{{city}}</td>\r",
+									"            <td>{{assignTo}}</td>\r",
+									"            <td>{{origin}}</td>\r",
+									"            <td>{{source}}</td>\r",
+									"            <td>{{currentStage}}</td>\r",
+									"            <td>{{previousStage}}</td>\r",
+									"            <td>{{leadStatus}}</td>\r",
+									"            <td>{{campaign}}</td>\r",
+									"            <td>{{callDuration}}</td>\r",
+									"            <td>{{recordingPath}}</td>\r",
+									"            <td>{{communicationStatus}}</td>\r",
+									"            <td>{{stageType}}</td>\r",
+									"            <td>{{Remarks1}}</td>\r",
+									"            <td>{{Remarks2}}</td>\r",
+									"        </tr>\r",
+									"    {{/each}}\r",
+									"</table>\r",
+									"`;\r",
+									"\r",
+									"function constructVisualizerPayload() {\r",
+									"    return {response: pm.response.json()}\r",
+									"}\r",
+									"\r",
+									"pm.visualizer.set(template, constructVisualizerPayload());"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "de8c4770-44be-40da-ad85-a42b0668294c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/lead/followup/report?from=2024-09-01&to=2024-09-30",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"lead",
+								"followup",
+								"report"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "2024-09-01"
+								},
+								{
+									"key": "to",
+									"value": "2024-09-30"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create lead state",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "a7753cae-37cd-4593-be91-6d75c60eb513",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "10d82bb8-76ab-4799-8666-3bfb0be82711",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"stage\": \"leadStage\",\r\n    \"leadId\": \"6491dbf9e0b24e6b92e14870\",\r\n    \"subStage\":\"leadSubStage\",\r\n    \"followUpDate\":\"02/09/23\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}:{{port}}/api/v1/lead/state"
+					},
+					"response": []
+				},
+				{
+					"name": "create lead",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "a7753cae-37cd-4593-be91-6d75c60eb513",
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "d996fdb2-93ab-42e1-a1e8-5956306fb97b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"leadData\": {\r\n        \"firstName\": \"tester\",\r\n        \"lastName\": \"Lead\",\r\n        \"email\": \"Tester@Tester.com\",\r\n        \"phone\": \"919874563210\",\r\n        \"alternatePhone\": \"919874563210\",\r\n        \"state\": \"State Test\",\r\n        \"city\": \"cityTest\"\r\n    },\r\n    \"enquirySource\": \"Linkedin\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}:{{port}}/api/v1/lead/"
+					},
+					"response": []
+				},
+				{
+					"name": "create lead followup",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "a7753cae-37cd-4593-be91-6d75c60eb513",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "74134fdd-2c0c-4860-bfd7-998edd28130f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"leadId\": \"650b29a37b5f195bc3792538\",\r\n    \"nextFollowUpDate\":\"2023-09-30\",\r\n    \"note\":\"note\",\r\n    \"communicationStatus\": \"Yes\",\r\n    \"packageType\": \"64f46dd37718788baf6848ed\",\r\n    \"interestedIn\": \"64f230e3615eabc2fa625a6d\",\r\n    \"stage\": \"Hot\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}:{{port}}/api/v1/lead/followup"
+					},
+					"response": []
+				},
+				{
+					"name": "Bulk upload with followup",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "a7753cae-37cd-4593-be91-6d75c60eb513",
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "921a3931-e5f4-49e3-bb57-4038b075856b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"file\": \"672472e44da40b9230f812da\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}:{{port}}/api/v1/lead/bulk-upload-followup"
+					},
+					"response": []
+				},
+				{
+					"name": "Bulk upload",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "a7753cae-37cd-4593-be91-6d75c60eb513",
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "1c1fee44-655b-4231-a9c1-32f1baf597ee",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"file\": \"66a88efaadb19a0de53800a1\",\r\n    \"enquirySource\": \"Facebook\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}:{{port}}/api/v1/lead/bulk-upload"
+					},
+					"response": []
+				},
+				{
+					"name": "update lead data",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "a7753cae-37cd-4593-be91-6d75c60eb513",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "fb5ad6f9-ce55-4d4d-97e9-918c5cd9c374",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"leadData\": {\r\n        \"name\": \"shankar\",\r\n        \"email\": \"shankar@yopmal.com\",\r\n        \"countryCode\": 91,\r\n        \"phoneNumber\": 8840860355,\r\n        \"state\": \"Uttar Pradesh\",\r\n        \"city\": \"Varanasi\",\r\n        \"primaryCampaign\": \"noida\"\r\n    },\r\n    \"packageType\": \"\",\r\n    \"intrestedIn\": \"\",\r\n    \"assignedTo\": \"\",\r\n    \"status\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/lead/:id",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"lead",
+								":id"
+							],
+							"variable": [
+								{
+									"id": "844f63d5-1f81-4906-a54c-96d16eb337f1",
+									"key": "id",
+									"value": "6491dbf9e0b24e6b92e14870"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create lead note",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "a7753cae-37cd-4593-be91-6d75c60eb513",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "1f3b5b77-a6f5-4977-a972-141ba7b3c505",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"leadId\": \"6491dbf9e0b24e6b92e14870\",\r\n    \"note\":\"note\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}:{{port}}/api/v1/lead/note"
+					},
+					"response": []
+				},
+				{
+					"name": "lead reassign",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "a7753cae-37cd-4593-be91-6d75c60eb513",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "308df35d-aab8-463d-901f-ac20c44ef256",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"remark\":\"Le tu kr le\",\r\n    \"assignedTo\": \"653e5e5abdf84a2080f12ba9\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/lead/reassign/:id",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"lead",
+								"reassign",
+								":id"
+							],
+							"variable": [
+								{
+									"id": "9d87d091-540d-4a67-8d73-1e52948929bc",
+									"key": "id",
+									"value": "654cd0df891c27495d9a8c7f"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change walkin time",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "a7753cae-37cd-4593-be91-6d75c60eb513",
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "6994c8a2-5d62-431c-94e0-9f5cb9f6fa52",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"remark\":\"Le tu kr le\",\r\n    \"walkinDateTime\": \"2024-06-12 05:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/lead/walkin/:id",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"lead",
+								"walkin",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "654cd0df891c27495d9a8c7f"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "lead assign to lawyer",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "a7753cae-37cd-4593-be91-6d75c60eb513",
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "6cd3562f-31f2-4a23-bac8-ac9b9bde172f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"remark\":\"Le tu kr le\",\r\n    \"assignedTo\": \"653e5e5abdf84a2080f12ba9\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/lead/assign/lawyer/:id",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"lead",
+								"assign",
+								"lawyer",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "654cd0df891c27495d9a8c7f"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "lead unassign from lawyer",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "a7753cae-37cd-4593-be91-6d75c60eb513",
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "00b81352-10b7-42b2-8199-c13c2b9245e9",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"remark\":\"removing for now\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/lead/unassign/lawyer/:id",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"lead",
+								"unassign",
+								"lawyer",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "66922f57d81799b598a08b25"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Lead calling",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "a7753cae-37cd-4593-be91-6d75c60eb513",
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "8749066e-7cf9-4e75-ba8b-ccf5500c8a6d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/lead/call/:id",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"lead",
+								"call",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "67496f269e5ebeb743dffdac"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "912570a7-4443-4098-924c-e69ea91a5f53"
+		},
+		{
+			"name": "Social App",
+			"item": [
+				{
+					"name": "Meta Insta form",
+					"item": [
+						{
+							"name": "Get Instant form for a app",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "a7753cae-37cd-4593-be91-6d75c60eb513",
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"id": "70dbfa81-f3bc-4b17-a72e-16c45c8fe9d5",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{host}}:{{port}}/api/v1/social-app/instant-form/:id?sync=true",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"v1",
+										"social-app",
+										"instant-form",
+										":id"
+									],
+									"query": [
+										{
+											"key": "sync",
+											"value": "true",
+											"description": "This field is used if we need to sync form data with meta",
+											"type": "text"
+										}
+									],
+									"variable": [
+										{
+											"id": "23569bbb-6f25-41e1-b778-ca6cd6ce9bae",
+											"key": "id",
+											"value": "657f3513dc4c1b514375a6d5"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add mapping in instant form",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "a7753cae-37cd-4593-be91-6d75c60eb513",
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"id": "b89232b0-9c68-408e-87ca-28b236ace9c7",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"formId\": \"898724295129046\",\r\n    \"name\": \"Untitled form 14/11/2023, 16:55\",\r\n    \"questions\": [\r\n        {\r\n            \"key\": \"full_name\",\r\n            \"label\": \"Full name\",\r\n            \"type\": \"FULL_NAME\",\r\n            \"id\": \"1827783311011189\",\r\n            \"mappedWith\": \"name\",\r\n            \"_id\": \"65813521a82357cfed10de06\"\r\n        },\r\n        {\r\n            \"key\": \"email\",\r\n            \"label\": \"Email\",\r\n            \"type\": \"EMAIL\",\r\n            \"mappedWith\": \"email\",\r\n            \"id\": \"184504747986011\",\r\n            \"_id\": \"65813521a82357cfed10de07\"\r\n        },\r\n        {\r\n            \"key\": \"phone_number\",\r\n            \"label\": \"Phone number\",\r\n            \"type\": \"PHONE\",\r\n            \"mappedWith\": \"phone\",\r\n            \"id\": \"357317906821302\",\r\n            \"_id\": \"65813521a82357cfed10de08\"\r\n        },\r\n        {\r\n            \"key\": \"city\",\r\n            \"label\": \"City\",\r\n            \"type\": \"CITY\",\r\n            \"mappedWith\": \"city\",\r\n            \"id\": \"880620653626512\",\r\n            \"_id\": \"65813521a82357cfed10de09\"\r\n        },\r\n        {\r\n            \"key\": \"state\",\r\n            \"label\": \"State\",\r\n            \"mappedWith\": \"state\",\r\n            \"type\": \"STATE\",\r\n            \"id\": \"311894544944881\",\r\n            \"_id\": \"65813521a82357cfed10de0a\"\r\n        },\r\n        {\r\n            \"key\": \"gender\",\r\n            \"label\": \"Gender\",\r\n            \"mappedWith\": \"gender\",\r\n            \"type\": \"GENDER\",\r\n            \"id\": \"1090477192134005\",\r\n            \"_id\": \"65813521a82357cfed10de0b\"\r\n        }\r\n    ],\r\n    \"isMappingCompleted\": true,\r\n    \"appId\": \"657f3513dc4c1b514375a6d5\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}:{{port}}/api/v1/social-app/instant-form/:appId/:id",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"v1",
+										"social-app",
+										"instant-form",
+										":appId",
+										":id"
+									],
+									"variable": [
+										{
+											"id": "e37a19db-6524-4c25-a5c6-efc21dbaea46",
+											"key": "appId",
+											"value": "657f3513dc4c1b514375a6d5"
+										},
+										{
+											"id": "d06f2fb5-1632-4534-8369-f74f68444df0",
+											"key": "id",
+											"value": "65813521a82357cfed10de05"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "63f676d7-51a0-45be-860e-610bd66bd1dd"
+				},
+				{
+					"name": "WBA",
+					"item": [
+						{
+							"name": "Get templates",
+							"id": "2b0ec945-5a69-406e-9734-fccf5534282f",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{host}}:{{port}}/api/v1/social-app/:appid/wba/template?sync=true",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"v1",
+										"social-app",
+										":appid",
+										"wba",
+										"template"
+									],
+									"query": [
+										{
+											"key": "sync",
+											"value": "true",
+											"type": "text"
+										}
+									],
+									"variable": [
+										{
+											"id": "f85eeb66-2094-421a-8266-a4ed9e6231d9",
+											"key": "appid",
+											"value": "663f52a69dab3ced0ea13afc"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All templates",
+							"id": "eca90551-b5bf-4d29-8c02-2ded4b0fa10b",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{host}}:{{port}}/api/v1/social-app/wba/template",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"v1",
+										"social-app",
+										"wba",
+										"template"
+									],
+									"query": [
+										{
+											"key": "sync",
+											"value": "true",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "05315fb3-e56b-4e53-841e-575c81c0e7a2"
+				},
+				{
+					"name": "Add app",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "a7753cae-37cd-4593-be91-6d75c60eb513",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "5a1cac7d-e3bf-4d40-be3d-51354a3566a5",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Lipijobs\",\r\n    \"account\": \"Facebook\",\r\n    \"clientId\": \"1048972455740548\",\r\n    \"clientSecret\": \"\",\r\n    \"pageId\": \"2348199518596149\",\r\n    \"token\": \"Facebook\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}:{{port}}/api/v1/social-app"
+					},
+					"response": []
+				},
+				{
+					"name": "Update App",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "a7753cae-37cd-4593-be91-6d75c60eb513",
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "e7d82813-eafa-4de6-a83a-d3e5581b427d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"pageToken\": \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/social-app/:id",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"social-app",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "66879aa42a561e6a03d85fe0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get List of Add app",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "a7753cae-37cd-4593-be91-6d75c60eb513",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "1e13874f-cd72-403c-8455-75d3690201d8",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"url": "{{host}}:{{port}}/api/v1/social-app"
+					},
+					"response": []
+				},
+				{
+					"name": "Get social app by Id",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "a7753cae-37cd-4593-be91-6d75c60eb513",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "0d2ee2e7-16d4-45c8-9ded-00bdfc584d1e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/social-app/:id",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"social-app",
+								":id"
+							],
+							"variable": [
+								{
+									"id": "d33004b0-329c-4718-b87c-5dd34cc85234",
+									"key": "id",
+									"value": "65571090802c6643c384e53e"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "c61b07e3-31b7-4b39-953d-7745e953d2b7"
+		},
+		{
+			"name": "Social Post",
+			"item": [
+				{
+					"name": "Create post",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "a7753cae-37cd-4593-be91-6d75c60eb513",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "1ccbae4b-0cb1-4925-bae4-f6169ce4eab5",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n    \"tags\": [\"#new\", \"#dome\"],\r\n    \"socialApp\": [\"64a1353d5a7f09c040eb7dba\"],\r\n    \"postDate\": \"2023-07-03 10:00:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}:{{port}}/api/v1/social-post/"
+					},
+					"response": []
+				},
+				{
+					"name": "Create post Copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "a7753cae-37cd-4593-be91-6d75c60eb513",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "254cd08a-f5ef-4096-bc97-1a126f2323e6",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}:{{port}}/api/v1/cron/"
+					},
+					"response": []
+				}
+			],
+			"id": "465c0484-c2d7-429f-b23e-792cef585a85"
+		},
+		{
+			"name": "config",
+			"item": [
+				{
+					"name": "Get Configs",
+					"id": "c96907a2-34c5-4f81-ab91-e82e571f2b58",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"url": "{{host}}:{{port}}/api/v1/config"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Lead Configs",
+					"id": "8ff5924b-78dc-4d76-a13b-cdd0b40b0e02",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"url": "{{host}}:{{port}}/api/v1/config"
+					},
+					"response": []
+				},
+				{
+					"name": "Get wehbook details",
+					"id": "51495eb4-f3fc-4624-9816-eed3a3e27f1d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/config/webhook?branch=safasdfasdfasdfasd",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"config",
+								"webhook"
+							],
+							"query": [
+								{
+									"key": "branch",
+									"value": "safasdfasdfasdfasd"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "bb13213c-05d3-40ff-a37b-6358257a2574"
+		},
+		{
+			"name": "Dashboard",
+			"item": [
+				{
+					"name": "Lead Stats",
+					"id": "a63b75cc-380e-4801-84e8-ae765c58e0d2",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/dashboard/leads?from=2024-03-01&to=2024-04-15",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"dashboard",
+								"leads"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "2024-03-01"
+								},
+								{
+									"key": "to",
+									"value": "2024-04-15"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "e340ef54-dd75-4414-8792-e321f5d576bc"
+		},
+		{
+			"name": "webhooks",
+			"item": [
+				{
+					"name": "Subscribe to fb",
+					"id": "d74b8a4f-eaf5-47b4-8f15-262d36d3450d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/webhook/facebook?hub.mode=subscribe&hub.challenge=522559135&hub.verify_token=sadfisdfasdfksajdf9asdf",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"webhook",
+								"facebook"
+							],
+							"query": [
+								{
+									"key": "hub.mode",
+									"value": "subscribe"
+								},
+								{
+									"key": "hub.challenge",
+									"value": "522559135"
+								},
+								{
+									"key": "hub.verify_token",
+									"value": "sadfisdfasdfksajdf9asdf"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post data to fb",
+					"id": "72e20cf1-7ac4-4318-8997-f9b80cb5de87",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-hub-signature",
+								"value": "sha1=9b235600bb35c6c16807c529822e0eae519e25ae",
+								"type": "text"
+							},
+							{
+								"key": "x-hub-signature-256",
+								"value": "sha256=67f3fa8036917a2f2b15fda7139ec2c634debe5d7db5aebca03aade31de6e0f1",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"entry\": [\r\n        {\r\n            \"id\": \"0\",\r\n            \"time\": 1705734331,\r\n            \"changes\": [\r\n                {\r\n                    \"field\": \"leadgen\",\r\n                    \"value\": {\r\n                        \"ad_id\": \"444444444\",\r\n                        \"form_id\": \"444444444444\",\r\n                        \"leadgen_id\": \"444444444444\",\r\n                        \"created_time\": 1705734330,\r\n                        \"page_id\": \"444444444444\",\r\n                        \"adgroup_id\": \"44444444444\"\r\n                    }\r\n                }\r\n            ]\r\n        }\r\n    ],\r\n    \"object\": \"page\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/webhook/:tenantId/facebook",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"webhook",
+								":tenantId",
+								"facebook"
+							],
+							"variable": [
+								{
+									"id": "f0dd948f-c0d4-4cf7-b8a5-02db92caab0a",
+									"key": "tenantId",
+									"value": "94IL5WNMJRW5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "telecmi events",
+					"id": "5ee42eb4-bb0a-46e9-83fb-de46fdc52225",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-hub-signature",
+								"value": "sha1=9b235600bb35c6c16807c529822e0eae519e25ae"
+							},
+							{
+								"key": "x-hub-signature-256",
+								"value": "sha256=67f3fa8036917a2f2b15fda7139ec2c634debe5d7db5aebca03aade31de6e0f1"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"call_id\": \"e51d5392-d9cf-123b-fe91-3cecefb9bfb6\",\r\n  \"leg\": \"b\",\r\n  \"type\": \"cdr\",\r\n  \"virtual_number\": 918475485484,\r\n  \"user\": \"500_33333947\",\r\n  \"cmiuuid\": \"ccd826f9-67a4-4467-acfb-a53093ff5c9d\",\r\n  \"direction\": \"outbound\",\r\n  \"callerid\": \"442000000000\",\r\n  \"app_id\": 2223343,\r\n  \"time\": 1650635340436,\r\n  \"custom\": \"{\\\"crm\\\":\\\"true\\\"}\",\r\n  \"extra_params\": \"{\\\"click2call\\\":\\\"true\\\"}\",\r\n  \"request_id\": \"bvS68LlqtFunYMQO0db6g9klSdfS0UHHDoK9S9Qvaed\",\r\n  \"status\": \"missed\",\r\n  \"to\": 917032725900,\r\n  \"conversation_uuid\": \"ccd826f9-67a4-4467-acfb-a53093ff5c9d\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}:{{port}}/api/v1/webhook/telecmi/cdr"
+					},
+					"response": []
+				},
+				{
+					"name": "telecmi cdr",
+					"id": "e09f3489-592f-455d-9b70-cb09c6732ccf",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-hub-signature",
+								"value": "sha1=9b235600bb35c6c16807c529822e0eae519e25ae"
+							},
+							{
+								"key": "x-hub-signature-256",
+								"value": "sha256=67f3fa8036917a2f2b15fda7139ec2c634debe5d7db5aebca03aade31de6e0f1"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"call_id\": \"e51d5392-d9cf-123b-fe91-3cecefb9bfb6\",\r\n  \"leg\": \"a\",\r\n  \"type\": \"cdr\",\r\n  \"user\": \"500_33333536\",\r\n  \"cmiuuid\": \"ccd826f9-67a4-4467-acfb-a53093ff5c9d\",\r\n  \"direction\": \"outbound\",\r\n  \"callerid\": \"442000000000\",\r\n  \"app_id\": 2223343,\r\n  \"time\": 1650635340436,\r\n  \"custom\": \"{\\\"crm\\\":\\\"true\\\"}\",\r\n  \"extra_params\": \"{\\\"click2call\\\":\\\"true\\\"}\",\r\n  \"request_id\": \"bvS68LlqtFunYMQO0db6g9klSdfS0UHHDoK9S9Qvaed\",\r\n  \"status\": \"hanged\",\r\n  \"to\": \"918249054626\",\r\n  \"conversation_uuid\": \"ccd826f9-67a4-4467-acfb-a53093ff5c9d\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}:{{port}}/api/v1/webhook/telecmi/cdr"
+					},
+					"response": []
+				}
+			],
+			"id": "b744e01c-de45-473d-9578-0e9986d2bd09"
+		},
+		{
+			"name": "Incoming numbers",
+			"item": [
+				{
+					"name": "Get Numbers",
+					"id": "f7e1d54c-c537-4b1b-ab6d-3b6f2c776e17",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{host}}:{{port}}/api/v1/incoming-number"
+					},
+					"response": []
+				},
+				{
+					"name": "Add number",
+					"id": "7a84ad2e-79a4-4906-a0fe-da1f17d9a9a4",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-hub-signature",
+								"value": "sha1=9b235600bb35c6c16807c529822e0eae519e25ae"
+							},
+							{
+								"key": "x-hub-signature-256",
+								"value": "sha256=67f3fa8036917a2f2b15fda7139ec2c634debe5d7db5aebca03aade31de6e0f1"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"number\": \"918475485484\",\r\n    \"type\": \"Lawyer\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}:{{port}}/api/v1/incoming-number"
+					},
+					"response": []
+				},
+				{
+					"name": "Change status",
+					"id": "91d9eec3-cabf-4988-9e1c-4ce1dc24f0ef",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "x-hub-signature",
+								"value": "sha1=9b235600bb35c6c16807c529822e0eae519e25ae"
+							},
+							{
+								"key": "x-hub-signature-256",
+								"value": "sha256=67f3fa8036917a2f2b15fda7139ec2c634debe5d7db5aebca03aade31de6e0f1"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"status\": \"INACTIVE\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/incoming-number/:id",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"incoming-number",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "66641131107cd242eee0fa14"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "9b3d6c61-9cb8-4067-ba22-aadbf99e81f9"
+		},
+		{
+			"name": "Master data",
+			"item": [
+				{
+					"name": "City",
+					"id": "70749000-fa39-4c9d-beff-01e417955aa9",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{host}}:{{port}}/api/v1/master-data/city"
+					},
+					"response": []
+				},
+				{
+					"name": "Specialization",
+					"id": "0041fc9a-5eb4-4c34-a1f0-f87774a51034",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": "{{host}}:{{port}}/api/v1/master-data/specialization"
+					},
+					"response": []
+				}
+			],
+			"id": "468fdbf6-94c5-43fa-b0f3-543dd68a1f80"
+		},
+		{
+			"name": "Reports",
+			"item": [
+				{
+					"name": "campaign",
+					"id": "e3642439-519e-4845-8606-3e93a7013f53",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}"
+							}
+						],
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/reports/campaign?from=2024-03-01&to=2024-06-30",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"reports",
+								"campaign"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "2024-03-01"
+								},
+								{
+									"key": "to",
+									"value": "2024-06-30"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "campaign Detail",
+					"id": "74a79271-34d2-4813-9254-e70b1db63345",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}"
+							}
+						],
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/reports/campaign/:id?from=2024-03-01&to=2024-06-30",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"reports",
+								"campaign",
+								":id"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "2024-03-01"
+								},
+								{
+									"key": "to",
+									"value": "2024-06-30"
+								}
+							],
+							"variable": [
+								{
+									"id": "64544a4c-2cec-469c-8f42-eaff4d0bd29a",
+									"key": "id",
+									"value": "66051901534bfe32d90beac9"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "MIS",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "06435f45-5deb-4970-9635-79f0011bed16",
+								"exec": [
+									"var template = `\r",
+									"<style type=\"text/css\">\r",
+									"    .tftable {font-size:14px;color:#333333;width:100%;border-width: 1px;border-color: #87ceeb;border-collapse: collapse;}\r",
+									"    .tftable th {font-size:18px;background-color:#87ceeb;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;text-align:left;}\r",
+									"    .tftable tr {background-color:#ffffff;}\r",
+									"    .tftable td {font-size:14px;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;}\r",
+									"    .tftable tr:hover {background-color:#e0ffff;}\r",
+									"</style>\r",
+									"\r",
+									"<table class=\"tftable\" border=\"1\">\r",
+									"    <tr>\r",
+									"        \r",
+									"        <th>First Name</th>\r",
+									"        <th>Last Name</th>\r",
+									"        <th>Total Leads</th>\r",
+									"        <th>Total Calls</th>\r",
+									"        <th>Unique Call</th>\r",
+									"        <th>Warm Leads</th>\r",
+									"        <th>Hot Leads</th>\r",
+									"        <th>Converted Leads</th>\r",
+									"        <th>Cold Leads</th>\r",
+									"        <th>Target</th>\r",
+									"    </tr>\r",
+									"    \r",
+									"    <tr>\r",
+									"        \r",
+									"        <td>{{response.data.userData.0.firstName}}</td>\r",
+									"        <td>{{response.data.userData.0.lastName}}</td>\r",
+									"        <td>{{response.data.userData.0.totalLeads}}</td>\r",
+									"        <td>{{response.data.userData.0.totalCalls}}</td>\r",
+									"        <td>{{response.data.userData.0.uniqueCall}}</td>\r",
+									"        <td>{{response.data.userData.0.warmLeads}}</td>\r",
+									"        <td>{{response.data.userData.0.hotLeads}}</td>\r",
+									"        <td>{{response.data.userData.0.convertedLeads}}</td>\r",
+									"        <td>{{response.data.userData.0.coldLeads}}</td>\r",
+									"        <td>{{response.data.userData.0.target}}</td>\r",
+									"    </tr>\r",
+									"    <tr>\r",
+									"        \r",
+									"        <td>{{response.data.userData.1.firstName}}</td>\r",
+									"        <td>{{response.data.userData.1.lastName}}</td>\r",
+									"        <td>{{response.data.userData.1.totalLeads}}</td>\r",
+									"        <td>{{response.data.userData.1.totalCalls}}</td>\r",
+									"        <td>{{response.data.userData.1.uniqueCall}}</td>\r",
+									"        <td>{{response.data.userData.1.warmLeads}}</td>\r",
+									"        <td>{{response.data.userData.1.hotLeads}}</td>\r",
+									"        <td>{{response.data.userData.1.convertedLeads}}</td>\r",
+									"        <td>{{response.data.userData.1.coldLeads}}</td>\r",
+									"        <td>{{response.data.userData.1.target}}</td>\r",
+									"    </tr>\r",
+									"    <tr>\r",
+									"        <td>{{response.data.userData.2.firstName}}</td>\r",
+									"        <td>{{response.data.userData.2.lastName}}</td>\r",
+									"        <td>{{response.data.userData.2.totalLeads}}</td>\r",
+									"        <td>{{response.data.userData.2.totalCalls}}</td>\r",
+									"        <td>{{response.data.userData.2.uniqueCall}}</td>\r",
+									"        <td>{{response.data.userData.2.warmLeads}}</td>\r",
+									"        <td>{{response.data.userData.2.hotLeads}}</td>\r",
+									"        <td>{{response.data.userData.2.convertedLeads}}</td>\r",
+									"        <td>{{response.data.userData.2.coldLeads}}</td>\r",
+									"        <td>{{response.data.userData.2.target}}</td>\r",
+									"    </tr>\r",
+									"    <tr>\r",
+									"        <td>{{response.data.userData.3.firstName}}</td>\r",
+									"        <td>{{response.data.userData.3.lastName}}</td>\r",
+									"        <td>{{response.data.userData.3.totalLeads}}</td>\r",
+									"        <td>{{response.data.userData.3.totalCalls}}</td>\r",
+									"        <td>{{response.data.userData.3.uniqueCall}}</td>\r",
+									"        <td>{{response.data.userData.3.warmLeads}}</td>\r",
+									"        <td>{{response.data.userData.3.hotLeads}}</td>\r",
+									"        <td>{{response.data.userData.3.convertedLeads}}</td>\r",
+									"        <td>{{response.data.userData.3.coldLeads}}</td>\r",
+									"        <td>{{response.data.userData.3.target}}</td>\r",
+									"    </tr>\r",
+									"    <tr>\r",
+									"        <td>{{response.data.userData.4.firstName}}</td>\r",
+									"        <td>{{response.data.userData.4.lastName}}</td>\r",
+									"        <td>{{response.data.userData.4.totalLeads}}</td>\r",
+									"        <td>{{response.data.userData.4.totalCalls}}</td>\r",
+									"        <td>{{response.data.userData.4.uniqueCall}}</td>\r",
+									"        <td>{{response.data.userData.4.warmLeads}}</td>\r",
+									"        <td>{{response.data.userData.4.hotLeads}}</td>\r",
+									"        <td>{{response.data.userData.4.convertedLeads}}</td>\r",
+									"        <td>{{response.data.userData.4.coldLeads}}</td>\r",
+									"        <td>{{response.data.userData.4.target}}</td>\r",
+									"    </tr>\r",
+									"    <tr>\r",
+									"        <td>{{response.data.userData.5.firstName}}</td>\r",
+									"        <td>{{response.data.userData.5.lastName}}</td>\r",
+									"        <td>{{response.data.userData.5.totalLeads}}</td>\r",
+									"        <td>{{response.data.userData.5.totalCalls}}</td>\r",
+									"        <td>{{response.data.userData.5.uniqueCall}}</td>\r",
+									"        <td>{{response.data.userData.5.warmLeads}}</td>\r",
+									"        <td>{{response.data.userData.5.hotLeads}}</td>\r",
+									"        <td>{{response.data.userData.5.convertedLeads}}</td>\r",
+									"        <td>{{response.data.userData.5.coldLeads}}</td>\r",
+									"        <td>{{response.data.userData.5.target}}</td>\r",
+									"    </tr>\r",
+									"    <tr>\r",
+									"        <td>{{response.data.userData.6.firstName}}</td>\r",
+									"        <td>{{response.data.userData.6.lastName}}</td>\r",
+									"        <td>{{response.data.userData.6.totalLeads}}</td>\r",
+									"        <td>{{response.data.userData.6.totalCalls}}</td>\r",
+									"        <td>{{response.data.userData.6.uniqueCall}}</td>\r",
+									"        <td>{{response.data.userData.6.warmLeads}}</td>\r",
+									"        <td>{{response.data.userData.6.hotLeads}}</td>\r",
+									"        <td>{{response.data.userData.6.convertedLeads}}</td>\r",
+									"        <td>{{response.data.userData.6.coldLeads}}</td>\r",
+									"        <td>{{response.data.userData.6.target}}</td>\r",
+									"    </tr>\r",
+									"</table>\r",
+									"`;\r",
+									"\r",
+									"function constructVisualizerPayload() {\r",
+									"    return {response: pm.response.json()}\r",
+									"}\r",
+									"\r",
+									"pm.visualizer.set(template, constructVisualizerPayload());"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "5cad4877-7897-499c-9b60-3e20b80e945a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}"
+							}
+						],
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/reports/mis?from=2024-06-01&to=2024-06-30&reportType=monthly",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"reports",
+								"mis"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "2024-06-01"
+								},
+								{
+									"key": "to",
+									"value": "2024-06-30"
+								},
+								{
+									"key": "reportType",
+									"value": "monthly"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Stage Change Report",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "06435f45-5deb-4970-9635-79f0011bed16",
+								"exec": [
+									"var template = `\r",
+									"<style type=\"text/css\">\r",
+									"    .tftable {font-size:14px;color:#333333;width:100%;border-width: 1px;border-color: #87ceeb;border-collapse: collapse;}\r",
+									"    .tftable th {font-size:18px;background-color:#87ceeb;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;text-align:left;}\r",
+									"    .tftable tr {background-color:#ffffff;}\r",
+									"    .tftable td {font-size:14px;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;}\r",
+									"    .tftable tr:hover {background-color:#e0ffff;}\r",
+									"</style>\r",
+									"\r",
+									"<table class=\"tftable\" border=\"1\">\r",
+									"    <tr>\r",
+									"        \r",
+									"        <th>First Name</th>\r",
+									"        <th>Last Name</th>\r",
+									"        <th>Total Leads</th>\r",
+									"        <th>Total Calls</th>\r",
+									"        <th>Unique Call</th>\r",
+									"        <th>Warm Leads</th>\r",
+									"        <th>Hot Leads</th>\r",
+									"        <th>Converted Leads</th>\r",
+									"        <th>Cold Leads</th>\r",
+									"        <th>Target</th>\r",
+									"    </tr>\r",
+									"    \r",
+									"    <tr>\r",
+									"        \r",
+									"        <td>{{response.data.userData.0.firstName}}</td>\r",
+									"        <td>{{response.data.userData.0.lastName}}</td>\r",
+									"        <td>{{response.data.userData.0.totalLeads}}</td>\r",
+									"        <td>{{response.data.userData.0.totalCalls}}</td>\r",
+									"        <td>{{response.data.userData.0.uniqueCall}}</td>\r",
+									"        <td>{{response.data.userData.0.warmLeads}}</td>\r",
+									"        <td>{{response.data.userData.0.hotLeads}}</td>\r",
+									"        <td>{{response.data.userData.0.convertedLeads}}</td>\r",
+									"        <td>{{response.data.userData.0.coldLeads}}</td>\r",
+									"        <td>{{response.data.userData.0.target}}</td>\r",
+									"    </tr>\r",
+									"    <tr>\r",
+									"        \r",
+									"        <td>{{response.data.userData.1.firstName}}</td>\r",
+									"        <td>{{response.data.userData.1.lastName}}</td>\r",
+									"        <td>{{response.data.userData.1.totalLeads}}</td>\r",
+									"        <td>{{response.data.userData.1.totalCalls}}</td>\r",
+									"        <td>{{response.data.userData.1.uniqueCall}}</td>\r",
+									"        <td>{{response.data.userData.1.warmLeads}}</td>\r",
+									"        <td>{{response.data.userData.1.hotLeads}}</td>\r",
+									"        <td>{{response.data.userData.1.convertedLeads}}</td>\r",
+									"        <td>{{response.data.userData.1.coldLeads}}</td>\r",
+									"        <td>{{response.data.userData.1.target}}</td>\r",
+									"    </tr>\r",
+									"    <tr>\r",
+									"        <td>{{response.data.userData.2.firstName}}</td>\r",
+									"        <td>{{response.data.userData.2.lastName}}</td>\r",
+									"        <td>{{response.data.userData.2.totalLeads}}</td>\r",
+									"        <td>{{response.data.userData.2.totalCalls}}</td>\r",
+									"        <td>{{response.data.userData.2.uniqueCall}}</td>\r",
+									"        <td>{{response.data.userData.2.warmLeads}}</td>\r",
+									"        <td>{{response.data.userData.2.hotLeads}}</td>\r",
+									"        <td>{{response.data.userData.2.convertedLeads}}</td>\r",
+									"        <td>{{response.data.userData.2.coldLeads}}</td>\r",
+									"        <td>{{response.data.userData.2.target}}</td>\r",
+									"    </tr>\r",
+									"    <tr>\r",
+									"        <td>{{response.data.userData.3.firstName}}</td>\r",
+									"        <td>{{response.data.userData.3.lastName}}</td>\r",
+									"        <td>{{response.data.userData.3.totalLeads}}</td>\r",
+									"        <td>{{response.data.userData.3.totalCalls}}</td>\r",
+									"        <td>{{response.data.userData.3.uniqueCall}}</td>\r",
+									"        <td>{{response.data.userData.3.warmLeads}}</td>\r",
+									"        <td>{{response.data.userData.3.hotLeads}}</td>\r",
+									"        <td>{{response.data.userData.3.convertedLeads}}</td>\r",
+									"        <td>{{response.data.userData.3.coldLeads}}</td>\r",
+									"        <td>{{response.data.userData.3.target}}</td>\r",
+									"    </tr>\r",
+									"    <tr>\r",
+									"        <td>{{response.data.userData.4.firstName}}</td>\r",
+									"        <td>{{response.data.userData.4.lastName}}</td>\r",
+									"        <td>{{response.data.userData.4.totalLeads}}</td>\r",
+									"        <td>{{response.data.userData.4.totalCalls}}</td>\r",
+									"        <td>{{response.data.userData.4.uniqueCall}}</td>\r",
+									"        <td>{{response.data.userData.4.warmLeads}}</td>\r",
+									"        <td>{{response.data.userData.4.hotLeads}}</td>\r",
+									"        <td>{{response.data.userData.4.convertedLeads}}</td>\r",
+									"        <td>{{response.data.userData.4.coldLeads}}</td>\r",
+									"        <td>{{response.data.userData.4.target}}</td>\r",
+									"    </tr>\r",
+									"    <tr>\r",
+									"        <td>{{response.data.userData.5.firstName}}</td>\r",
+									"        <td>{{response.data.userData.5.lastName}}</td>\r",
+									"        <td>{{response.data.userData.5.totalLeads}}</td>\r",
+									"        <td>{{response.data.userData.5.totalCalls}}</td>\r",
+									"        <td>{{response.data.userData.5.uniqueCall}}</td>\r",
+									"        <td>{{response.data.userData.5.warmLeads}}</td>\r",
+									"        <td>{{response.data.userData.5.hotLeads}}</td>\r",
+									"        <td>{{response.data.userData.5.convertedLeads}}</td>\r",
+									"        <td>{{response.data.userData.5.coldLeads}}</td>\r",
+									"        <td>{{response.data.userData.5.target}}</td>\r",
+									"    </tr>\r",
+									"    <tr>\r",
+									"        <td>{{response.data.userData.6.firstName}}</td>\r",
+									"        <td>{{response.data.userData.6.lastName}}</td>\r",
+									"        <td>{{response.data.userData.6.totalLeads}}</td>\r",
+									"        <td>{{response.data.userData.6.totalCalls}}</td>\r",
+									"        <td>{{response.data.userData.6.uniqueCall}}</td>\r",
+									"        <td>{{response.data.userData.6.warmLeads}}</td>\r",
+									"        <td>{{response.data.userData.6.hotLeads}}</td>\r",
+									"        <td>{{response.data.userData.6.convertedLeads}}</td>\r",
+									"        <td>{{response.data.userData.6.coldLeads}}</td>\r",
+									"        <td>{{response.data.userData.6.target}}</td>\r",
+									"    </tr>\r",
+									"</table>\r",
+									"`;\r",
+									"\r",
+									"function constructVisualizerPayload() {\r",
+									"    return {response: pm.response.json()}\r",
+									"}\r",
+									"\r",
+									"pm.visualizer.set(template, constructVisualizerPayload());"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "a78ad020-8736-482e-9c9f-eb76c5d19d71",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}"
+							}
+						],
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/reports/stage-change?from=2025-10-01&to=2025-10-30&reportType=daily",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"reports",
+								"stage-change"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "2025-10-01"
+								},
+								{
+									"key": "to",
+									"value": "2025-10-30"
+								},
+								{
+									"key": "reportType",
+									"value": "daily",
+									"type": "text"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "76e96af2-a5a7-441b-8a81-8134ef8e832e"
+		},
+		{
+			"name": "Workflow",
+			"item": [
+				{
+					"name": "Get workflows",
+					"id": "588742f4-703f-4a89-8bdd-88e7be8361ba",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/workflow?isRecent=true",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"workflow"
+							],
+							"query": [
+								{
+									"key": "isRecent",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create workflows",
+					"id": "a79eb985-afc7-4d1e-960a-5588a93c01d1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}:{{port}}/api/v1/workflow"
+					},
+					"response": []
+				},
+				{
+					"name": "Update",
+					"id": "a126d0d7-ce4d-4e5b-99f0-03e5bd379cef",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							},
+							{
+								"key": "isRecent",
+								"value": "true",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/workflow/:id",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"workflow",
+								":id"
+							],
+							"variable": [
+								{
+									"id": "e9ee02e0-af17-4eb6-a76d-e4bd74678b64",
+									"key": "id",
+									"value": "66a1dae99cc0e03de27c9b5e"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "9c2974c9-341f-40bd-83b1-c6e3de9da916"
+		},
+		{
+			"name": "Call Recording",
+			"item": [
+				{
+					"name": "Get activity",
+					"id": "e1ad264c-4366-415e-8bf2-acda0aa2415b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/call-records/activity?from=2024-09-12&to=2024-09-12&user=661f65499a62d1c8cc0e4f45",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"call-records",
+								"activity"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "2024-09-12"
+								},
+								{
+									"key": "to",
+									"value": "2024-09-12"
+								},
+								{
+									"key": "user",
+									"value": "661f65499a62d1c8cc0e4f45",
+									"type": "text"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Answered",
+					"id": "c4f8cbae-e43b-47b6-a6e2-69283a9ba4ab",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/call-records/answered?from=2024-04-20&to=2024-04-30",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"call-records",
+								"answered"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "2024-04-20"
+								},
+								{
+									"key": "to",
+									"value": "2024-04-30"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get user activity",
+					"id": "a32ded5d-6659-43bc-9785-e17e783dbf8d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/call-records/user-activity?from=2024-04-20&to=2024-04-30",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"call-records",
+								"user-activity"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "2024-04-20"
+								},
+								{
+									"key": "to",
+									"value": "2024-04-30"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "99c01649-20d7-4e98-974e-df1cf2055f46"
+		},
+		{
+			"name": "external",
+			"item": [
+				{
+					"name": "lead",
+					"item": [
+						{
+							"name": "create lead",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "a7753cae-37cd-4593-be91-6d75c60eb513",
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"id": "c3f38027-cf16-4b5d-9ec9-ad6bdf1de757",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}"
+									},
+									{
+										"key": "clientId",
+										"value": "TTYQFDBY",
+										"type": "text"
+									},
+									{
+										"key": "secret",
+										"value": "AQJV4J4O3JPN6A4D5Q5I",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"leadData\": {\r\n        \"firstName\": \"tester\",\r\n        \"lastName\": \"Lead\",\r\n        \"email\": \"abhishek.new1@test.com\",\r\n        \"phone\": \"4747474748\",\r\n        \"isdCode\": \"91\",\r\n        \"state\": \"State Test\",\r\n        \"city\": \"cityTest\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{host}}:{{port}}/api/v1/external/lead"
+							},
+							"response": []
+						},
+						{
+							"name": "get lead",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "a7753cae-37cd-4593-be91-6d75c60eb513",
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"id": "d53b4161-2439-46f6-8e34-2599d4595387",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}"
+									},
+									{
+										"key": "clientId",
+										"value": "TTYQFDBY",
+										"type": "text"
+									},
+									{
+										"key": "secret",
+										"value": "AQJV4J4O3JPN6A4D5Q5I",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{host}}:{{port}}/api/v1/external/lead/:id",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"v1",
+										"external",
+										"lead",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "671c9508dcb3023562faaa05"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update lead data",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "a7753cae-37cd-4593-be91-6d75c60eb513",
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"id": "7c207458-5dda-4bf6-8527-2a4a170c79a6",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"leadData\": {\r\n        \"name\": \"shankar\",\r\n        \"email\": \"shankar@yopmal.com\",\r\n        \"countryCode\": 91,\r\n        \"phoneNumber\": 8840860355,\r\n        \"state\": \"Uttar Pradesh\",\r\n        \"city\": \"Varanasi\",\r\n        \"primaryCampaign\": \"noida\"\r\n    },\r\n    \"packageType\": \"\",\r\n    \"intrestedIn\": \"\",\r\n    \"assignedTo\": \"\",\r\n    \"status\": \"\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}:{{port}}/api/v1/external/lead/:id",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"v1",
+										"external",
+										"lead",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "6491dbf9e0b24e6b92e14870"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "7dff49c6-db64-489c-84d9-e760698c5baf"
+				}
+			],
+			"id": "9c0711d4-56e7-412b-b732-686a84d1c6cc"
+		},
+		{
+			"name": "Login by token",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a7753cae-37cd-4593-be91-6d75c60eb513",
+						"exec": [
+							"var jsonData = pm.response.json();\r",
+							"pm.environment.set(\"token\", jsonData.data.token);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"id": "bb99873d-fed9-41d3-a1c7-7601dfb10687",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Origin",
+						"value": "{{referer}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"token\": \"$2b$05$s1L2a3S4hrHkpm5LJwGneeo3P.zUcu0FqT.lDCZUokzkTlkFw3Xuox55s6vgm\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{host}}:{{port}}/api/v1/auth/login/token"
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a7753cae-37cd-4593-be91-6d75c60eb513",
+						"exec": [
+							"var jsonData = pm.response.json();\r",
+							"pm.environment.set(\"token\", jsonData.data.token);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"id": "bc2c44c0-086c-41e8-a331-c69d61817613",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Origin",
+						"value": "{{referer}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"admin@restthecase.com\",\r\n    \"password\": \"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/api/v1/auth/login",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"login"
+					],
+					"query": [
+						{
+							"key": "source",
+							"value": "CoachApp",
+							"description": "CoachApp | UserApp | WebApp",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Verify sso token",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a7753cae-37cd-4593-be91-6d75c60eb513",
+						"exec": [
+							"var jsonData = pm.response.json();\r",
+							"pm.environment.set(\"token\", jsonData.data.token);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"id": "06b3f09e-c74c-4bcf-9c4b-3abc87332151",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Origin",
+						"value": "{{referer}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"admin@restthecase.com\",\r\n    \"password\": \"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/api/v1/auth/sso/verify",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"sso",
+						"verify"
+					],
+					"query": [
+						{
+							"key": "source",
+							"value": "CoachApp",
+							"description": "CoachApp | UserApp | WebApp",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
