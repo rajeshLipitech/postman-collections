@@ -1,0 +1,1283 @@
+{
+	"info": {
+		"_postman_id": "a5be5877-71f8-4dfb-9c3c-f6b635d0ecd1",
+		"name": "Pune MIrror",
+		"description": "# Eshoppily API documents",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Me",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "03499e48-5752-4076-b963-23a297d11e4f",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "629c744d-7986-4106-81de-1323b1f34296",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}:{{port}}/api/v1//user/me",
+						"description": "Get LoggedIn User Information"
+					},
+					"response": []
+				},
+				{
+					"name": "Get List of users",
+					"id": "d6b56c29-fad8-4527-bc1b-3dbd554dc7ac",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"phone\": \"9899999999\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}/user"
+					},
+					"response": []
+				},
+				{
+					"name": "Create User",
+					"id": "add53715-ee71-401c-8382-300d29bbbbae",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"user@user.com\",\r\n    \"password\": \"password\",\r\n    \"confirmPassword\": \"password\",\r\n    \"role\": \"User\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}/user/create"
+					},
+					"response": []
+				},
+				{
+					"name": "Update user",
+					"id": "1a789fd5-0410-4805-825f-9f8a1a55a05f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"User Eshoppily\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/user/update",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"user",
+								"update"
+							],
+							"query": [
+								{
+									"key": "userId",
+									"value": "6126054a356ef44d3c59d013",
+									"description": "Admin user can update any other user profile by passing other user id in this field",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get User by id",
+					"id": "1c4768f7-52bf-4a39-acf9-55ec50ef1813",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/user/:id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"user",
+								":id"
+							],
+							"variable": [
+								{
+									"id": "8134e44d-b07f-4aa1-ad3b-8fd2cc50b1e4",
+									"key": "id",
+									"value": "6125fe7766c1df4e04867468"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update password",
+					"id": "816cef51-5391-4c2d-af30-b4cfd2e66369",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"currentPassword\":\"12345\",\r\n    \"newPassword\":\"password\",\r\n    \"confirmPassword\":\"password\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}/user/change-password"
+					},
+					"response": []
+				},
+				{
+					"name": "send reset password email",
+					"id": "3dbb180b-d581-49c0-94c3-e00fc0d61080",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"rajeshupadhayaya@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}/user/reset-password-mail"
+					},
+					"response": []
+				},
+				{
+					"name": "reset password",
+					"id": "9244ae9b-1666-49d8-8cd8-37027c327b85",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\":\"rajeshupadhayaya@gmail.com\",\r\n    \"password\":\"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}/user/reset-password"
+					},
+					"response": []
+				}
+			],
+			"id": "8c251b54-c08f-4a48-81ea-cc4b2ef24ebb",
+			"description": "## User Operations related API's"
+		},
+		{
+			"name": "Assets",
+			"item": [
+				{
+					"name": "User Public file upload",
+					"id": "44ff2bfe-5177-4747-81eb-1cb38938f6e5",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/rajes/Downloads/APT-6315B67E98430.pdf"
+								}
+							]
+						},
+						"url": "{{host}}:{{port1}}/api/v1/asset/upload"
+					},
+					"response": []
+				}
+			],
+			"id": "c19d6288-862b-4770-905c-55471ebc14dd"
+		},
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "Get category Detail",
+					"id": "fa3a84e6-6620-4628-8b86-522b1170e601",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/category/:slug",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"category",
+								":slug"
+							],
+							"variable": [
+								{
+									"id": "1f153543-eed3-438f-bc2c-cb29f96788aa",
+									"key": "slug",
+									"value": "category-1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get category List",
+					"id": "f442b629-9f9f-4fa6-b340-8956d41a2437",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}:{{port}}/api/v1/category"
+					},
+					"response": []
+				},
+				{
+					"name": "Get category List tree",
+					"id": "e93c3d7b-b43b-4e73-b365-28fc900bbaad",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}:{{port}}/api/v1/category"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Category",
+					"id": "8125ef79-3eeb-4121-a97c-6bbea8e98b23",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Category 1\",\r\n    \"description\": \"Test Descrtiption\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}:{{port}}/api/v1/category/create"
+					},
+					"response": []
+				},
+				{
+					"name": "Update category",
+					"id": "acf2b743-9830-4b31-8abd-bc6ccef7f4e8",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Test Category\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/category/:id",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"category",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "63ab12492968540654cc6fa7"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "72cd19bb-2f2f-4d9d-8cad-6c59971561fd"
+		},
+		{
+			"name": "Layout",
+			"item": [
+				{
+					"name": "Get layout Detail",
+					"id": "fba720d0-76b2-479c-ac8d-430e2bd94446",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port1}}/api/v1/layout/:slug",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port1}}",
+							"path": [
+								"api",
+								"v1",
+								"layout",
+								":slug"
+							],
+							"variable": [
+								{
+									"key": "slug",
+									"value": "home"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get category List",
+					"id": "b0af8605-2f37-4ab1-b15f-1e339d76f7b2",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}/category"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Layout",
+					"id": "efab22c7-b0da-4ab4-bb42-64d36950d08b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"home\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}:{{port1}}/api/v1/layout/create"
+					},
+					"response": []
+				},
+				{
+					"name": "Update layout",
+					"id": "d785728c-d023-46f2-ab4b-7f2e857a3c7f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"body\": {\n        \"headlines\": [\n            \"636bca20e9b9c1211e80d031\",\n            \"636bca20e9b9c1211e80d082\",\n            \"636bca20e9b9c1211e80d070\",\n            \"636bc9913a06b59251da7b7d\"\n        ],\n        \"topStory\": [\n            \"636bc9913a06b59251da7bac\",\n            \"636bc9913a06b59251da7ba2\",\n            \"636bca20e9b9c1211e80d070\",\n            \"636bc9913a06b59251da7b7d\",\n            \"636bca2ee9b9c1211e80d24b\",\n            \"636bca2ee9b9c1211e80d200\"\n        ],\n        \"sections\": [\n            {\n                \"type\": \"Article\",\n                \"template\": \"template-1\",\n                \"articles\": [\n                    \"636bde44e9b9c1211e8296bb\",\n                    \"636bde45e9b9c1211e8296d2\",\n                    \"636bde2be9b9c1211e829405\",\n                    \"636bde2be9b9c1211e82942f\",\n                    \"636bde2be9b9c1211e82940e\",\n                    \"636bde1fe9b9c1211e8292bb\",\n                    \"636bcaade9b9c1211e80e0ed\",\n                    \"636bcaade9b9c1211e80e10c\"\n                ],\n                \"_id\": \"636bdeb28974898830337c49\",\n                \"category\": \"634acfb9e2c6db3ea8961101\",\n                \"name\": \"\",\n                \"color\": \"#sfdas\"\n            }\n        ],\n        \"coverStory\": \"636bca20e9b9c1211e80d070\"\n    },\n    \"_id\": \"636be7da33ac220187b779bd\",\n    \"discriminatorKey\": \"Home\",\n    \"name\": \"test\",\n    \"user\": \"631f446bbba0eed8beac0307\",\n    \"createdAt\": \"2022-09-13T19:14:08.487Z\",\n    \"updatedAt\": \"2022-09-13T19:14:08.487Z\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port1}}/api/v1/layout/:id",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port1}}",
+							"path": [
+								"api",
+								"v1",
+								"layout",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "636be7da33ac220187b779bd"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "c90b7055-f101-45c1-8bae-80b5311cce51"
+		},
+		{
+			"name": "Role",
+			"item": [
+				{
+					"name": "Get category Detail",
+					"id": "20960979-1ff2-45ef-8830-9b1c1152ce3e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port1}}/api/v1/role/:id",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port1}}",
+							"path": [
+								"api",
+								"v1",
+								"role",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "631b1aaa0f9cc328a27abd69"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get category List",
+					"id": "54227597-ad71-47ea-ab5d-2ed92868cfca",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port1}}/api/v1/role?status=Disable",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port1}}",
+							"path": [
+								"api",
+								"v1",
+								"role"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "Disable",
+									"type": "text"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Role",
+					"id": "95bd6dcd-55ec-422c-a50a-87d722f0ce7c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"ImageAndCategoryRole\",\r\n    \"modelPermissions\": {\r\n        \"Asset\": [\r\n            \"Read\",\r\n            \"Write\",\r\n            \"Edit\",\r\n            \"Remove\"\r\n        ],\r\n        \"Category\": [\r\n            \"Read\",\r\n            \"Write\",\r\n            \"Edit\",\r\n            \"Remove\"\r\n        ]\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}:{{port1}}/api/v1/role/create"
+					},
+					"response": []
+				},
+				{
+					"name": "Update category",
+					"id": "b52bfa24-4b77-494f-a3ab-bdf1c1fa7e0d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"modelPermissions\": {\n        \"Asset\": [\n            \"Read\",\n            \"Write\",\n            \"Edit\",\n            \"Remove\"\n        ],\n        \"Category\": [\n            \"Read\",\n            \"Write\",\n            \"Edit\",\n            \"Remove\"\n        ],\n        \"Epaper\": [\n            \"Read\",\n            \"Write\",\n            \"Edit\",\n            \"Remove\"\n        ]\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port1}}/api/v1/role//:id",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port1}}",
+							"path": [
+								"api",
+								"v1",
+								"role",
+								"",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "631b1aaa0f9cc328a27abd69"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "514e442b-dd3f-49e0-9eba-fd94836ed943"
+		},
+		{
+			"name": "CMS",
+			"item": [
+				{
+					"name": "Get CMS Detail",
+					"id": "fb33b7d3-a3fd-4af1-b0d2-0a25831109d1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/cms/detail/:id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"cms",
+								"detail",
+								":id"
+							],
+							"variable": [
+								{
+									"id": "fdccc916-6da0-4059-b216-d8ff933aedf2",
+									"key": "id",
+									"value": "612cd3b9247e420350920302"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get CMS Notification",
+					"id": "87d5473b-9945-4e76-a982-89a2a5ace27e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}:{{port1}}/api/v1/cms/notification"
+					},
+					"response": []
+				},
+				{
+					"name": "Get cms List",
+					"id": "0b358400-927f-4cc2-abf8-4e6e10df87b9",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/cms?type=Blog",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"cms"
+							],
+							"query": [
+								{
+									"key": "type",
+									"value": "Blog"
+								},
+								{
+									"key": "isRecent",
+									"value": "true",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Cms",
+					"id": "be889356-63f5-4a91-8538-313de8faf03f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"कौतुकास्पद! दिवसा अभ्यास करतो अन् रात्री सायकलवरून चहा विकतो; 'अशी' सुचली कल्पना\",\r\n    \"body\": [{\r\n        \"title\": \"कौतुकास्पद! दिवसा अभ्यास करतो अन् रात्री सायकलवरून चहा विकतो; 'अशी' सुचली कल्पना\",\r\n        \"body\": \"<h2>कौतुकास्पद! दिवसा अभ्यास करतो अन् रात्री सायकलवरून चहा विकतो; 'अशी' सुचली कल्पना</h2>\"\r\n    }],\r\n    \"type\": \"Blog\",\r\n    \"categories\":[\"634acfb9e2c6db3ea8961106\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}:{{port}}/api/v1/cms/create"
+					},
+					"response": []
+				},
+				{
+					"name": "Update cms",
+					"id": "4c8ca166-7e0a-44ed-97e9-2b34ba97a53f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"status\": \"Published\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port1}}/api/v1/cms/:id",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port1}}",
+							"path": [
+								"api",
+								"v1",
+								"cms",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "631a2b73aef72f258e628d61"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "667759b7-4e81-4255-a424-8c3f3ccbd092",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						],
+						"id": "20f49b3b-c6c5-4f4f-8df0-0e5a476d8292"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						],
+						"id": "3680656c-6684-43cd-86c6-be5a16a5467f"
+					}
+				}
+			]
+		},
+		{
+			"name": "Menus",
+			"item": [
+				{
+					"name": "Get Menu Detail",
+					"id": "2769796f-2f84-4c14-8b56-3bc9df2bab35",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}/menu"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Active Menu Detail",
+					"id": "98449a7a-b75b-4bc0-9813-d766f4236fb8",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}/menu/active"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Menu",
+					"id": "e9b76156-4dd8-4ddd-a6c7-03252c537559",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Menu 1\",\r\n    \"items\": [{\r\n        \"name\": \"Category 1\",\r\n        \"url\": \"/category/category-1\",\r\n        \"position\": 1,\r\n        \"menuType\": \"Category\"\r\n    }]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}/menu/create"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Menu",
+					"id": "ce2c5d9a-f373-4e93-9466-eec51f1330d3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Menu 1\",\n    \"items\": [\n        {\n            \"name\": \"Category 1\",\n            \"url\": \"/category/category-1\",\n            \"position\": 1,\n            \"menuType\": \"Category\"\n        },\n        {\n            \"name\": \"Category 2\",\n            \"url\": \"/category/category-2\",\n            \"position\": 2,\n            \"menuType\": \"Category\"\n        }\n    \n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/menu/:id",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"menu",
+								":id"
+							],
+							"variable": [
+								{
+									"id": "76a0cf4a-a451-4038-9f01-25f0a8eee233",
+									"key": "id",
+									"value": "612cd1469d0473530080c104"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "0ba8df03-7c5c-4e23-b080-c2dd87cccdb0",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						],
+						"id": "3a64b36e-49d2-44e5-8e08-f450e4d132b5"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						],
+						"id": "1d2a97fc-a1bd-4484-876f-be96bed42987"
+					}
+				}
+			]
+		},
+		{
+			"name": "User Login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a7753cae-37cd-4593-be91-6d75c60eb513",
+						"exec": [
+							"var jsonData = pm.response.json();\r",
+							"pm.environment.set(\"token\", jsonData.data.token);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"id": "adaf9ef0-2359-4991-bda4-e61fafa72f1b",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"admin@punemirror.com\",\r\n    \"password\": \"password\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{host}}:{{port1}}/api/v1/auth/login"
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "468bfc24-5b87-4119-8e7c-0b32d601f74f",
+						"exec": [
+							"var jsonData = pm.response.json();\r",
+							"pm.environment.set(\"token\", jsonData.data.token);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"id": "216e4273-f933-47f1-a2b7-3d585458ec27",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": ""
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"user1@user.com\",\r\n    \"password\": \"12345\",\r\n    \"confirmPassword\": \"12345\",\r\n    \"role\": \"User\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{host}}:{{port}}/api/v1/auth/register"
+			},
+			"response": []
+		}
+	]
+}
