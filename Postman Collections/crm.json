@@ -12208,7 +12208,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"configuration\": {\r\n        \"durationType\": \"Monthly\",\r\n        \"variableInput\": \"Time\"\r\n    }\r\n}",
+							"raw": "{\r\n    \"configuration\": {\r\n        \"durationType\": \"Monthly\",\r\n        \"variableInput\": \"Time\",\r\n        \"prize\":{\r\n            \"first\": 500,\r\n            \"second\": 300,\r\n            \"third\": 200,\r\n            \"consolation\": 100\r\n        }\r\n    }\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -12420,6 +12420,51 @@
 								"challenge",
 								":id",
 								"leaderboard"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "65b77f6aa3b965f33bc8d685"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Publish leaderboard",
+					"id": "9e2e363e-726c-45c8-b1ae-75cf394741ee",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/challenge/:id/leaderboard/publish",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"challenge",
+								":id",
+								"leaderboard",
+								"publish"
 							],
 							"variable": [
 								{
