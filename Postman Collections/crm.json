@@ -12401,7 +12401,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Live class 1\",\r\n    \"mentor\": \"653e5e5abdf84a2080f12ba9\",\r\n    \"description\": \"Some live class\",\r\n    \"startDateTime\": \"2023-12-28 11:00\",\r\n    \"endDateTime\": \"2023-12-28 12:00\",\r\n    \"link\": \"https://meet.com\"\r\n}",
+							"raw": "{\r\n    \"date\": \"2025-01-13\",\r\n    \"users\": [\r\n        {\r\n            \"user\": \"6543b3e7e962542d79b7ecc5\",\r\n            \"score\": 150\r\n        },\r\n        {\r\n            \"user\": \"654c944a891c27495d9a7f7d\",\r\n            \"score\": 110\r\n        },\r\n        {\r\n            \"user\": \"654e6df24f22874ab5a6515c\",\r\n            \"score\": 140\r\n        },\r\n        {\r\n            \"user\": \"65661ef3d9078e17433b76e9\",\r\n            \"score\": 100\r\n        },\r\n        {\r\n            \"user\": \"6577e6765fada5022df65059\",\r\n            \"score\": 92\r\n        }\r\n    ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -12424,7 +12424,7 @@
 							"variable": [
 								{
 									"key": "id",
-									"value": ""
+									"value": "65b77f6aa3b965f33bc8d685"
 								}
 							]
 						}
