@@ -12454,7 +12454,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"date\": \"2025-01-12\",\r\n    \"users\": [\r\n        {\r\n            \"user\": \"6543b3e7e962542d79b7ecc5\",\r\n            \"score\": 120\r\n        },\r\n        {\r\n            \"user\": \"654c944a891c27495d9a7f7d\",\r\n            \"score\": 120\r\n        },\r\n        {\r\n            \"user\": \"654e6df24f22874ab5a6515c\",\r\n            \"score\": 150\r\n        },\r\n        {\r\n            \"user\": \"65661ef3d9078e17433b76e9\",\r\n            \"score\": 80\r\n        },\r\n        {\r\n            \"user\": \"6577e6765fada5022df65059\",\r\n            \"score\": 90\r\n        }\r\n    ]\r\n}",
+							"raw": "{\r\n    \"date\": \"2025-01-12\",\r\n    \"users\": [\r\n        {\r\n            \"user\": \"6543b3e7e962542d79b7ecc5\",\r\n            \"score\": 120\r\n        },\r\n        {\r\n            \"user\": \"654c944a891c27495d9a7f7d\",\r\n            \"score\": 130\r\n        },\r\n        {\r\n            \"user\": \"654e6df24f22874ab5a6515c\",\r\n            \"score\": 150\r\n        },\r\n        {\r\n            \"user\": \"65661ef3d9078e17433b76e9\",\r\n            \"score\": 80\r\n        },\r\n        {\r\n            \"user\": \"6577e6765fada5022df65059\",\r\n            \"score\": 90\r\n        }\r\n    ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
