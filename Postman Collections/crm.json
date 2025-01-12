@@ -12208,7 +12208,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Challenge 1\"\r\n}",
+							"raw": "{\r\n    \"configuration\": {\r\n        \"durationType\": \"Monthly\",\r\n        \"variableInput\": \"Time\"\r\n    }\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -12230,7 +12230,7 @@
 							"variable": [
 								{
 									"key": "id",
-									"value": "6574b8fd5528f33e1e833970"
+									"value": "65b77f6aa3b965f33bc8d685"
 								}
 							]
 						}
