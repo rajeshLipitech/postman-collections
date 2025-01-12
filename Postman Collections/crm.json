@@ -12433,7 +12433,7 @@
 					"response": []
 				},
 				{
-					"name": "Get leaderboards for a challenge",
+					"name": "Get all leaderboards",
 					"id": "3a5054f8-6029-4287-a32e-c050ee1786ee",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -12445,7 +12445,7 @@
 								"token": "{{token}}"
 							}
 						},
-						"method": "POST",
+						"method": "GET",
 						"header": [
 							{
 								"key": "Origin",
@@ -12453,15 +12453,6 @@
 								"type": "text"
 							}
 						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Live class 1\",\r\n    \"mentor\": \"653e5e5abdf84a2080f12ba9\",\r\n    \"description\": \"Some live class\",\r\n    \"startDateTime\": \"2023-12-28 11:00\",\r\n    \"endDateTime\": \"2023-12-28 12:00\",\r\n    \"link\": \"https://meet.com\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
 						"url": {
 							"raw": "{{host}}:{{port}}/api/v1/challenge/:id/leaderboard",
 							"host": [
@@ -12477,7 +12468,6 @@
 							],
 							"variable": [
 								{
-									"id": "b3a7eb3a-db3a-47d4-88e9-ce50fe04081f",
 									"key": "id",
 									"value": ""
 								}
