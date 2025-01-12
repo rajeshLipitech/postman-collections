@@ -12445,7 +12445,7 @@
 								"token": "{{token}}"
 							}
 						},
-						"method": "POST",
+						"method": "PATCH",
 						"header": [
 							{
 								"key": "Origin",
@@ -12463,7 +12463,7 @@
 							}
 						},
 						"url": {
-							"raw": "{{host}}:{{port}}/api/v1/challenge/:id/leaderboard",
+							"raw": "{{host}}:{{port}}/api/v1/challenge/:id/leaderboard/:leaderBoardId",
 							"host": [
 								"{{host}}"
 							],
@@ -12473,12 +12473,17 @@
 								"v1",
 								"challenge",
 								":id",
-								"leaderboard"
+								"leaderboard",
+								":leaderBoardId"
 							],
 							"variable": [
 								{
 									"key": "id",
 									"value": "65b77f6aa3b965f33bc8d685"
+								},
+								{
+									"key": "leaderBoardId",
+									"value": "6783a88208811686ee7d21b9"
 								}
 							]
 						}
@@ -12522,7 +12527,7 @@
 							"variable": [
 								{
 									"key": "id",
-									"value": ""
+									"value": "65b77f6aa3b965f33bc8d685"
 								}
 							]
 						}
