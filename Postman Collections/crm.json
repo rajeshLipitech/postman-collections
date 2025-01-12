@@ -12109,6 +12109,212 @@
 			"name": "Challenge",
 			"item": [
 				{
+					"name": "leaderboard",
+					"item": [
+						{
+							"name": "Add leaderboard",
+							"id": "b737a2ef-7c9f-4a6e-a60f-5e46801ff3f9",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"date\": \"2025-01-13\",\r\n    \"users\": [\r\n        {\r\n            \"user\": \"6543b3e7e962542d79b7ecc5\",\r\n            \"score\": 150\r\n        },\r\n        {\r\n            \"user\": \"654c944a891c27495d9a7f7d\",\r\n            \"score\": 110\r\n        },\r\n        {\r\n            \"user\": \"654e6df24f22874ab5a6515c\",\r\n            \"score\": 140\r\n        },\r\n        {\r\n            \"user\": \"65661ef3d9078e17433b76e9\",\r\n            \"score\": 100\r\n        },\r\n        {\r\n            \"user\": \"6577e6765fada5022df65059\",\r\n            \"score\": 92\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}:{{port}}/api/v1/challenge/:id/leaderboard",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"v1",
+										"challenge",
+										":id",
+										"leaderboard"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "65b77f6aa3b965f33bc8d685"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Publish leaderboard",
+							"id": "9e2e363e-726c-45c8-b1ae-75cf394741ee",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{host}}:{{port}}/api/v1/challenge/:id/leaderboard/publish",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"v1",
+										"challenge",
+										":id",
+										"leaderboard",
+										"publish"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "65b77f6aa3b965f33bc8d685"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update leaderboard",
+							"id": "785c297b-3b3f-4434-bd9a-cdb8a2cd6cc3",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"date\": \"2025-01-12\",\r\n    \"users\": [\r\n        {\r\n            \"user\": \"6543b3e7e962542d79b7ecc5\",\r\n            \"score\": 120\r\n        },\r\n        {\r\n            \"user\": \"654c944a891c27495d9a7f7d\",\r\n            \"score\": 130\r\n        },\r\n        {\r\n            \"user\": \"654e6df24f22874ab5a6515c\",\r\n            \"score\": 150\r\n        },\r\n        {\r\n            \"user\": \"65661ef3d9078e17433b76e9\",\r\n            \"score\": 80\r\n        },\r\n        {\r\n            \"user\": \"6577e6765fada5022df65059\",\r\n            \"score\": 90\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}:{{port}}/api/v1/challenge/:id/leaderboard/:leaderBoardId",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"v1",
+										"challenge",
+										":id",
+										"leaderboard",
+										":leaderBoardId"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "65b77f6aa3b965f33bc8d685"
+										},
+										{
+											"key": "leaderBoardId",
+											"value": "6783a88208811686ee7d21b9"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get all leaderboards",
+							"id": "3a5054f8-6029-4287-a32e-c050ee1786ee",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{host}}:{{port}}/api/v1/challenge/:id/leaderboard",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"v1",
+										"challenge",
+										":id",
+										"leaderboard"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "65b77f6aa3b965f33bc8d685"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "1c7157e6-e4c7-427e-84df-11da725f321b"
+				},
+				{
 					"name": "Create Challenge",
 					"id": "6ad464da-a9d2-41c2-acbd-d02b889769ac",
 					"protocolProfileBehavior": {
@@ -12372,206 +12578,6 @@
 									"id": "29f1192f-54c8-41c1-bf98-3ba5a770449c",
 									"key": "id",
 									"value": ""
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Add leaderboard",
-					"id": "b737a2ef-7c9f-4a6e-a60f-5e46801ff3f9",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": {
-								"token": "{{token}}"
-							}
-						},
-						"method": "POST",
-						"header": [
-							{
-								"key": "Origin",
-								"value": "{{referer}}",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"date\": \"2025-01-13\",\r\n    \"users\": [\r\n        {\r\n            \"user\": \"6543b3e7e962542d79b7ecc5\",\r\n            \"score\": 150\r\n        },\r\n        {\r\n            \"user\": \"654c944a891c27495d9a7f7d\",\r\n            \"score\": 110\r\n        },\r\n        {\r\n            \"user\": \"654e6df24f22874ab5a6515c\",\r\n            \"score\": 140\r\n        },\r\n        {\r\n            \"user\": \"65661ef3d9078e17433b76e9\",\r\n            \"score\": 100\r\n        },\r\n        {\r\n            \"user\": \"6577e6765fada5022df65059\",\r\n            \"score\": 92\r\n        }\r\n    ]\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{host}}:{{port}}/api/v1/challenge/:id/leaderboard",
-							"host": [
-								"{{host}}"
-							],
-							"port": "{{port}}",
-							"path": [
-								"api",
-								"v1",
-								"challenge",
-								":id",
-								"leaderboard"
-							],
-							"variable": [
-								{
-									"key": "id",
-									"value": "65b77f6aa3b965f33bc8d685"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Publish leaderboard",
-					"id": "9e2e363e-726c-45c8-b1ae-75cf394741ee",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": {
-								"token": "{{token}}"
-							}
-						},
-						"method": "POST",
-						"header": [
-							{
-								"key": "Origin",
-								"value": "{{referer}}",
-								"type": "text"
-							}
-						],
-						"url": {
-							"raw": "{{host}}:{{port}}/api/v1/challenge/:id/leaderboard/publish",
-							"host": [
-								"{{host}}"
-							],
-							"port": "{{port}}",
-							"path": [
-								"api",
-								"v1",
-								"challenge",
-								":id",
-								"leaderboard",
-								"publish"
-							],
-							"variable": [
-								{
-									"key": "id",
-									"value": "65b77f6aa3b965f33bc8d685"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Update leaderboard",
-					"id": "785c297b-3b3f-4434-bd9a-cdb8a2cd6cc3",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": {
-								"token": "{{token}}"
-							}
-						},
-						"method": "PATCH",
-						"header": [
-							{
-								"key": "Origin",
-								"value": "{{referer}}",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"date\": \"2025-01-12\",\r\n    \"users\": [\r\n        {\r\n            \"user\": \"6543b3e7e962542d79b7ecc5\",\r\n            \"score\": 120\r\n        },\r\n        {\r\n            \"user\": \"654c944a891c27495d9a7f7d\",\r\n            \"score\": 130\r\n        },\r\n        {\r\n            \"user\": \"654e6df24f22874ab5a6515c\",\r\n            \"score\": 150\r\n        },\r\n        {\r\n            \"user\": \"65661ef3d9078e17433b76e9\",\r\n            \"score\": 80\r\n        },\r\n        {\r\n            \"user\": \"6577e6765fada5022df65059\",\r\n            \"score\": 90\r\n        }\r\n    ]\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{host}}:{{port}}/api/v1/challenge/:id/leaderboard/:leaderBoardId",
-							"host": [
-								"{{host}}"
-							],
-							"port": "{{port}}",
-							"path": [
-								"api",
-								"v1",
-								"challenge",
-								":id",
-								"leaderboard",
-								":leaderBoardId"
-							],
-							"variable": [
-								{
-									"key": "id",
-									"value": "65b77f6aa3b965f33bc8d685"
-								},
-								{
-									"key": "leaderBoardId",
-									"value": "6783a88208811686ee7d21b9"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Get all leaderboards",
-					"id": "3a5054f8-6029-4287-a32e-c050ee1786ee",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": {
-								"token": "{{token}}"
-							}
-						},
-						"method": "GET",
-						"header": [
-							{
-								"key": "Origin",
-								"value": "{{referer}}",
-								"type": "text"
-							}
-						],
-						"url": {
-							"raw": "{{host}}:{{port}}/api/v1/challenge/:id/leaderboard",
-							"host": [
-								"{{host}}"
-							],
-							"port": "{{port}}",
-							"path": [
-								"api",
-								"v1",
-								"challenge",
-								":id",
-								"leaderboard"
-							],
-							"variable": [
-								{
-									"key": "id",
-									"value": "65b77f6aa3b965f33bc8d685"
 								}
 							]
 						}
