@@ -159,6 +159,64 @@
 					"id": "9c3044e3-78b3-4a54-acc2-04645543f5ef"
 				},
 				{
+					"name": "Passbook",
+					"item": [
+						{
+							"name": "Get passbook",
+							"id": "c28198ab-234b-464f-a496-2b5e070707a4",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}:{{port}}/api/v1/user/passbook?user=6543b3e7e962542d79b7ecc5",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"passbook"
+									],
+									"query": [
+										{
+											"key": "user",
+											"value": "6543b3e7e962542d79b7ecc5"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "ca0686ef-43e3-4d26-a250-96cf9e84f6c3"
+				},
+				{
 					"name": "Targets",
 					"item": [
 						{
