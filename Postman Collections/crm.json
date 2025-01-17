@@ -14771,6 +14771,52 @@
 					"response": []
 				},
 				{
+					"name": "Exercise",
+					"id": "03df9964-e48d-43a0-b040-88a9f7e2534b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}"
+							}
+						],
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/reports/payment?from=2024-03-01&to=2024-06-30",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"reports",
+								"payment"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "2024-03-01"
+								},
+								{
+									"key": "to",
+									"value": "2024-06-30"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "campaign",
 					"id": "c416aa1e-6096-404f-a11b-19d59d989e5a",
 					"protocolProfileBehavior": {
