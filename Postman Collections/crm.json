@@ -14771,7 +14771,7 @@
 					"response": []
 				},
 				{
-					"name": "Exercise",
+					"name": "Exercise Plan",
 					"id": "03df9964-e48d-43a0-b040-88a9f7e2534b",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -14791,7 +14791,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{host}}:{{port}}/api/v1/reports/payment?from=2024-03-01&to=2024-06-30",
+							"raw": "{{host}}:{{port}}/api/v1/reports/exercise?from=2025-01-01&to=2025-01-31&branch=655de9467d0200c2944cb68b",
 							"host": [
 								"{{host}}"
 							],
@@ -14800,16 +14800,20 @@
 								"api",
 								"v1",
 								"reports",
-								"payment"
+								"exercise"
 							],
 							"query": [
 								{
 									"key": "from",
-									"value": "2024-03-01"
+									"value": "2025-01-01"
 								},
 								{
 									"key": "to",
-									"value": "2024-06-30"
+									"value": "2025-01-31"
+								},
+								{
+									"key": "branch",
+									"value": "655de9467d0200c2944cb68b"
 								}
 							]
 						}
