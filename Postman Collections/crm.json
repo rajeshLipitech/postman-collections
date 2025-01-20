@@ -15446,6 +15446,55 @@
 			"name": "Notifications",
 			"item": [
 				{
+					"name": "marketing",
+					"item": [
+						{
+							"name": "Get list",
+							"id": "5c3d0e18-f9d0-40c1-8b18-0a9ee657c3e3",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{host}}:{{port}}/api/v1/notification/marketing?isRecent=true",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"v1",
+										"notification",
+										"marketing"
+									],
+									"query": [
+										{
+											"key": "isRecent",
+											"value": "true"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "4d859274-702f-4560-8935-d8fbf6bd0b35"
+				},
+				{
 					"name": "Get notifications",
 					"id": "2f2c5580-1ffa-441a-8681-c1657b5dfc48",
 					"protocolProfileBehavior": {
@@ -16523,6 +16572,36 @@
 				}
 			},
 			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": {
+			"token": "{{token}}"
+		}
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "91764bc1-1a21-4a88-81c2-dc507aa02a4d",
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "f1c59ed5-6525-4dbc-8cdc-c995d183f4f9",
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
 		}
 	]
 }
