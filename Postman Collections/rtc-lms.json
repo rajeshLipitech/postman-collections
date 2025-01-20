@@ -4598,12 +4598,13 @@
 					{
 						"key": "Origin",
 						"value": "{{referer}}",
-						"type": "text"
+						"type": "text",
+						"disabled": true
 					}
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"email\": \"admin@restthecase.com\",\r\n    \"password\": \"password\"\r\n}",
+					"raw": "{\r\n    \"email\": \"admin@restthecase.com\",\r\n    \"password\": \"Superadminrtc@123\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
