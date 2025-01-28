@@ -4707,7 +4707,34 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "https://api.chatbot.lipihipi.com/conversations"
+				"url": {
+					"raw": "https://api.chatbot.lipihipi.com/conversations/:leadId",
+					"protocol": "https",
+					"host": [
+						"api",
+						"chatbot",
+						"lipihipi",
+						"com"
+					],
+					"path": [
+						"conversations",
+						":leadId"
+					],
+					"query": [
+						{
+							"key": "leadId",
+							"value": "671c9508dcb3023562faaa05",
+							"type": "text",
+							"disabled": true
+						}
+					],
+					"variable": [
+						{
+							"key": "leadId",
+							"value": "66da8e280d6c1d08edda5b01"
+						}
+					]
+				}
 			},
 			"response": []
 		},
