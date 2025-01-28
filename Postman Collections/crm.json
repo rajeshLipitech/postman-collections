@@ -12642,6 +12642,50 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Subscribe",
+					"id": "ee9ce08e-b3af-475b-8ea1-b6cc495bc1c8",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/challenge/subscribe/:id",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"challenge",
+								"subscribe",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "67061bc0f55e43a8a4ed7413"
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			],
 			"id": "56a22519-7e52-4b0e-8f11-1c6ff627a256"
