@@ -4697,6 +4697,49 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "chatbot conversations",
+			"id": "f55fff3f-aa05-46a1-b5a1-70908f8bcabd",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://api.chatbot.lipihipi.com/conversations"
+			},
+			"response": []
+		},
+		{
+			"name": "chatbot conversations (local)",
+			"id": "5db6f33d-439a-40fb-881f-bafcea055cbf",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/conversations/:leadId",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"conversations",
+						":leadId"
+					],
+					"variable": [
+						{
+							"key": "leadId",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }
