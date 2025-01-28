@@ -12396,7 +12396,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Live class 1\",\r\n    \"mentor\": \"653e5e5abdf84a2080f12ba9\",\r\n    \"description\": \"Some live class\",\r\n    \"startDateTime\": \"2023-12-28 11:00\",\r\n    \"endDateTime\": \"2023-12-28 12:00\",\r\n    \"link\": \"https://meet.com\"\r\n}",
+							"raw": "{\r\n    \"name\": \"Live class 1\",\r\n    \"mentor\": \"653e5e5abdf84a2080f12ba9\",\r\n    \"description\": \"Some live class\",\r\n    \"startDateTime\": \"2025-02-01 11:00\",\r\n    \"endDateTime\": \"2025-02-15 12:00\",\r\n    \"link\": \"https://meet.com\",\r\n    \"noOfSeats\": 100,\r\n    \"modeOfEvent\": \"Online\",\r\n    \"configuration\": {\r\n        \"durationType\": \"Monthly\",\r\n        \"variableInput\": \"Time\",\r\n        \"prize\":{\r\n            \"first\": 500,\r\n            \"second\": 300,\r\n            \"third\": 100,\r\n            \"consolation\": 50\r\n        }\r\n    }\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
