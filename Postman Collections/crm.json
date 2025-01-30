@@ -15368,7 +15368,7 @@
 							}
 						},
 						"url": {
-							"raw": "{{host}}:{{port}}/api/v1/attendance/:userId",
+							"raw": "{{host}}:{{port}}/api/v1/attendance?isRecent=true",
 							"host": [
 								"{{host}}"
 							],
@@ -15376,14 +15376,13 @@
 							"path": [
 								"api",
 								"v1",
-								"attendance",
-								":userId"
+								"attendance"
 							],
-							"variable": [
+							"query": [
 								{
-									"id": "83a19b73-98a2-4f7d-a738-b6a638fb9dfb",
-									"key": "userId",
-									"value": "660a3a8b52d8c26989edfd10"
+									"key": "isRecent",
+									"value": "true",
+									"type": "text"
 								}
 							]
 						}
