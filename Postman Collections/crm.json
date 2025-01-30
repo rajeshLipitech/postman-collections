@@ -15333,7 +15333,7 @@
 					"response": []
 				},
 				{
-					"name": "Get User attendance Copy",
+					"name": "Get My attendance",
 					"id": "d17050f6-38c2-4fa4-a251-2a88586e0ab0",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
