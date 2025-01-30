@@ -15333,6 +15333,64 @@
 					"response": []
 				},
 				{
+					"name": "Get User attendance Copy",
+					"id": "d17050f6-38c2-4fa4-a251-2a88586e0ab0",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							},
+							{
+								"key": "isRecent",
+								"value": "true",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user\": \"660a3a8b52d8c26989edfd10\",\r\n    \"branch\": \"657a9972fba39a328e37f216\",\r\n    \"inTime\": \"2024-04-04 10:00:00\",\r\n    \"date\": \"2024-04-04\",\r\n    \"status\": \"Present\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/attendance/:userId",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"attendance",
+								":userId"
+							],
+							"variable": [
+								{
+									"id": "83a19b73-98a2-4f7d-a738-b6a638fb9dfb",
+									"key": "userId",
+									"value": "660a3a8b52d8c26989edfd10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Get All attendance",
 					"event": [
 						{
