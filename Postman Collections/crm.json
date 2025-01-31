@@ -15591,6 +15591,85 @@
 								}
 							},
 							"response": []
+						},
+						{
+							"name": "Get list Copy",
+							"id": "afb42d06-e7af-406d-8ab2-b088a91c10b1",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"target\": \"Trainer\",\r\n    \"branches\": [\r\n        \"653ba3402619321c25d76fa8\"\r\n    ],\r\n    \"title\": \"Test Notification\",\r\n    \"text\": \"This is test\",\r\n    \"image\": \"679c5b7a4dd56d1936d415ce\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{host}}:{{port}}/api/v1/notification/marketing"
+							},
+							"response": []
+						},
+						{
+							"name": "Publish",
+							"id": "995b8e37-e9b1-403f-8f2a-295ac9355b02",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{host}}:{{port}}/api/v1/notification/marketing/publish/:id",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"v1",
+										"notification",
+										"marketing",
+										"publish",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "679c5b7d4dd56d1936d415d0"
+										}
+									]
+								}
+							},
+							"response": []
 						}
 					],
 					"id": "4d859274-702f-4560-8935-d8fbf6bd0b35"
