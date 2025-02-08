@@ -9288,7 +9288,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{host}}:{{port}}/api/v1/social-app/meta-ad/:id?sync=true",
+									"raw": "{{host}}:{{port}}/api/v1/social-app/meta-ad/:id",
 									"host": [
 										"{{host}}"
 									],
@@ -9304,13 +9304,14 @@
 										{
 											"key": "sync",
 											"value": "true",
-											"description": "This field is used if we need to sync form data with meta"
+											"description": "This field is used if we need to sync form data with meta",
+											"disabled": true
 										}
 									],
 									"variable": [
 										{
 											"key": "id",
-											"value": "657f3513dc4c1b514375a6d5"
+											"value": "65a0dc21871c6fe9dd7eae1f"
 										}
 									]
 								}
