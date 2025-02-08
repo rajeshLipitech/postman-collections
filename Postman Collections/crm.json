@@ -9251,6 +9251,147 @@
 					"id": "dd408730-5616-41df-b1a8-a7d5d768c9d1"
 				},
 				{
+					"name": "Meta Ads",
+					"item": [
+						{
+							"name": "Get Ads for a app",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "a7753cae-37cd-4593-be91-6d75c60eb513",
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"id": "9a1364fc-2c3f-403b-82c0-959288916532",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{host}}:{{port}}/api/v1/social-app/meta-ad/:id?sync=true",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"v1",
+										"social-app",
+										"meta-ad",
+										":id"
+									],
+									"query": [
+										{
+											"key": "sync",
+											"value": "true",
+											"description": "This field is used if we need to sync form data with meta"
+										}
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "657f3513dc4c1b514375a6d5"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Add mapping in meta-ad",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "a7753cae-37cd-4593-be91-6d75c60eb513",
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"id": "c08ee4dc-391b-46bc-b958-e861600f1118",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"adId\": \"898724295129046\",\r\n    \"branch\": \"\",\r\n    \"isMappingCompleted\": true,\r\n    \"appId\": \"657f3513dc4c1b514375a6d5\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}:{{port}}/api/v1/social-app/meta-ad/:appId/:id",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"v1",
+										"social-app",
+										"meta-ad",
+										":appId",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "appId",
+											"value": "657f3513dc4c1b514375a6d5"
+										},
+										{
+											"key": "id",
+											"value": "65813521a82357cfed10de05"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "917655a5-58c9-4be7-9278-0c55a40b96ba"
+				},
+				{
 					"name": "WBA",
 					"item": [
 						{
