@@ -16489,7 +16489,7 @@
 							"response": []
 						},
 						{
-							"name": "Update Role Copy",
+							"name": "Update Partner",
 							"id": "9f47ed0f-bc2a-4a0f-8877-140e51c4e070",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -16519,7 +16519,7 @@
 									}
 								},
 								"url": {
-									"raw": "{{host}}:{{port}}/api/v1/role//:id",
+									"raw": "{{host}}:{{port}}/api/v1/partner/:id",
 									"host": [
 										"{{host}}"
 									],
@@ -16527,13 +16527,11 @@
 									"path": [
 										"api",
 										"v1",
-										"role",
-										"",
+										"partner",
 										":id"
 									],
 									"variable": [
 										{
-											"id": "a8a91151-5d29-47d2-992a-51aa5dc0391d",
 											"key": "id",
 											"value": "631b1aaa0f9cc328a27abd69"
 										}
