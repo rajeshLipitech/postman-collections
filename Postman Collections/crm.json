@@ -16511,7 +16511,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"modelPermissions\": {\n        \"Asset\": [\n            \"Read\",\n            \"Write\",\n            \"Edit\",\n            \"Remove\"\n        ],\n        \"Category\": [\n            \"Read\",\n            \"Write\",\n            \"Edit\",\n            \"Remove\"\n        ],\n        \"Epaper\": [\n            \"Read\",\n            \"Write\",\n            \"Edit\",\n            \"Remove\"\n        ]\n    }\n}",
+									"raw": "{\n    \"gst\": \"AXDKS55485YY\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -16533,7 +16533,7 @@
 									"variable": [
 										{
 											"key": "id",
-											"value": "631b1aaa0f9cc328a27abd69"
+											"value": "67c1ccf2e5d9c78eb5d9f0c0"
 										}
 									]
 								}
