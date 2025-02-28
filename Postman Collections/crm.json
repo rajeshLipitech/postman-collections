@@ -16477,7 +16477,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"name\":\"ImageAndUserRole\",\r\n    \"modelPermissions\": {\r\n        \"Asset\": [\r\n            \"Read\",\r\n            \"Write\",\r\n            \"Edit\",\r\n            \"Remove\"\r\n        ],\r\n        \"User\": [\r\n            \"Read\",\r\n            \"Write\",\r\n            \"Edit\",\r\n            \"Remove\"\r\n        ]\r\n    }\r\n}",
+									"raw": "{\r\n    \"name\": \"Mac Donald's\",\r\n    \"phone\": \"9999999991\",\r\n    \"email\": \"macd@gmail.com\",\r\n    \"gst\": \"BXDKS55485SS\",\r\n    \"pan\": \"XI09IIS0SS\",\r\n    \"website\": \"https://macd.com/in\",\r\n    \"category\": \"Food\",\r\n    \"about\": \"We are burger company\",\r\n    \"address\": {\r\n        \"line1\": \"Delhi\",\r\n        \"pincode\": \"1234\",\r\n        \"city\": \"Delhi\",\r\n        \"state\": \"Delhi\"\r\n    }\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
