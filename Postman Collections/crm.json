@@ -16673,7 +16673,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"name\": \"75% off on Burger\",\r\n    \"type\": \"Private\",\r\n    \"discount\": {\r\n        \"value\": 20\r\n    },\r\n    \"usage\": {\r\n        \"value\": 12,\r\n        \"type\": \"Yearly\" // Monthly\r\n    },\r\n    \"endDate\": \"2025-12-31\",\r\n    \"status\": \"ACTIVE\",\r\n    \"partner\": \"\",\r\n    \"description\": \"These are terms and conditions\"\r\n}",
+									"raw": "{\r\n    \"name\": \"75% off on Burger\",\r\n    \"type\": \"Private\",\r\n    \"discount\": {\r\n        \"value\": 20\r\n    },\r\n    \"usage\": {\r\n        \"value\": 12,\r\n        \"type\": \"Yearly\" // Monthly\r\n    },\r\n    \"endDate\": \"2025-12-31\",\r\n    \"status\": \"ACTIVE\",\r\n    \"partner\": \"67c1ccf2e5d9c78eb5d9f0c0\",\r\n    \"description\": \"These are terms and conditions\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
