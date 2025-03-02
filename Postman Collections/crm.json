@@ -16547,7 +16547,7 @@
 					"name": "Offers",
 					"item": [
 						{
-							"name": "Get Partner detail",
+							"name": "Get Offer detail",
 							"id": "f27cefe3-55c5-45e1-95b6-6c822183a9af",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -16577,7 +16577,7 @@
 									}
 								},
 								"url": {
-									"raw": "{{host}}:{{port}}/api/v1/partner/:id",
+									"raw": "{{host}}:{{port}}/api/v1/offer/:id",
 									"host": [
 										"{{host}}"
 									],
@@ -16585,12 +16585,11 @@
 									"path": [
 										"api",
 										"v1",
-										"partner",
+										"offer",
 										":id"
 									],
 									"variable": [
 										{
-											"id": "988362da-8348-4c09-9236-0be6744bedb3",
 											"key": "id",
 											"value": "648b537f062978bb147b0556"
 										}
