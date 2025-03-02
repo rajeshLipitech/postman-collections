@@ -16542,6 +16542,204 @@
 						}
 					],
 					"id": "d8ed56c8-faa1-4441-b2df-1bc0e7c76bfb"
+				},
+				{
+					"name": "Offers",
+					"item": [
+						{
+							"name": "Get Partner detail",
+							"id": "f27cefe3-55c5-45e1-95b6-6c822183a9af",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}:{{port}}/api/v1/partner/:id",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"v1",
+										"partner",
+										":id"
+									],
+									"variable": [
+										{
+											"id": "988362da-8348-4c09-9236-0be6744bedb3",
+											"key": "id",
+											"value": "648b537f062978bb147b0556"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get offers List",
+							"id": "655c4c40-41d0-4bc0-a9b9-2ff426d41c58",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}:{{port}}/api/v1/offer",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"v1",
+										"offer"
+									],
+									"query": [
+										{
+											"key": "status",
+											"value": "Disable",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create Partner",
+							"id": "da839866-30a6-45a3-8f79-65c8e667d7d9",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Amritsari Dhaba\",\r\n    \"phone\": \"9999999992\",\r\n    \"email\": \"amritsari@gmail.com\",\r\n    \"gst\": \"KXDKS55485SS\",\r\n    \"pan\": \"KI09IIS0SS\",\r\n    \"website\": \"https://amritsari.in\",\r\n    \"category\": \"Food\",\r\n    \"about\": \"We are punjabi food company\",\r\n    \"address\": {\r\n        \"line1\": \"Delhi\",\r\n        \"pincode\": \"1234\",\r\n        \"city\": \"Delhi\",\r\n        \"state\": \"Delhi\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{host}}:{{port}}/api/v1/partner"
+							},
+							"response": []
+						},
+						{
+							"name": "Update Partner",
+							"id": "26d1bb24-22e5-45dc-9841-8bb9820e18e1",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"gst\": \"AXDKS55485YY\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}:{{port}}/api/v1/partner/:id",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"v1",
+										"partner",
+										":id"
+									],
+									"variable": [
+										{
+											"id": "1c0c1d64-e21d-4b22-8763-fc78c610fb0c",
+											"key": "id",
+											"value": "67c1ccf2e5d9c78eb5d9f0c0"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "811a5020-0c0a-4e70-97ab-1fa8ea848dcc"
 				}
 			],
 			"id": "ce46cd9e-a69f-40db-942c-c1f07bacb942"
