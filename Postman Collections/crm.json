@@ -16673,7 +16673,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"name\": \"Amritsari Dhaba\",\r\n    \"phone\": \"9999999992\",\r\n    \"email\": \"amritsari@gmail.com\",\r\n    \"gst\": \"KXDKS55485SS\",\r\n    \"pan\": \"KI09IIS0SS\",\r\n    \"website\": \"https://amritsari.in\",\r\n    \"category\": \"Food\",\r\n    \"about\": \"We are punjabi food company\",\r\n    \"address\": {\r\n        \"line1\": \"Delhi\",\r\n        \"pincode\": \"1234\",\r\n        \"city\": \"Delhi\",\r\n        \"state\": \"Delhi\"\r\n    }\r\n}",
+									"raw": "{\r\n    \"name\": \"75% off on Burger\",\r\n    \"type\": \"Private\",\r\n    \"discount\": {\r\n        \"value\": 20\r\n    },\r\n    \"usage\": {\r\n        \"value\": 12,\r\n        \"type\": \"Yearly\"\r\n    },\r\n    \"endDate\": \"2025-12-31\",\r\n    \"description\": \"These are terms and conditions\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
