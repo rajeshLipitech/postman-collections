@@ -16685,7 +16685,7 @@
 							"response": []
 						},
 						{
-							"name": "Update coupn",
+							"name": "Update offer",
 							"id": "26d1bb24-22e5-45dc-9841-8bb9820e18e1",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
