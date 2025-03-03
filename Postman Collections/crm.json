@@ -16767,7 +16767,7 @@
 									}
 								},
 								"url": {
-									"raw": "{{host}}:{{port}}/api/v1/coupon/purchase/:id",
+									"raw": "{{host}}:{{port}}/api/v1/offer/purchase/:id",
 									"host": [
 										"{{host}}"
 									],
@@ -16775,14 +16775,14 @@
 									"path": [
 										"api",
 										"v1",
-										"coupon",
+										"offer",
 										"purchase",
 										":id"
 									],
 									"variable": [
 										{
 											"key": "id",
-											"value": ""
+											"value": "67c32936a83e4d21ac16c6c6"
 										}
 									]
 								}
