@@ -16735,16 +16735,63 @@
 								}
 							},
 							"response": []
-						}
-					],
-					"id": "811a5020-0c0a-4e70-97ab-1fa8ea848dcc"
-				},
-				{
-					"name": "Coupon",
-					"item": [
+						},
 						{
-							"name": "Get my coupon list",
-							"id": "2d4b424d-51a3-4afd-8e8f-20b90d7f5b0a",
+							"name": "Purchase offer",
+							"id": "c2aed8ce-8d16-445d-851f-d7e9d52155d2",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"75% off on Burger\",\r\n    \"type\": \"Private\",\r\n    \"discount\": {\r\n        \"value\": 20\r\n    },\r\n    \"usage\": {\r\n        \"value\": 12,\r\n        \"type\": \"Yearly\" // Monthly\r\n    },\r\n    \"endDate\": \"2025-12-31\",\r\n    \"status\": \"ACTIVE\",\r\n    \"partner\": \"67c1ccf2e5d9c78eb5d9f0c0\",\r\n    \"description\": \"These are terms and conditions\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}:{{port}}/api/v1/coupon/purchase/:id",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"v1",
+										"coupon",
+										"purchase",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get exclusive offer list",
+							"id": "f6341918-af73-4128-b2a7-9b7804a20fb0",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -16773,7 +16820,7 @@
 									}
 								},
 								"url": {
-									"raw": "{{host}}:{{port}}/api/v1/coupon",
+									"raw": "{{host}}:{{port}}/api/v1/offer/private",
 									"host": [
 										"{{host}}"
 									],
@@ -16781,7 +16828,8 @@
 									"path": [
 										"api",
 										"v1",
-										"coupon"
+										"offer",
+										"private"
 									],
 									"query": [
 										{
@@ -16793,10 +16841,16 @@
 								}
 							},
 							"response": []
-						},
+						}
+					],
+					"id": "811a5020-0c0a-4e70-97ab-1fa8ea848dcc"
+				},
+				{
+					"name": "Coupon",
+					"item": [
 						{
-							"name": "Get exclusive coupon list",
-							"id": "f6341918-af73-4128-b2a7-9b7804a20fb0",
+							"name": "Get my coupon list",
+							"id": "2d4b424d-51a3-4afd-8e8f-20b90d7f5b0a",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -16892,59 +16946,6 @@
 											"key": "status",
 											"value": "Disable",
 											"disabled": true
-										}
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Purchase coupons",
-							"id": "c2aed8ce-8d16-445d-851f-d7e9d52155d2",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "{{token}}"
-									}
-								},
-								"method": "POST",
-								"header": [
-									{
-										"key": "Origin",
-										"value": "{{referer}}",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"name\": \"75% off on Burger\",\r\n    \"type\": \"Private\",\r\n    \"discount\": {\r\n        \"value\": 20\r\n    },\r\n    \"usage\": {\r\n        \"value\": 12,\r\n        \"type\": \"Yearly\" // Monthly\r\n    },\r\n    \"endDate\": \"2025-12-31\",\r\n    \"status\": \"ACTIVE\",\r\n    \"partner\": \"67c1ccf2e5d9c78eb5d9f0c0\",\r\n    \"description\": \"These are terms and conditions\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{host}}:{{port}}/api/v1/coupon/purchase/:id",
-									"host": [
-										"{{host}}"
-									],
-									"port": "{{port}}",
-									"path": [
-										"api",
-										"v1",
-										"coupon",
-										"purchase",
-										":id"
-									],
-									"variable": [
-										{
-											"key": "id",
-											"value": ""
 										}
 									]
 								}
