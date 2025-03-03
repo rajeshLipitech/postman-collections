@@ -16744,59 +16744,6 @@
 					"item": [
 						{
 							"name": "Get my coupon list",
-							"id": "95237326-b2d1-4113-82cc-7852983ab0fa",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "{{token}}"
-									}
-								},
-								"method": "GET",
-								"header": [
-									{
-										"key": "Origin",
-										"value": "{{referer}}",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{host}}:{{port}}/api/v1/offer/:id",
-									"host": [
-										"{{host}}"
-									],
-									"port": "{{port}}",
-									"path": [
-										"api",
-										"v1",
-										"offer",
-										":id"
-									],
-									"variable": [
-										{
-											"id": "a7f4f077-9a30-46ee-a4d6-eff96876bdb2",
-											"key": "id",
-											"value": "67c32936a83e4d21ac16c6c6"
-										}
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Get offers List",
 							"id": "2d4b424d-51a3-4afd-8e8f-20b90d7f5b0a",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -16826,7 +16773,7 @@
 									}
 								},
 								"url": {
-									"raw": "{{host}}:{{port}}/api/v1/offer",
+									"raw": "{{host}}:{{port}}/api/v1/coupon",
 									"host": [
 										"{{host}}"
 									],
@@ -16834,7 +16781,7 @@
 									"path": [
 										"api",
 										"v1",
-										"offer"
+										"coupon"
 									],
 									"query": [
 										{
@@ -16848,7 +16795,7 @@
 							"response": []
 						},
 						{
-							"name": "Create coupons",
+							"name": "Purchase coupons",
 							"id": "c2aed8ce-8d16-445d-851f-d7e9d52155d2",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -16877,60 +16824,7 @@
 										}
 									}
 								},
-								"url": "{{host}}:{{port}}/api/v1/partner"
-							},
-							"response": []
-						},
-						{
-							"name": "Update coupn",
-							"id": "87cf78b7-eed7-4844-b4de-e6b65fb67558",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "{{token}}"
-									}
-								},
-								"method": "PATCH",
-								"header": [
-									{
-										"key": "Origin",
-										"value": "{{referer}}",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"value\": 300\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{host}}:{{port}}/api/v1/offer/:id",
-									"host": [
-										"{{host}}"
-									],
-									"port": "{{port}}",
-									"path": [
-										"api",
-										"v1",
-										"offer",
-										":id"
-									],
-									"variable": [
-										{
-											"id": "1f9495ce-57b3-4576-aec3-cd32bc271497",
-											"key": "id",
-											"value": "67c32936a83e4d21ac16c6c6"
-										}
-									]
-								}
+								"url": "{{host}}:{{port}}/api/v1/coupon/purchase"
 							},
 							"response": []
 						}
