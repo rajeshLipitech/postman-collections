@@ -16591,7 +16591,7 @@
 									"variable": [
 										{
 											"key": "id",
-											"value": "648b537f062978bb147b0556"
+											"value": "67c32936a83e4d21ac16c6c6"
 										}
 									]
 								}
@@ -16601,58 +16601,6 @@
 						{
 							"name": "Get offers List",
 							"id": "655c4c40-41d0-4bc0-a9b9-2ff426d41c58",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "{{token}}"
-									}
-								},
-								"method": "GET",
-								"header": [
-									{
-										"key": "Origin",
-										"value": "{{referer}}",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{host}}:{{port}}/api/v1/offer",
-									"host": [
-										"{{host}}"
-									],
-									"port": "{{port}}",
-									"path": [
-										"api",
-										"v1",
-										"offer"
-									],
-									"query": [
-										{
-											"key": "status",
-											"value": "Disable",
-											"disabled": true
-										}
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Get offers List Copy",
-							"id": "88feaedf-61a2-40be-a905-46734aa9d131",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -16790,6 +16738,204 @@
 						}
 					],
 					"id": "811a5020-0c0a-4e70-97ab-1fa8ea848dcc"
+				},
+				{
+					"name": "Coupon",
+					"item": [
+						{
+							"name": "Get my coupon list",
+							"id": "95237326-b2d1-4113-82cc-7852983ab0fa",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}:{{port}}/api/v1/offer/:id",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"v1",
+										"offer",
+										":id"
+									],
+									"variable": [
+										{
+											"id": "a7f4f077-9a30-46ee-a4d6-eff96876bdb2",
+											"key": "id",
+											"value": "67c32936a83e4d21ac16c6c6"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get offers List",
+							"id": "2d4b424d-51a3-4afd-8e8f-20b90d7f5b0a",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}:{{port}}/api/v1/offer",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"v1",
+										"offer"
+									],
+									"query": [
+										{
+											"key": "status",
+											"value": "Disable",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Create coupons",
+							"id": "c2aed8ce-8d16-445d-851f-d7e9d52155d2",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"75% off on Burger\",\r\n    \"type\": \"Private\",\r\n    \"discount\": {\r\n        \"value\": 20\r\n    },\r\n    \"usage\": {\r\n        \"value\": 12,\r\n        \"type\": \"Yearly\" // Monthly\r\n    },\r\n    \"endDate\": \"2025-12-31\",\r\n    \"status\": \"ACTIVE\",\r\n    \"partner\": \"67c1ccf2e5d9c78eb5d9f0c0\",\r\n    \"description\": \"These are terms and conditions\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{host}}:{{port}}/api/v1/partner"
+							},
+							"response": []
+						},
+						{
+							"name": "Update coupn",
+							"id": "87cf78b7-eed7-4844-b4de-e6b65fb67558",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"value\": 300\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}:{{port}}/api/v1/offer/:id",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"v1",
+										"offer",
+										":id"
+									],
+									"variable": [
+										{
+											"id": "1f9495ce-57b3-4576-aec3-cd32bc271497",
+											"key": "id",
+											"value": "67c32936a83e4d21ac16c6c6"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "4e95927e-11b4-4fe3-bdda-d977544d4869"
 				}
 			],
 			"id": "ce46cd9e-a69f-40db-942c-c1f07bacb942"
