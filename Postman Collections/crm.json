@@ -16795,6 +16795,58 @@
 							"response": []
 						},
 						{
+							"name": "Get coupon detail",
+							"id": "8334f721-bc58-4d3e-97b5-2b5c2d5ad9e6",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}:{{port}}/api/v1/coupon",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"v1",
+										"coupon"
+									],
+									"query": [
+										{
+											"key": "status",
+											"value": "Disable",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
 							"name": "Purchase coupons",
 							"id": "c2aed8ce-8d16-445d-851f-d7e9d52155d2",
 							"protocolProfileBehavior": {
@@ -16824,7 +16876,26 @@
 										}
 									}
 								},
-								"url": "{{host}}:{{port}}/api/v1/coupon/purchase"
+								"url": {
+									"raw": "{{host}}:{{port}}/api/v1/coupon/purchase/:id",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"v1",
+										"coupon",
+										"purchase",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								}
 							},
 							"response": []
 						}
