@@ -16651,6 +16651,58 @@
 							"response": []
 						},
 						{
+							"name": "Get offers List Copy",
+							"id": "88feaedf-61a2-40be-a905-46734aa9d131",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}:{{port}}/api/v1/offer",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"v1",
+										"offer"
+									],
+									"query": [
+										{
+											"key": "status",
+											"value": "Disable",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
 							"name": "Create Offer",
 							"id": "da839866-30a6-45a3-8f79-65c8e667d7d9",
 							"protocolProfileBehavior": {
@@ -16685,7 +16737,7 @@
 							"response": []
 						},
 						{
-							"name": "Update Partner",
+							"name": "Update coupn",
 							"id": "26d1bb24-22e5-45dc-9841-8bb9820e18e1",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -16707,7 +16759,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"gst\": \"AXDKS55485YY\"\n}",
+									"raw": "{\n    \"value\": 300\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -16715,7 +16767,7 @@
 									}
 								},
 								"url": {
-									"raw": "{{host}}:{{port}}/api/v1/partner/:id",
+									"raw": "{{host}}:{{port}}/api/v1/offer/:id",
 									"host": [
 										"{{host}}"
 									],
@@ -16723,14 +16775,13 @@
 									"path": [
 										"api",
 										"v1",
-										"partner",
+										"offer",
 										":id"
 									],
 									"variable": [
 										{
-											"id": "1c0c1d64-e21d-4b22-8763-fc78c610fb0c",
 											"key": "id",
-											"value": "67c1ccf2e5d9c78eb5d9f0c0"
+											"value": "67c32936a83e4d21ac16c6c6"
 										}
 									]
 								}
@@ -16774,7 +16825,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"email\": \"superadmin@domain.com\",\r\n    \"password\": \"password@123\"\r\n}",
+					"raw": "{\r\n    // \"email\": \"deepti.sharma@multifit.co.in\",\r\n    // \"email\": \"educrack2023@gmail.com\",\r\n    // \"email\": \"nibeditaswain416@gmail.com\",\r\n    // \"email\": \"shikharohit@gmail.com\",\r\n    \"email\": \"superadmin@domain.com\",\r\n    // \"email\": \"trainer.user25@gmail.com\",\r\n    \"password\": \"password@123\"\r\n    // \"password\": \"password\"\r\n    // \"fcmToken\": \"testtoken1\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -16796,7 +16847,7 @@
 					"query": [
 						{
 							"key": "source",
-							"value": "CoachApp",
+							"value": "UserApp",
 							"description": "CoachApp | UserApp | WebApp",
 							"disabled": true
 						}
