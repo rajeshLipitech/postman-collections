@@ -162,7 +162,7 @@
 					"name": "Wallet",
 					"item": [
 						{
-							"name": "Get passbook",
+							"name": "Get My passbook",
 							"id": "c28198ab-234b-464f-a496-2b5e070707a4",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -206,6 +206,167 @@
 									],
 									"variable": [
 										{
+											"key": "userId",
+											"value": "6543b3e7e962542d79b7ecc5"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get My coins",
+							"id": "ee3bf05b-3401-4113-875f-a1e736e9d916",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}:{{port}}/api/v1/user/wallet/:userId",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"wallet",
+										":userId"
+									],
+									"variable": [
+										{
+											"key": "userId",
+											"value": "6543b3e7e962542d79b7ecc5"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get User passbook",
+							"id": "617ac56e-0120-4498-b87e-49655490b82b",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}:{{port}}/api/v1/user/passbook/:userId",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"passbook",
+										":userId"
+									],
+									"variable": [
+										{
+											"id": "9e50160f-ce9e-4a67-9673-0beb7aef1bb1",
+											"key": "userId",
+											"value": "6543b3e7e962542d79b7ecc5"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get User coin",
+							"id": "034117b5-517b-4fbf-aa27-9f98da07a15b",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}:{{port}}/api/v1/user/wallet/:userId",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"wallet",
+										":userId"
+									],
+									"variable": [
+										{
+											"id": "2dd252ac-be79-426d-bc72-241fab11cf7e",
 											"key": "userId",
 											"value": "6543b3e7e962542d79b7ecc5"
 										}
