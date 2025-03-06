@@ -14395,6 +14395,28 @@
 					"response": []
 				},
 				{
+					"name": "Get Configs Copy",
+					"id": "d52d85f2-057c-4550-81eb-2b004c1f1aef",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"url": "{{host}}:{{port}}/api/v1/config"
+					},
+					"response": []
+				},
+				{
 					"name": "Branch configurations",
 					"id": "a3a3a5a6-e007-421c-87b3-628a63966634",
 					"protocolProfileBehavior": {
@@ -17078,7 +17100,7 @@
 									}
 								},
 								"url": {
-									"raw": "{{host}}:{{port}}/api/v1/coupon",
+									"raw": "{{host}}:{{port}}/api/v1/coupon/:id",
 									"host": [
 										"{{host}}"
 									],
@@ -17086,13 +17108,20 @@
 									"path": [
 										"api",
 										"v1",
-										"coupon"
+										"coupon",
+										":id"
 									],
 									"query": [
 										{
 											"key": "status",
 											"value": "Disable",
 											"disabled": true
+										}
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "67c57eaf893528e52c0e443c"
 										}
 									]
 								}
