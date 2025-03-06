@@ -244,26 +244,7 @@
 										}
 									}
 								},
-								"url": {
-									"raw": "{{host}}:{{port}}/api/v1/user/wallet/:userId",
-									"host": [
-										"{{host}}"
-									],
-									"port": "{{port}}",
-									"path": [
-										"api",
-										"v1",
-										"user",
-										"wallet",
-										":userId"
-									],
-									"variable": [
-										{
-											"key": "userId",
-											"value": "6543b3e7e962542d79b7ecc5"
-										}
-									]
-								}
+								"url": "{{host}}:{{port}}/api/v1/user/wallet/amount"
 							},
 							"response": []
 						},
@@ -298,7 +279,7 @@
 									}
 								},
 								"url": {
-									"raw": "{{host}}:{{port}}/api/v1/user/passbook/:userId",
+									"raw": "{{host}}:{{port}}/api/v1/user/wallet/passbook/:userId",
 									"host": [
 										"{{host}}"
 									],
@@ -307,12 +288,12 @@
 										"api",
 										"v1",
 										"user",
+										"wallet",
 										"passbook",
 										":userId"
 									],
 									"variable": [
 										{
-											"id": "9e50160f-ce9e-4a67-9673-0beb7aef1bb1",
 											"key": "userId",
 											"value": "6543b3e7e962542d79b7ecc5"
 										}
@@ -352,7 +333,7 @@
 									}
 								},
 								"url": {
-									"raw": "{{host}}:{{port}}/api/v1/user/wallet/:userId",
+									"raw": "{{host}}:{{port}}/api/v1/user/wallet/amount/:userId",
 									"host": [
 										"{{host}}"
 									],
@@ -362,11 +343,11 @@
 										"v1",
 										"user",
 										"wallet",
+										"amount",
 										":userId"
 									],
 									"variable": [
 										{
-											"id": "2dd252ac-be79-426d-bc72-241fab11cf7e",
 											"key": "userId",
 											"value": "6543b3e7e962542d79b7ecc5"
 										}
