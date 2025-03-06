@@ -14395,14 +14395,17 @@
 					"response": []
 				},
 				{
-					"name": "Get Configs Copy",
+					"name": "Get Absent reasons",
 					"id": "d52d85f2-057c-4550-81eb-2b004c1f1aef",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
 					"request": {
 						"auth": {
-							"type": "noauth"
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
 						},
 						"method": "GET",
 						"header": [
@@ -14412,7 +14415,7 @@
 								"type": "text"
 							}
 						],
-						"url": "{{host}}:{{port}}/api/v1/config"
+						"url": "{{host}}:{{port}}/api/v1/config/absent-reasons"
 					},
 					"response": []
 				},
