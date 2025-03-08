@@ -16823,6 +16823,63 @@
 							"response": []
 						},
 						{
+							"name": "Get offers List Copy",
+							"id": "147c2c0c-d7f8-4dbd-a200-367022bca7d0",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}:{{port}}/api/v1/offer?isRecent=true",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"v1",
+										"offer"
+									],
+									"query": [
+										{
+											"key": "status",
+											"value": "Disable",
+											"disabled": true
+										},
+										{
+											"key": "isRecent",
+											"value": "true",
+											"type": "text"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
 							"name": "Purchase offer",
 							"id": "c2aed8ce-8d16-445d-851f-d7e9d52155d2",
 							"protocolProfileBehavior": {
