@@ -16823,7 +16823,7 @@
 							"response": []
 						},
 						{
-							"name": "Get offers List Copy",
+							"name": "Get Exclusive offers List",
 							"id": "147c2c0c-d7f8-4dbd-a200-367022bca7d0",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -16853,7 +16853,7 @@
 									}
 								},
 								"url": {
-									"raw": "{{host}}:{{port}}/api/v1/offer?isRecent=true",
+									"raw": "{{host}}:{{port}}/api/v1/offer/exclusive?isRecent=true",
 									"host": [
 										"{{host}}"
 									],
@@ -16861,7 +16861,8 @@
 									"path": [
 										"api",
 										"v1",
-										"offer"
+										"offer",
+										"exclusive"
 									],
 									"query": [
 										{
@@ -16871,8 +16872,7 @@
 										},
 										{
 											"key": "isRecent",
-											"value": "true",
-											"type": "text"
+											"value": "true"
 										}
 									]
 								}
@@ -16926,59 +16926,6 @@
 										{
 											"key": "id",
 											"value": "67c32936a83e4d21ac16c6c6"
-										}
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Get exclusive offer list",
-							"id": "f6341918-af73-4128-b2a7-9b7804a20fb0",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "{{token}}"
-									}
-								},
-								"method": "GET",
-								"header": [
-									{
-										"key": "Origin",
-										"value": "{{referer}}",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{host}}:{{port}}/api/v1/offer/private",
-									"host": [
-										"{{host}}"
-									],
-									"port": "{{port}}",
-									"path": [
-										"api",
-										"v1",
-										"offer",
-										"private"
-									],
-									"query": [
-										{
-											"key": "status",
-											"value": "Disable",
-											"disabled": true
 										}
 									]
 								}
