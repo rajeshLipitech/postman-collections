@@ -17142,6 +17142,197 @@
 			"id": "ce46cd9e-a69f-40db-942c-c1f07bacb942"
 		},
 		{
+			"name": "webhooks",
+			"item": [
+				{
+					"name": "Subscribe to fb",
+					"id": "3d75f81b-23f0-4d24-b105-4412d5ab1daa",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/webhook/facebook?hub.mode=subscribe&hub.challenge=522559135&hub.verify_token=sadfisdfasdfksajdf9asdf",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"webhook",
+								"facebook"
+							],
+							"query": [
+								{
+									"key": "hub.mode",
+									"value": "subscribe"
+								},
+								{
+									"key": "hub.challenge",
+									"value": "522559135"
+								},
+								{
+									"key": "hub.verify_token",
+									"value": "sadfisdfasdfksajdf9asdf"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Post data to fb",
+					"id": "a2d50f98-4090-4ff2-9e5a-793a4bcf9960",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-hub-signature",
+								"value": "sha1=9b235600bb35c6c16807c529822e0eae519e25ae",
+								"type": "text"
+							},
+							{
+								"key": "x-hub-signature-256",
+								"value": "sha256=67f3fa8036917a2f2b15fda7139ec2c634debe5d7db5aebca03aade31de6e0f1",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"entry\": [\r\n        {\r\n            \"id\": \"0\",\r\n            \"time\": 1705734331,\r\n            \"changes\": [\r\n                {\r\n                    \"field\": \"leadgen\",\r\n                    \"value\": {\r\n                        \"ad_id\": \"444444444\",\r\n                        \"form_id\": \"444444444444\",\r\n                        \"leadgen_id\": \"444444444444\",\r\n                        \"created_time\": 1705734330,\r\n                        \"page_id\": \"444444444444\",\r\n                        \"adgroup_id\": \"44444444444\"\r\n                    }\r\n                }\r\n            ]\r\n        }\r\n    ],\r\n    \"object\": \"page\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/webhook/:tenantId/facebook",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"webhook",
+								":tenantId",
+								"facebook"
+							],
+							"variable": [
+								{
+									"id": "f0dd948f-c0d4-4cf7-b8a5-02db92caab0a",
+									"key": "tenantId",
+									"value": "94IL5WNMJRW5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "telecmi events",
+					"id": "4d712319-1c58-4d5f-bedb-f41ceb1f5f61",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-hub-signature",
+								"value": "sha1=9b235600bb35c6c16807c529822e0eae519e25ae"
+							},
+							{
+								"key": "x-hub-signature-256",
+								"value": "sha256=67f3fa8036917a2f2b15fda7139ec2c634debe5d7db5aebca03aade31de6e0f1"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"call_id\": \"e51d5392-d9cf-123b-fe91-3cecefb9bfb6\",\r\n  \"leg\": \"b\",\r\n  \"type\": \"cdr\",\r\n  \"virtual_number\": 918475485484,\r\n  \"user\": \"500_33333947\",\r\n  \"cmiuuid\": \"ccd826f9-67a4-4467-acfb-a53093ff5c9d\",\r\n  \"direction\": \"outbound\",\r\n  \"callerid\": \"442000000000\",\r\n  \"app_id\": 2223343,\r\n  \"time\": 1650635340436,\r\n  \"custom\": \"{\\\"crm\\\":\\\"true\\\"}\",\r\n  \"extra_params\": \"{\\\"click2call\\\":\\\"true\\\"}\",\r\n  \"request_id\": \"bvS68LlqtFunYMQO0db6g9klSdfS0UHHDoK9S9Qvaed\",\r\n  \"status\": \"missed\",\r\n  \"to\": 917032725900,\r\n  \"conversation_uuid\": \"ccd826f9-67a4-4467-acfb-a53093ff5c9d\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}:{{port}}/api/v1/webhook/telecmi/cdr"
+					},
+					"response": []
+				},
+				{
+					"name": "telecmi cdr",
+					"id": "c62df8bd-e045-40ca-8720-ec4dc83f737e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-hub-signature",
+								"value": "sha1=9b235600bb35c6c16807c529822e0eae519e25ae"
+							},
+							{
+								"key": "x-hub-signature-256",
+								"value": "sha256=67f3fa8036917a2f2b15fda7139ec2c634debe5d7db5aebca03aade31de6e0f1"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"call_id\": \"e51d5392-d9cf-123b-fe91-3cecefb9bfb6\",\r\n  \"leg\": \"a\",\r\n  \"type\": \"cdr\",\r\n  \"user\": \"500_33333536\",\r\n  \"cmiuuid\": \"ccd826f9-67a4-4467-acfb-a53093ff5c9d\",\r\n  \"direction\": \"outbound\",\r\n  \"callerid\": \"442000000000\",\r\n  \"app_id\": 2223343,\r\n  \"time\": 1650635340436,\r\n  \"custom\": \"{\\\"crm\\\":\\\"true\\\"}\",\r\n  \"extra_params\": \"{\\\"click2call\\\":\\\"true\\\"}\",\r\n  \"request_id\": \"bvS68LlqtFunYMQO0db6g9klSdfS0UHHDoK9S9Qvaed\",\r\n  \"status\": \"hanged\",\r\n  \"to\": \"918249054626\",\r\n  \"conversation_uuid\": \"ccd826f9-67a4-4467-acfb-a53093ff5c9d\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}:{{port}}/api/v1/webhook/telecmi/cdr"
+					},
+					"response": []
+				},
+				{
+					"name": "APIG telecmi",
+					"id": "4887023a-4444-47a1-bfc5-e32854e4c7d4",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-hub-signature",
+								"value": "sha1=9b235600bb35c6c16807c529822e0eae519e25ae"
+							},
+							{
+								"key": "x-hub-signature-256",
+								"value": "sha256=67f3fa8036917a2f2b15fda7139ec2c634debe5d7db5aebca03aade31de6e0f1"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"call_id\": \"e51d5392-d9cf-123b-fe91-3cecefb9bfb6\",\r\n  \"leg\": \"a\",\r\n  \"type\": \"cdr\",\r\n  \"user\": \"500_33333536\",\r\n  \"cmiuuid\": \"ccd826f9-67a4-4467-acfb-a53093ff5c9d\",\r\n  \"direction\": \"outbound\",\r\n  \"callerid\": \"442000000000\",\r\n  \"app_id\": 2223343,\r\n  \"time\": 1650635340436,\r\n  \"custom\": \"{\\\"crm\\\":\\\"true\\\"}\",\r\n  \"extra_params\": \"{\\\"click2call\\\":\\\"true\\\"}\",\r\n  \"request_id\": \"bvS68LlqtFunYMQO0db6g9klSdfS0UHHDoK9S9Qvaed\",\r\n  \"status\": \"hanged\",\r\n  \"to\": \"918249054626\",\r\n  \"conversation_uuid\": \"ccd826f9-67a4-4467-acfb-a53093ff5c9d\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}:{{port}}/api/v1/webhook/telecmi/cdr"
+					},
+					"response": []
+				}
+			],
+			"id": "d5645f48-ff76-4f44-b545-a555c87071a9"
+		},
+		{
 			"name": "User Login",
 			"event": [
 				{
