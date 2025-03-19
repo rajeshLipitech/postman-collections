@@ -10152,7 +10152,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{host}}:{{port}}/api/v1/payment/?user=657aac96e9c36390832efe11",
+							"raw": "{{host}}:{{port}}/api/v1/payment/?user=6571901be9617977c5fb4199&isRecent=true&pageSize=50",
 							"host": [
 								"{{host}}"
 							],
@@ -10171,7 +10171,28 @@
 								},
 								{
 									"key": "user",
-									"value": "657aac96e9c36390832efe11"
+									"value": "6571901be9617977c5fb4199"
+								},
+								{
+									"key": "populate",
+									"value": "trainer.image,packages,ansillaryPackage,trainer_f=firstName|lastName|phone|altPhone,nutritionist_f=firstName|lastName|phone|altPhone",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "isRecent",
+									"value": "true"
+								},
+								{
+									"key": "pageSize",
+									"value": "50",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "ACTIVE",
+									"type": "text",
+									"disabled": true
 								}
 							]
 						}
