@@ -721,60 +721,6 @@
 								"url": "{{host}}:{{port}}/api/v1/user/commission-slot"
 							},
 							"response": []
-						},
-						{
-							"name": "Update target",
-							"id": "c685576d-4a1a-472e-bece-432895b92371",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "{{token}}"
-									}
-								},
-								"method": "PATCH",
-								"header": [
-									{
-										"key": "Origin",
-										"value": "{{referer}}",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"modelPermissions\": {\n        \"Asset\": [\n            \"Read\",\n            \"Write\",\n            \"Edit\",\n            \"Remove\"\n        ],\n        \"Category\": [\n            \"Read\",\n            \"Write\",\n            \"Edit\",\n            \"Remove\"\n        ],\n        \"Epaper\": [\n            \"Read\",\n            \"Write\",\n            \"Edit\",\n            \"Remove\"\n        ]\n    }\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{host}}:{{port}}/api/v1/user/target/:userId",
-									"host": [
-										"{{host}}"
-									],
-									"port": "{{port}}",
-									"path": [
-										"api",
-										"v1",
-										"user",
-										"target",
-										":userId"
-									],
-									"variable": [
-										{
-											"id": "6c7bb072-af5e-4097-a180-7bdcfdc000bf",
-											"key": "userId",
-											"value": "65435df0e962542d79b7d2ef"
-										}
-									]
-								}
-							},
-							"response": []
 						}
 					],
 					"id": "96a9faf0-d089-4c3b-96ca-75b1f8281645"
