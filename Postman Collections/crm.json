@@ -598,7 +598,7 @@
 									}
 								},
 								"url": {
-									"raw": "{{host}}:{{port}}/api/v1/user//commission-slot/:userId",
+									"raw": "{{host}}:{{port}}/api/v1/user/commission-slot/:userId",
 									"host": [
 										"{{host}}"
 									],
@@ -607,7 +607,6 @@
 										"api",
 										"v1",
 										"user",
-										"",
 										"commission-slot",
 										":userId"
 									],
@@ -656,7 +655,7 @@
 							"response": []
 						},
 						{
-							"name": "Get My target",
+							"name": "Get My commission",
 							"id": "5d8ddf05-5328-4235-be80-24f610d69086",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -685,26 +684,7 @@
 										}
 									}
 								},
-								"url": {
-									"raw": "{{host}}:{{port}}/api/v1/user/target?date=2023-12",
-									"host": [
-										"{{host}}"
-									],
-									"port": "{{port}}",
-									"path": [
-										"api",
-										"v1",
-										"user",
-										"target"
-									],
-									"query": [
-										{
-											"key": "date",
-											"value": "2023-12",
-											"type": "text"
-										}
-									]
-								}
+								"url": "{{host}}:{{port}}/api/v1/user//commission-slot"
 							},
 							"response": []
 						},
