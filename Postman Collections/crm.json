@@ -3482,6 +3482,49 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Delete Feed",
+					"id": "df15c7ab-a619-4323-937b-3a88238530e6",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/feed/:id",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"feed",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "65746525727a9598d799b8c1"
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			],
 			"id": "127b0a76-7f50-48a6-b49c-551434bf0a55",
