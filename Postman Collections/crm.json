@@ -568,7 +568,7 @@
 					"name": "Commission slot",
 					"item": [
 						{
-							"name": "Get User target",
+							"name": "Get User Commission",
 							"id": "479c9638-9732-42f3-bf7f-a1cd2345f0af",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -598,7 +598,7 @@
 									}
 								},
 								"url": {
-									"raw": "{{host}}:{{port}}/api/v1/user/target/:userId?date=2023-11",
+									"raw": "{{host}}:{{port}}/api/v1/user//commission-slot/:userId",
 									"host": [
 										"{{host}}"
 									],
@@ -607,18 +607,12 @@
 										"api",
 										"v1",
 										"user",
-										"target",
+										"",
+										"commission-slot",
 										":userId"
-									],
-									"query": [
-										{
-											"key": "date",
-											"value": "2023-11"
-										}
 									],
 									"variable": [
 										{
-											"id": "83d5fb55-2585-4556-b1ba-556123d02397",
 											"key": "userId",
 											"value": "65435df0e962542d79b7d2ef"
 										}
@@ -628,7 +622,7 @@
 							"response": []
 						},
 						{
-							"name": "Get User target Copy",
+							"name": "Get global target",
 							"id": "324e3901-bf51-432f-9e1c-acd2416fc46e",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -657,33 +651,7 @@
 										}
 									}
 								},
-								"url": {
-									"raw": "{{host}}:{{port}}/api/v1/user/target/:userId?date=2023-11",
-									"host": [
-										"{{host}}"
-									],
-									"port": "{{port}}",
-									"path": [
-										"api",
-										"v1",
-										"user",
-										"target",
-										":userId"
-									],
-									"query": [
-										{
-											"key": "date",
-											"value": "2023-11"
-										}
-									],
-									"variable": [
-										{
-											"id": "83d5fb55-2585-4556-b1ba-556123d02397",
-											"key": "userId",
-											"value": "65435df0e962542d79b7d2ef"
-										}
-									]
-								}
+								"url": "{{host}}:{{port}}/api/v1/user/commission-slot/global"
 							},
 							"response": []
 						},
