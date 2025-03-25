@@ -2637,6 +2637,44 @@
 							"response": []
 						},
 						{
+							"name": "Get All Instant form",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "a7753cae-37cd-4593-be91-6d75c60eb513",
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"id": "834bb489-efe2-4a16-91dc-f9d1f18df5ce",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"url": "{{host}}:{{port}}/api/v1/social-app/instant-form"
+							},
+							"response": []
+						},
+						{
 							"name": "Add mapping in instant form",
 							"event": [
 								{
