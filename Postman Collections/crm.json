@@ -1542,7 +1542,7 @@
 							"response": []
 						},
 						{
-							"name": "Get user incentive",
+							"name": "Get Stats",
 							"id": "bf6213bc-46ad-4914-a8f7-3e2e31f17340",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -1572,7 +1572,7 @@
 									}
 								},
 								"url": {
-									"raw": "{{host}}:{{port}}/api/v1/user/incentive/:userId",
+									"raw": "{{host}}:{{port}}/api/v1/user/incentive/stats?month=2&year=2025",
 									"host": [
 										"{{host}}"
 									],
@@ -1582,12 +1582,18 @@
 										"v1",
 										"user",
 										"incentive",
-										":userId"
+										"stats"
 									],
-									"variable": [
+									"query": [
 										{
-											"key": "userId",
-											"value": "65426602c6140a2565d0fa9a"
+											"key": "month",
+											"value": "2",
+											"type": "text"
+										},
+										{
+											"key": "year",
+											"value": "2025",
+											"type": "text"
 										}
 									]
 								}
