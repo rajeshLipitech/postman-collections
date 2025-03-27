@@ -2,7 +2,7 @@
 	"info": {
 		"_postman_id": "2f98c2ed-83fe-46ee-a2c5-5c0aaef0ef7f",
 		"name": "CRM",
-		"schema": "https://schema.postman.com/json/collection/v2.0.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
 	"item": [
 		{
@@ -1436,7 +1436,7 @@
 					"name": "Incentives",
 					"item": [
 						{
-							"name": "Get my incentives",
+							"name": "Get Monthly incentives",
 							"id": "d7a7c969-b704-495e-91ea-2f3a4bae0d59",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
