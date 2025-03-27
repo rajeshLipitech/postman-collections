@@ -1489,6 +1489,59 @@
 							"response": []
 						},
 						{
+							"name": "Get Monthly incentive detail",
+							"id": "dc6974f8-7e1a-44e8-8800-ce0a8252a8ec",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}:{{port}}/api/v1/user/incentive/:id",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"incentive",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "67e4eb9d4e7f4a06f64afeb9"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
 							"name": "Get user incentive",
 							"id": "bf6213bc-46ad-4914-a8f7-3e2e31f17340",
 							"protocolProfileBehavior": {
