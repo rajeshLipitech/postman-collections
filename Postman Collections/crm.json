@@ -10873,7 +10873,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"billDate\": \"2025-03-28\",\r\n    \"amount\": 2000,\r\n    \"package\": \"655b8bc74df13819b2b553ed\",\r\n    \"paymentMethods\": [\r\n        {\r\n            \"methodName\": \"Cash\",\r\n            \"amount\": 800\r\n        }\r\n    ]\r\n}",
+							"raw": "{\r\n    \"billDate\": \"2025-03-28\",\r\n    \"amount\": 21422,\r\n    \"package\": \"655b8bc74df13819b2b553ed\",\r\n    \"paymentMethods\": [\r\n        {\r\n            \"methodName\": \"Cash\",\r\n            \"amount\": 21422\r\n        }\r\n    ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -10897,11 +10897,11 @@
 							"variable": [
 								{
 									"key": "paymentId",
-									"value": "67e63ef5d912611f82af86be"
+									"value": "67e6457dd912611f82af88b2"
 								},
 								{
 									"key": "itemId",
-									"value": "67e63ef6d912611f82af86c6"
+									"value": "67e6457dd912611f82af88ba"
 								}
 							]
 						}
