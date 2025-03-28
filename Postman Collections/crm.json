@@ -10851,6 +10851,64 @@
 					"response": []
 				},
 				{
+					"name": "Upgrade package",
+					"id": "306789ce-ff00-4eb9-9969-347db90e7aff",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"paymentNotes\": \"Some notes\",\r\n    \"paymentMethod\": \"Card\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/payment/upgrade/:paymentId/:itemId",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"payment",
+								"upgrade",
+								":paymentId",
+								":itemId"
+							],
+							"variable": [
+								{
+									"key": "paymentId",
+									"value": "65df29c6ac0b683b6b59d15e"
+								},
+								{
+									"key": "itemId",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Download Receipt",
 					"id": "b5ad5649-63c0-4939-b7fc-671cd35ceee3",
 					"protocolProfileBehavior": {
