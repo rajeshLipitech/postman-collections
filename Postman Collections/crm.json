@@ -1601,6 +1601,63 @@
 							"response": []
 						},
 						{
+							"name": "Get My Incentive",
+							"id": "aeeb44b0-47c3-4fe7-8a83-3c527cc4ea98",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}:{{port}}/api/v1/user/incentive/my?month=2&year=2025",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"incentive",
+										"my"
+									],
+									"query": [
+										{
+											"key": "month",
+											"value": "2"
+										},
+										{
+											"key": "year",
+											"value": "2025"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
 							"name": "Release Incentive",
 							"id": "5c2ebc77-1f54-4411-a736-9fadcac57db7",
 							"protocolProfileBehavior": {
