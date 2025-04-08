@@ -6311,7 +6311,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"activity\": \"669d62887820665c9b99644f\",\r\n    \"validFrom\": \"2024-08-23 12:39:00\",\r\n    \"validTo\": \"2024-08-22 12:39:10\"\r\n}",
+							"raw": "{\r\n    // \"activity\": \"669d62887820665c9b99644f\",\r\n    \"location\": \"CH-1\",\r\n    \"validFrom\": \"2024-08-23 12:39:00\",\r\n    \"validTo\": \"2024-08-22 12:39:10\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
