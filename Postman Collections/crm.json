@@ -1012,7 +1012,7 @@
 									}
 								},
 								"url": {
-									"raw": "{{host}}:{{port}}/api/v1/user/bca/:id",
+									"raw": "{{host}}:{{port}}/api/v1/user/member/bca/:id",
 									"host": [
 										"{{host}}"
 									],
@@ -1021,6 +1021,7 @@
 										"api",
 										"v1",
 										"user",
+										"member",
 										"bca",
 										":id"
 									],
@@ -1184,7 +1185,8 @@
 										"exec": [
 											""
 										],
-										"type": "text/javascript"
+										"type": "text/javascript",
+										"packages": {}
 									}
 								}
 							],
@@ -1208,7 +1210,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{host}}:{{port}}/api/v1/user/bca/:id",
+									"raw": "{{host}}:{{port}}/api/v1/user/member/bca/:id",
 									"host": [
 										"{{host}}"
 									],
@@ -1217,13 +1219,14 @@
 										"api",
 										"v1",
 										"user",
+										"member",
 										"bca",
 										":id"
 									],
 									"variable": [
 										{
 											"key": "id",
-											"value": "653a998543998c3f1a6cebef",
+											"value": "65f2a85e8957696fc80f0fb5",
 											"description": "this field is optional for the user but mandatory for the trainer"
 										}
 									]
