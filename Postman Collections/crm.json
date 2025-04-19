@@ -12968,6 +12968,15 @@
 								"type": "text"
 							}
 						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"slot\":\"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
 							"raw": "{{host}}:{{port}}/api/v1/activity-attendance/:id",
 							"host": [
@@ -12983,7 +12992,7 @@
 							"variable": [
 								{
 									"key": "id",
-									"value": "657a935bc4a1d7abd9ef0bda"
+									"value": "67fa2319b0a5a6025e36b0b3"
 								}
 							]
 						}
