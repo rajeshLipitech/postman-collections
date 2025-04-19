@@ -12901,7 +12901,7 @@
 								"token": "{{token}}"
 							}
 						},
-						"method": "DELETE",
+						"method": "POST",
 						"header": [
 							{
 								"key": "Origin",
@@ -12919,7 +12919,7 @@
 							}
 						},
 						"url": {
-							"raw": "{{host}}:{{port}}/api/v1/live-class/:id/slot/:slotId",
+							"raw": "{{host}}:{{port}}/api/v1/live-class/:id/slot",
 							"host": [
 								"{{host}}"
 							],
@@ -12929,19 +12929,12 @@
 								"v1",
 								"live-class",
 								":id",
-								"slot",
-								":slotId"
+								"slot"
 							],
 							"variable": [
 								{
-									"id": "ea8b771f-40b0-4c38-a058-81b39ca094f8",
 									"key": "id",
 									"value": "67fa2319b0a5a6025e36b0b3"
-								},
-								{
-									"id": "f4f2ce3c-47e1-473b-9940-03f412b2f99d",
-									"key": "slotId",
-									"value": "67fa2319b0a5a6025e36b0c0"
 								}
 							]
 						}
