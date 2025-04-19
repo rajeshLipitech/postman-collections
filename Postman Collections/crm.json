@@ -12889,6 +12889,66 @@
 					"response": []
 				},
 				{
+					"name": "Add slot",
+					"id": "5ac91fc5-a1b7-43da-bcc4-06e0395cbca2",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"link\": \"https://meet.google.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/live-class/:id/slot/:slotId",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"live-class",
+								":id",
+								"slot",
+								":slotId"
+							],
+							"variable": [
+								{
+									"id": "ea8b771f-40b0-4c38-a058-81b39ca094f8",
+									"key": "id",
+									"value": "67fa2319b0a5a6025e36b0b3"
+								},
+								{
+									"id": "f4f2ce3c-47e1-473b-9940-03f412b2f99d",
+									"key": "slotId",
+									"value": "67fa2319b0a5a6025e36b0c0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Delete Live Class Copy",
 					"id": "b31676c5-6d49-411a-865b-7fe4c82bd2bb",
 					"protocolProfileBehavior": {
