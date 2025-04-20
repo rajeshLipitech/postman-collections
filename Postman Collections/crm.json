@@ -6326,6 +6326,40 @@
 					"response": []
 				},
 				{
+					"name": "Add qr code",
+					"id": "f2a70314-df55-462b-932f-0fe426147dec",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    // \"activity\": \"669d62887820665c9b99644f\",\r\n    \"location\": \"CH-1\",\r\n    \"validFrom\": \"2024-08-23 12:39:00\",\r\n    \"validTo\": \"2024-08-22 12:39:10\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}:{{port}}/api/v1/device/add-qr-code"
+					},
+					"response": []
+				},
+				{
 					"name": "Get List of devices",
 					"id": "540ca1e6-9bec-4c43-8b17-45fde5a24e2a",
 					"protocolProfileBehavior": {
@@ -17952,7 +17986,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    // \"email\": \"reonchatterjee10@gmail.com\",\r\n    // \"email\": \"educrack2023@gmail.com\", // Trainer user\r\n    // \"email\": \"sagitariusanu@gmail.com\", // Member user\r\n    // \"email\": \"saloni.avhad18@gmail.com\", // Prod trainer user\r\n    // \"email\": \"nibeditaswain416@gmail.com\", // Member user\r\n    // \"email\": \"shikharohit@gmail.com\",\r\n    \"email\": \"superadmin@domain.com\", // super admin user\r\n    // \"email\": \"deepti.sharma@multifit.co.in\", // super admin user\r\n    // \"email\": \"trainer.user25@gmail.com\",\r\n    // \"password\": \"password\"\r\n    \"password\": \"password@123\"\r\n    // \"fcmToken\": \"testtoken1\"\r\n    //LFA Creds\r\n    // \"email\":\"shree.zirpe@multifit.co.in\",\r\n    // \"password\":\"password@123\"\r\n    // \"email\":\"ayush.raj@gmail.com\",\r\n    // \"password\":\"AAY@7387\"\r\n\r\n}",
+					"raw": "{\r\n    // \"email\": \"reonchatterjee10@gmail.com\",\r\n    // \"email\": \"educrack2023@gmail.com\", // Trainer user\r\n    // \"email\": \"sagitariusanu@gmail.com\", // Member user\r\n    // \"email\": \"saloni.avhad18@gmail.com\", // Prod trainer user\r\n    // \"email\": \"nibeditaswain416@gmail.com\", // Member user\r\n    // \"email\": \"shikharohit@gmail.com\",\r\n    // \"email\": \"superadmin@domain.com\", // super admin user\r\n    // \"email\": \"deepti.sharma@multifit.co.in\", // super admin user\r\n    // \"email\": \"trainer.user25@gmail.com\",\r\n    // \"password\": \"password\"\r\n    // \"password\": \"password@123\"\r\n    \"email\": \"hyderbad@gmail.com\", // branch admin user\r\n    \"password\": \"pass\"\r\n    // \"fcmToken\": \"testtoken1\"\r\n    //LFA Creds\r\n    // \"email\":\"shree.zirpe@multifit.co.in\",\r\n    // \"password\":\"password@123\"\r\n    // \"email\":\"ayush.raj@gmail.com\",\r\n    // \"password\":\"AAY@7387\"\r\n\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
