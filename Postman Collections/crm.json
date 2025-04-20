@@ -17952,7 +17952,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    // \"email\": \"deepti.sharma@multifit.co.in\",\r\n    // \"email\": \"educrack2023@gmail.com\", // Trainer user\r\n    // \"email\": \"sagitariusanu@gmail.com\", // Member user\r\n    // \"email\": \"saloni.avhad18@gmail.com\", // Prod trainer user\r\n    // \"email\": \"nibeditaswain416@gmail.com\", // Member user\r\n    // \"email\": \"shikharohit@gmail.com\",\r\n    // \"email\": \"superadmin@domain.com\", // super admin user\r\n    // \"email\": \"trainer.user25@gmail.com\",\r\n    // \"password\": \"password@123\"\r\n    // \"password\": \"password\"\r\n    // \"fcmToken\": \"testtoken1\"\r\n    //LFA Creds\r\n    \"email\":\"shree.zirpe@multifit.co.in\",\r\n    \"password\":\"password@123\"\r\n\r\n}",
+					"raw": "{\r\n    // \"email\": \"reonchatterjee10@gmail.com\",\r\n    // \"email\": \"educrack2023@gmail.com\", // Trainer user\r\n    // \"email\": \"sagitariusanu@gmail.com\", // Member user\r\n    // \"email\": \"saloni.avhad18@gmail.com\", // Prod trainer user\r\n    // \"email\": \"nibeditaswain416@gmail.com\", // Member user\r\n    // \"email\": \"shikharohit@gmail.com\",\r\n    \"email\": \"superadmin@domain.com\", // super admin user\r\n    // \"email\": \"deepti.sharma@multifit.co.in\", // super admin user\r\n    // \"email\": \"trainer.user25@gmail.com\",\r\n    // \"password\": \"password\"\r\n    \"password\": \"password@123\"\r\n    // \"fcmToken\": \"testtoken1\"\r\n    //LFA Creds\r\n    // \"email\":\"shree.zirpe@multifit.co.in\",\r\n    // \"password\":\"password@123\"\r\n    // \"email\":\"ayush.raj@gmail.com\",\r\n    // \"password\":\"AAY@7387\"\r\n\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -17960,7 +17960,7 @@
 					}
 				},
 				"url": {
-					"raw": "{{host}}:{{port}}/api/v1/auth/login?source=UserApp",
+					"raw": "{{host}}:{{port}}/api/v1/auth/login",
 					"host": [
 						"{{host}}"
 					],
@@ -17975,7 +17975,8 @@
 						{
 							"key": "source",
 							"value": "UserApp",
-							"description": "CoachApp | UserApp | WebApp"
+							"description": "CoachApp | UserApp | WebApp",
+							"disabled": true
 						}
 					]
 				}
