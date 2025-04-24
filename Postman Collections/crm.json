@@ -16501,6 +16501,125 @@
 					"response": []
 				},
 				{
+					"name": "Get attendance scan",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "f49dabee-6d46-497e-8ace-bf86b95fc33e",
+								"exec": [
+									"const moment = require('moment');\r",
+									"\r",
+									"var template = `\r",
+									"<style type=\"text/css\">\r",
+									"    .tftable {font-size:14px;color:#333333;width:100%;border-width: 1px;border-color: #87ceeb;border-collapse: collapse;}\r",
+									"    .tftable th {font-size:18px;background-color:#87ceeb;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;text-align:left;}\r",
+									"    .tftable tr {background-color:#ffffff;}\r",
+									"    .tftable td {font-size:14px;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;}\r",
+									"    .tftable tr:hover {background-color:#e0ffff;}\r",
+									"</style>\r",
+									"\r",
+									"<table class=\"tftable\" border=\"1\">\r",
+									"    <tr>\r",
+									"        <th>User</th>\r",
+									"        <th>Date</th>\r",
+									"        <th>In Time</th>\r",
+									"        <th>Out Time</th>\r",
+									"        <th>Working hours</th>\r",
+									"        <th>Status</th>\r",
+									"    </tr>\r",
+									"    \r",
+									"    {{#each response.data.list}}\r",
+									"        <tr>\r",
+									"            <td>{{user.firstName}} {{user.lastName}}</td>\r",
+									"            <td>{{date}}</td>\r",
+									"            <td>{{inTime}}</td>\r",
+									"            <td>{{outTime}}</td>\r",
+									"            \r",
+									"            <td>{{status}}</td>\r",
+									"        </tr>\r",
+									"    {{/each}}\r",
+									"</table>\r",
+									"`;\r",
+									"\r",
+									"function constructVisualizerPayload() {\r",
+									"    return { response: pm.response.json() }\r",
+									"}\r",
+									"\r",
+									"pm.visualizer.set(template, constructVisualizerPayload());"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "ea7851b0-d051-432a-b4ea-1560bd95f680",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}"
+							},
+							{
+								"key": "isRecent",
+								"value": "true"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/attendance/scan?from=2025-04-01&to=2025-05-30&populate=user_f=firstName|lastName",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"attendance",
+								"scan"
+							],
+							"query": [
+								{
+									"key": "userType",
+									"value": "Admin",
+									"disabled": true
+								},
+								{
+									"key": "from",
+									"value": "2025-04-01"
+								},
+								{
+									"key": "to",
+									"value": "2025-05-30"
+								},
+								{
+									"key": "populate",
+									"value": "user_f=firstName|lastName"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "User attendance Mark",
 					"id": "6aa59327-71b2-4481-87f3-2ba6ce441d9d",
 					"protocolProfileBehavior": {
