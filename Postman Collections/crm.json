@@ -17538,7 +17538,7 @@
 									}
 								},
 								"url": {
-									"raw": "{{host}}:{{port}}/api/v1/offer?isRecent=true",
+									"raw": "{{host}}:{{port}}/api/v1/offer?isRecent=true&page=2",
 									"host": [
 										"{{host}}"
 									],
@@ -17556,7 +17556,11 @@
 										},
 										{
 											"key": "isRecent",
-											"value": "true",
+											"value": "true"
+										},
+										{
+											"key": "page",
+											"value": "2",
 											"type": "text"
 										}
 									]
