@@ -16704,7 +16704,7 @@
 							}
 						},
 						"url": {
-							"raw": "{{host}}:{{port}}/api/v1/attendance/stats?from=2025-04-21&to=2025-04-25&branch=65f7d689df0c0e50baee2444",
+							"raw": "{{host}}:{{port}}/api/v1/attendance/stats?from=2025-04-21&to=2025-04-25&branch=65f7d689df0c0e50baee2444&status=Present",
 							"host": [
 								"{{host}}"
 							],
@@ -16726,8 +16726,12 @@
 								},
 								{
 									"key": "branch",
-									"value": "65f7d689df0c0e50baee2444",
-									"type": "text"
+									"value": "65f7d689df0c0e50baee2444"
+								},
+								{
+									"key": "status",
+									"value": "Present",
+									"description": "Present | Absent"
 								}
 							]
 						}
