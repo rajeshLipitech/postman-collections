@@ -12662,6 +12662,50 @@
 					"response": []
 				},
 				{
+					"name": "Get Stats",
+					"id": "8707fe9b-0018-44b4-85ad-d4a57a19adfc",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/live-class/stats?branch=65f7d689df0c0e50baee2444",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"live-class",
+								"stats"
+							],
+							"query": [
+								{
+									"key": "branch",
+									"value": "65f7d689df0c0e50baee2444",
+									"type": "text"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Get Live Classes List",
 					"id": "3c0df9fb-c7e2-4f50-a68f-801870992c12",
 					"protocolProfileBehavior": {
