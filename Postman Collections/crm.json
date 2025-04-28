@@ -12727,7 +12727,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{host}}:{{port}}/api/v1/live-class/stats/overview?branch=65f7d689df0c0e50baee2444",
+							"raw": "{{host}}:{{port}}/api/v1/live-class/stats/preview?branch=65f7d689df0c0e50baee2444",
 							"host": [
 								"{{host}}"
 							],
@@ -12737,7 +12737,7 @@
 								"v1",
 								"live-class",
 								"stats",
-								"overview"
+								"preview"
 							],
 							"query": [
 								{
