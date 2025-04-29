@@ -16556,7 +16556,7 @@
 							}
 						},
 						"url": {
-							"raw": "{{host}}:{{port}}/api/v1/attendance?userType=Admin&from=2024-04-01&to=2024-04-30&populate=user_f=firstName|lastName",
+							"raw": "{{host}}:{{port}}/api/v1/attendance?from=2025-04-28&to=2025-04-28&populate=user_f%3DfirstName%7ClastName&branch=65f7d689df0c0e50baee2444&page=1&pageSize=10&userTypes[]=User",
 							"host": [
 								"{{host}}"
 							],
@@ -16569,19 +16569,41 @@
 							"query": [
 								{
 									"key": "userType",
-									"value": "Admin"
+									"value": "User",
+									"disabled": true
 								},
 								{
 									"key": "from",
-									"value": "2024-04-01"
+									"value": "2025-04-28"
 								},
 								{
 									"key": "to",
-									"value": "2024-04-30"
+									"value": "2025-04-28"
 								},
 								{
 									"key": "populate",
-									"value": "user_f=firstName|lastName"
+									"value": "user_f%3DfirstName%7ClastName"
+								},
+								{
+									"key": "branch",
+									"value": "65f7d689df0c0e50baee2444"
+								},
+								{
+									"key": "user",
+									"value": "6578904408c2bef7548b181b",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "pageSize",
+									"value": "10"
+								},
+								{
+									"key": "userTypes[]",
+									"value": "User"
 								}
 							]
 						}
