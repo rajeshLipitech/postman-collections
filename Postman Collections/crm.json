@@ -16479,6 +16479,10 @@
 							"script": {
 								"id": "f49dabee-6d46-497e-8ace-bf86b95fc33e",
 								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
 									"const moment = require('moment');\r",
 									"\r",
 									"var template = `\r",
@@ -16498,6 +16502,7 @@
 									"        <th>Out Time</th>\r",
 									"        <th>Working hours</th>\r",
 									"        <th>Status</th>\r",
+									"        <th>Location</th>\r",
 									"    </tr>\r",
 									"    \r",
 									"    {{#each response.data.list}}\r",
@@ -16506,15 +16511,16 @@
 									"            <td>{{date}}</td>\r",
 									"            <td>{{inTime}}</td>\r",
 									"            <td>{{outTime}}</td>\r",
-									"            \r",
-									"            <td>{{status}}</td>\r",
+									"            <td>{{moment.utc(moment.utc(outTime).diff(moment.utc(inTime))).format('HH:mm:ss')}}</td>\r",
+									"            <td>{{locations}}</td>\r",
 									"        </tr>\r",
 									"    {{/each}}\r",
 									"</table>\r",
 									"`;\r",
 									"\r",
 									"function constructVisualizerPayload() {\r",
-									"    return { response: pm.response.json() }\r",
+									"    var res = pm.response.json();\r",
+									"    return { response: res }\r",
 									"}\r",
 									"\r",
 									"pm.visualizer.set(template, constructVisualizerPayload());"
@@ -16556,7 +16562,7 @@
 							}
 						},
 						"url": {
-							"raw": "{{host}}:{{port}}/api/v1/attendance?from=2025-04-28&to=2025-04-28&populate=user_f%3DfirstName%7ClastName&branch=65f7d689df0c0e50baee2444&page=1&pageSize=10&userTypes[]=User",
+							"raw": "{{host}}:{{port}}/api/v1/attendance?from=2025-04-28&to=2025-04-28&populate=user_f%3DfirstName%7ClastName&branch=65f7d689df0c0e50baee2444&page=1&pageSize=200&userTypes[]=User&status=Present",
 							"host": [
 								"{{host}}"
 							],
@@ -16599,11 +16605,16 @@
 								},
 								{
 									"key": "pageSize",
-									"value": "10"
+									"value": "200"
 								},
 								{
 									"key": "userTypes[]",
 									"value": "User"
+								},
+								{
+									"key": "status",
+									"value": "Present",
+									"type": "text"
 								}
 							]
 						}
