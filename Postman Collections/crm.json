@@ -16502,7 +16502,7 @@
 									"        <th>Out Time</th>\r",
 									"        <th>Working hours</th>\r",
 									"        <th>Status</th>\r",
-									"        <th>Location</th>\r",
+									"        \r",
 									"    </tr>\r",
 									"    \r",
 									"    {{#each response.data.list}}\r",
@@ -16512,7 +16512,7 @@
 									"            <td>{{inTime}}</td>\r",
 									"            <td>{{outTime}}</td>\r",
 									"            <td>{{moment.utc(moment.utc(outTime).diff(moment.utc(inTime))).format('HH:mm:ss')}}</td>\r",
-									"            <td>{{locations}}</td>\r",
+									"          \r",
 									"        </tr>\r",
 									"    {{/each}}\r",
 									"</table>\r",
@@ -16613,8 +16613,7 @@
 								},
 								{
 									"key": "status",
-									"value": "Present",
-									"type": "text"
+									"value": "Present"
 								}
 							]
 						}
