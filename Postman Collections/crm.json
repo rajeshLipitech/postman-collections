@@ -15297,7 +15297,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{host}}:{{port}}/api/v1/dashboard/member/:branchId?from=2025-04-15&to=2025-04-26",
+							"raw": "{{host}}:{{port}}/api/v1/dashboard/member/:branchId?from=2025-04-28&to=2025-04-28",
 							"host": [
 								"{{host}}"
 							],
@@ -15312,17 +15312,17 @@
 							"query": [
 								{
 									"key": "from",
-									"value": "2025-04-15"
+									"value": "2025-04-28"
 								},
 								{
 									"key": "to",
-									"value": "2025-04-26"
+									"value": "2025-04-28"
 								}
 							],
 							"variable": [
 								{
 									"key": "branchId",
-									"value": "65f7d689df0c0e50baee2444"
+									"value": "6596cde8521db8cebc695daf"
 								}
 							]
 						}
