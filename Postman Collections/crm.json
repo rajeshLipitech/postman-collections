@@ -4959,6 +4959,15 @@
 										"type": "text"
 									}
 								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\":\"Size\",\r\n    \"options\": [\"S\", \"M\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
 								"url": "{{host}}:{{port}}/api/v1/ecommerce/attribute"
 							},
 							"response": []
@@ -5074,7 +5083,7 @@
 							"response": []
 						},
 						{
-							"name": "Add attribute",
+							"name": "Add category",
 							"id": "bb94e481-3f44-4cb6-bf00-c3ec1bf0d8d9",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -5088,7 +5097,16 @@
 										"type": "text"
 									}
 								],
-								"url": "{{host}}:{{port}}/api/v1/ecommerce/attribute"
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{host}}:{{port}}/api/v1/ecommerce/category"
 							},
 							"response": []
 						},
