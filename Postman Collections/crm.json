@@ -4933,7 +4933,13 @@
 							},
 							"request": {
 								"method": "GET",
-								"header": [],
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
 								"url": "{{host}}:{{port}}/api/v1/ecommerce/attribute"
 							},
 							"response": []
