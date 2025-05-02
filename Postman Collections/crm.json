@@ -18334,6 +18334,11 @@
 			"id": "d5645f48-ff76-4f44-b545-a555c87071a9"
 		},
 		{
+			"name": "Ecommerce",
+			"item": [],
+			"id": "a4a38fd5-ed54-42f5-9935-b57f64dff3de"
+		},
+		{
 			"name": "User Login",
 			"event": [
 				{
