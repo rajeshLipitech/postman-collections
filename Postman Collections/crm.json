@@ -4943,6 +4943,25 @@
 								"url": "{{host}}:{{port}}/api/v1/ecommerce/attribute"
 							},
 							"response": []
+						},
+						{
+							"name": "Add attribute",
+							"id": "75423eb3-a8f9-4b4e-b63f-5c0d13c345c1",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"url": "{{host}}:{{port}}/api/v1/ecommerce/attribute"
+							},
+							"response": []
 						}
 					],
 					"id": "2c8fa958-78d4-4b34-94dd-8a3b56abbbeb"
