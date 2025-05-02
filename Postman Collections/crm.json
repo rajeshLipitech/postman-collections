@@ -4970,6 +4970,116 @@
 								"disableBodyPruning": true
 							},
 							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{host}}:{{port}}/api/v1/ecommerce/attribute/:id",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"v1",
+										"ecommerce",
+										"attribute",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "68147554362b67172b9df3be"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update attribute",
+							"id": "09204b7f-3759-48e1-a36b-39f2cfb2e8c2",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    // \"name\":\"Size\",\r\n    \"options\": [\"S\", \"M\", \"L\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}:{{port}}/api/v1/ecommerce/attribute/:id",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"v1",
+										"ecommerce",
+										"attribute",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "68147554362b67172b9df3be"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "2c8fa958-78d4-4b34-94dd-8a3b56abbbeb"
+				},
+				{
+					"name": "Categories",
+					"item": [
+						{
+							"name": "Get List",
+							"id": "335496d5-f08f-4fdd-a61e-a56786f84280",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"url": "{{host}}:{{port}}/api/v1/ecommerce/category"
+							},
+							"response": []
+						},
+						{
+							"name": "Add attribute",
+							"id": "bb94e481-3f44-4cb6-bf00-c3ec1bf0d8d9",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
 								"method": "POST",
 								"header": [
 									{
@@ -4981,9 +5091,96 @@
 								"url": "{{host}}:{{port}}/api/v1/ecommerce/attribute"
 							},
 							"response": []
+						},
+						{
+							"name": "get attribute",
+							"id": "78d6e2e9-96a8-4aa6-93cf-7f3336e0a818",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{host}}:{{port}}/api/v1/ecommerce/attribute/:id",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"v1",
+										"ecommerce",
+										"attribute",
+										":id"
+									],
+									"variable": [
+										{
+											"id": "d5a77c32-ee3b-4fb4-8336-b5668e8e397a",
+											"key": "id",
+											"value": "68147554362b67172b9df3be"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "update",
+							"id": "446d9be3-86a2-46fa-a512-b41a23eb3715",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    // \"name\":\"Size\",\r\n    \"options\": [\"S\", \"M\", \"L\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}:{{port}}/api/v1/ecommerce/attribute/:id",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"v1",
+										"ecommerce",
+										"attribute",
+										":id"
+									],
+									"variable": [
+										{
+											"id": "faf81a5e-7430-45a7-86e7-60419282bdd9",
+											"key": "id",
+											"value": "68147554362b67172b9df3be"
+										}
+									]
+								}
+							},
+							"response": []
 						}
 					],
-					"id": "2c8fa958-78d4-4b34-94dd-8a3b56abbbeb"
+					"id": "a4552736-5da4-45e1-9a4e-b112b5308d60"
 				}
 			],
 			"id": "a4a38fd5-ed54-42f5-9935-b57f64dff3de"
