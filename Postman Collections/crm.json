@@ -4962,6 +4962,25 @@
 								"url": "{{host}}:{{port}}/api/v1/ecommerce/attribute"
 							},
 							"response": []
+						},
+						{
+							"name": "get attribute",
+							"id": "0d082716-3e19-45a0-a31f-a63babc00d72",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"url": "{{host}}:{{port}}/api/v1/ecommerce/attribute"
+							},
+							"response": []
 						}
 					],
 					"id": "2c8fa958-78d4-4b34-94dd-8a3b56abbbeb"
