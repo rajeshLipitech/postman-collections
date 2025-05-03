@@ -5111,7 +5111,7 @@
 							"response": []
 						},
 						{
-							"name": "get attribute",
+							"name": "get category",
 							"id": "78d6e2e9-96a8-4aa6-93cf-7f3336e0a818",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -5126,7 +5126,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{host}}:{{port}}/api/v1/ecommerce/attribute/:id",
+									"raw": "{{host}}:{{port}}/api/v1/ecommerce/category/:id",
 									"host": [
 										"{{host}}"
 									],
@@ -5135,14 +5135,13 @@
 										"api",
 										"v1",
 										"ecommerce",
-										"attribute",
+										"category",
 										":id"
 									],
 									"variable": [
 										{
-											"id": "d5a77c32-ee3b-4fb4-8336-b5668e8e397a",
 											"key": "id",
-											"value": "68147554362b67172b9df3be"
+											"value": "6815ae2aa151198ae0c8efc7"
 										}
 									]
 								}
