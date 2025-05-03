@@ -5126,7 +5126,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{host}}:{{port}}/api/v1/ecommerce/category/:id",
+									"raw": "{{host}}:{{port}}/api/v1/ecommerce/category/:id?populate=image_f=url",
 									"host": [
 										"{{host}}"
 									],
@@ -5137,6 +5137,13 @@
 										"ecommerce",
 										"category",
 										":id"
+									],
+									"query": [
+										{
+											"key": "populate",
+											"value": "image_f=url",
+											"type": "text"
+										}
 									],
 									"variable": [
 										{
@@ -5149,7 +5156,7 @@
 							"response": []
 						},
 						{
-							"name": "update",
+							"name": "update category",
 							"id": "446d9be3-86a2-46fa-a512-b41a23eb3715",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -5173,7 +5180,7 @@
 									}
 								},
 								"url": {
-									"raw": "{{host}}:{{port}}/api/v1/ecommerce/attribute/:id",
+									"raw": "{{host}}:{{port}}/api/v1/ecommerce/category/:id",
 									"host": [
 										"{{host}}"
 									],
@@ -5182,14 +5189,13 @@
 										"api",
 										"v1",
 										"ecommerce",
-										"attribute",
+										"category",
 										":id"
 									],
 									"variable": [
 										{
-											"id": "faf81a5e-7430-45a7-86e7-60419282bdd9",
 											"key": "id",
-											"value": "68147554362b67172b9df3be"
+											"value": "6815ae2aa151198ae0c8efc7"
 										}
 									]
 								}
