@@ -3839,6 +3839,61 @@
 					"response": []
 				},
 				{
+					"name": "Active Member",
+					"id": "7527d23a-9cab-4e70-acfb-fcfc36f142f4",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/dashboard/member/active/:branchId?from=2025-04-28&to=2025-04-28",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"dashboard",
+								"member",
+								"active",
+								":branchId"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "2025-04-28"
+								},
+								{
+									"key": "to",
+									"value": "2025-04-28"
+								}
+							],
+							"variable": [
+								{
+									"key": "branchId",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Overview",
 					"event": [
 						{
