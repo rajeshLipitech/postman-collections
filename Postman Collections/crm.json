@@ -5133,7 +5133,7 @@
 										"type": "text"
 									}
 								],
-								"url": "{{host}}:{{port}}/api/v1/ecommerce/auth"
+								"url": "{{host}}:{{port}}/api/v1/ecommerce/auth/token"
 							},
 							"response": []
 						}
