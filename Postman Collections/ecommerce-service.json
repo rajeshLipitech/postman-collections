@@ -1,0 +1,1197 @@
+{
+	"info": {
+		"_postman_id": "0f27744d-ed61-4578-9f9f-d74f3f5f8a80",
+		"name": "Coupon Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Tenant",
+			"item": [
+				{
+					"name": "Create tenant",
+					"id": "eb3086c8-c2f0-40be-a980-4b170270989d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Dominos India\",\r\n    \"phone\": \"9999999999\",\r\n    \"email\": \"dominos@gmail.com\",\r\n    \"gst\": \"AXDKS55485SS\",\r\n    \"pan\": \"PI09IIS0SS\",\r\n    \"website\": \"https://dominos.com/in\",\r\n    \"category\": \"Food\",\r\n    // \"logo\": \"\",\r\n    \"about\": \"We are pizza company\",\r\n    \"address\": {\r\n        \"line1\": \"Delhi\",\r\n        \"pincode\": \"1234\",\r\n        \"city\": \"Delhi\",\r\n        \"state\": \"Delhi\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}:{{port}}/api/v1/tenant"
+					},
+					"response": []
+				},
+				{
+					"name": "Update tenant",
+					"id": "b689feff-9c30-44fe-b44e-78aa9ecb334e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"gst\": \"AXDKS55485XX\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/tenant/:tenantId",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"tenant",
+								":tenantId"
+							],
+							"variable": [
+								{
+									"key": "tenantId",
+									"value": "67c1ccf2e5d9c78eb5d9f0c0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get tenant List",
+					"id": "d93d07bf-939e-4fbe-895a-d9ab329224e5",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{host}}:{{port}}/api/v1/tenant"
+					},
+					"response": []
+				}
+			],
+			"id": "9a8789be-165f-4f70-b3d1-906c4467ac83",
+			"auth": {
+				"type": "apikey",
+				"apikey": {
+					"value": "lPbBqWW4s5Zav1HPV43HlnVOpZSnH4lynFleoEMTKYzWVR8xAmbUY2YAh6lpzyA4",
+					"key": "x-api-key"
+				}
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "0eec7d68-4c31-43d4-84b8-01664f051989",
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "cbf07c2a-d632-469e-8d14-f5005ca20128",
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Offers",
+			"item": [
+				{
+					"name": "Create offer",
+					"id": "518e1833-450d-4ac6-ac5f-14aa63a45f59",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"75% off on Burger\",\r\n    \"type\": \"Private\",\r\n    \"discount\": {\r\n        \"value\": 20\r\n    },\r\n    \"usage\": {\r\n        \"value\": 12,\r\n        \"type\": \"Yearly\"\r\n    },\r\n    \"endDate\": \"2025-12-31\",\r\n    \"description\": \"These are terms and conditions\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/offer?tenant=67c1d71325d207797263da9e",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"offer"
+							],
+							"query": [
+								{
+									"key": "tenant",
+									"value": "67c1d71325d207797263da9e"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update offer",
+					"id": "49f0525e-e24b-4336-bb92-66c1e5a57d98",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"gst\": \"AXDKS55485XX\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/offer/:offerId?tenant=67c1d71325d207797263da9e",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"offer",
+								":offerId"
+							],
+							"query": [
+								{
+									"key": "tenant",
+									"value": "67c1d71325d207797263da9e",
+									"type": "text"
+								}
+							],
+							"variable": [
+								{
+									"key": "offerId",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get offer list",
+					"id": "6204fa98-bb6f-4b45-94fe-70d0e2e371da",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/offer?tenant=67c1d71325d207797263da9e",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"offer"
+							],
+							"query": [
+								{
+									"key": "tenant",
+									"value": "67c1d71325d207797263da9e"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get offer list Copy",
+					"id": "90625ad5-5ebe-4a2c-95e6-bc7006f0017f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/offer?tenant=67c1d71325d207797263da9e",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"offer"
+							],
+							"query": [
+								{
+									"key": "tenant",
+									"value": "67c1d71325d207797263da9e"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get offer detail",
+					"id": "7ea57bc3-44d9-45e0-9f85-402724d66be3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/offer/:offerId?tenant=67c1d71325d207797263da9e",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"offer",
+								":offerId"
+							],
+							"query": [
+								{
+									"key": "tenant",
+									"value": "67c1d71325d207797263da9e",
+									"type": "text"
+								}
+							],
+							"variable": [
+								{
+									"key": "offerId",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "9e14e6f9-b387-4c73-9561-019e24fba5a4",
+			"auth": {
+				"type": "apikey",
+				"apikey": {
+					"value": "lPbBqWW4s5Zav1HPV43HlnVOpZSnH4lynFleoEMTKYzWVR8xAmbUY2YAh6lpzyA4",
+					"key": "x-api-key"
+				}
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "643a40d8-4209-42b2-ada4-c635e819504d",
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "2724aece-c497-4b14-8b3a-8e5c32675186",
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Coupon",
+			"item": [
+				{
+					"name": "Create coupon",
+					"id": "59f0e3b5-314c-4ff8-af08-75d9bfb11984",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"offer\": \"67c32936a83e4d21ac16c6c6\",\r\n    \"user\": {\r\n        \"id\": \"65cc8d887747ea06991acd57\",\r\n        \"name\": \"Nibedita Swain416\",\r\n        \"provider\": \"Hyderbad Branch\"\r\n    },\r\n    \"image\": \"afasfiasdf9asdf9sad\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/coupon",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"coupon"
+							],
+							"query": [
+								{
+									"key": "tenant",
+									"value": "67c1d71325d207797263da9e",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get coupon list",
+					"id": "a697a333-3f28-4cc2-93a9-dd785181058d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/coupon?tenant=67c1d71325d207797263da9e&offer",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"coupon"
+							],
+							"query": [
+								{
+									"key": "tenant",
+									"value": "67c1d71325d207797263da9e"
+								},
+								{
+									"key": "offer",
+									"value": null,
+									"type": "text"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get coupon detail",
+					"id": "d3c9c10b-dda1-41ad-9b87-52e41c3afacb",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/coupon/:couponId?tenant=67c1d71325d207797263da9e&populate=offer,tenant_f=name|description",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"coupon",
+								":couponId"
+							],
+							"query": [
+								{
+									"key": "tenant",
+									"value": "67c1d71325d207797263da9e"
+								},
+								{
+									"key": "populate",
+									"value": "offer,tenant_f=name|description"
+								}
+							],
+							"variable": [
+								{
+									"key": "couponId",
+									"value": "67c4189d3455d03b83da3f7d"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Redeem Coupon",
+					"id": "35d73259-e115-4e6f-94a9-a33dcddeccb4",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/coupon/redeem/:couponId",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"coupon",
+								"redeem",
+								":couponId"
+							],
+							"variable": [
+								{
+									"key": "couponId",
+									"value": "67c57eaf893528e52c0e443c"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Coupon Verify",
+					"id": "568164e6-37e5-4dda-8da8-77fb800738af",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/coupon/verify/:couponCode?populate=offer",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"coupon",
+								"verify",
+								":couponCode"
+							],
+							"query": [
+								{
+									"key": "populate",
+									"value": "offer"
+								}
+							],
+							"variable": [
+								{
+									"key": "couponCode",
+									"value": "51377614"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "2095a7f7-ecd4-4d70-b15d-5e42f492d99d",
+			"auth": {
+				"type": "noauth"
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "ef6dacb2-cc4f-4724-9ef8-48c052721af0",
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "470b92bb-978c-44c5-9929-ecc5da9ca53f",
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Asset",
+			"item": [
+				{
+					"name": "Create Asset",
+					"id": "154bdd35-3290-43e3-856e-816b19cf27ee",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"fileNotInWorkingDirectoryWarning": "This file isn't in your working directory. Teammates you share this request with won't be able to use this file. To make collaboration easier you can setup your working directory in Settings.",
+									"filesNotInWorkingDirectory": [
+										"/C:/Users/rajes/Pictures/031.jpg"
+									],
+									"src": "/C:/Users/rajes/Pictures/031.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/asset/upload",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"asset",
+								"upload"
+							],
+							"query": [
+								{
+									"key": "private",
+									"value": "true",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "6a7e6cc8-b2ea-4b5a-a772-fa0c57369a1a",
+							"name": "Create Asset",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"src": "/C:/Users/rajes/Pictures/python.png"
+										}
+									]
+								},
+								"url": "{{host}}:{{port}}/api/v1/asset/upload"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "397"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"18d-UwxiHcf2yIaTbIlQt7cAFOBqIa0\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Aug 2023 17:07:18 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"data\": {\n        \"key\": \"28cfd432-3932-41e0-bd24-118891efa830.png\",\n        \"name\": \"python.png\",\n        \"type\": \"public\",\n        \"mimetype\": \"image/png\",\n        \"url\": \"https://crm-crmlocalhost.s3.ap-south-1.amazonaws.com/full/28cfd432-3932-41e0-bd24-118891efa830.png\",\n        \"_id\": \"64eb82c5491dd86ed6fe633d\",\n        \"createdAt\": \"2023-08-27T17:07:17.987Z\",\n        \"updatedAt\": \"2023-08-27T17:07:17.987Z\"\n    },\n    \"status\": \"Ok\",\n    \"message\": {\n        \"code\": \"AssetSuccessfullyUploaded\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Asset by id",
+					"id": "6e793c52-9c56-4f51-a439-b5ced2b5d37d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/asset/:id",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"asset",
+								":id"
+							],
+							"variable": [
+								{
+									"id": "ff5c5fbc-c8c0-44ac-93af-dd026a1bb7bb",
+									"key": "id",
+									"value": "64eb82c5491dd86ed6fe633d"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Private Asset",
+					"id": "e362f379-f604-485d-b153-da7f0a8e3cf9",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/asset/get/:id",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"asset",
+								"get",
+								":id"
+							],
+							"variable": [
+								{
+									"id": "4b373563-5b73-43fe-bef3-48cd60f14639",
+									"key": "id",
+									"value": "65afa6f70d7996a77bd68bdf"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Asset",
+					"id": "5faf40c1-50c1-4a8b-b938-e974f6e014c8",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/asset/:id",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"asset",
+								":id"
+							],
+							"variable": [
+								{
+									"id": "969f4bff-3856-4f67-b19f-931586bea4c5",
+									"key": "id",
+									"value": "65a3f5a8e4edd9b0c544d437"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "8aa48958-62c0-48e1-8819-d616659ee38f",
+			"description": "## User Operations related API's",
+			"auth": {
+				"type": "apikey",
+				"apikey": {
+					"key": "x-api-key",
+					"value": "lPbBqWW4s5Zav1HPV43HlnVOpZSnH4lynFleoEMTKYzWVR8xAmbUY2YAh6lpzyA4"
+				}
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "483fc6fb-4269-4fd4-848c-41d07a8438c5",
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "e0ceff09-4af9-47fa-ac08-6ea6904f4d47",
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "Dashboard",
+			"item": [
+				{
+					"name": "Overview",
+					"id": "9bc580ea-ed2b-4945-bdea-4653c719b0ae",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}:{{port}}/api/v1/dashboard/overview"
+					},
+					"response": []
+				}
+			],
+			"id": "beb3d3c7-7c14-41a1-b512-96bf4b9b59ec",
+			"description": "## User Operations related API's",
+			"auth": {
+				"type": "apikey",
+				"apikey": {
+					"key": "x-api-key",
+					"value": "lPbBqWW4s5Zav1HPV43HlnVOpZSnH4lynFleoEMTKYzWVR8xAmbUY2YAh6lpzyA4"
+				}
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "483fc6fb-4269-4fd4-848c-41d07a8438c5",
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "e0ceff09-4af9-47fa-ac08-6ea6904f4d47",
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
+			"name": "User Login",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a7753cae-37cd-4593-be91-6d75c60eb513",
+						"exec": [
+							"var jsonData = pm.response.json();\r",
+							"pm.environment.set(\"token\", jsonData.data.token);"
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"id": "88b5ad28-86b4-47b2-9d15-65924c11be4b",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Origin",
+						"value": "{{referer}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"dominos@gmail.com\",\r\n    \"password\": \"DOM@9999\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{host}}:{{port}}/api/v1/auth/login"
+			},
+			"response": [
+				{
+					"id": "ea2cadea-9ccc-4912-ad9c-73f9dd0e7a2d",
+					"name": "LFA",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"shree.zirpe@multifit.co.in\",\r\n    \"password\": \"password@123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/auth/login",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"login"
+							],
+							"query": [
+								{
+									"key": "source",
+									"value": "CoachApp",
+									"description": "CoachApp | UserApp | WebApp",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.18.0 (Ubuntu)"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 08 Aug 2024 07:36:14 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "460"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1cc-HnqFr8UcoP7F6obtBeOno0hSIZw\""
+						}
+					],
+					"cookie": [],
+					"responseTime": null,
+					"body": "{\n    \"data\": {\n        \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY0OGI1MjFhYTRiOTZmYmE0MDExNTZiOCIsImVtYWlsIjoic2hyZWUuemlycGVAbXVsdGlmaXQuY28uaW4ifSwidGltZXN0YW1wIjoiMjAyNC0wOC0wOFQwNzozNjoxNC4xMDVaIiwiaWF0IjoxNzIzMTAyNTc0LCJleHAiOjE3MjMzNjE3NzQsImF1ZCI6Imdsb2JhbCJ9.12ML6p6MsXdd568xpbbj0I50HDBznEjkiLE3fFeaOi8\",\n        \"refreshToken\": \"$2b$05$qm864smOmCWZ48zZtTrkDOuRBiRYs1L2a3S4hJFxtS5wY9g9OxpZXDfickeu.\"\n    },\n    \"status\": \"Ok\",\n    \"message\": {\n        \"code\": \"LoginSuccess\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Me",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "03499e48-5752-4076-b963-23a297d11e4f",
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"id": "42f72073-1276-4b0c-8aaf-b7c0ceb9c81f",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "{{token}}"
+					}
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Origin",
+						"value": "{{referer}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}:{{port}}/api/v1/user/me",
+					"host": [
+						"{{host}}"
+					],
+					"port": "{{port}}",
+					"path": [
+						"api",
+						"v1",
+						"user",
+						"me"
+					],
+					"query": [
+						{
+							"key": "populate",
+							"value": "tenant",
+							"disabled": true
+						}
+					]
+				},
+				"description": "Get LoggedIn User Information"
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": {
+			"token": "{{token}}"
+		}
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "892de978-0ac8-4014-8138-4a6cf6af1609",
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "b121772b-0ddf-4ce8-96e8-3e444f2cfeac",
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
