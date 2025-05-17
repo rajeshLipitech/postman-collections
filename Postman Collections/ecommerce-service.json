@@ -1000,7 +1000,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"email\": \"dominos@gmail.com\",\r\n    \"password\": \"DOM@9999111\"\r\n}",
+					"raw": "{\r\n    \"email\": \"dominos@gmail.com\",\r\n    \"password\": \"DOM@9999\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
