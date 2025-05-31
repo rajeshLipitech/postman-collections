@@ -579,7 +579,7 @@
 			"name": "Order",
 			"item": [
 				{
-					"name": "Create coupon",
+					"name": "Create order",
 					"id": "d9a69cf1-3cf8-4eb1-bbd1-75fe48229514",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
