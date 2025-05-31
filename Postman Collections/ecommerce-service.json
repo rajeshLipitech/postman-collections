@@ -576,6 +576,82 @@
 			]
 		},
 		{
+			"name": "Order",
+			"item": [
+				{
+					"name": "Create coupon",
+					"id": "d9a69cf1-3cf8-4eb1-bbd1-75fe48229514",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"offer\": \"67c32936a83e4d21ac16c6c6\",\r\n    \"user\": {\r\n        \"id\": \"65cc8d887747ea06991acd57\",\r\n        \"name\": \"Nibedita Swain416\",\r\n        \"provider\": \"Hyderbad Branch\"\r\n    },\r\n    \"image\": \"afasfiasdf9asdf9sad\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/coupon",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"coupon"
+							],
+							"query": [
+								{
+									"key": "tenant",
+									"value": "67c1d71325d207797263da9e",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "53348f95-0486-456d-8c6e-fc8d722917df",
+			"auth": {
+				"type": "bearer",
+				"bearer": {
+					"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY4MWY2ZGRiYmU0NGFhNzQ1YTM0ZjhmNSIsImVtYWlsIjoibmliZWRpdGFzd2FpbjQxNkBnbWFpbC5jb20ifSwidGltZXN0YW1wIjoiMjAyNS0wNS0zMVQwNzo1MToyOC40MzVaIiwiaWF0IjoxNzQ4Njc3ODg4LCJleHAiOjE3NDg5MzcwODgsImF1ZCI6Imdsb2JhbCJ9.bKXcW2p4m2fcFTVX4y7cl2ARwUqxBo-gqcE9M2klJn8"
+				}
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "c11810e2-4d2f-4adf-bd68-ec227ec4985b",
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "7245d35e-c711-4d3b-b84c-35fb2038334e",
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
 			"name": "Category",
 			"item": [
 				{
