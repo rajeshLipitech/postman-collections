@@ -9520,6 +9520,49 @@
 					"response": []
 				},
 				{
+					"name": "Get slots for a day",
+					"id": "49c29790-4f23-4c65-9116-3eb954d1646e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/live-class/slots?day=MONDAY",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"live-class",
+								"slots"
+							],
+							"query": [
+								{
+									"key": "day",
+									"value": "MONDAY"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Get over Stats",
 					"id": "06aca5de-c17b-4585-a807-813f2e39ff9f",
 					"protocolProfileBehavior": {
