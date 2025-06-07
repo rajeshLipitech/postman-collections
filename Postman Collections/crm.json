@@ -15986,6 +15986,91 @@
 							"response": []
 						},
 						{
+							"name": "Get members by id",
+							"id": "f36c1090-a5a0-4d54-82d5-0775eb36f737",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{host}}:{{port}}/api/v1/user/member?isRecent=true&status=ACTIVE&assessment=true&packageType=GymMembership",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"member"
+									],
+									"query": [
+										{
+											"key": "isRecent",
+											"value": "true"
+										},
+										{
+											"key": "search",
+											"value": "rajesh",
+											"disabled": true
+										},
+										{
+											"key": "status",
+											"value": "ACTIVE",
+											"description": "ACTIVE | INACTIVE"
+										},
+										{
+											"key": "trial",
+											"value": "true",
+											"disabled": true
+										},
+										{
+											"key": "assessment",
+											"value": "true"
+										},
+										{
+											"key": "page",
+											"value": "1",
+											"disabled": true
+										},
+										{
+											"key": "packageType",
+											"value": "GymMembership",
+											"description": "PT | GymMembership"
+										},
+										{
+											"key": "workoutCard",
+											"value": "true",
+											"description": "true | false",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "ptPlan",
+											"value": "true",
+											"description": "true",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
 							"name": "Generate BCA",
 							"event": [
 								{
