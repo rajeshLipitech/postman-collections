@@ -15148,7 +15148,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{host}}:{{port}}/api/v1/tracker?trackerType=Weight&from=2023-10-13&to=2023-10-13",
+							"raw": "{{host}}:{{port}}/api/v1/system-trail?populate=addedBy_f=name",
 							"host": [
 								"{{host}}"
 							],
@@ -15156,26 +15156,22 @@
 							"path": [
 								"api",
 								"v1",
-								"tracker"
+								"system-trail"
 							],
 							"query": [
 								{
-									"key": "trackerType",
-									"value": "Weight",
-									"description": "Water | Weight | Diet"
-								},
-								{
 									"key": "from",
-									"value": "2023-10-13"
+									"value": "2023-10-13",
+									"disabled": true
 								},
 								{
 									"key": "to",
-									"value": "2023-10-13"
+									"value": "2023-10-13",
+									"disabled": true
 								},
 								{
 									"key": "populate",
-									"value": "diet,plannedDiet",
-									"disabled": true
+									"value": "addedBy_f=name"
 								}
 							]
 						}
