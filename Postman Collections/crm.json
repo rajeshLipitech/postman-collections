@@ -9520,6 +9520,68 @@
 					"response": []
 				},
 				{
+					"name": "Get Stats Download",
+					"id": "8f891b58-16b3-4f87-bcda-3aec523aac1b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/live-class/stats/download?from=2025-04-01&to=2025-04-28&timeSlot=14:00 - 15:00",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"live-class",
+								"stats",
+								"download"
+							],
+							"query": [
+								{
+									"key": "branch",
+									"value": "65f7d689df0c0e50baee2444",
+									"disabled": true
+								},
+								{
+									"key": "from",
+									"value": "2025-04-01"
+								},
+								{
+									"key": "to",
+									"value": "2025-04-28"
+								},
+								{
+									"key": "timeSlot",
+									"value": "14:00 - 15:00"
+								},
+								{
+									"key": "day",
+									"value": "MONDAY",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Get slots for a day",
 					"id": "49c29790-4f23-4c65-9116-3eb954d1646e",
 					"protocolProfileBehavior": {
@@ -14415,6 +14477,98 @@
 			"description": "## User Operations related API's"
 		},
 		{
+			"name": "System trail",
+			"item": [
+				{
+					"name": "Create",
+					"id": "b7837b2d-27c7-4757-b353-29e9717cc8d2",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"trackerType\": \"Diet\",\r\n    \"diet\": \"652baa5b2c4ecd95f85512d9\",\r\n    \"value\": 1,\r\n    \"mealType\": \"AfterWorkout\",\r\n    \"trackDate\": \"2023-11-05\",\r\n    \"nutritians\": [\r\n        {\r\n            \"name\": \"Fat\",\r\n            \"value\": 1.1,\r\n            \"unit\": \"g\",\r\n            \"_id\": \"65474aa016daac704dd2ff4f\"\r\n        },\r\n        {\r\n            \"name\": \"Protein\",\r\n            \"value\": 1.5,\r\n            \"unit\": \"g\",\r\n            \"_id\": \"65474aa016daac704dd2ff50\"\r\n        },\r\n        {\r\n            \"name\": \"Carbs\",\r\n            \"value\": 2.1,\r\n            \"unit\": \"g\",\r\n            \"_id\": \"65474aa016daac704dd2ff51\"\r\n        },\r\n        {\r\n            \"name\": \"Energy\",\r\n            \"value\": 1.1,\r\n            \"unit\": \"g\",\r\n            \"_id\": \"65474aa016daac704dd2ff52\"\r\n        }\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}:{{port}}/api/v1/system-trail"
+					},
+					"response": []
+				},
+				{
+					"name": "Get Tracked information",
+					"id": "787434f5-c0eb-4b1f-908d-a338ae074e3e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/system-trail?populate=addedBy_f=name",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"system-trail"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "2023-10-13",
+									"disabled": true
+								},
+								{
+									"key": "to",
+									"value": "2023-10-13",
+									"disabled": true
+								},
+								{
+									"key": "populate",
+									"value": "addedBy_f=name"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "2f84e2ef-a871-4046-a7d8-51fc58f5c5ca"
+		},
+		{
 			"name": "Team",
 			"item": [
 				{
@@ -15088,98 +15242,6 @@
 				}
 			],
 			"id": "919228bf-22ae-4e00-bb6d-40e3ab3726f3"
-		},
-		{
-			"name": "System trail",
-			"item": [
-				{
-					"name": "Create",
-					"id": "b7837b2d-27c7-4757-b353-29e9717cc8d2",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": {
-								"token": "{{token}}"
-							}
-						},
-						"method": "POST",
-						"header": [
-							{
-								"key": "Origin",
-								"value": "{{referer}}",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"trackerType\": \"Diet\",\r\n    \"diet\": \"652baa5b2c4ecd95f85512d9\",\r\n    \"value\": 1,\r\n    \"mealType\": \"AfterWorkout\",\r\n    \"trackDate\": \"2023-11-05\",\r\n    \"nutritians\": [\r\n        {\r\n            \"name\": \"Fat\",\r\n            \"value\": 1.1,\r\n            \"unit\": \"g\",\r\n            \"_id\": \"65474aa016daac704dd2ff4f\"\r\n        },\r\n        {\r\n            \"name\": \"Protein\",\r\n            \"value\": 1.5,\r\n            \"unit\": \"g\",\r\n            \"_id\": \"65474aa016daac704dd2ff50\"\r\n        },\r\n        {\r\n            \"name\": \"Carbs\",\r\n            \"value\": 2.1,\r\n            \"unit\": \"g\",\r\n            \"_id\": \"65474aa016daac704dd2ff51\"\r\n        },\r\n        {\r\n            \"name\": \"Energy\",\r\n            \"value\": 1.1,\r\n            \"unit\": \"g\",\r\n            \"_id\": \"65474aa016daac704dd2ff52\"\r\n        }\r\n    ]\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": "{{host}}:{{port}}/api/v1/system-trail"
-					},
-					"response": []
-				},
-				{
-					"name": "Get Tracked information",
-					"id": "787434f5-c0eb-4b1f-908d-a338ae074e3e",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": {
-								"token": "{{token}}"
-							}
-						},
-						"method": "GET",
-						"header": [
-							{
-								"key": "Origin",
-								"value": "{{referer}}",
-								"type": "text"
-							}
-						],
-						"url": {
-							"raw": "{{host}}:{{port}}/api/v1/system-trail?populate=addedBy_f=name",
-							"host": [
-								"{{host}}"
-							],
-							"port": "{{port}}",
-							"path": [
-								"api",
-								"v1",
-								"system-trail"
-							],
-							"query": [
-								{
-									"key": "from",
-									"value": "2023-10-13",
-									"disabled": true
-								},
-								{
-									"key": "to",
-									"value": "2023-10-13",
-									"disabled": true
-								},
-								{
-									"key": "populate",
-									"value": "addedBy_f=name"
-								}
-							]
-						}
-					},
-					"response": []
-				}
-			],
-			"id": "2f84e2ef-a871-4046-a7d8-51fc58f5c5ca"
 		},
 		{
 			"name": "User",
