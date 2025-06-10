@@ -9481,7 +9481,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{host}}:{{port}}/api/v1/live-class/stats?branch=65f7d689df0c0e50baee2444&from=2025-04-01&to=2025-04-28&timeSlot=14:00 - 15:00&day=MONDAY",
+							"raw": "{{host}}:{{port}}/api/v1/live-class/stats?from=2025-06-01&to=2025-06-28&slots[]=06:00-08:30&slots[]=11:40-13:00",
 							"host": [
 								"{{host}}"
 							],
@@ -9495,23 +9495,35 @@
 							"query": [
 								{
 									"key": "branch",
-									"value": "65f7d689df0c0e50baee2444"
+									"value": "65f7d689df0c0e50baee2444",
+									"disabled": true
 								},
 								{
 									"key": "from",
-									"value": "2025-04-01"
+									"value": "2025-06-01"
 								},
 								{
 									"key": "to",
-									"value": "2025-04-28"
+									"value": "2025-06-28"
 								},
 								{
-									"key": "timeSlot",
-									"value": "14:00 - 15:00"
+									"key": "slot",
+									"value": "06:00-08:30",
+									"disabled": true
 								},
 								{
 									"key": "day",
 									"value": "MONDAY",
+									"disabled": true
+								},
+								{
+									"key": "slots[]",
+									"value": "06:00-08:30",
+									"type": "text"
+								},
+								{
+									"key": "slots[]",
+									"value": "11:40-13:00",
 									"type": "text"
 								}
 							]
