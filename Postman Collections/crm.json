@@ -9541,7 +9541,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{host}}:{{port}}/api/v1/live-class/stats/download?from=2025-04-01&to=2025-04-28&timeSlot=14:00 - 15:00",
+							"raw": "{{host}}:{{port}}/api/v1/live-class/stats/download?from=2025-04-01&to=2025-04-28&slot=14:00 - 15:00",
 							"host": [
 								"{{host}}"
 							],
@@ -9568,7 +9568,7 @@
 									"value": "2025-04-28"
 								},
 								{
-									"key": "timeSlot",
+									"key": "slot",
 									"value": "14:00 - 15:00"
 								},
 								{
