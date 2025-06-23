@@ -9378,7 +9378,7 @@
 									}
 								},
 								"url": {
-									"raw": "{{host}}:{{port}}/api/v1/live-class/subscribe?activityId=6809daad3b7a925854b16a9a&slotId=6809daae3b7a925854b16a9e&date=2025-06-27",
+									"raw": "{{host}}:{{port}}/api/v1/live-class/subscribe?timeline=past",
 									"host": [
 										"{{host}}"
 									],
@@ -9392,15 +9392,23 @@
 									"query": [
 										{
 											"key": "activityId",
-											"value": "6809daad3b7a925854b16a9a"
+											"value": "6809daad3b7a925854b16a9a",
+											"disabled": true
 										},
 										{
 											"key": "slotId",
-											"value": "6809daae3b7a925854b16a9e"
+											"value": "6809daae3b7a925854b16a9e",
+											"disabled": true
 										},
 										{
 											"key": "date",
-											"value": "2025-06-27"
+											"value": "2025-06-27",
+											"disabled": true
+										},
+										{
+											"key": "timeline",
+											"value": "past",
+											"description": "future | past"
 										}
 									]
 								}
