@@ -9229,6 +9229,65 @@
 			"name": "Live Class",
 			"item": [
 				{
+					"name": "Subscribe",
+					"item": [
+						{
+							"name": "Subscribe",
+							"id": "bd1947d6-8a21-41ec-a5ed-e4c5a3b040e2",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"slot\": \"\",\r\n    \"date\": \"2025-06-28\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}:{{port}}/api/v1/live-class/subscribe/:id",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"v1",
+										"live-class",
+										"subscribe",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "6809daad3b7a925854b16a9a"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "799589bf-6141-4aaf-a78d-7685b0b57a91"
+				},
+				{
 					"name": "Create Live  class",
 					"id": "475f0e3c-1b9b-4296-9e5d-84d00139225f",
 					"protocolProfileBehavior": {
@@ -9365,50 +9424,6 @@
 								{
 									"key": "id",
 									"value": ""
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Subscribe",
-					"id": "bd1947d6-8a21-41ec-a5ed-e4c5a3b040e2",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": {
-								"token": "{{token}}"
-							}
-						},
-						"method": "POST",
-						"header": [
-							{
-								"key": "Origin",
-								"value": "{{referer}}",
-								"type": "text"
-							}
-						],
-						"url": {
-							"raw": "{{host}}:{{port}}/api/v1/live-class/subscribe/:id",
-							"host": [
-								"{{host}}"
-							],
-							"port": "{{port}}",
-							"path": [
-								"api",
-								"v1",
-								"live-class",
-								"subscribe",
-								":id"
-							],
-							"variable": [
-								{
-									"key": "id",
-									"value": "67061bc0f55e43a8a4ed7413"
 								}
 							]
 						}
