@@ -9285,6 +9285,59 @@
 							"response": []
 						},
 						{
+							"name": "Approve Subscription",
+							"id": "2d3ec7d4-6697-4a67-9086-3de00d0fb4d0",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"slot\": \"\",\r\n    \"date\": \"2025-06-28\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}:{{port}}/api/v1/live-class/subscribe/:requestId",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"v1",
+										"live-class",
+										"subscribe",
+										":requestId"
+									],
+									"variable": [
+										{
+											"key": "requestId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
 							"name": "Get Subscriptions",
 							"id": "506beef5-0a88-4386-96bc-79e6280b5b26",
 							"protocolProfileBehavior": {
@@ -9378,7 +9431,7 @@
 									}
 								},
 								"url": {
-									"raw": "{{host}}:{{port}}/api/v1/live-class/subscribe?timeline=past",
+									"raw": "{{host}}:{{port}}/api/v1/live-class/subscribe?timeline=future",
 									"host": [
 										"{{host}}"
 									],
@@ -9407,7 +9460,7 @@
 										},
 										{
 											"key": "timeline",
-											"value": "past",
+											"value": "future",
 											"description": "future | past"
 										}
 									]
