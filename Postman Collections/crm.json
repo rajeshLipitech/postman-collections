@@ -13475,6 +13475,69 @@
 				},
 				{
 					"name": "Package Expire",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "b92f4b94-b7f5-4f0c-bcfe-9085339b84d5",
+								"exec": [
+									"var template = `\r",
+									"<style type=\"text/css\">\r",
+									"    .tftable {font-size:14px;color:#333333;width:100%;border-width: 1px;border-color: #87ceeb;border-collapse: collapse;}\r",
+									"    .tftable th {font-size:18px;background-color:#87ceeb;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;text-align:left;}\r",
+									"    .tftable tr {background-color:#ffffff;}\r",
+									"    .tftable td {font-size:14px;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;}\r",
+									"    .tftable tr:hover {background-color:#e0ffff;}\r",
+									"</style>\r",
+									"\r",
+									"<table class=\"tftable\" border=\"1\">\r",
+									"    <tr>\r",
+									"        <th>User Name</th>\r",
+									"        <th>Email</th>\r",
+									"        <th>Phone</th>\r",
+									"        <th>Package Name</th>\r",
+									"        <th>Duration</th>\r",
+									"        <th>Bill Date</th>\r",
+									"        <th>Branch Name</th>\r",
+									"        <th>Trainer Name</th>\r",
+									"        <th>Status</th>\r",
+									"        <th>Renewed</th>\r",
+									"        <th>Amount</th>\r",
+									"        <th>Discount</th>\r",
+									"        <th>Extended</th>\r",
+									"    </tr>\r",
+									"    \r",
+									"    {{#each response.data}}\r",
+									"        <tr>\r",
+									"            <td>{{user.name}}</td>\r",
+									"            <td>{{user.email}}</td>\r",
+									"            <td>{{user.phone}}</td>\r",
+									"            <td>{{packages.name}}</td>\r",
+									"            <td>{{packages.duration.years}} years, {{packages.duration.months}} months, {{packages.duration.days}} days</td>\r",
+									"            <td>{{billDate}}</td>\r",
+									"            <td>{{branch.name}}</td>\r",
+									"            <td>{{trainer.name}}</td>\r",
+									"            <td>{{status}}</td>\r",
+									"            <td>{{renewed}}</td>\r",
+									"            <td>{{amount}}</td>\r",
+									"            <td>{{discount}}</td>\r",
+									"            <td>{{extended}}</td>\r",
+									"        </tr>\r",
+									"    {{/each}}\r",
+									"</table>\r",
+									"`;\r",
+									"\r",
+									"function constructVisualizerPayload() {\r",
+									"    return {response: pm.response.json()};\r",
+									"}\r",
+									"\r",
+									"pm.visualizer.set(template, constructVisualizerPayload());"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
 					"id": "163aa06f-077d-492d-89f0-92f6ffacbace",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -13494,7 +13557,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{host}}:{{port}}/api/v1/reports/package-expire?from=2025-07-01&to=2025-07-30",
+							"raw": "{{host}}:{{port}}/api/v1/reports/package-expire?from=2025-07-01&to=2025-07-30&branch=6596cd94521db8cebc695daa",
 							"host": [
 								"{{host}}"
 							],
@@ -13513,6 +13576,10 @@
 								{
 									"key": "to",
 									"value": "2025-07-30"
+								},
+								{
+									"key": "branch",
+									"value": "6596cd94521db8cebc695daa"
 								}
 							]
 						}
