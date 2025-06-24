@@ -13472,6 +13472,52 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Package Expire",
+					"id": "163aa06f-077d-492d-89f0-92f6ffacbace",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}"
+							}
+						],
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/reports/package-expire?from=2025-07-01&to=2025-07-30",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"reports",
+								"package-expire"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "2025-07-01"
+								},
+								{
+									"key": "to",
+									"value": "2025-07-30"
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			],
 			"id": "d4899778-bcda-4160-8e90-cb441dce0659"
