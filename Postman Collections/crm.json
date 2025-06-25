@@ -13516,9 +13516,9 @@
 									"            <td>{{user.phone}}</td>\r",
 									"            <td>{{packages.name}}</td>\r",
 									"            <td>{{packages.duration.years}} years, {{packages.duration.months}} months, {{packages.duration.days}} days</td>\r",
-									"            <td>{{formatDate(billDate)}}</td>\r",
-									"            <td>{{formatDate(accessStart)}}</td>\r",
-									"            <td>{{formatDate(accessFinish)}}</td>\r",
+									"            <td>{{formatDate billDate}}</td>\r",
+									"            <td>{{formatDate accessStart}}</td>\r",
+									"            <td>{{formatDate accessFinish}}</td>\r",
 									"            <td>{{branch.name}}</td>\r",
 									"            <td>{{trainer.name}}</td>\r",
 									"            <td>{{status}}</td>\r",
@@ -13532,6 +13532,8 @@
 									"`;\r",
 									"\r",
 									"function formatDate(dateString) {\r",
+									"    console.log(dateString)\r",
+									"    if (!dateString) return ''; // Handle empty date\r",
 									"    const options = { timeZone: 'Asia/Kolkata', year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit' };\r",
 									"    return new Date(dateString).toLocaleString('en-IN', options);\r",
 									"}\r",
@@ -13542,8 +13544,8 @@
 									"    };\r",
 									"}\r",
 									"\r",
-									"// pm.visualizer.set(template, {response: pm.response.json()});\r",
-									"pm.visualizer.set(template, constructVisualizerPayload());"
+									"pm.visualizer.set(template, constructVisualizerPayload());\r",
+									""
 								],
 								"type": "text/javascript",
 								"packages": {}
