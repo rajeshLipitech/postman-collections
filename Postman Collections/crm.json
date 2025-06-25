@@ -13534,7 +13534,6 @@
 									"`;\r",
 									"\r",
 									"const responseData = pm.response.json();\r",
-									"console.log(\"responseData before\", responseData)\r",
 									"responseData.data.forEach(function(item) {\r",
 									"    if (item.billDate) {\r",
 									"        item.billDate = new Date(item.billDate).toISOString().slice(0, 10);\r",
@@ -13546,7 +13545,6 @@
 									"        item.accessFinish = new Date(item.accessFinish).toISOString().slice(0, 10);\r",
 									"    }\r",
 									"});\r",
-									"console.log(\"responseData after\", responseData)\r",
 									"\r",
 									"pm.visualizer.set(template, { response: responseData.data });"
 								],
