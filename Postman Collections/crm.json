@@ -13498,6 +13498,8 @@
 									"        <th>Package Name</th>\r",
 									"        <th>Duration</th>\r",
 									"        <th>Bill Date</th>\r",
+									"        <th>Start Date</th>\r",
+									"        <th>End Date</th>\r",
 									"        <th>Branch Name</th>\r",
 									"        <th>Trainer Name</th>\r",
 									"        <th>Status</th>\r",
@@ -13514,8 +13516,9 @@
 									"            <td>{{user.phone}}</td>\r",
 									"            <td>{{packages.name}}</td>\r",
 									"            <td>{{packages.duration.years}} years, {{packages.duration.months}} months, {{packages.duration.days}} days</td>\r",
-									"            <td>{{billDate}}</td>\r",
-									"            // <td>{{formatDate billDate}}</td>\r",
+									"            <td>{{formatDate(billDate)}}</td>\r",
+									"            <td>{{formatDate(accessStart)}}</td>\r",
+									"            <td>{{formatDate(accessFinish)}}</td>\r",
 									"            <td>{{branch.name}}</td>\r",
 									"            <td>{{trainer.name}}</td>\r",
 									"            <td>{{status}}</td>\r",
@@ -13528,17 +13531,18 @@
 									"</table>\r",
 									"`;\r",
 									"\r",
-									"// function formatDate(dateString) {\r",
-									"//     const options = { timeZone: 'Asia/Kolkata', year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit' };\r",
-									"//     return new Date(dateString).toLocaleString('en-IN', options);\r",
-									"// }\r",
+									"function formatDate(dateString) {\r",
+									"    const options = { timeZone: 'Asia/Kolkata', year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit' };\r",
+									"    return new Date(dateString).toLocaleString('en-IN', options);\r",
+									"}\r",
 									"\r",
 									"function constructVisualizerPayload() {\r",
-									"    return {response: pm.response.json(), \r",
-									"    // formatDate: formatDate\r",
+									"    return {response: pm.response.json(),\r",
+									"    formatDate: formatDate\r",
 									"    };\r",
 									"}\r",
 									"\r",
+									"// pm.visualizer.set(template, {response: pm.response.json()});\r",
 									"pm.visualizer.set(template, constructVisualizerPayload());"
 								],
 								"type": "text/javascript",
@@ -13565,7 +13569,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{host}}:{{port}}/api/v1/reports/package-expire?from=2025-07-01&to=2025-07-30&branch=6596cd94521db8cebc695daa",
+							"raw": "{{host}}:{{port}}/api/v1/reports/package-expire?from=2025-07-01&to=2025-07-31&branch=6596cd94521db8cebc695daa",
 							"host": [
 								"{{host}}"
 							],
@@ -13583,7 +13587,7 @@
 								},
 								{
 									"key": "to",
-									"value": "2025-07-30"
+									"value": "2025-07-31"
 								},
 								{
 									"key": "branch",
