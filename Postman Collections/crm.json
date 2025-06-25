@@ -13511,7 +13511,7 @@
 									"        <th>Access Finish</th>\r",
 									"    </tr>\r",
 									"    \r",
-									"    {{#each response.data}}\r",
+									"    {{#each response}}\r",
 									"        <tr>\r",
 									"            <td>{{packages.name}}</td>\r",
 									"            <td>{{packages.duration.years}} years, {{packages.duration.months}} months, {{packages.duration.days}} days</td>\r",
@@ -13534,7 +13534,7 @@
 									"`;\r",
 									"\r",
 									"const responseData = pm.response.json();\r",
-									"\r",
+									"console.log(\"responseData before\", responseData)\r",
 									"responseData.data.forEach(function(item) {\r",
 									"    if (item.billDate) {\r",
 									"        item.billDate = moment(item.billDate).tz('Asia/Kolkata').format('YYYY-MM-DD');\r",
@@ -13546,8 +13546,9 @@
 									"        item.accessFinish = moment(item.accessFinish).tz('Asia/Kolkata').format('YYYY-MM-DD');\r",
 									"    }\r",
 									"});\r",
+									"// console.log(\"responseData after\", responseData)\r",
 									"\r",
-									"pm.visualizer.set(template, {response: responseData.data});"
+									"pm.visualizer.set(template, { response: responseData.data });"
 								],
 								"type": "text/javascript",
 								"packages": {}
