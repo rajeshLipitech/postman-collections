@@ -13585,7 +13585,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{host}}:{{port}}/api/v1/reports/package-expire?from=2025-07-01&to=2025-07-31&branch=6596cd94521db8cebc695daa",
+							"raw": "{{host}}:{{port}}/api/v1/reports/package-expire?from=2021-07-01&to=2025-06-25",
 							"host": [
 								"{{host}}"
 							],
@@ -13599,15 +13599,16 @@
 							"query": [
 								{
 									"key": "from",
-									"value": "2025-07-01"
+									"value": "2021-07-01"
 								},
 								{
 									"key": "to",
-									"value": "2025-07-31"
+									"value": "2025-06-25"
 								},
 								{
 									"key": "branch",
-									"value": "6596cd94521db8cebc695daa"
+									"value": "6596cd94521db8cebc695daa",
+									"disabled": true
 								}
 							]
 						}
