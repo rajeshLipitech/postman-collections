@@ -18807,7 +18807,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{host}}:{{port}}/api/v1/live-class?modeOfEvent=Offline",
+							"raw": "{{host}}:{{port}}/api/v1/virtual-pt",
 							"host": [
 								"{{host}}"
 							],
@@ -18815,7 +18815,7 @@
 							"path": [
 								"api",
 								"v1",
-								"live-class"
+								"virtual-pt"
 							],
 							"query": [
 								{
@@ -18823,12 +18823,6 @@
 									"value": "Past",
 									"description": "Past | Future",
 									"disabled": true
-								},
-								{
-									"key": "modeOfEvent",
-									"value": "Offline",
-									"description": "Online | Offline",
-									"type": "text"
 								}
 							]
 						}
