@@ -18774,7 +18774,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Live class 1\",\r\n    \"mentor\": \"65438cf9e962542d79b7e707\",\r\n    \"description\": \"Some live class\",\r\n    \"startDateTime\": \"2023-12-28 11:00\",\r\n    \"endDateTime\": \"2023-12-28 12:00\",\r\n    \"link\": \"https://meet.com\",\r\n    \"image\": \"64eb82c5491dd86ed6fe633d\"\r\n}",
+							"raw": "{\r\n    \"name\": \"Full Body workout\",\r\n    \"description\": \"Virtual PT Some live class\",\r\n    \"startDateTime\": \"2025-07-01\",\r\n    \"endDateTime\": \"2025-12-31\",\r\n    \"image\": \"64eb82c5491dd86ed6fe633d\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -18782,115 +18782,6 @@
 							}
 						},
 						"url": "{{host}}:{{port}}/api/v1/virtual-pt/"
-					},
-					"response": [
-						{
-							"id": "c8b8c0fb-1e00-41c5-9489-2a5c55163e95",
-							"name": "Create Live  class",
-							"originalRequest": {
-								"method": "POST",
-								"header": [
-									{
-										"key": "Origin",
-										"value": "{{referer}}",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"name\": \"Live class 1\",\r\n    \"mentor\": \"65438cf9e962542d79b7e707\",\r\n    \"description\": \"Some live class\",\r\n    \"startDateTime\": \"2023-12-28 11:00\",\r\n    \"endDateTime\": \"2023-12-28 12:00\",\r\n    \"link\": \"https://meet.com\",\r\n    \"image\": \"64eb82c5491dd86ed6fe633d\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{host}}:{{port}}/api/v1/live-class/"
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "X-Powered-By",
-									"value": "Express"
-								},
-								{
-									"key": "Access-Control-Allow-Origin",
-									"value": "*"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json; charset=utf-8"
-								},
-								{
-									"key": "Content-Length",
-									"value": "528"
-								},
-								{
-									"key": "ETag",
-									"value": "W/\"210-rnDFdKQ8OgxDE1bdy4nzRG1kbK4\""
-								},
-								{
-									"key": "Date",
-									"value": "Thu, 14 Dec 2023 05:32:11 GMT"
-								},
-								{
-									"key": "Connection",
-									"value": "keep-alive"
-								},
-								{
-									"key": "Keep-Alive",
-									"value": "timeout=5"
-								}
-							],
-							"cookie": [],
-							"responseTime": null,
-							"body": "{\n    \"data\": {\n        \"addedBy\": \"654a70eefbd7dd39118a8b09\",\n        \"name\": \"Live class 1\",\n        \"image\": \"64eb82c5491dd86ed6fe633d\",\n        \"mentor\": \"65438cf9e962542d79b7e707\",\n        \"description\": \"Some live class\",\n        \"startDateTime\": \"2023-12-28T05:30:00.000Z\",\n        \"endDateTime\": \"2023-12-28T06:30:00.000Z\",\n        \"branch\": \"65436af6e962542d79b7d90b\",\n        \"type\": \"LiveClass\",\n        \"link\": \"https://meet.com\",\n        \"_id\": \"657a935bc4a1d7abd9ef0bda\",\n        \"createdAt\": \"2023-12-14T05:32:11.304Z\",\n        \"updatedAt\": \"2023-12-14T05:32:11.304Z\",\n        \"slug\": \"live-class-1\"\n    },\n    \"status\": \"Ok\",\n    \"message\": {\n        \"code\": \"LiveClassCreateSuccess\"\n    }\n}"
-						}
-					]
-				},
-				{
-					"name": "Get over Stats",
-					"id": "c63ea3f1-0595-43ff-9e6d-9dd901ef5c1b",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": {
-								"token": "{{token}}"
-							}
-						},
-						"method": "GET",
-						"header": [
-							{
-								"key": "Origin",
-								"value": "{{referer}}",
-								"type": "text"
-							}
-						],
-						"url": {
-							"raw": "{{host}}:{{port}}/api/v1/live-class/stats/preview?branch=65f7d689df0c0e50baee2444",
-							"host": [
-								"{{host}}"
-							],
-							"port": "{{port}}",
-							"path": [
-								"api",
-								"v1",
-								"live-class",
-								"stats",
-								"preview"
-							],
-							"query": [
-								{
-									"key": "branch",
-									"value": "65f7d689df0c0e50baee2444"
-								}
-							]
-						}
 					},
 					"response": []
 				},
@@ -19209,59 +19100,6 @@
 									"id": "f59f9205-c57f-45ba-aafd-eb29fd582314",
 									"key": "id",
 									"value": "67fa2319b0a5a6025e36b0b3"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Delete Live Class Copy",
-					"id": "2da78186-5277-4e9e-9643-0ca3715eb30d",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": {
-								"token": "{{token}}"
-							}
-						},
-						"method": "DELETE",
-						"header": [
-							{
-								"key": "Origin",
-								"value": "{{referer}}",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"link\": \"https://meet.google.com\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{host}}:{{port}}/api/v1/live-class/:id",
-							"host": [
-								"{{host}}"
-							],
-							"port": "{{port}}",
-							"path": [
-								"api",
-								"v1",
-								"live-class",
-								":id"
-							],
-							"variable": [
-								{
-									"id": "87d39a8a-a650-4cf6-94b0-0bd40789c38d",
-									"key": "id",
-									"value": "6574b696cfb873db6b6b92b4"
 								}
 							]
 						}
