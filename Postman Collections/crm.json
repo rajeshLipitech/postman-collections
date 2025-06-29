@@ -18504,6 +18504,1041 @@
 			"description": "## User Operations related API's"
 		},
 		{
+			"name": "Vitual PT",
+			"item": [
+				{
+					"name": "Subscribe",
+					"item": [
+						{
+							"name": "Subscribe",
+							"id": "cbdbf896-5637-4b53-83a3-778a83e66c91",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"slot\": \"\",\r\n    \"date\": \"2025-06-28\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}:{{port}}/api/v1/live-class/subscribe/:id",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"v1",
+										"live-class",
+										"subscribe",
+										":id"
+									],
+									"variable": [
+										{
+											"id": "8b9508d2-832d-44a9-9824-6b6dac527c94",
+											"key": "id",
+											"value": "6809daad3b7a925854b16a9a"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Approve Subscription",
+							"id": "9c9fbfd8-26e1-4f0d-b450-500080127c46",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"slot\": \"\",\r\n    \"date\": \"2025-06-28\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}:{{port}}/api/v1/live-class/subscribe/:requestId",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"v1",
+										"live-class",
+										"subscribe",
+										":requestId"
+									],
+									"variable": [
+										{
+											"id": "36e16814-fb5e-4cad-b7bc-e1146568a43b",
+											"key": "requestId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Subscriptions",
+							"id": "211c8ed5-ef5f-41ae-b56c-a6d35d708b3a",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"slot\": \"\",\r\n    \"date\": \"2025-06-28\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}:{{port}}/api/v1/live-class/subscribe?activityId=6809daad3b7a925854b16a9a&slotId=6809daae3b7a925854b16a9e&date=2025-06-27",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"v1",
+										"live-class",
+										"subscribe"
+									],
+									"query": [
+										{
+											"key": "activityId",
+											"value": "6809daad3b7a925854b16a9a",
+											"type": "text"
+										},
+										{
+											"key": "slotId",
+											"value": "6809daae3b7a925854b16a9e",
+											"type": "text"
+										},
+										{
+											"key": "date",
+											"value": "2025-06-27",
+											"type": "text"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get My Subscriptions",
+							"id": "74ab57d0-1a82-4a65-b65e-71e27cd4f7a8",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"slot\": \"\",\r\n    \"date\": \"2025-06-28\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}:{{port}}/api/v1/live-class/subscribe?timeline=future",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"v1",
+										"live-class",
+										"subscribe"
+									],
+									"query": [
+										{
+											"key": "activityId",
+											"value": "6809daad3b7a925854b16a9a",
+											"disabled": true
+										},
+										{
+											"key": "slotId",
+											"value": "6809daae3b7a925854b16a9e",
+											"disabled": true
+										},
+										{
+											"key": "date",
+											"value": "2025-06-27",
+											"disabled": true
+										},
+										{
+											"key": "timeline",
+											"value": "future",
+											"description": "future | past"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "d37537c3-9093-4fd6-9475-89891e2696d8"
+				},
+				{
+					"name": "Create Virtual PT",
+					"id": "5d77addb-dd49-42da-ab0e-6569d1a85883",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Live class 1\",\r\n    \"mentor\": \"65438cf9e962542d79b7e707\",\r\n    \"description\": \"Some live class\",\r\n    \"startDateTime\": \"2023-12-28 11:00\",\r\n    \"endDateTime\": \"2023-12-28 12:00\",\r\n    \"link\": \"https://meet.com\",\r\n    \"image\": \"64eb82c5491dd86ed6fe633d\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}:{{port}}/api/v1/live-class/"
+					},
+					"response": [
+						{
+							"id": "c8b8c0fb-1e00-41c5-9489-2a5c55163e95",
+							"name": "Create Live  class",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Live class 1\",\r\n    \"mentor\": \"65438cf9e962542d79b7e707\",\r\n    \"description\": \"Some live class\",\r\n    \"startDateTime\": \"2023-12-28 11:00\",\r\n    \"endDateTime\": \"2023-12-28 12:00\",\r\n    \"link\": \"https://meet.com\",\r\n    \"image\": \"64eb82c5491dd86ed6fe633d\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{host}}:{{port}}/api/v1/live-class/"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "528"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"210-rnDFdKQ8OgxDE1bdy4nzRG1kbK4\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 14 Dec 2023 05:32:11 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"data\": {\n        \"addedBy\": \"654a70eefbd7dd39118a8b09\",\n        \"name\": \"Live class 1\",\n        \"image\": \"64eb82c5491dd86ed6fe633d\",\n        \"mentor\": \"65438cf9e962542d79b7e707\",\n        \"description\": \"Some live class\",\n        \"startDateTime\": \"2023-12-28T05:30:00.000Z\",\n        \"endDateTime\": \"2023-12-28T06:30:00.000Z\",\n        \"branch\": \"65436af6e962542d79b7d90b\",\n        \"type\": \"LiveClass\",\n        \"link\": \"https://meet.com\",\n        \"_id\": \"657a935bc4a1d7abd9ef0bda\",\n        \"createdAt\": \"2023-12-14T05:32:11.304Z\",\n        \"updatedAt\": \"2023-12-14T05:32:11.304Z\",\n        \"slug\": \"live-class-1\"\n    },\n    \"status\": \"Ok\",\n    \"message\": {\n        \"code\": \"LiveClassCreateSuccess\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Mark attendance",
+					"id": "5aaff25b-a6ae-405b-86ad-ed479b901198",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/live-class/attendance/:id",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"live-class",
+								"attendance",
+								":id"
+							],
+							"variable": [
+								{
+									"id": "c37b4071-8e9f-4add-b7ab-c058a47a89ce",
+									"key": "id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get attendance",
+					"id": "375cdb3b-5042-45ce-b989-611986db50be",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/live-class/attendance/:id",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"live-class",
+								"attendance",
+								":id"
+							],
+							"variable": [
+								{
+									"id": "a449bdb3-884d-4816-99c0-8d6e296bb3bb",
+									"key": "id",
+									"value": "657a935bc4a1d7abd9ef0bda"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Stats",
+					"id": "acb6db74-4e9b-4e41-a3eb-8be288acffe3",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/live-class/stats?from=2025-06-01&to=2025-06-28&slots[]=06:00-08:30&slots[]=11:40-13:00",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"live-class",
+								"stats"
+							],
+							"query": [
+								{
+									"key": "branch",
+									"value": "65f7d689df0c0e50baee2444",
+									"disabled": true
+								},
+								{
+									"key": "from",
+									"value": "2025-06-01"
+								},
+								{
+									"key": "to",
+									"value": "2025-06-28"
+								},
+								{
+									"key": "slot",
+									"value": "06:00-08:30",
+									"disabled": true
+								},
+								{
+									"key": "day",
+									"value": "MONDAY",
+									"disabled": true
+								},
+								{
+									"key": "slots[]",
+									"value": "06:00-08:30",
+									"type": "text"
+								},
+								{
+									"key": "slots[]",
+									"value": "11:40-13:00",
+									"type": "text"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Stats Download",
+					"id": "5dcb8105-4e85-4c62-a79c-ce4aaa34a48d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/live-class/stats/download?from=2025-04-01&to=2025-04-28&slot=14:00 - 15:00",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"live-class",
+								"stats",
+								"download"
+							],
+							"query": [
+								{
+									"key": "branch",
+									"value": "65f7d689df0c0e50baee2444",
+									"disabled": true
+								},
+								{
+									"key": "from",
+									"value": "2025-04-01"
+								},
+								{
+									"key": "to",
+									"value": "2025-04-28"
+								},
+								{
+									"key": "slot",
+									"value": "14:00 - 15:00"
+								},
+								{
+									"key": "day",
+									"value": "MONDAY",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get slots for a day",
+					"id": "a0f8dcc1-22ba-495d-b759-dcfefe52c9a6",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/live-class/slots?day=MONDAY",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"live-class",
+								"slots"
+							],
+							"query": [
+								{
+									"key": "day",
+									"value": "MONDAY"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get over Stats",
+					"id": "c63ea3f1-0595-43ff-9e6d-9dd901ef5c1b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/live-class/stats/preview?branch=65f7d689df0c0e50baee2444",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"live-class",
+								"stats",
+								"preview"
+							],
+							"query": [
+								{
+									"key": "branch",
+									"value": "65f7d689df0c0e50baee2444"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Live Classes List",
+					"id": "a4f5a950-74ea-40fa-9b8c-2f83f8a1457b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/live-class?modeOfEvent=Offline",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"live-class"
+							],
+							"query": [
+								{
+									"key": "timeline",
+									"value": "Past",
+									"description": "Past | Future",
+									"disabled": true
+								},
+								{
+									"key": "modeOfEvent",
+									"value": "Offline",
+									"description": "Online | Offline",
+									"type": "text"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Live Classes By Id",
+					"id": "1e7013ab-a3db-4c43-ab0a-7fff6946e12c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/live-class/:id",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"live-class",
+								":id"
+							],
+							"variable": [
+								{
+									"id": "54b5d566-db80-4379-af1a-329194387073",
+									"key": "id",
+									"value": "67fa2319b0a5a6025e36b0b3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Live Class",
+					"id": "1195773b-3841-4d56-865b-144365f10c6c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Cisco Live class 1\",\r\n    \"description\": \"Some live class\",\r\n    \"startDateTime\": \"2025-03-31T18:30:00.000Z\",\r\n    \"endDateTime\": \"2025-12-30T18:30:00.000Z\",\r\n    \"modeOfEvent\": \"Online\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/live-class/:id",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"live-class",
+								":id"
+							],
+							"variable": [
+								{
+									"id": "622bfeab-b5b9-493f-991a-ca816a940d84",
+									"key": "id",
+									"value": "6574b696cfb873db6b6b92b4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Slot",
+					"id": "d09c4c93-c906-43a9-921f-d39e33c1baf0",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"day\": \"MONDAY\",\r\n    \"startTime\": \"10:00\",\r\n    \"endTime\": \"11:00\",\r\n    \"link\": \"https://meet.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/live-class/:id/slot/:slotId",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"live-class",
+								":id",
+								"slot",
+								":slotId"
+							],
+							"variable": [
+								{
+									"id": "7b6b5141-0947-4e1a-b777-12b4100963e7",
+									"key": "id",
+									"value": "67fa2319b0a5a6025e36b0b3"
+								},
+								{
+									"id": "327d2ced-1f7c-4b96-a7fd-d93e841ede3e",
+									"key": "slotId",
+									"value": "67fa2319b0a5a6025e36b0bf"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Slot",
+					"id": "367fb3a4-bc7c-4330-ac37-163b20ac3229",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"link\": \"https://meet.google.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/live-class/:id/slot/:slotId",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"live-class",
+								":id",
+								"slot",
+								":slotId"
+							],
+							"variable": [
+								{
+									"id": "f0433104-0b3b-46c5-a046-bc955c079b57",
+									"key": "id",
+									"value": "67fa2319b0a5a6025e36b0b3"
+								},
+								{
+									"id": "4e4417fd-3223-436c-9982-f760b2e05af1",
+									"key": "slotId",
+									"value": "67fa2319b0a5a6025e36b0c0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add slot",
+					"id": "61edc1f0-eb07-4472-a0bf-83841ca4baa1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"link\": \"https://meet.google.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/live-class/:id/slot",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"live-class",
+								":id",
+								"slot"
+							],
+							"variable": [
+								{
+									"id": "f59f9205-c57f-45ba-aafd-eb29fd582314",
+									"key": "id",
+									"value": "67fa2319b0a5a6025e36b0b3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Live Class Copy",
+					"id": "2da78186-5277-4e9e-9643-0ca3715eb30d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"link\": \"https://meet.google.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/live-class/:id",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"live-class",
+								":id"
+							],
+							"variable": [
+								{
+									"id": "87d39a8a-a650-4cf6-94b0-0bd40789c38d",
+									"key": "id",
+									"value": "6574b696cfb873db6b6b92b4"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "9ec195b6-5fe8-41f7-b50e-c9796350de7f"
+		},
+		{
 			"name": "Vitals",
 			"item": [
 				{
