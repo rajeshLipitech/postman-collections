@@ -18989,6 +18989,59 @@
 					"response": []
 				},
 				{
+					"name": "Publish virtual pt",
+					"id": "9bc9fe08-664a-4f2c-b0e2-e31d6c009403",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/virtual-pt/:id/publish",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"virtual-pt",
+								":id",
+								"publish"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "6860feb76f39355d0db4f258"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Delete Slot",
 					"id": "367fb3a4-bc7c-4330-ac37-163b20ac3229",
 					"protocolProfileBehavior": {
@@ -19069,7 +19122,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"link\": \"https://meet.google.com\"\r\n}",
+							"raw": "{\r\n    \"day\": \"MONDAY\",\r\n    \"startTime\": \"07:00\",\r\n    \"endTime\": \"08:00\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
