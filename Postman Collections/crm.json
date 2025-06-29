@@ -18786,7 +18786,7 @@
 					"response": []
 				},
 				{
-					"name": "Get Live Classes List",
+					"name": "Get Virtual PT List",
 					"id": "a4f5a950-74ea-40fa-9b8c-2f83f8a1457b",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -18807,7 +18807,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{host}}:{{port}}/api/v1/virtual-pt",
+							"raw": "{{host}}:{{port}}/api/v1/virtual-pt?status=INACTIVE",
 							"host": [
 								"{{host}}"
 							],
@@ -18823,6 +18823,12 @@
 									"value": "Past",
 									"description": "Past | Future",
 									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "INACTIVE",
+									"description": "ACTIVE | INACTIVE",
+									"type": "text"
 								}
 							]
 						}
@@ -18830,7 +18836,7 @@
 					"response": []
 				},
 				{
-					"name": "Get Live Classes By Id",
+					"name": "Get Virtual PT By Id",
 					"id": "1e7013ab-a3db-4c43-ab0a-7fff6946e12c",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -18851,7 +18857,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{host}}:{{port}}/api/v1/live-class/:id",
+							"raw": "{{host}}:{{port}}/api/v1/virtual-pt/:id",
 							"host": [
 								"{{host}}"
 							],
@@ -18859,14 +18865,13 @@
 							"path": [
 								"api",
 								"v1",
-								"live-class",
+								"virtual-pt",
 								":id"
 							],
 							"variable": [
 								{
-									"id": "54b5d566-db80-4379-af1a-329194387073",
 									"key": "id",
-									"value": "67fa2319b0a5a6025e36b0b3"
+									"value": "6860feb76f39355d0db4f258"
 								}
 							]
 						}
@@ -18874,7 +18879,7 @@
 					"response": []
 				},
 				{
-					"name": "Update Live Class",
+					"name": "Update Virtual PT",
 					"id": "1195773b-3841-4d56-865b-144365f10c6c",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -18904,7 +18909,7 @@
 							}
 						},
 						"url": {
-							"raw": "{{host}}:{{port}}/api/v1/live-class/:id",
+							"raw": "{{host}}:{{port}}/api/v1/virtual-pt/:id",
 							"host": [
 								"{{host}}"
 							],
@@ -18912,14 +18917,13 @@
 							"path": [
 								"api",
 								"v1",
-								"live-class",
+								"virtual-pt",
 								":id"
 							],
 							"variable": [
 								{
-									"id": "622bfeab-b5b9-493f-991a-ca816a940d84",
 									"key": "id",
-									"value": "6574b696cfb873db6b6b92b4"
+									"value": "6860feb76f39355d0db4f258"
 								}
 							]
 						}
