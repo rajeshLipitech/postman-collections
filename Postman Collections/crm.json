@@ -18781,7 +18781,7 @@
 								}
 							}
 						},
-						"url": "{{host}}:{{port}}/api/v1/live-class/"
+						"url": "{{host}}:{{port}}/api/v1/virtual-pt/"
 					},
 					"response": [
 						{
