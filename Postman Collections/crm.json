@@ -18953,7 +18953,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"day\": \"MONDAY\",\r\n    \"startTime\": \"10:00\",\r\n    \"endTime\": \"11:00\",\r\n    \"link\": \"https://meet.com\"\r\n}",
+							"raw": "{\r\n    \"day\": \"MONDAY\",\r\n    \"startTime\": \"10:00\",\r\n    \"endTime\": \"11:00\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -18961,7 +18961,7 @@
 							}
 						},
 						"url": {
-							"raw": "{{host}}:{{port}}/api/v1/live-class/:id/slot/:slotId",
+							"raw": "{{host}}:{{port}}/api/v1/virtual-pt/:id/slot/:slotId",
 							"host": [
 								"{{host}}"
 							],
@@ -18969,21 +18969,19 @@
 							"path": [
 								"api",
 								"v1",
-								"live-class",
+								"virtual-pt",
 								":id",
 								"slot",
 								":slotId"
 							],
 							"variable": [
 								{
-									"id": "7b6b5141-0947-4e1a-b777-12b4100963e7",
 									"key": "id",
-									"value": "67fa2319b0a5a6025e36b0b3"
+									"value": "6860feb76f39355d0db4f258"
 								},
 								{
-									"id": "327d2ced-1f7c-4b96-a7fd-d93e841ede3e",
 									"key": "slotId",
-									"value": "67fa2319b0a5a6025e36b0bf"
+									"value": "6860feb76bf2f5eae84f2849"
 								}
 							]
 						}
@@ -19021,7 +19019,7 @@
 							}
 						},
 						"url": {
-							"raw": "{{host}}:{{port}}/api/v1/live-class/:id/slot/:slotId",
+							"raw": "{{host}}:{{port}}/api/v1/virtual-pt/:id/slot/:slotId",
 							"host": [
 								"{{host}}"
 							],
@@ -19029,21 +19027,19 @@
 							"path": [
 								"api",
 								"v1",
-								"live-class",
+								"virtual-pt",
 								":id",
 								"slot",
 								":slotId"
 							],
 							"variable": [
 								{
-									"id": "f0433104-0b3b-46c5-a046-bc955c079b57",
 									"key": "id",
-									"value": "67fa2319b0a5a6025e36b0b3"
+									"value": "6860feb76f39355d0db4f258"
 								},
 								{
-									"id": "4e4417fd-3223-436c-9982-f760b2e05af1",
 									"key": "slotId",
-									"value": "67fa2319b0a5a6025e36b0c0"
+									"value": "6860feb76bf2f5eae84f2849"
 								}
 							]
 						}
@@ -19081,7 +19077,7 @@
 							}
 						},
 						"url": {
-							"raw": "{{host}}:{{port}}/api/v1/live-class/:id/slot",
+							"raw": "{{host}}:{{port}}/api/v1/virtual-pt/:id/slot",
 							"host": [
 								"{{host}}"
 							],
@@ -19089,15 +19085,14 @@
 							"path": [
 								"api",
 								"v1",
-								"live-class",
+								"virtual-pt",
 								":id",
 								"slot"
 							],
 							"variable": [
 								{
-									"id": "f59f9205-c57f-45ba-aafd-eb29fd582314",
 									"key": "id",
-									"value": "67fa2319b0a5a6025e36b0b3"
+									"value": "6860feb76f39355d0db4f258"
 								}
 							]
 						}
