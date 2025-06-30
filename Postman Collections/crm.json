@@ -19042,6 +19042,60 @@
 					"response": []
 				},
 				{
+					"name": "Branch Subscription",
+					"id": "a2dc8737-1437-4942-bbe1-58351099363a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/virtual-pt/:id/publish",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"virtual-pt",
+								":id",
+								"publish"
+							],
+							"variable": [
+								{
+									"id": "6685f694-155c-4c8d-95e6-47096ee62df7",
+									"key": "id",
+									"value": "6860feb76f39355d0db4f258"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Delete Slot",
 					"id": "367fb3a4-bc7c-4330-ac37-163b20ac3229",
 					"protocolProfileBehavior": {
