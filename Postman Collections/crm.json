@@ -18624,69 +18624,13 @@
 											"key": "timeline",
 											"value": "future",
 											"description": "future | past"
-										}
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Get Subscriptions",
-							"id": "211c8ed5-ef5f-41ae-b56c-a6d35d708b3a",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "{{token}}"
-									}
-								},
-								"method": "GET",
-								"header": [
-									{
-										"key": "Origin",
-										"value": "{{referer}}",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"slot\": \"\",\r\n    \"date\": \"2025-06-28\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{host}}:{{port}}/api/v1/live-class/subscribe?activityId=6809daad3b7a925854b16a9a&slotId=6809daae3b7a925854b16a9e&date=2025-06-27",
-									"host": [
-										"{{host}}"
-									],
-									"port": "{{port}}",
-									"path": [
-										"api",
-										"v1",
-										"live-class",
-										"subscribe"
-									],
-									"query": [
-										{
-											"key": "activityId",
-											"value": "6809daad3b7a925854b16a9a",
-											"type": "text"
 										},
 										{
-											"key": "slotId",
-											"value": "6809daae3b7a925854b16a9e",
-											"type": "text"
-										},
-										{
-											"key": "date",
-											"value": "2025-06-27",
-											"type": "text"
+											"key": "addedBy",
+											"value": null,
+											"description": "Admin only",
+											"type": "text",
+											"disabled": true
 										}
 									]
 								}
