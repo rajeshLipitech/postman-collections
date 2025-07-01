@@ -18563,8 +18563,8 @@
 							"response": []
 						},
 						{
-							"name": "Approve Subscription",
-							"id": "9c9fbfd8-26e1-4f0d-b450-500080127c46",
+							"name": "Get My Subscriptions",
+							"id": "74ab57d0-1a82-4a65-b65e-71e27cd4f7a8",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -18575,7 +18575,7 @@
 										"token": "{{token}}"
 									}
 								},
-								"method": "PATCH",
+								"method": "GET",
 								"header": [
 									{
 										"key": "Origin",
@@ -18593,7 +18593,7 @@
 									}
 								},
 								"url": {
-									"raw": "{{host}}:{{port}}/api/v1/live-class/subscribe/:requestId",
+									"raw": "{{host}}:{{port}}/api/v1/virtual-pt/subscribe?timeline=future",
 									"host": [
 										"{{host}}"
 									],
@@ -18601,15 +18601,29 @@
 									"path": [
 										"api",
 										"v1",
-										"live-class",
-										"subscribe",
-										":requestId"
+										"virtual-pt",
+										"subscribe"
 									],
-									"variable": [
+									"query": [
 										{
-											"id": "36e16814-fb5e-4cad-b7bc-e1146568a43b",
-											"key": "requestId",
-											"value": ""
+											"key": "virtualPtId",
+											"value": "6809daad3b7a925854b16a9a",
+											"disabled": true
+										},
+										{
+											"key": "slotId",
+											"value": "6809daae3b7a925854b16a9e",
+											"disabled": true
+										},
+										{
+											"key": "sessionDate",
+											"value": "2025-06-27",
+											"disabled": true
+										},
+										{
+											"key": "timeline",
+											"value": "future",
+											"description": "future | past"
 										}
 									]
 								}
@@ -18673,74 +18687,6 @@
 											"key": "date",
 											"value": "2025-06-27",
 											"type": "text"
-										}
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Get My Subscriptions",
-							"id": "74ab57d0-1a82-4a65-b65e-71e27cd4f7a8",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "{{token}}"
-									}
-								},
-								"method": "GET",
-								"header": [
-									{
-										"key": "Origin",
-										"value": "{{referer}}",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"slot\": \"\",\r\n    \"date\": \"2025-06-28\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{host}}:{{port}}/api/v1/live-class/subscribe?timeline=future",
-									"host": [
-										"{{host}}"
-									],
-									"port": "{{port}}",
-									"path": [
-										"api",
-										"v1",
-										"live-class",
-										"subscribe"
-									],
-									"query": [
-										{
-											"key": "activityId",
-											"value": "6809daad3b7a925854b16a9a",
-											"disabled": true
-										},
-										{
-											"key": "slotId",
-											"value": "6809daae3b7a925854b16a9e",
-											"disabled": true
-										},
-										{
-											"key": "date",
-											"value": "2025-06-27",
-											"disabled": true
-										},
-										{
-											"key": "timeline",
-											"value": "future",
-											"description": "future | past"
 										}
 									]
 								}
