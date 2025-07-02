@@ -18725,6 +18725,62 @@
 					"response": []
 				},
 				{
+					"name": "Get Virtual PT Slots List",
+					"id": "227fecd1-6e44-4175-a891-1c19d3cca784",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/virtual-pt/slots?day=WEDNESDAY",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"virtual-pt",
+								"slots"
+							],
+							"query": [
+								{
+									"key": "timeline",
+									"value": "Past",
+									"description": "Past | Future",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "INACTIVE",
+									"description": "ACTIVE | INACTIVE",
+									"disabled": true
+								},
+								{
+									"key": "day",
+									"value": "WEDNESDAY",
+									"type": "text"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Get Virtual PT By Id",
 					"id": "1e7013ab-a3db-4c43-ab0a-7fff6946e12c",
 					"protocolProfileBehavior": {
