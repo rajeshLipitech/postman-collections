@@ -18940,7 +18940,7 @@
 											}
 										],
 										"url": {
-											"raw": "{{host}}:{{port}}/api/v1/virtual-pt/slot/sessions/:id",
+											"raw": "{{host}}:{{port}}/api/v1/virtual-pt/slot/sessions/:id?sortedBy=date&sortedOrder",
 											"host": [
 												"{{host}}"
 											],
@@ -18953,10 +18953,37 @@
 												"sessions",
 												":id"
 											],
+											"query": [
+												{
+													"key": "timeline",
+													"value": null,
+													"description": "Future | Past",
+													"disabled": true
+												},
+												{
+													"key": "from",
+													"value": null,
+													"disabled": true
+												},
+												{
+													"key": "to",
+													"value": null,
+													"disabled": true
+												},
+												{
+													"key": "sortedBy",
+													"value": "date"
+												},
+												{
+													"key": "sortedOrder",
+													"value": null,
+													"type": "text"
+												}
+											],
 											"variable": [
 												{
 													"key": "id",
-													"value": "",
+													"value": "6860feb76f39355d0db4f258",
 													"description": "Virtual PT Id"
 												}
 											]
