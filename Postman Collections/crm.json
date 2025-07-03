@@ -18916,6 +18916,112 @@
 					"name": "Slots",
 					"item": [
 						{
+							"name": "Sessions",
+							"item": [
+								{
+									"name": "Get sessions",
+									"id": "6359977d-441d-4588-88a9-58e5944adfa3",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{token}}"
+											}
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Origin",
+												"value": "{{referer}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{host}}:{{port}}/api/v1/virtual-pt/slot/sessions/:id",
+											"host": [
+												"{{host}}"
+											],
+											"port": "{{port}}",
+											"path": [
+												"api",
+												"v1",
+												"virtual-pt",
+												"slot",
+												"sessions",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "",
+													"description": "Virtual PT Id"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Update sessions",
+									"id": "37c891c0-a94b-419f-a7de-9e60ec8a5430",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{token}}"
+											}
+										},
+										"method": "PATCH",
+										"header": [
+											{
+												"key": "Origin",
+												"value": "{{referer}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"mentory\": \"\",\r\n    \"moderator\": \"\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{host}}:{{port}}/api/v1/virtual-pt/slot/sessions/:sessionId",
+											"host": [
+												"{{host}}"
+											],
+											"port": "{{port}}",
+											"path": [
+												"api",
+												"v1",
+												"virtual-pt",
+												"slot",
+												"sessions",
+												":sessionId"
+											],
+											"variable": [
+												{
+													"key": "sessionId",
+													"value": ""
+												}
+											]
+										}
+									},
+									"response": []
+								}
+							],
+							"id": "19c1a5e5-a613-47ba-a53e-92f5b41025a5"
+						},
+						{
 							"name": "Add slot - Superadmin only",
 							"id": "61edc1f0-eb07-4472-a0bf-83841ca4baa1",
 							"protocolProfileBehavior": {
@@ -19142,11 +19248,6 @@
 						}
 					],
 					"id": "e02c528e-5e50-44ce-9dba-6f792076e4cb"
-				},
-				{
-					"name": "Sessioins",
-					"item": [],
-					"id": "19c1a5e5-a613-47ba-a53e-92f5b41025a5"
 				}
 			],
 			"id": "9ec195b6-5fe8-41f7-b50e-c9796350de7f"
