@@ -18641,495 +18641,512 @@
 					"id": "d37537c3-9093-4fd6-9475-89891e2696d8"
 				},
 				{
-					"name": "Create Virtual PT",
-					"id": "5d77addb-dd49-42da-ab0e-6569d1a85883",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": {
-								"token": "{{token}}"
-							}
-						},
-						"method": "POST",
-						"header": [
-							{
-								"key": "Origin",
-								"value": "{{referer}}",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Full Body workout\",\r\n    \"description\": \"Virtual PT Some live class\",\r\n    \"startDate\": \"2025-07-01\",\r\n    \"endDate\": \"2025-12-31\",\r\n    \"image\": \"64eb82c5491dd86ed6fe633d\",\r\n    \"slots\": [\r\n        {\r\n            \"day\": \"MONDAY\",\r\n            \"startTime\": \"07:00\",\r\n            \"endTime\": \"08:00\"\r\n        },\r\n        {\r\n            \"day\": \"MONDAY\",\r\n            \"startTime\": \"08:00\",\r\n            \"endTime\": \"09:00\"\r\n        },\r\n        {\r\n            \"day\": \"MONDAY\",\r\n            \"startTime\": \"09:00\",\r\n            \"endTime\": \"10:00\"\r\n        },\r\n        {\r\n            \"day\": \"MONDAY\",\r\n            \"startTime\": \"17:00\",\r\n            \"endTime\": \"18:00\"\r\n        },\r\n        {\r\n            \"day\": \"MONDAY\",\r\n            \"startTime\": \"18:00\",\r\n            \"endTime\": \"19:00\"\r\n        },\r\n        {\r\n            \"day\": \"MONDAY\",\r\n            \"startTime\": \"21:00\",\r\n            \"endTime\": \"22:00\"\r\n        },\r\n        {\r\n            \"day\": \"WEDNESDAY\",\r\n            \"startTime\": \"07:00\",\r\n            \"endTime\": \"08:00\"\r\n        },\r\n        {\r\n            \"day\": \"FRIDAY\",\r\n            \"startTime\": \"07:00\",\r\n            \"endTime\": \"08:00\"\r\n        },\r\n        {\r\n            \"day\": \"SUNDAY\",\r\n            \"startTime\": \"07:00\",\r\n            \"endTime\": \"08:00\"\r\n        }\r\n    ]\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": "{{host}}:{{port}}/api/v1/virtual-pt/"
-					},
-					"response": []
-				},
-				{
-					"name": "Get Virtual PT List",
-					"id": "a4f5a950-74ea-40fa-9b8c-2f83f8a1457b",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": {
-								"token": "{{token}}"
-							}
-						},
-						"method": "GET",
-						"header": [
-							{
-								"key": "Origin",
-								"value": "{{referer}}",
-								"type": "text"
-							}
-						],
-						"url": {
-							"raw": "{{host}}:{{port}}/api/v1/virtual-pt?status=INACTIVE",
-							"host": [
-								"{{host}}"
-							],
-							"port": "{{port}}",
-							"path": [
-								"api",
-								"v1",
-								"virtual-pt"
-							],
-							"query": [
-								{
-									"key": "timeline",
-									"value": "Past",
-									"description": "Past | Future",
-									"disabled": true
+					"name": "Virtual pt",
+					"item": [
+						{
+							"name": "Create Virtual PT - Superadmin only",
+							"id": "5d77addb-dd49-42da-ab0e-6569d1a85883",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
 								},
-								{
-									"key": "status",
-									"value": "INACTIVE",
-									"description": "ACTIVE | INACTIVE",
-									"type": "text"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Get Virtual PT By Id",
-					"id": "1e7013ab-a3db-4c43-ab0a-7fff6946e12c",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": {
-								"token": "{{token}}"
-							}
-						},
-						"method": "GET",
-						"header": [
-							{
-								"key": "Origin",
-								"value": "{{referer}}",
-								"type": "text"
-							}
-						],
-						"url": {
-							"raw": "{{host}}:{{port}}/api/v1/virtual-pt/:id",
-							"host": [
-								"{{host}}"
-							],
-							"port": "{{port}}",
-							"path": [
-								"api",
-								"v1",
-								"virtual-pt",
-								":id"
-							],
-							"variable": [
-								{
-									"key": "id",
-									"value": "6860feb76f39355d0db4f258"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Update Virtual PT",
-					"id": "1195773b-3841-4d56-865b-144365f10c6c",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": {
-								"token": "{{token}}"
-							}
-						},
-						"method": "PATCH",
-						"header": [
-							{
-								"key": "Origin",
-								"value": "{{referer}}",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Cisco Live class 1\",\r\n    \"description\": \"Some live class\",\r\n    \"startDateTime\": \"2025-03-31T18:30:00.000Z\",\r\n    \"endDateTime\": \"2025-12-30T18:30:00.000Z\",\r\n    \"modeOfEvent\": \"Online\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{host}}:{{port}}/api/v1/virtual-pt/:id",
-							"host": [
-								"{{host}}"
-							],
-							"port": "{{port}}",
-							"path": [
-								"api",
-								"v1",
-								"virtual-pt",
-								":id"
-							],
-							"variable": [
-								{
-									"key": "id",
-									"value": "6860feb76f39355d0db4f258"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Publish virtual pt",
-					"id": "9bc9fe08-664a-4f2c-b0e2-e31d6c009403",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": {
-								"token": "{{token}}"
-							}
-						},
-						"method": "POST",
-						"header": [
-							{
-								"key": "Origin",
-								"value": "{{referer}}",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{host}}:{{port}}/api/v1/virtual-pt/:id/publish",
-							"host": [
-								"{{host}}"
-							],
-							"port": "{{port}}",
-							"path": [
-								"api",
-								"v1",
-								"virtual-pt",
-								":id",
-								"publish"
-							],
-							"variable": [
-								{
-									"key": "id",
-									"value": "6860feb76f39355d0db4f258"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Branch Subscription",
-					"id": "a2dc8737-1437-4942-bbe1-58351099363a",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": {
-								"token": "{{token}}"
-							}
-						},
-						"method": "POST",
-						"header": [
-							{
-								"key": "Origin",
-								"value": "{{referer}}",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"pricingModel\": \"Upfront\",\r\n    \"virtualPtId\": \"6860feb76f39355d0db4f258\",\r\n    \"branch\": \"65b90a198f3850d18c74c1cd\",\r\n    \"price\": 0,\r\n    \"saleAmount\": 100000,\r\n    \"allowedUser\": 5000\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": "{{host}}:{{port}}/api/v1/virtual-pt/branch/subscription"
-					},
-					"response": []
-				},
-				{
-					"name": "Add slot",
-					"id": "61edc1f0-eb07-4472-a0bf-83841ca4baa1",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": {
-								"token": "{{token}}"
-							}
-						},
-						"method": "POST",
-						"header": [
-							{
-								"key": "Origin",
-								"value": "{{referer}}",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"day\": \"MONDAY\",\r\n    \"startTime\": \"07:00\",\r\n    \"endTime\": \"08:00\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{host}}:{{port}}/api/v1/virtual-pt/:id/slot",
-							"host": [
-								"{{host}}"
-							],
-							"port": "{{port}}",
-							"path": [
-								"api",
-								"v1",
-								"virtual-pt",
-								":id",
-								"slot"
-							],
-							"variable": [
-								{
-									"key": "id",
-									"value": "6860feb76f39355d0db4f258"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Get Virtual PT Slots List",
-					"id": "227fecd1-6e44-4175-a891-1c19d3cca784",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": {
-								"token": "{{token}}"
-							}
-						},
-						"method": "GET",
-						"header": [
-							{
-								"key": "Origin",
-								"value": "{{referer}}",
-								"type": "text"
-							}
-						],
-						"url": {
-							"raw": "{{host}}:{{port}}/api/v1/virtual-pt/slots?day=WEDNESDAY",
-							"host": [
-								"{{host}}"
-							],
-							"port": "{{port}}",
-							"path": [
-								"api",
-								"v1",
-								"virtual-pt",
-								"slots"
-							],
-							"query": [
-								{
-									"key": "timeline",
-									"value": "Past",
-									"description": "Past | Future",
-									"disabled": true
+								"method": "POST",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Full Body workout\",\r\n    \"description\": \"Virtual PT Some live class\",\r\n    \"startDate\": \"2025-07-01\",\r\n    \"endDate\": \"2025-12-31\",\r\n    \"image\": \"64eb82c5491dd86ed6fe633d\",\r\n    \"slots\": [\r\n        {\r\n            \"day\": \"MONDAY\",\r\n            \"startTime\": \"07:00\",\r\n            \"endTime\": \"08:00\"\r\n        },\r\n        {\r\n            \"day\": \"MONDAY\",\r\n            \"startTime\": \"08:00\",\r\n            \"endTime\": \"09:00\"\r\n        },\r\n        {\r\n            \"day\": \"MONDAY\",\r\n            \"startTime\": \"09:00\",\r\n            \"endTime\": \"10:00\"\r\n        },\r\n        {\r\n            \"day\": \"MONDAY\",\r\n            \"startTime\": \"17:00\",\r\n            \"endTime\": \"18:00\"\r\n        },\r\n        {\r\n            \"day\": \"MONDAY\",\r\n            \"startTime\": \"18:00\",\r\n            \"endTime\": \"19:00\"\r\n        },\r\n        {\r\n            \"day\": \"MONDAY\",\r\n            \"startTime\": \"21:00\",\r\n            \"endTime\": \"22:00\"\r\n        },\r\n        {\r\n            \"day\": \"WEDNESDAY\",\r\n            \"startTime\": \"07:00\",\r\n            \"endTime\": \"08:00\"\r\n        },\r\n        {\r\n            \"day\": \"FRIDAY\",\r\n            \"startTime\": \"07:00\",\r\n            \"endTime\": \"08:00\"\r\n        },\r\n        {\r\n            \"day\": \"SUNDAY\",\r\n            \"startTime\": \"07:00\",\r\n            \"endTime\": \"08:00\"\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
 								},
-								{
-									"key": "status",
-									"value": "INACTIVE",
-									"description": "ACTIVE | INACTIVE",
-									"disabled": true
+								"url": "{{host}}:{{port}}/api/v1/virtual-pt/"
+							},
+							"response": []
+						},
+						{
+							"name": "Get Virtual PT List",
+							"id": "a4f5a950-74ea-40fa-9b8c-2f83f8a1457b",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
 								},
-								{
-									"key": "day",
-									"value": "WEDNESDAY",
-									"type": "text"
+								"method": "GET",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{host}}:{{port}}/api/v1/virtual-pt?status=INACTIVE",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"v1",
+										"virtual-pt"
+									],
+									"query": [
+										{
+											"key": "timeline",
+											"value": "Past",
+											"description": "Past | Future",
+											"disabled": true
+										},
+										{
+											"key": "status",
+											"value": "INACTIVE",
+											"description": "ACTIVE | INACTIVE",
+											"type": "text"
+										}
+									]
 								}
-							]
+							},
+							"response": []
+						},
+						{
+							"name": "Get Virtual PT By Id",
+							"id": "1e7013ab-a3db-4c43-ab0a-7fff6946e12c",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{host}}:{{port}}/api/v1/virtual-pt/:id",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"v1",
+										"virtual-pt",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "6860feb76f39355d0db4f258"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Virtual PT - Superadmin only",
+							"id": "1195773b-3841-4d56-865b-144365f10c6c",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Cisco Live class 1\",\r\n    \"description\": \"Some live class\",\r\n    \"startDateTime\": \"2025-03-31T18:30:00.000Z\",\r\n    \"endDateTime\": \"2025-12-30T18:30:00.000Z\",\r\n    \"modeOfEvent\": \"Online\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}:{{port}}/api/v1/virtual-pt/:id",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"v1",
+										"virtual-pt",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "6860feb76f39355d0db4f258"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Publish virtual pt - Superadmin only",
+							"id": "9bc9fe08-664a-4f2c-b0e2-e31d6c009403",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}:{{port}}/api/v1/virtual-pt/:id/publish",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"v1",
+										"virtual-pt",
+										":id",
+										"publish"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "6860feb76f39355d0db4f258"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Branch Subscription - Superadmin only",
+							"id": "a2dc8737-1437-4942-bbe1-58351099363a",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"pricingModel\": \"Upfront\",\r\n    \"virtualPtId\": \"6860feb76f39355d0db4f258\",\r\n    \"branch\": \"65b90a198f3850d18c74c1cd\",\r\n    \"price\": 0,\r\n    \"saleAmount\": 100000,\r\n    \"allowedUser\": 5000\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{host}}:{{port}}/api/v1/virtual-pt/branch/subscription"
+							},
+							"response": []
 						}
-					},
-					"response": []
+					],
+					"id": "4e1b2f02-1199-489c-a920-6de4dc9f3385"
 				},
 				{
-					"name": "Update Slot",
-					"id": "d09c4c93-c906-43a9-921f-d39e33c1baf0",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": {
-								"token": "{{token}}"
-							}
-						},
-						"method": "PATCH",
-						"header": [
-							{
-								"key": "Origin",
-								"value": "{{referer}}",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"day\": \"MONDAY\",\r\n    \"startTime\": \"10:00\",\r\n    \"endTime\": \"11:00\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{host}}:{{port}}/api/v1/virtual-pt/:id/slot/:slotId",
-							"host": [
-								"{{host}}"
-							],
-							"port": "{{port}}",
-							"path": [
-								"api",
-								"v1",
-								"virtual-pt",
-								":id",
-								"slot",
-								":slotId"
-							],
-							"variable": [
-								{
-									"key": "id",
-									"value": "6860feb76f39355d0db4f258"
+					"name": "Slots",
+					"item": [
+						{
+							"name": "Add slot - Superadmin only",
+							"id": "61edc1f0-eb07-4472-a0bf-83841ca4baa1",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
 								},
-								{
-									"key": "slotId",
-									"value": "6860feb76bf2f5eae84f2849"
+								"method": "POST",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"day\": \"MONDAY\",\r\n    \"startTime\": \"07:00\",\r\n    \"endTime\": \"08:00\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}:{{port}}/api/v1/virtual-pt/:id/slot",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"v1",
+										"virtual-pt",
+										":id",
+										"slot"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "6860feb76f39355d0db4f258"
+										}
+									]
 								}
-							]
+							},
+							"response": []
+						},
+						{
+							"name": "Get Virtual PT Slots List",
+							"id": "227fecd1-6e44-4175-a891-1c19d3cca784",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{host}}:{{port}}/api/v1/virtual-pt/slots?day=WEDNESDAY",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"v1",
+										"virtual-pt",
+										"slots"
+									],
+									"query": [
+										{
+											"key": "timeline",
+											"value": "Past",
+											"description": "Past | Future",
+											"disabled": true
+										},
+										{
+											"key": "status",
+											"value": "INACTIVE",
+											"description": "ACTIVE | INACTIVE",
+											"disabled": true
+										},
+										{
+											"key": "day",
+											"value": "WEDNESDAY",
+											"type": "text"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Slot - Superadmin only",
+							"id": "d09c4c93-c906-43a9-921f-d39e33c1baf0",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"day\": \"MONDAY\",\r\n    \"startTime\": \"10:00\",\r\n    \"endTime\": \"11:00\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}:{{port}}/api/v1/virtual-pt/:id/slot/:slotId",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"v1",
+										"virtual-pt",
+										":id",
+										"slot",
+										":slotId"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "6860feb76f39355d0db4f258"
+										},
+										{
+											"key": "slotId",
+											"value": "6860feb76bf2f5eae84f2849"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Slot - Superadmin only",
+							"id": "367fb3a4-bc7c-4330-ac37-163b20ac3229",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"link\": \"https://meet.google.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}:{{port}}/api/v1/virtual-pt/:id/slot/:slotId",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"v1",
+										"virtual-pt",
+										":id",
+										"slot",
+										":slotId"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "6860feb76f39355d0db4f258"
+										},
+										{
+											"key": "slotId",
+											"value": "6860feb76bf2f5eae84f2849"
+										}
+									]
+								}
+							},
+							"response": []
 						}
-					},
-					"response": []
+					],
+					"id": "e02c528e-5e50-44ce-9dba-6f792076e4cb"
 				},
 				{
-					"name": "Delete Slot",
-					"id": "367fb3a4-bc7c-4330-ac37-163b20ac3229",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": {
-								"token": "{{token}}"
-							}
-						},
-						"method": "DELETE",
-						"header": [
-							{
-								"key": "Origin",
-								"value": "{{referer}}",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"link\": \"https://meet.google.com\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{host}}:{{port}}/api/v1/virtual-pt/:id/slot/:slotId",
-							"host": [
-								"{{host}}"
-							],
-							"port": "{{port}}",
-							"path": [
-								"api",
-								"v1",
-								"virtual-pt",
-								":id",
-								"slot",
-								":slotId"
-							],
-							"variable": [
-								{
-									"key": "id",
-									"value": "6860feb76f39355d0db4f258"
-								},
-								{
-									"key": "slotId",
-									"value": "6860feb76bf2f5eae84f2849"
-								}
-							]
-						}
-					},
-					"response": []
+					"name": "Sessioins",
+					"item": [],
+					"id": "19c1a5e5-a613-47ba-a53e-92f5b41025a5"
 				}
 			],
 			"id": "9ec195b6-5fe8-41f7-b50e-c9796350de7f"
