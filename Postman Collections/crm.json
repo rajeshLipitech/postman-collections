@@ -18992,6 +18992,80 @@
 									"response": []
 								},
 								{
+									"name": "Get My Assigned sessions",
+									"id": "af0963eb-c358-48b4-941d-a6c8b39f1917",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{token}}"
+											}
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Origin",
+												"value": "{{referer}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{host}}:{{port}}/api/v1/virtual-pt/slot/sessions/:id?sortedBy=date&sortedOrder",
+											"host": [
+												"{{host}}"
+											],
+											"port": "{{port}}",
+											"path": [
+												"api",
+												"v1",
+												"virtual-pt",
+												"slot",
+												"sessions",
+												":id"
+											],
+											"query": [
+												{
+													"key": "timeline",
+													"value": null,
+													"description": "Future | Past",
+													"disabled": true
+												},
+												{
+													"key": "from",
+													"value": null,
+													"disabled": true
+												},
+												{
+													"key": "to",
+													"value": null,
+													"disabled": true
+												},
+												{
+													"key": "sortedBy",
+													"value": "date"
+												},
+												{
+													"key": "sortedOrder",
+													"value": null,
+													"type": "text"
+												}
+											],
+											"variable": [
+												{
+													"id": "52675422-b3d7-4c69-8434-db62457ef454",
+													"key": "id",
+													"value": "6860feb76f39355d0db4f258",
+													"description": "Virtual PT Id"
+												}
+											]
+										}
+									},
+									"response": []
+								},
+								{
 									"name": "Update sessions",
 									"id": "37c891c0-a94b-419f-a7de-9e60ec8a5430",
 									"protocolProfileBehavior": {
