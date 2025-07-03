@@ -19110,6 +19110,86 @@
 										}
 									},
 									"response": []
+								},
+								{
+									"name": "Get sessions Users",
+									"id": "e41eb615-ea84-4293-ad03-1e471c97929a",
+									"protocolProfileBehavior": {
+										"disableBodyPruning": true
+									},
+									"request": {
+										"auth": {
+											"type": "bearer",
+											"bearer": {
+												"token": "{{token}}"
+											}
+										},
+										"method": "GET",
+										"header": [
+											{
+												"key": "Origin",
+												"value": "{{referer}}",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{host}}:{{port}}/api/v1/virtual-pt/slot/sessions/:id/:sessionId/user",
+											"host": [
+												"{{host}}"
+											],
+											"port": "{{port}}",
+											"path": [
+												"api",
+												"v1",
+												"virtual-pt",
+												"slot",
+												"sessions",
+												":id",
+												":sessionId",
+												"user"
+											],
+											"query": [
+												{
+													"key": "timeline",
+													"value": "",
+													"description": "Future | Past",
+													"disabled": true
+												},
+												{
+													"key": "from",
+													"value": "",
+													"disabled": true
+												},
+												{
+													"key": "to",
+													"value": "",
+													"disabled": true
+												},
+												{
+													"key": "sortedBy",
+													"value": "date",
+													"disabled": true
+												},
+												{
+													"key": "sortedOrder",
+													"value": null,
+													"disabled": true
+												}
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "6860feb76f39355d0db4f258",
+													"description": "Virtual PT Id"
+												},
+												{
+													"key": "sessionId",
+													"value": ""
+												}
+											]
+										}
+									},
+									"response": []
 								}
 							],
 							"id": "19c1a5e5-a613-47ba-a53e-92f5b41025a5"
