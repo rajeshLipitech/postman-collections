@@ -18725,62 +18725,6 @@
 					"response": []
 				},
 				{
-					"name": "Get Virtual PT Slots List",
-					"id": "227fecd1-6e44-4175-a891-1c19d3cca784",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": {
-								"token": "{{token}}"
-							}
-						},
-						"method": "GET",
-						"header": [
-							{
-								"key": "Origin",
-								"value": "{{referer}}",
-								"type": "text"
-							}
-						],
-						"url": {
-							"raw": "{{host}}:{{port}}/api/v1/virtual-pt/slots?day=WEDNESDAY",
-							"host": [
-								"{{host}}"
-							],
-							"port": "{{port}}",
-							"path": [
-								"api",
-								"v1",
-								"virtual-pt",
-								"slots"
-							],
-							"query": [
-								{
-									"key": "timeline",
-									"value": "Past",
-									"description": "Past | Future",
-									"disabled": true
-								},
-								{
-									"key": "status",
-									"value": "INACTIVE",
-									"description": "ACTIVE | INACTIVE",
-									"disabled": true
-								},
-								{
-									"key": "day",
-									"value": "WEDNESDAY",
-									"type": "text"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
 					"name": "Get Virtual PT By Id",
 					"id": "1e7013ab-a3db-4c43-ab0a-7fff6946e12c",
 					"protocolProfileBehavior": {
@@ -18876,64 +18820,6 @@
 					"response": []
 				},
 				{
-					"name": "Update Slot",
-					"id": "d09c4c93-c906-43a9-921f-d39e33c1baf0",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": {
-								"token": "{{token}}"
-							}
-						},
-						"method": "PATCH",
-						"header": [
-							{
-								"key": "Origin",
-								"value": "{{referer}}",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"day\": \"MONDAY\",\r\n    \"startTime\": \"10:00\",\r\n    \"endTime\": \"11:00\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{host}}:{{port}}/api/v1/virtual-pt/:id/slot/:slotId",
-							"host": [
-								"{{host}}"
-							],
-							"port": "{{port}}",
-							"path": [
-								"api",
-								"v1",
-								"virtual-pt",
-								":id",
-								"slot",
-								":slotId"
-							],
-							"variable": [
-								{
-									"key": "id",
-									"value": "6860feb76f39355d0db4f258"
-								},
-								{
-									"key": "slotId",
-									"value": "6860feb76bf2f5eae84f2849"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
 					"name": "Publish virtual pt",
 					"id": "9bc9fe08-664a-4f2c-b0e2-e31d6c009403",
 					"protocolProfileBehavior": {
@@ -19021,6 +18907,173 @@
 					"response": []
 				},
 				{
+					"name": "Add slot",
+					"id": "61edc1f0-eb07-4472-a0bf-83841ca4baa1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"day\": \"MONDAY\",\r\n    \"startTime\": \"07:00\",\r\n    \"endTime\": \"08:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/virtual-pt/:id/slot",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"virtual-pt",
+								":id",
+								"slot"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "6860feb76f39355d0db4f258"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Virtual PT Slots List",
+					"id": "227fecd1-6e44-4175-a891-1c19d3cca784",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/virtual-pt/slots?day=WEDNESDAY",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"virtual-pt",
+								"slots"
+							],
+							"query": [
+								{
+									"key": "timeline",
+									"value": "Past",
+									"description": "Past | Future",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "INACTIVE",
+									"description": "ACTIVE | INACTIVE",
+									"disabled": true
+								},
+								{
+									"key": "day",
+									"value": "WEDNESDAY",
+									"type": "text"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Slot",
+					"id": "d09c4c93-c906-43a9-921f-d39e33c1baf0",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"day\": \"MONDAY\",\r\n    \"startTime\": \"10:00\",\r\n    \"endTime\": \"11:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/virtual-pt/:id/slot/:slotId",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"virtual-pt",
+								":id",
+								"slot",
+								":slotId"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "6860feb76f39355d0db4f258"
+								},
+								{
+									"key": "slotId",
+									"value": "6860feb76bf2f5eae84f2849"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Delete Slot",
 					"id": "367fb3a4-bc7c-4330-ac37-163b20ac3229",
 					"protocolProfileBehavior": {
@@ -19072,59 +19125,6 @@
 								{
 									"key": "slotId",
 									"value": "6860feb76bf2f5eae84f2849"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Add slot",
-					"id": "61edc1f0-eb07-4472-a0bf-83841ca4baa1",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": {
-								"token": "{{token}}"
-							}
-						},
-						"method": "POST",
-						"header": [
-							{
-								"key": "Origin",
-								"value": "{{referer}}",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"day\": \"MONDAY\",\r\n    \"startTime\": \"07:00\",\r\n    \"endTime\": \"08:00\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{host}}:{{port}}/api/v1/virtual-pt/:id/slot",
-							"host": [
-								"{{host}}"
-							],
-							"port": "{{port}}",
-							"path": [
-								"api",
-								"v1",
-								"virtual-pt",
-								":id",
-								"slot"
-							],
-							"variable": [
-								{
-									"key": "id",
-									"value": "6860feb76f39355d0db4f258"
 								}
 							]
 						}
