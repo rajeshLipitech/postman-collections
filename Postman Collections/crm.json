@@ -18585,7 +18585,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"slot\": \"\",\r\n    \"date\": \"2025-06-28\"\r\n}",
+									"raw": "",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -18593,7 +18593,7 @@
 									}
 								},
 								"url": {
-									"raw": "{{host}}:{{port}}/api/v1/virtual-pt/subscribe?timeline=future",
+									"raw": "{{host}}:{{port}}/api/v1/virtual-pt/subscribe?timeline=past",
 									"host": [
 										"{{host}}"
 									],
@@ -18622,12 +18622,12 @@
 										},
 										{
 											"key": "timeline",
-											"value": "future",
+											"value": "past",
 											"description": "future | past"
 										},
 										{
 											"key": "addedBy",
-											"value": null,
+											"value": "",
 											"description": "Admin only",
 											"type": "text",
 											"disabled": true
