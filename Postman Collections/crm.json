@@ -1105,7 +1105,7 @@
 					"response": []
 				},
 				{
-					"name": "Get attendance stats Copy",
+					"name": "Individual leaderboard",
 					"event": [
 						{
 							"listen": "test",
