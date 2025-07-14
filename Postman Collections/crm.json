@@ -15064,7 +15064,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{host}}:{{port}}/api/v1/team?populate=manager_f=name, user_f=name",
+							"raw": "{{host}}:{{port}}/api/v1/team",
 							"host": [
 								"{{host}}"
 							],
@@ -15077,7 +15077,8 @@
 							"query": [
 								{
 									"key": "populate",
-									"value": "manager_f=name, user_f=name"
+									"value": "",
+									"disabled": true
 								}
 							]
 						}
