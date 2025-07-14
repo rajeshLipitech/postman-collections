@@ -15142,7 +15142,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Super Duper Team\",\r\n    \"description\": \"Hey enjoy\",\r\n    \"users\": [\r\n        {\r\n            \"user\": \"648b521aa4b96fba401156b8\",\r\n            \"isAdmin\": true\r\n        }\r\n    ]\r\n}",
+							"raw": "{\r\n    \"name\": \"Super Duper Team\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -15164,7 +15164,7 @@
 							"variable": [
 								{
 									"key": "id",
-									"value": "64a6f8a33a45df5ca9ca1cb5"
+									"value": "6874a8d03a4b91250e47f8c2"
 								}
 							]
 						}
@@ -15417,15 +15417,13 @@
 							"query": [
 								{
 									"key": "populate",
-									"value": "user_f=name|image",
-									"type": "text"
+									"value": "user_f=name|image"
 								}
 							],
 							"variable": [
 								{
-									"id": "a90b3c6c-40f0-4c92-b163-20c6027dbc11",
 									"key": "id",
-									"value": "64a7b97e8ef1996de573b7e3"
+									"value": "6874a8d03a4b91250e47f8c2"
 								}
 							]
 						}
