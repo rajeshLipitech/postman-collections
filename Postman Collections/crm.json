@@ -20328,6 +20328,37 @@
 					"response": []
 				},
 				{
+					"name": "ESSL",
+					"id": "8acdeb31-f921-44f2-9160-89f94f8c0c63",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "x-hub-signature",
+								"value": "sha1=9b235600bb35c6c16807c529822e0eae519e25ae"
+							},
+							{
+								"key": "x-hub-signature-256",
+								"value": "sha256=67f3fa8036917a2f2b15fda7139ec2c634debe5d7db5aebca03aade31de6e0f1"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"call_id\": \"e51d5392-d9cf-123b-fe91-3cecefb9bfb6\",\r\n  \"leg\": \"a\",\r\n  \"type\": \"cdr\",\r\n  \"user\": \"500_33333536\",\r\n  \"cmiuuid\": \"ccd826f9-67a4-4467-acfb-a53093ff5c9d\",\r\n  \"direction\": \"outbound\",\r\n  \"callerid\": \"442000000000\",\r\n  \"app_id\": 2223343,\r\n  \"time\": 1650635340436,\r\n  \"custom\": \"{\\\"crm\\\":\\\"true\\\"}\",\r\n  \"extra_params\": \"{\\\"click2call\\\":\\\"true\\\"}\",\r\n  \"request_id\": \"bvS68LlqtFunYMQO0db6g9klSdfS0UHHDoK9S9Qvaed\",\r\n  \"status\": \"hanged\",\r\n  \"to\": \"918249054626\",\r\n  \"conversation_uuid\": \"ccd826f9-67a4-4467-acfb-a53093ff5c9d\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}:{{port}}/api/v1/webhook/94IL5WNMJRW5/essl"
+					},
+					"response": []
+				},
+				{
 					"name": "APIG telecmi",
 					"id": "4887023a-4444-47a1-bfc5-e32854e4c7d4",
 					"protocolProfileBehavior": {
