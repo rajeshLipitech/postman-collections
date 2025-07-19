@@ -6700,6 +6700,49 @@
 					"response": []
 				},
 				{
+					"name": "Get My exercise History",
+					"id": "af1a3cd0-903c-4fff-a09d-113ed72982a1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/exercise-plan/history?paymentId=67cfd956d47bf453faa9db78",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"exercise-plan",
+								"history"
+							],
+							"query": [
+								{
+									"key": "paymentId",
+									"value": "67cfd956d47bf453faa9db78"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Get Multi days plan",
 					"id": "058eac18-96ab-4128-b9e5-db68883e9245",
 					"protocolProfileBehavior": {
