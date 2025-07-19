@@ -794,6 +794,78 @@
 			]
 		},
 		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Get product - Admin",
+					"id": "5efab466-67be-4164-a7b3-a2e08b1ce795",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "page",
+								"value": "1",
+								"type": "text"
+							},
+							{
+								"key": "pageSize",
+								"value": "10",
+								"type": "text"
+							},
+							{
+								"key": "populate",
+								"value": "image_f=url",
+								"type": "text"
+							}
+						],
+						"url": "{{host}}:{{port}}/api/v1/products/fetch"
+					},
+					"response": []
+				}
+			],
+			"id": "c488a483-93c2-4cd2-b8e2-28d913da93b4",
+			"auth": {
+				"type": "apikey",
+				"apikey": {
+					"value": "lPbBqWW4s5Zav1HPV43HlnVOpZSnH4lynFleoEMTKYzWVR8xAmbUY2YAh6lpzyA4",
+					"key": "x-api-key"
+				}
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "1b70fa2f-fbfc-4a1d-b1c2-5296ad164c2b",
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "1194005e-0ef4-46d4-b5be-96524ff3867a",
+						"type": "text/javascript",
+						"packages": {},
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		},
+		{
 			"name": "Asset",
 			"item": [
 				{
