@@ -6673,7 +6673,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{host}}:{{port}}/api/v1/exercise-plan",
+							"raw": "{{host}}:{{port}}/api/v1/exercise-plan?paymentId=67cfd956d47bf453faa9db78",
 							"host": [
 								"{{host}}"
 							],
@@ -6688,6 +6688,11 @@
 									"key": "date",
 									"value": "2023-11-09",
 									"disabled": true
+								},
+								{
+									"key": "paymentId",
+									"value": "67cfd956d47bf453faa9db78",
+									"type": "text"
 								}
 							]
 						}
