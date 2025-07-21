@@ -20379,7 +20379,12 @@
 					"name": "ESSL",
 					"id": "8acdeb31-f921-44f2-9160-89f94f8c0c63",
 					"protocolProfileBehavior": {
-						"disableBodyPruning": true
+						"disableBodyPruning": true,
+						"tlsDisabledProtocols": [
+							"TLSv1_3",
+							"TLSv1_1",
+							"TLSv1"
+						]
 					},
 					"request": {
 						"method": "POST",
