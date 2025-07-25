@@ -2951,7 +2951,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{host}}:{{port}}/api/v1/challenge?timeline=Past",
+							"raw": "{{host}}:{{port}}/api/v1/challenge?timeline=Future",
 							"host": [
 								"{{host}}"
 							],
@@ -2964,7 +2964,7 @@
 							"query": [
 								{
 									"key": "timeline",
-									"value": "Past",
+									"value": "Future",
 									"description": "Past | Future"
 								}
 							]
