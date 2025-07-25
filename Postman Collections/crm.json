@@ -9761,6 +9761,100 @@
 					"id": "799589bf-6141-4aaf-a78d-7685b0b57a91"
 				},
 				{
+					"name": "Attendance",
+					"item": [
+						{
+							"name": "Mark attendance",
+							"id": "a7cbb1ed-c983-4506-b62b-16b3ba9e56e7",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{host}}:{{port}}/api/v1/live-class/attendance/:id",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"v1",
+										"live-class",
+										"attendance",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get attendance",
+							"id": "7f3ec5ef-cb8c-4078-8ef9-bec3fe3fe31d",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{host}}:{{port}}/api/v1/live-class/attendance/:id",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"v1",
+										"live-class",
+										"attendance",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "657a935bc4a1d7abd9ef0bda"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "81ce53e8-1264-491f-aa89-5f19a34591ad"
+				},
+				{
 					"name": "Create Live  class",
 					"id": "475f0e3c-1b9b-4296-9e5d-84d00139225f",
 					"protocolProfileBehavior": {
@@ -9858,94 +9952,6 @@
 							"body": "{\n    \"data\": {\n        \"addedBy\": \"654a70eefbd7dd39118a8b09\",\n        \"name\": \"Live class 1\",\n        \"image\": \"64eb82c5491dd86ed6fe633d\",\n        \"mentor\": \"65438cf9e962542d79b7e707\",\n        \"description\": \"Some live class\",\n        \"startDateTime\": \"2023-12-28T05:30:00.000Z\",\n        \"endDateTime\": \"2023-12-28T06:30:00.000Z\",\n        \"branch\": \"65436af6e962542d79b7d90b\",\n        \"type\": \"LiveClass\",\n        \"link\": \"https://meet.com\",\n        \"_id\": \"657a935bc4a1d7abd9ef0bda\",\n        \"createdAt\": \"2023-12-14T05:32:11.304Z\",\n        \"updatedAt\": \"2023-12-14T05:32:11.304Z\",\n        \"slug\": \"live-class-1\"\n    },\n    \"status\": \"Ok\",\n    \"message\": {\n        \"code\": \"LiveClassCreateSuccess\"\n    }\n}"
 						}
 					]
-				},
-				{
-					"name": "Mark attendance",
-					"id": "a7cbb1ed-c983-4506-b62b-16b3ba9e56e7",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": {
-								"token": "{{token}}"
-							}
-						},
-						"method": "POST",
-						"header": [
-							{
-								"key": "Origin",
-								"value": "{{referer}}",
-								"type": "text"
-							}
-						],
-						"url": {
-							"raw": "{{host}}:{{port}}/api/v1/live-class/attendance/:id",
-							"host": [
-								"{{host}}"
-							],
-							"port": "{{port}}",
-							"path": [
-								"api",
-								"v1",
-								"live-class",
-								"attendance",
-								":id"
-							],
-							"variable": [
-								{
-									"key": "id",
-									"value": ""
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Get attendance",
-					"id": "7f3ec5ef-cb8c-4078-8ef9-bec3fe3fe31d",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": {
-								"token": "{{token}}"
-							}
-						},
-						"method": "GET",
-						"header": [
-							{
-								"key": "Origin",
-								"value": "{{referer}}",
-								"type": "text"
-							}
-						],
-						"url": {
-							"raw": "{{host}}:{{port}}/api/v1/live-class/attendance/:id",
-							"host": [
-								"{{host}}"
-							],
-							"port": "{{port}}",
-							"path": [
-								"api",
-								"v1",
-								"live-class",
-								"attendance",
-								":id"
-							],
-							"variable": [
-								{
-									"key": "id",
-									"value": "657a935bc4a1d7abd9ef0bda"
-								}
-							]
-						}
-					},
-					"response": []
 				},
 				{
 					"name": "Get Stats",
