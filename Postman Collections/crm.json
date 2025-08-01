@@ -19225,6 +19225,61 @@
 							"response": []
 						},
 						{
+							"name": "Delete User to subscription Copy",
+							"id": "55845b3d-00b7-419f-94f5-3829fd8aee4c",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}:{{port}}/api/v1/virtual-pt/branch/subscription/:id/user",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"v1",
+										"virtual-pt",
+										"branch",
+										"subscription",
+										":id",
+										"user"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "686389e20f18b3207d8ad37e"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
 							"name": "Branch Subscription - Superadmin only",
 							"id": "a2dc8737-1437-4942-bbe1-58351099363a",
 							"protocolProfileBehavior": {
