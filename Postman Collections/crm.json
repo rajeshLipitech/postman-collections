@@ -19200,7 +19200,7 @@
 									}
 								},
 								"url": {
-									"raw": "{{host}}:{{port}}/api/v1/virtual-pt/:id/publish",
+									"raw": "{{host}}:{{port}}/api/v1/virtual-pt/branch/subscription/:id/user",
 									"host": [
 										"{{host}}"
 									],
@@ -19209,13 +19209,15 @@
 										"api",
 										"v1",
 										"virtual-pt",
+										"branch",
+										"subscription",
 										":id",
-										"publish"
+										"user"
 									],
 									"variable": [
 										{
 											"key": "id",
-											"value": "6860feb76f39355d0db4f258"
+											"value": "686389e20f18b3207d8ad37e"
 										}
 									]
 								}
