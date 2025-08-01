@@ -19170,6 +19170,59 @@
 							"response": []
 						},
 						{
+							"name": "Add User to subscription",
+							"id": "461b02d1-c89c-4e2b-a626-616bee4a86c3",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}:{{port}}/api/v1/virtual-pt/:id/publish",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"v1",
+										"virtual-pt",
+										":id",
+										"publish"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "6860feb76f39355d0db4f258"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
 							"name": "Branch Subscription - Superadmin only",
 							"id": "a2dc8737-1437-4942-bbe1-58351099363a",
 							"protocolProfileBehavior": {
