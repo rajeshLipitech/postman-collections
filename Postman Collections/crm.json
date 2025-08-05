@@ -19225,7 +19225,7 @@
 							"response": []
 						},
 						{
-							"name": "Delete User to subscription Copy",
+							"name": "Delete User to subscription",
 							"id": "55845b3d-00b7-419f-94f5-3829fd8aee4c",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -19247,7 +19247,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "",
+									"raw": "{\r\n    \"user\": \"657da9cb3d8a679311c67e46\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
