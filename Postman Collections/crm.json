@@ -18887,7 +18887,7 @@
 									}
 								},
 								"url": {
-									"raw": "{{host}}:{{port}}/api/v1/virtual-pt/subscribe?timeline=past",
+									"raw": "{{host}}:{{port}}/api/v1/virtual-pt/subscribe?addedBy=657da9cb3d8a679311c67e46",
 									"host": [
 										"{{host}}"
 									],
@@ -18917,14 +18917,14 @@
 										{
 											"key": "timeline",
 											"value": "past",
-											"description": "future | past"
+											"description": "future | past",
+											"disabled": true
 										},
 										{
 											"key": "addedBy",
-											"value": "",
+											"value": "657da9cb3d8a679311c67e46",
 											"description": "Admin only",
-											"type": "text",
-											"disabled": true
+											"type": "text"
 										}
 									]
 								}
