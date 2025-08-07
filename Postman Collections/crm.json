@@ -15547,6 +15547,60 @@
 					"response": []
 				},
 				{
+					"name": "Add user Copy",
+					"id": "bbaf2b52-80f0-4244-b054-cbcfbd878cf2",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"teamId\": \"64a7b97e8ef1996de573b7e3\",\r\n    \"user\": \"648b521aa4b96fba401156b8\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/team/:id/user",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"team",
+								":id",
+								"user"
+							],
+							"variable": [
+								{
+									"id": "d42e119c-3405-46c6-94ca-eda44f9379e7",
+									"key": "id",
+									"value": "64a7b97e8ef1996de573b7e3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Get Team User List",
 					"id": "eda103e8-e912-4e97-9597-31eecf38d3c8",
 					"protocolProfileBehavior": {
