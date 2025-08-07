@@ -15239,7 +15239,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{host}}:{{port}}/api/v1/team",
+							"raw": "{{host}}:{{port}}/api/v1/team?sortedBy=wallet&sortedOrder=Desc",
 							"host": [
 								"{{host}}"
 							],
@@ -15254,6 +15254,16 @@
 									"key": "populate",
 									"value": "",
 									"disabled": true
+								},
+								{
+									"key": "sortedBy",
+									"value": "wallet",
+									"type": "text"
+								},
+								{
+									"key": "sortedOrder",
+									"value": "Desc",
+									"type": "text"
 								}
 							]
 						}
