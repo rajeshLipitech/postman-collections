@@ -15547,7 +15547,7 @@
 					"response": []
 				},
 				{
-					"name": "Add user Copy",
+					"name": "Add points",
 					"id": "bbaf2b52-80f0-4244-b054-cbcfbd878cf2",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
