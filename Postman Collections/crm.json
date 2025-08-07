@@ -15569,34 +15569,48 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"teamId\": \"64a7b97e8ef1996de573b7e3\",\r\n    \"user\": \"648b521aa4b96fba401156b8\"\r\n}",
+							"raw": "{\r\n    \"team\": \"64a7b97e8ef1996de573b7e3\",\r\n    \"value\": \"\",\r\n    \"comment\": \"\",\r\n    \"activityType\": \"\",\r\n    \"contributors\": [\"648b521aa4b96fba401156b8\"]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": {
-							"raw": "{{host}}:{{port}}/api/v1/team/:id/user",
-							"host": [
-								"{{host}}"
-							],
-							"port": "{{port}}",
-							"path": [
-								"api",
-								"v1",
-								"team",
-								":id",
-								"user"
-							],
-							"variable": [
-								{
-									"id": "d42e119c-3405-46c6-94ca-eda44f9379e7",
-									"key": "id",
-									"value": "64a7b97e8ef1996de573b7e3"
+						"url": "{{host}}:{{port}}/api/v1/team/points"
+					},
+					"response": []
+				},
+				{
+					"name": "Wallet histroy",
+					"id": "e56de88d-04de-4475-a92b-85e35f94f298",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"team\": \"64a7b97e8ef1996de573b7e3\",\r\n    \"value\": \"\",\r\n    \"comment\": \"\",\r\n    \"activityType\": \"\",\r\n    \"contributors\": [\"648b521aa4b96fba401156b8\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
 								}
-							]
-						}
+							}
+						},
+						"url": "{{host}}:{{port}}/api/v1/team/wallet-history"
 					},
 					"response": []
 				},
