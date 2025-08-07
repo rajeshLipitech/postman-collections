@@ -15494,6 +15494,59 @@
 					]
 				},
 				{
+					"name": "Get Team wallet history",
+					"id": "d80d43bb-d504-4970-8133-400ca0767362",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/team/:id/wallet-history",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"team",
+								":id",
+								"wallet-history"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "687f318dc47d9c96ecbe9add"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Add user",
 					"id": "48f7ba12-6e15-47aa-bb08-8ac595a54052",
 					"protocolProfileBehavior": {
