@@ -15780,7 +15780,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{host}}:{{port}}/api/v1/team?sortedBy=wallet&sortedOrder=Desc",
+							"raw": "{{host}}:{{port}}/api/v1/telecmi-number",
 							"host": [
 								"{{host}}"
 							],
@@ -15788,23 +15788,13 @@
 							"path": [
 								"api",
 								"v1",
-								"team"
+								"telecmi-number"
 							],
 							"query": [
 								{
 									"key": "populate",
 									"value": "",
 									"disabled": true
-								},
-								{
-									"key": "sortedBy",
-									"value": "wallet",
-									"type": "text"
-								},
-								{
-									"key": "sortedOrder",
-									"value": "Desc",
-									"type": "text"
 								}
 							]
 						}
@@ -15812,7 +15802,7 @@
 					"response": []
 				},
 				{
-					"name": "Create Team",
+					"name": "Create",
 					"id": "d6d80254-a922-4a6a-855d-5174d2337890",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -15834,19 +15824,19 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Super Duper Team 1\",\r\n    \"description\": \"Hey enjoy\",\r\n    \"image\": \"64eb82c5491dd86ed6fe633d\",\r\n    \"manager\": \"648b521aa4b96fba401156b8\"\r\n}",
+							"raw": "{\r\n    \"number\": 918031404915,\r\n    \"branch\": \"653ba3402619321c25d76fa8\",\r\n    \"branchName\": \"Kalyani Nagar\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
-						"url": "{{host}}:{{port}}/api/v1/team/"
+						"url": "{{host}}:{{port}}/api/v1/telecmi-number/"
 					},
 					"response": []
 				},
 				{
-					"name": "Update team",
+					"name": "Update",
 					"id": "6ed8d28b-e273-4d5b-a23b-415bf9a26ba2",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -15868,7 +15858,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"Super Duper Team\"\r\n}",
+							"raw": "{\r\n    \"number\": 918031404915,\r\n    \"branch\": \"653ba6e82619321c25d76ffb\",\r\n    \"branchName\": \"Kharadi\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -15876,7 +15866,7 @@
 							}
 						},
 						"url": {
-							"raw": "{{host}}:{{port}}/api/v1/team/:id",
+							"raw": "{{host}}:{{port}}/api/v1/telecmi-number/:id",
 							"host": [
 								"{{host}}"
 							],
@@ -15884,14 +15874,13 @@
 							"path": [
 								"api",
 								"v1",
-								"team",
+								"telecmi-number",
 								":id"
 							],
 							"variable": [
 								{
-									"id": "147af502-3e53-44c0-ae28-454874c7eaca",
 									"key": "id",
-									"value": "6874a8d03a4b91250e47f8c2"
+									"value": "689adb4973054891f227f3c1"
 								}
 							]
 						}
@@ -15899,358 +15888,8 @@
 					"response": []
 				},
 				{
-					"name": "Get Team by id",
-					"id": "52955171-c40c-4c5c-a956-e98fe220cecb",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": {
-								"token": "{{token}}"
-							}
-						},
-						"method": "GET",
-						"header": [
-							{
-								"key": "Origin",
-								"value": "{{referer}}",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{host}}:{{port}}/api/v1/team/:id?populate=image_f=url,users:user",
-							"host": [
-								"{{host}}"
-							],
-							"port": "{{port}}",
-							"path": [
-								"api",
-								"v1",
-								"team",
-								":id"
-							],
-							"query": [
-								{
-									"key": "populate",
-									"value": "image_f=url,users:user"
-								}
-							],
-							"variable": [
-								{
-									"id": "718f8ee7-947f-4dd1-8a25-956b326c2e91",
-									"key": "id",
-									"value": ""
-								}
-							]
-						}
-					},
-					"response": [
-						{
-							"id": "95cd5d4e-2eb9-4806-8c1a-e69ca576e06b",
-							"name": "Get Team by id",
-							"originalRequest": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Origin",
-										"value": "{{referer}}",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{host}}:{{port}}/api/v1/team/:id?populate=image_f=url",
-									"host": [
-										"{{host}}"
-									],
-									"port": "{{port}}",
-									"path": [
-										"api",
-										"v1",
-										"team",
-										":id"
-									],
-									"query": [
-										{
-											"key": "populate",
-											"value": "image_f=url"
-										}
-									],
-									"variable": [
-										{
-											"key": "id",
-											"value": "64f5c5b240607fe2e6fdd94f"
-										}
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "X-Powered-By",
-									"value": "Express"
-								},
-								{
-									"key": "Access-Control-Allow-Origin",
-									"value": "*"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json; charset=utf-8"
-								},
-								{
-									"key": "Content-Length",
-									"value": "437"
-								},
-								{
-									"key": "ETag",
-									"value": "W/\"1b5-U4eRlTVYBo9jp0UIIvK1YA/latM\""
-								},
-								{
-									"key": "Date",
-									"value": "Mon, 04 Sep 2023 11:57:48 GMT"
-								},
-								{
-									"key": "Connection",
-									"value": "keep-alive"
-								},
-								{
-									"key": "Keep-Alive",
-									"value": "timeout=5"
-								}
-							],
-							"cookie": [],
-							"responseTime": null,
-							"body": "{\n    \"data\": {\n        \"_id\": \"64f5c5b240607fe2e6fdd94f\",\n        \"user\": \"648b521aa4b96fba401156b8\",\n        \"name\": \"Super Duper Team 1\",\n        \"image\": {\n            \"_id\": \"64eb82c5491dd86ed6fe633d\",\n            \"url\": \"https://crm-crmlocalhost.s3.ap-south-1.amazonaws.com/full/28cfd432-3932-41e0-bd24-118891efa830.png\"\n        },\n        \"manager\": \"648b521aa4b96fba401156b8\",\n        \"description\": \"Hey enjoy\",\n        \"isPublic\": \"false\",\n        \"users\": [],\n        \"slug\": \"super-duper-team-1\",\n        \"__v\": 0\n    },\n    \"status\": \"Ok\",\n    \"message\": {\n        \"code\": \"TeamDetailSuccess\"\n    }\n}"
-						}
-					]
-				},
-				{
-					"name": "Get Team wallet history",
-					"id": "78785c1b-dde2-4827-aee1-081cb50de8dc",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": {
-								"token": "{{token}}"
-							}
-						},
-						"method": "GET",
-						"header": [
-							{
-								"key": "Origin",
-								"value": "{{referer}}",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{host}}:{{port}}/api/v1/team/:id/wallet-history",
-							"host": [
-								"{{host}}"
-							],
-							"port": "{{port}}",
-							"path": [
-								"api",
-								"v1",
-								"team",
-								":id",
-								"wallet-history"
-							],
-							"variable": [
-								{
-									"id": "9e3d2395-58d9-4dfd-a5d2-05dbb9ceb7a0",
-									"key": "id",
-									"value": "687f318dc47d9c96ecbe9add"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Add user",
-					"id": "df6ae338-d456-4f43-b487-c0aaf04cf12c",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": {
-								"token": "{{token}}"
-							}
-						},
-						"method": "POST",
-						"header": [
-							{
-								"key": "Origin",
-								"value": "{{referer}}",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"teamId\": \"64a7b97e8ef1996de573b7e3\",\r\n    \"user\": \"648b521aa4b96fba401156b8\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{host}}:{{port}}/api/v1/team/:id/user",
-							"host": [
-								"{{host}}"
-							],
-							"port": "{{port}}",
-							"path": [
-								"api",
-								"v1",
-								"team",
-								":id",
-								"user"
-							],
-							"variable": [
-								{
-									"id": "de429586-c029-4c8e-8a0b-eeba73f6d737",
-									"key": "id",
-									"value": "64a7b97e8ef1996de573b7e3"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Add points",
-					"id": "0fa3fda2-b607-4be7-a27a-d89e1dd09880",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": {
-								"token": "{{token}}"
-							}
-						},
-						"method": "POST",
-						"header": [
-							{
-								"key": "Origin",
-								"value": "{{referer}}",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"team\": \"64a7b97e8ef1996de573b7e3\",\r\n    \"value\": \"\",\r\n    \"comment\": \"\",\r\n    \"activityType\": \"\",\r\n    \"contributors\": [\"648b521aa4b96fba401156b8\"]\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": "{{host}}:{{port}}/api/v1/team/points"
-					},
-					"response": []
-				},
-				{
-					"name": "Get Team User List",
-					"id": "b8b9c4c5-4a94-4ee8-8cb4-473eef251898",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": {
-								"token": "{{token}}"
-							}
-						},
-						"method": "GET",
-						"header": [
-							{
-								"key": "Origin",
-								"value": "{{referer}}",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"teamId\": \"64a7b97e8ef1996de573b7e3\",\r\n    \"user\": \"648b521aa4b96fba401156b8\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{host}}:{{port}}/api/v1/team/:id/user?populate=user_f=name|image",
-							"host": [
-								"{{host}}"
-							],
-							"port": "{{port}}",
-							"path": [
-								"api",
-								"v1",
-								"team",
-								":id",
-								"user"
-							],
-							"query": [
-								{
-									"key": "populate",
-									"value": "user_f=name|image"
-								}
-							],
-							"variable": [
-								{
-									"id": "1a02af0c-786b-498a-987b-03fa9696ea6c",
-									"key": "id",
-									"value": "6874a8d03a4b91250e47f8c2"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Delete User From Team",
-					"id": "319a0b90-45b7-4f2d-8adb-0f27d24ca1fa",
+					"name": "Delete",
+					"id": "2ed45f1b-ac02-48fd-ad99-4893cac69df3",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -16269,8 +15908,17 @@
 								"type": "text"
 							}
 						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Super Duper Team\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": {
-							"raw": "{{host}}:{{port}}/api/v1/team/:id/user/:teamUserId",
+							"raw": "{{host}}:{{port}}/api/v1/telecmi-number/:id",
 							"host": [
 								"{{host}}"
 							],
@@ -16278,21 +15926,13 @@
 							"path": [
 								"api",
 								"v1",
-								"team",
-								":id",
-								"user",
-								":teamUserId"
+								"telecmi-number",
+								":id"
 							],
 							"variable": [
 								{
-									"id": "bcb4bb0a-1b4a-4f22-8eaa-79ed1845edbb",
 									"key": "id",
-									"value": "64a7b97e8ef1996de573b7e3"
-								},
-								{
-									"id": "a798a4c9-3597-431e-b2ef-c57c193e2a68",
-									"key": "teamUserId",
-									"value": "64fa1d090c4b80a0e9ee8bca"
+									"value": "67d90c033db6e05030ce8886"
 								}
 							]
 						}
@@ -19870,7 +19510,7 @@
 							"response": []
 						},
 						{
-							"name": "Delete User to subscription",
+							"name": "Delete User from subscription",
 							"id": "55845b3d-00b7-419f-94f5-3829fd8aee4c",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
