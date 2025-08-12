@@ -19530,17 +19530,8 @@
 										"type": "text"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"user\": \"657da9cb3d8a679311c67e46\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
 								"url": {
-									"raw": "{{host}}:{{port}}/api/v1/virtual-pt/branch/subscription/:id/user",
+									"raw": "{{host}}:{{port}}/api/v1/virtual-pt/branch/subscription/:id/user/:userId",
 									"host": [
 										"{{host}}"
 									],
@@ -19552,12 +19543,17 @@
 										"branch",
 										"subscription",
 										":id",
-										"user"
+										"user",
+										":userId"
 									],
 									"variable": [
 										{
 											"key": "id",
 											"value": "686389e20f18b3207d8ad37e"
+										},
+										{
+											"key": "userId",
+											"value": "657da9cb3d8a679311c67e46"
 										}
 									]
 								}
