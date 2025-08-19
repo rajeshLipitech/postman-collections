@@ -17265,7 +17265,7 @@
 									}
 								},
 								"url": {
-									"raw": "{{host}}:{{port}}/api/v1/user/member/bca/:id",
+									"raw": "{{host}}:{{port}}/api/v1/user/bca/:id",
 									"host": [
 										"{{host}}"
 									],
@@ -17274,7 +17274,6 @@
 										"api",
 										"v1",
 										"user",
-										"member",
 										"bca",
 										":id"
 									],
@@ -17463,7 +17462,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{host}}:{{port}}/api/v1/user/member/bca/:id",
+									"raw": "{{host}}:{{port}}/api/v1/user/bca/:id",
 									"host": [
 										"{{host}}"
 									],
@@ -17472,7 +17471,6 @@
 										"api",
 										"v1",
 										"user",
-										"member",
 										"bca",
 										":id"
 									],
