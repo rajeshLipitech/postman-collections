@@ -13908,6 +13908,146 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "BCA Report",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "b92f4b94-b7f5-4f0c-bcfe-9085339b84d5",
+								"exec": [
+									"const moment = require('moment');\r",
+									"\r",
+									"var template = `\r",
+									"<style type=\"text/css\">\r",
+									"    .tftable {font-size:14px;color:#333333;width:100%;border-width: 1px;border-color: #87ceeb;border-collapse: collapse;}\r",
+									"    .tftable th {font-size:18px;background-color:#87ceeb;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;text-align:left;}\r",
+									"    .tftable tr {background-color:#ffffff;}\r",
+									"    .tftable td {font-size:14px;border-width: 1px;padding: 8px;border-style: solid;border-color: #87ceeb;}\r",
+									"    .tftable tr:hover {background-color:#e0ffff;}\r",
+									"</style>\r",
+									"\r",
+									"<table class=\"tftable\" border=\"1\">\r",
+									"    <tr>\r",
+									"        <th>Package Name</th>\r",
+									"        <th>Duration</th>\r",
+									"        <th>Bill Date</th>\r",
+									"        <th>Branch Name</th>\r",
+									"        <th>User Name</th>\r",
+									"        <th>Email</th>\r",
+									"        <th>Phone</th>\r",
+									"        <th>Trainer Name</th>\r",
+									"        <th>Status</th>\r",
+									"        <th>Renewed</th>\r",
+									"        <th>Amount</th>\r",
+									"        <th>Discount</th>\r",
+									"        <th>Extended</th>\r",
+									"        <th>Access Start</th>\r",
+									"        <th>Access Finish</th>\r",
+									"    </tr>\r",
+									"    \r",
+									"    {{#each response}}\r",
+									"        <tr>\r",
+									"            <td>{{packages.name}}</td>\r",
+									"            <td>{{packages.duration.years}} years, {{packages.duration.months}} months, {{packages.duration.days}} days</td>\r",
+									"            <td>{{billDate}}</td>\r",
+									"            <td>{{branch.name}}</td>\r",
+									"            <td>{{user.name}}</td>\r",
+									"            <td>{{user.email}}</td>\r",
+									"            <td>{{user.phone}}</td>\r",
+									"            <td>{{trainer.name}}</td>\r",
+									"            <td>{{status}}</td>\r",
+									"            <td>{{renewed}}</td>\r",
+									"            <td>{{amount}}</td>\r",
+									"            <td>{{discount}}</td>\r",
+									"            <td>{{extended}}</td>\r",
+									"            <td>{{accessStart}}</td>\r",
+									"            <td>{{accessFinish}}</td>\r",
+									"        </tr>\r",
+									"    {{/each}}\r",
+									"</table>\r",
+									"`;\r",
+									"\r",
+									"const responseData = pm.response.json();\r",
+									"responseData.data.forEach(function(item) {\r",
+									"    if (item.billDate) {\r",
+									"        item.billDate = new Date(item.billDate).toISOString().slice(0, 10);\r",
+									"    }\r",
+									"    if (item.accessStart) {\r",
+									"        item.accessStart = new Date(item.accessStart).toISOString().slice(0, 10);\r",
+									"    }\r",
+									"    if (item.accessFinish) {\r",
+									"        item.accessFinish = new Date(item.accessFinish).toISOString().slice(0, 10);\r",
+									"    }\r",
+									"});\r",
+									"\r",
+									"pm.visualizer.set(template, { response: responseData.data });"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "9c9f3c66-022f-4c9f-a0d8-d0f527e72c01",
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"id": "d3dce978-868d-4675-8840-21ac752150b7",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}"
+							}
+						],
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/reports/package-expire?from=2025-05-01&to=2025-06-30",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"reports",
+								"package-expire"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "2025-05-01"
+								},
+								{
+									"key": "to",
+									"value": "2025-06-30"
+								},
+								{
+									"key": "branch",
+									"value": "6596cd94521db8cebc695daa",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
 				}
 			],
 			"id": "d4899778-bcda-4160-8e90-cb441dce0659"
