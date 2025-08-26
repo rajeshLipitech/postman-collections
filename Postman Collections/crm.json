@@ -14019,7 +14019,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{host}}:{{port}}/api/v1/reports/package-expire?from=2025-05-01&to=2025-06-30",
+							"raw": "{{host}}:{{port}}/api/v1/reports/bca?from=2025-05-01&to=2025-06-30",
 							"host": [
 								"{{host}}"
 							],
@@ -14028,7 +14028,7 @@
 								"api",
 								"v1",
 								"reports",
-								"package-expire"
+								"bca"
 							],
 							"query": [
 								{
