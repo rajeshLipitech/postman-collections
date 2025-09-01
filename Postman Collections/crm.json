@@ -19732,6 +19732,61 @@
 								"url": "{{host}}:{{port}}/api/v1/virtual-pt/branch/subscription"
 							},
 							"response": []
+						},
+						{
+							"name": "Zoom JWT token",
+							"id": "b0b27b8c-265c-4700-943d-9bd5b298f2cc",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"pricingModel\": \"Upfront\",\r\n    \"virtualPtId\": \"6860feb76f39355d0db4f258\",\r\n    \"branch\": \"65b90a198f3850d18c74c1cd\",\r\n    \"price\": 0,\r\n    \"saleAmount\": 100000,\r\n    \"allowedUser\": 5000\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}:{{port}}/api/v1/virtual-pt/slot/sessions/:sessionId/zoom-auth-token",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"v1",
+										"virtual-pt",
+										"slot",
+										"sessions",
+										":sessionId",
+										"zoom-auth-token"
+									],
+									"variable": [
+										{
+											"key": "sessionId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
 						}
 					],
 					"id": "4e1b2f02-1199-489c-a920-6de4dc9f3385"
