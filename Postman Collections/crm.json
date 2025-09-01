@@ -19754,15 +19754,6 @@
 										"type": "text"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"pricingModel\": \"Upfront\",\r\n    \"virtualPtId\": \"6860feb76f39355d0db4f258\",\r\n    \"branch\": \"65b90a198f3850d18c74c1cd\",\r\n    \"price\": 0,\r\n    \"saleAmount\": 100000,\r\n    \"allowedUser\": 5000\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
 								"url": {
 									"raw": "{{host}}:{{port}}/api/v1/virtual-pt/slot/sessions/:sessionId/zoom-auth-token",
 									"host": [
@@ -19781,7 +19772,7 @@
 									"variable": [
 										{
 											"key": "sessionId",
-											"value": ""
+											"value": "68b14fb9da749166d545adca"
 										}
 									]
 								}
