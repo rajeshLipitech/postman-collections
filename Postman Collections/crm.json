@@ -19788,7 +19788,7 @@
 							"response": []
 						},
 						{
-							"name": "Zoom JWT token",
+							"name": "[Removed]Zoom JWT token",
 							"id": "b0b27b8c-265c-4700-943d-9bd5b298f2cc",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -19825,6 +19825,53 @@
 									],
 									"variable": [
 										{
+											"key": "sessionId",
+											"value": "68b14fb9da749166d545adca"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Start video meeting",
+							"id": "1f509b1c-f424-42e0-b07e-e7c7988fdd2a",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{host}}:{{port}}/api/v1/virtual-pt/slot/sessions/:sessionId/zoom-auth-token",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"v1",
+										"virtual-pt",
+										"slot",
+										"sessions",
+										":sessionId",
+										"zoom-auth-token"
+									],
+									"variable": [
+										{
+											"id": "58ef5b41-6647-4237-be1f-f917ce5809aa",
 											"key": "sessionId",
 											"value": "68b14fb9da749166d545adca"
 										}
