@@ -19335,6 +19335,61 @@
 							"response": []
 						},
 						{
+							"name": "Get Video sdk token",
+							"id": "0cfe1842-1990-40ea-8a0e-0bf7726cc37c",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"slot\": \"\",\r\n    \"date\": \"2025-06-28\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}:{{port}}/api/v1/virtual-pt/subscribe/:id",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"v1",
+										"virtual-pt",
+										"subscribe",
+										":id"
+									],
+									"variable": [
+										{
+											"id": "c9b1b1a5-8b2b-4e01-b4b6-fb6aff39bd55",
+											"key": "id",
+											"value": "68b69aed76e0e29c4f974c74",
+											"description": "subscription id"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
 							"name": "Get My Subscriptions",
 							"id": "74ab57d0-1a82-4a65-b65e-71e27cd4f7a8",
 							"protocolProfileBehavior": {
