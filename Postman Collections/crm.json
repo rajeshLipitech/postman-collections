@@ -19800,7 +19800,7 @@
 										"token": "{{token}}"
 									}
 								},
-								"method": "GET",
+								"method": "POST",
 								"header": [
 									{
 										"key": "Origin",
@@ -19808,6 +19808,15 @@
 										"type": "text"
 									}
 								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"role\": 1, // 1 for host, 0 for attendee\r\n    \"videoWebRtcMode\": 1 // 1 for true, 0 for false\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
 								"url": {
 									"raw": "{{host}}:{{port}}/api/v1/virtual-pt/slot/sessions/:sessionId/zoom-auth-token",
 									"host": [
@@ -19826,7 +19835,7 @@
 									"variable": [
 										{
 											"key": "sessionId",
-											"value": "68b14fb9da749166d545adca"
+											"value": "68b5469df1f8deb866474339"
 										}
 									]
 								}
@@ -19846,7 +19855,7 @@
 										"token": "{{token}}"
 									}
 								},
-								"method": "GET",
+								"method": "POST",
 								"header": [
 									{
 										"key": "Origin",
@@ -19855,7 +19864,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{host}}:{{port}}/api/v1/virtual-pt/slot/sessions/:sessionId/zoom-auth-token",
+									"raw": "{{host}}:{{port}}/api/v1/virtual-pt/slot/sessions/:sessionId/start-video",
 									"host": [
 										"{{host}}"
 									],
@@ -19867,11 +19876,10 @@
 										"slot",
 										"sessions",
 										":sessionId",
-										"zoom-auth-token"
+										"start-video"
 									],
 									"variable": [
 										{
-											"id": "58ef5b41-6647-4237-be1f-f917ce5809aa",
 											"key": "sessionId",
 											"value": "68b14fb9da749166d545adca"
 										}
