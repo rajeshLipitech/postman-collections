@@ -19355,15 +19355,6 @@
 										"type": "text"
 									}
 								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"slot\": \"\",\r\n    \"date\": \"2025-06-28\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
 								"url": {
 									"raw": "{{host}}:{{port}}/api/v1/virtual-pt/subscribe/:id/video-token",
 									"host": [
