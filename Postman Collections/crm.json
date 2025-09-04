@@ -19365,7 +19365,7 @@
 									}
 								},
 								"url": {
-									"raw": "{{host}}:{{port}}/api/v1/virtual-pt/subscribe/:id",
+									"raw": "{{host}}:{{port}}/api/v1/virtual-pt/subscribe/:id/video-token",
 									"host": [
 										"{{host}}"
 									],
@@ -19375,13 +19375,13 @@
 										"v1",
 										"virtual-pt",
 										"subscribe",
-										":id"
+										":id",
+										"video-token"
 									],
 									"variable": [
 										{
-											"id": "c9b1b1a5-8b2b-4e01-b4b6-fb6aff39bd55",
 											"key": "id",
-											"value": "68b69aed76e0e29c4f974c74",
+											"value": "68b85ea86cf0b3b5ad6616c4",
 											"description": "subscription id"
 										}
 									]
