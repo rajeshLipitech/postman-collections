@@ -19347,7 +19347,7 @@
 										"token": "{{token}}"
 									}
 								},
-								"method": "GET",
+								"method": "POST",
 								"header": [
 									{
 										"key": "Origin",
