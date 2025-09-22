@@ -17628,6 +17628,45 @@
 							"response": []
 						},
 						{
+							"name": "Get smart diet",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "03499e48-5752-4076-b963-23a297d11e4f",
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"id": "0147b047-b3bd-4097-a9b3-d5479e63dcd3",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"url": "{{host}}:{{port}}/api/v1/user/member/smartdiet",
+								"description": "Get LoggedIn User Information"
+							},
+							"response": []
+						},
+						{
 							"name": "bulk-upload",
 							"id": "081c9c90-5ecf-4643-aaa3-bcbd9e586c1a",
 							"protocolProfileBehavior": {
