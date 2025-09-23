@@ -15356,6 +15356,371 @@
 			"id": "2f84e2ef-a871-4046-a7d8-51fc58f5c5ca"
 		},
 		{
+			"name": "Smart Nutrition",
+			"item": [
+				{
+					"name": "Get Subscriptions",
+					"id": "ec65a8d2-912a-4abf-97fa-c3bab4bcb92e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/team?sortedBy=wallet&sortedOrder=Desc",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"team"
+							],
+							"query": [
+								{
+									"key": "populate",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "sortedBy",
+									"value": "wallet",
+									"type": "text"
+								},
+								{
+									"key": "sortedOrder",
+									"value": "Desc",
+									"type": "text"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add subscription",
+					"id": "da2f4e0c-6a85-4888-836d-35415a49f82a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Super Duper Team 1\",\r\n    \"description\": \"Hey enjoy\",\r\n    \"image\": \"64eb82c5491dd86ed6fe633d\",\r\n    \"manager\": \"648b521aa4b96fba401156b8\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}:{{port}}/api/v1/team/"
+					},
+					"response": []
+				},
+				{
+					"name": "Update subscription",
+					"id": "82386fc2-6e3b-4715-84be-659a7e3719ad",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Super Duper Team\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/team/:id",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"team",
+								":id"
+							],
+							"variable": [
+								{
+									"id": "b7fa78b0-b9f5-4ded-9ff9-423f2e51b30a",
+									"key": "id",
+									"value": "6874a8d03a4b91250e47f8c2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get subscription by id",
+					"id": "f81c459f-36a2-4f90-a4a4-8639716daf79",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/team/:id?populate=image_f=url,users:user",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"team",
+								":id"
+							],
+							"query": [
+								{
+									"key": "populate",
+									"value": "image_f=url,users:user"
+								}
+							],
+							"variable": [
+								{
+									"id": "7ab0fcd0-f2ae-45d8-88b4-74cf3f70d2ef",
+									"key": "id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Team wallet history",
+					"id": "710bc3f3-57e3-49bf-81d5-c1691b2a0427",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/team/:id/wallet-history",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"team",
+								":id",
+								"wallet-history"
+							],
+							"variable": [
+								{
+									"id": "f893b2d8-08be-4be0-96ff-50a635aab70a",
+									"key": "id",
+									"value": "687f318dc47d9c96ecbe9add"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add users to subscription",
+					"id": "dc1a2dc5-e858-4f95-bc92-1d5846070549",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"teamId\": \"64a7b97e8ef1996de573b7e3\",\r\n    \"user\": \"648b521aa4b96fba401156b8\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/team/:id/user",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"team",
+								":id",
+								"user"
+							],
+							"variable": [
+								{
+									"id": "d7ddee86-af09-4cce-adc3-87f49a1862b1",
+									"key": "id",
+									"value": "64a7b97e8ef1996de573b7e3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User From subscription",
+					"id": "779c6c43-b345-4a7c-88d5-246ae7c6bdfa",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/team/:id/user/:teamUserId",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"team",
+								":id",
+								"user",
+								":teamUserId"
+							],
+							"variable": [
+								{
+									"id": "02d53bed-f150-4452-b25e-418a26fe00cc",
+									"key": "id",
+									"value": "64a7b97e8ef1996de573b7e3"
+								},
+								{
+									"id": "efcd3178-afe3-461f-b671-6df6487b96fa",
+									"key": "teamUserId",
+									"value": "64fa1d090c4b80a0e9ee8bca"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "c32b6830-bdc8-4778-9b43-85d558084c80",
+			"description": "## User Operations related API's"
+		},
+		{
 			"name": "Team",
 			"item": [
 				{
