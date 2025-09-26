@@ -12236,6 +12236,105 @@
 					]
 				},
 				{
+					"name": "Purchase online",
+					"id": "78e47538-26bb-4d46-946f-cc5897c27e33",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"payment\": {\r\n        \"user\": \"653a998543998c3f1a6cebef\",\r\n        \"packages\": \"653bb3ef2619321c25d77105\",\r\n        \"salesStaff\": \"648c1e9451e17ccf98398b2e\",\r\n        \"billDate\": \"2024-02-28\",\r\n        \"ansillaries\": [\r\n            {\r\n                \"packages\": \"653bc4052619321c25d771af\",\r\n                \"amount\": \"15000\",\r\n                \"bundled\": false,\r\n                \"accessStart\": \"2023-07-03\",\r\n                \"accessFinish\": \"2024-07-03\"\r\n            }\r\n        ],\r\n        \"accessStart\": \"2023-07-03\",\r\n        \"accessFinish\": \"2023-07-03\",\r\n        \"amount\": 30000,\r\n        \"discount\": 0,\r\n        \"paymentAmount\": 25000,\r\n        \"paymentDues\": [{\r\n            \"amount\": 5000,\r\n            \"dueDate\": \"2024-03-10\"\r\n        }],\r\n        \"trial\": false,\r\n        \"paymentMethod\": \"dfdfdfdfdfd\",\r\n        \"paymentNote\": \"fffdd\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}:{{port}}/api/v1/payment/"
+					},
+					"response": [
+						{
+							"id": "9dfceafc-e618-46fc-9f87-f541ea4f16e1",
+							"name": "Create Branch",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Package 1\",\r\n    \"description\": \"Some Test Package\",\r\n    \"trialDays\": 2,\r\n    \"branches\": [\"64eb8331bff45463b300eb0d\"],\r\n    \"images\": [\"64eb82c5491dd86ed6fe633d\"],\r\n    \"ansillaries\": [{\r\n        \"id\": \"64f45f2bc131246b9df544d6\",\r\n        \"sessionCount\": 20\r\n    }],\r\n    \"fees\": 10000,\r\n    \"discountedFees\": 7000,\r\n    \"packageType\": \"GymMembership\",\r\n    \"membershipId\": \"64f46dd37718788baf6848ed\",\r\n    \"duration\": {\r\n        \"years\": 0,\r\n        \"months\": 12,\r\n        \"days\": 0\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{host}}:{{port}}/api/v1/package/"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "580"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"244-/ml46KAXB1a6rr9wXPLr2MBkEFY\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 03 Sep 2023 11:39:25 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"data\": {\n        \"user\": \"648b521aa4b96fba401156b8\",\n        \"name\": \"Package 1\",\n        \"membershipId\": \"64f46dd37718788baf6848ed\",\n        \"description\": \"Some Test Package\",\n        \"trialDays\": 2,\n        \"branches\": [\n            \"64eb8331bff45463b300eb0d\"\n        ],\n        \"fees\": 10000,\n        \"discountedFees\": 7000,\n        \"ansillaries\": [\n            {\n                \"id\": \"64f45f2bc131246b9df544d6\",\n                \"sessionCount\": 20,\n                \"_id\": \"64f4706d70c837ea42919b65\"\n            }\n        ],\n        \"packageType\": \"GymMembership\",\n        \"status\": \"Active\",\n        \"duration\": {\n            \"years\": 0,\n            \"months\": 12,\n            \"days\": 0\n        },\n        \"images\": [\n            \"64eb82c5491dd86ed6fe633d\"\n        ],\n        \"_id\": \"64f4706d70c837ea42919b64\",\n        \"slug\": \"package-1-0002\",\n        \"__v\": 0\n    },\n    \"status\": \"Ok\",\n    \"message\": {\n        \"code\": \"PackageCreateSuccess\"\n    }\n}"
+						}
+					]
+				},
+				{
 					"name": "Pay dues",
 					"id": "2a49e26b-8593-420e-9537-3c40433467b3",
 					"protocolProfileBehavior": {
