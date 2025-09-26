@@ -11314,7 +11314,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{host}}:{{port}}/api/v1/package?packageType=GymMembership&populate=images,branches_f=name",
+							"raw": "{{host}}:{{port}}/api/v1/package/smart-diet",
 							"host": [
 								"{{host}}"
 							],
@@ -11322,7 +11322,8 @@
 							"path": [
 								"api",
 								"v1",
-								"package"
+								"package",
+								"smart-diet"
 							],
 							"query": [
 								{
@@ -11338,72 +11339,18 @@
 								{
 									"key": "packageType",
 									"value": "GymMembership",
-									"description": "GymMembership | Ancillary"
+									"description": "GymMembership | Ancillary",
+									"disabled": true
 								},
 								{
 									"key": "populate",
-									"value": "images,branches_f=name"
+									"value": "images,branches_f=name",
+									"disabled": true
 								}
 							]
 						}
 					},
-					"response": [
-						{
-							"id": "3ba21095-ad4d-4b2d-863f-2c910083fbda",
-							"name": "Get List of package",
-							"originalRequest": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Origin",
-										"value": "{{referer}}",
-										"type": "text"
-									}
-								],
-								"url": "{{host}}:{{port}}/api/v1/package"
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "X-Powered-By",
-									"value": "Express"
-								},
-								{
-									"key": "Access-Control-Allow-Origin",
-									"value": "*"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json; charset=utf-8"
-								},
-								{
-									"key": "Content-Length",
-									"value": "525"
-								},
-								{
-									"key": "ETag",
-									"value": "W/\"20d-iPJFQ9WG5tYnTX9r5wp73j9+l7Y\""
-								},
-								{
-									"key": "Date",
-									"value": "Fri, 01 Sep 2023 18:44:00 GMT"
-								},
-								{
-									"key": "Connection",
-									"value": "keep-alive"
-								},
-								{
-									"key": "Keep-Alive",
-									"value": "timeout=5"
-								}
-							],
-							"cookie": [],
-							"responseTime": null,
-							"body": "{\n    \"data\": {\n        \"list\": [\n            {\n                \"_id\": \"64f230e3615eabc2fa625a6d\",\n                \"user\": \"648b521aa4b96fba401156b8\",\n                \"name\": \"Package 1\",\n                \"description\": \"Some Test Package\",\n                \"trial\": false,\n                \"fees\": 10000,\n                \"discountedFees\": 7000,\n                \"packageType\": \"GymMembership\",\n                \"paymentType\": \"OneTime\",\n                \"status\": \"Active\",\n                \"sessions\": [\n                    {\n                        \"count\": 30,\n                        \"name\": \"Gym Sessions\",\n                        \"_id\": \"64f230e3615eabc2fa625a6e\"\n                    },\n                    {\n                        \"count\": 6,\n                        \"name\": \"Group Sessions\",\n                        \"days\": 20,\n                        \"_id\": \"64f230e3615eabc2fa625a6f\"\n                    }\n                ],\n                \"images\": [],\n                \"slug\": \"package-1\",\n                \"__v\": 0\n            }\n        ],\n        \"total\": 1\n    },\n    \"status\": \"Ok\",\n    \"message\": {\n        \"code\": \"PackageListSuccess\"\n    }\n}"
-						}
-					]
+					"response": []
 				},
 				{
 					"name": "Create Package Membership",
