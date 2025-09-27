@@ -22053,7 +22053,8 @@
 							"pm.environment.set(\"token\", jsonData.data.token);"
 						],
 						"type": "text/javascript",
-						"packages": {}
+						"packages": {},
+						"requests": {}
 					}
 				}
 			],
