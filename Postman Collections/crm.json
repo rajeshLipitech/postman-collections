@@ -12265,7 +12265,26 @@
 								}
 							}
 						},
-						"url": "{{host}}:{{port}}/api/v1/payment/"
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/payment/purchase/:id",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"payment",
+								"purchase",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						}
 					},
 					"response": [
 						{
