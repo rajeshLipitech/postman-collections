@@ -12258,7 +12258,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"payment\": {\r\n        \"user\": \"653a998543998c3f1a6cebef\",\r\n        \"packages\": \"653bb3ef2619321c25d77105\",\r\n        \"salesStaff\": \"648c1e9451e17ccf98398b2e\",\r\n        \"billDate\": \"2024-02-28\",\r\n        \"ansillaries\": [\r\n            {\r\n                \"packages\": \"653bc4052619321c25d771af\",\r\n                \"amount\": \"15000\",\r\n                \"bundled\": false,\r\n                \"accessStart\": \"2023-07-03\",\r\n                \"accessFinish\": \"2024-07-03\"\r\n            }\r\n        ],\r\n        \"accessStart\": \"2023-07-03\",\r\n        \"accessFinish\": \"2023-07-03\",\r\n        \"amount\": 30000,\r\n        \"discount\": 0,\r\n        \"paymentAmount\": 25000,\r\n        \"paymentDues\": [{\r\n            \"amount\": 5000,\r\n            \"dueDate\": \"2024-03-10\"\r\n        }],\r\n        \"trial\": false,\r\n        \"paymentMethod\": \"dfdfdfdfdfd\",\r\n        \"paymentNote\": \"fffdd\"\r\n    }\r\n}",
+							"raw": "",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -12281,7 +12281,7 @@
 							"variable": [
 								{
 									"key": "id",
-									"value": ""
+									"value": "68d631d83d1cc964ff86eed7"
 								}
 							]
 						}
