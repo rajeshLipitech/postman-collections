@@ -11201,7 +11201,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{host}}:{{port}}/api/v1/package?packageType=GymMembership&populate=images,branches_f=name",
+							"raw": "{{host}}:{{port}}/api/v1/package?packageType=SmartDiet&populate=images,branches_f=name",
 							"host": [
 								"{{host}}"
 							],
@@ -11224,8 +11224,8 @@
 								},
 								{
 									"key": "packageType",
-									"value": "GymMembership",
-									"description": "GymMembership | Ancillary"
+									"value": "SmartDiet",
+									"description": "GymMembership | Ancillary | SmartDiet"
 								},
 								{
 									"key": "populate",
