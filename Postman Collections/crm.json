@@ -15624,6 +15624,117 @@
 					"response": []
 				},
 				{
+					"name": "Add User",
+					"id": "2f909860-c616-415e-84c9-a650c9297da9",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Super Duper Team 1\",\r\n    \"description\": \"Hey enjoy\",\r\n    \"image\": \"64eb82c5491dd86ed6fe633d\",\r\n    \"manager\": \"648b521aa4b96fba401156b8\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/smart-nutrition/:id/user",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"smart-nutrition",
+								":id",
+								"user"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add User Copy",
+					"id": "ec4ed0ab-a360-42a7-9122-4cd5da0b55a9",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Super Duper Team 1\",\r\n    \"description\": \"Hey enjoy\",\r\n    \"image\": \"64eb82c5491dd86ed6fe633d\",\r\n    \"manager\": \"648b521aa4b96fba401156b8\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/smart-nutrition/:id/user/:userId",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"smart-nutrition",
+								":id",
+								"user",
+								":userId"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": ""
+								},
+								{
+									"key": "userId",
+									"value": ""
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Update subscription",
 					"id": "82386fc2-6e3b-4715-84be-659a7e3719ad",
 					"protocolProfileBehavior": {
