@@ -11927,7 +11927,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{host}}:{{port}}/api/v1/payment",
+							"raw": "{{host}}:{{port}}/api/v1/payment?packageType[]=SmartDiet&status=ACTIVE",
 							"host": [
 								"{{host}}"
 							],
@@ -11942,6 +11942,16 @@
 									"key": "page",
 									"value": "1",
 									"disabled": true
+								},
+								{
+									"key": "packageType[]",
+									"value": "SmartDiet",
+									"description": " [\"SmartType\", \"GymMembership\", \"Ancillary\"]"
+								},
+								{
+									"key": "status",
+									"value": "ACTIVE",
+									"type": "text"
 								}
 							]
 						}
