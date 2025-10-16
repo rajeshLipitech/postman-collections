@@ -11858,7 +11858,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{host}}:{{port}}/api/v1/payment/items?branch=65436af6e962542d79b7d90b&from=2023-11-15&to=2024-01-15&isRecent=true&type=GymMembership&renewed=false",
+							"raw": "{{host}}:{{port}}/api/v1/payment/items",
 							"host": [
 								"{{host}}"
 							],
@@ -11872,19 +11872,23 @@
 							"query": [
 								{
 									"key": "branch",
-									"value": "65436af6e962542d79b7d90b"
+									"value": "65436af6e962542d79b7d90b",
+									"disabled": true
 								},
 								{
 									"key": "from",
-									"value": "2023-11-15"
+									"value": "2023-11-15",
+									"disabled": true
 								},
 								{
 									"key": "to",
-									"value": "2024-01-15"
+									"value": "2024-01-15",
+									"disabled": true
 								},
 								{
 									"key": "isRecent",
-									"value": "true"
+									"value": "true",
+									"disabled": true
 								},
 								{
 									"key": "page",
@@ -11894,11 +11898,13 @@
 								{
 									"key": "type",
 									"value": "GymMembership",
-									"description": "NON_PT | PT | GymMembership"
+									"description": "NON_PT | PT | GymMembership",
+									"disabled": true
 								},
 								{
 									"key": "renewed",
-									"value": "false"
+									"value": "false",
+									"disabled": true
 								}
 							]
 						}
@@ -11927,7 +11933,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{host}}:{{port}}/api/v1/payment?packageType[]=GymMembership",
+							"raw": "{{host}}:{{port}}/api/v1/payment?packageType[]=SmartType",
 							"host": [
 								"{{host}}"
 							],
@@ -11945,12 +11951,18 @@
 								},
 								{
 									"key": "packageType[]",
-									"value": "GymMembership",
+									"value": "SmartType",
 									"description": " [\"SmartType\", \"GymMembership\", \"Ancillary\"]"
 								},
 								{
 									"key": "status",
 									"value": "ACTIVE",
+									"disabled": true
+								},
+								{
+									"key": "packageType[]",
+									"value": "Ancillary",
+									"type": "text",
 									"disabled": true
 								}
 							]
@@ -19606,7 +19618,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"slot\": \"\",\r\n    \"date\": \"2025-06-28\"\r\n}",
+									"raw": "{\r\n    \"slot\": \"68b5466df1f8deb866474316\",\r\n    \"date\": \"2025-09-09\"\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -19629,7 +19641,7 @@
 									"variable": [
 										{
 											"key": "id",
-											"value": "6860feb76f39355d0db4f258"
+											"value": "68b5466d8119578c9f5cd5be"
 										}
 									]
 								}
