@@ -11933,7 +11933,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{host}}:{{port}}/api/v1/payment?packageType[]=SmartType",
+							"raw": "{{host}}:{{port}}/api/v1/payment?packageType[]=SmartDiet",
 							"host": [
 								"{{host}}"
 							],
@@ -11951,8 +11951,8 @@
 								},
 								{
 									"key": "packageType[]",
-									"value": "SmartType",
-									"description": " [\"SmartType\", \"GymMembership\", \"Ancillary\"]"
+									"value": "SmartDiet",
+									"description": " [\"SmartDiet\", \"GymMembership\", \"Ancillary\"]"
 								},
 								{
 									"key": "status",
