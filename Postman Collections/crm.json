@@ -9886,7 +9886,7 @@
 							"response": []
 						},
 						{
-							"name": "Get attendance Copy",
+							"name": "Delete attendance",
 							"id": "672a1fc5-e427-4097-970d-b50e52d74ac4",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
