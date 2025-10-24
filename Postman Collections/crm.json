@@ -9884,6 +9884,50 @@
 								}
 							},
 							"response": []
+						},
+						{
+							"name": "Get attendance Copy",
+							"id": "672a1fc5-e427-4097-970d-b50e52d74ac4",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{host}}:{{port}}/api/v1/live-class/attendance/:id",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"v1",
+										"live-class",
+										"attendance",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "68fb1ef70a2d01ce01352a57"
+										}
+									]
+								}
+							},
+							"response": []
 						}
 					],
 					"id": "81ce53e8-1264-491f-aa89-5f19a34591ad"
