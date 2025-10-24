@@ -10280,7 +10280,7 @@
 								"token": "{{token}}"
 							}
 						},
-						"method": "GET",
+						"method": "POST",
 						"header": [
 							{
 								"key": "Origin",
@@ -10288,26 +10288,16 @@
 								"type": "text"
 							}
 						],
-						"url": {
-							"raw": "{{host}}:{{port}}/api/v1/live-class/:id",
-							"host": [
-								"{{host}}"
-							],
-							"port": "{{port}}",
-							"path": [
-								"api",
-								"v1",
-								"live-class",
-								":id"
-							],
-							"variable": [
-								{
-									"id": "0cf1550f-5c78-451a-b989-717d47b08dce",
-									"key": "id",
-									"value": "67fa2319b0a5a6025e36b0b3"
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"liveclass\": \"67fa2319b0a5a6025e36b0b3\",\r\n    \"slot\": \"\",\r\n    \"attendanceDateTime\": \"\",\r\n    \"mode\": \"Online\",\r\n    \"users\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
 								}
-							]
-						}
+							}
+						},
+						"url": "{{host}}:{{port}}/api/v1/live-class/attendance"
 					},
 					"response": []
 				},
