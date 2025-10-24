@@ -10290,7 +10290,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"liveclass\": \"67fa2319b0a5a6025e36b0b3\",\r\n    \"slot\": \"\",\r\n    \"attendanceDateTime\": \"\",\r\n    \"mode\": \"Online\",\r\n    \"users\": []\r\n}",
+							"raw": "{\r\n    \"liveclass\": \"67fa2319b0a5a6025e36b0b3\",\r\n    \"slot\": \"67fa2319b0a5a6025e36b0bf\",\r\n    \"attendanceDateTime\": \"2025-10-20\",\r\n    \"mode\": \"Online\",\r\n    \"users\": [\"65b90bf28f3850d18c74c23c\", \"65b90bf28f3850d18c74c23d\"]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
