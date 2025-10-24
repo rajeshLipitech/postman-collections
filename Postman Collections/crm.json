@@ -10268,6 +10268,50 @@
 					"response": []
 				},
 				{
+					"name": "Add bulk attendance",
+					"id": "98a7fb25-a652-487f-b678-bcba21ad3194",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/live-class/:id",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"live-class",
+								":id"
+							],
+							"variable": [
+								{
+									"id": "0cf1550f-5c78-451a-b989-717d47b08dce",
+									"key": "id",
+									"value": "67fa2319b0a5a6025e36b0b3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "Update Live Class",
 					"id": "d81f358e-9de7-4a3c-9d07-187a84d2f598",
 					"protocolProfileBehavior": {
