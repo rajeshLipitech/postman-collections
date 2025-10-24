@@ -9808,6 +9808,40 @@
 							"response": []
 						},
 						{
+							"name": "Add bulk attendance",
+							"id": "98a7fb25-a652-487f-b678-bcba21ad3194",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"liveclass\": \"67fa2319b0a5a6025e36b0b3\",\r\n    \"slot\": \"67fa2319b0a5a6025e36b0bf\",\r\n    \"attendanceDateTime\": \"2025-10-20\",\r\n    \"mode\": \"Online\",\r\n    \"users\": [\"65b90bf28f3850d18c74c23c\", \"65b90bf28f3850d18c74c23d\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{host}}:{{port}}/api/v1/live-class/attendance"
+							},
+							"response": []
+						},
+						{
 							"name": "Get attendance",
 							"id": "7f3ec5ef-cb8c-4078-8ef9-bec3fe3fe31d",
 							"protocolProfileBehavior": {
@@ -10264,40 +10298,6 @@
 								}
 							]
 						}
-					},
-					"response": []
-				},
-				{
-					"name": "Add bulk attendance",
-					"id": "98a7fb25-a652-487f-b678-bcba21ad3194",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": {
-								"token": "{{token}}"
-							}
-						},
-						"method": "POST",
-						"header": [
-							{
-								"key": "Origin",
-								"value": "{{referer}}",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"liveclass\": \"67fa2319b0a5a6025e36b0b3\",\r\n    \"slot\": \"67fa2319b0a5a6025e36b0bf\",\r\n    \"attendanceDateTime\": \"2025-10-20\",\r\n    \"mode\": \"Online\",\r\n    \"users\": [\"65b90bf28f3850d18c74c23c\", \"65b90bf28f3850d18c74c23d\"]\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": "{{host}}:{{port}}/api/v1/live-class/attendance"
 					},
 					"response": []
 				},
