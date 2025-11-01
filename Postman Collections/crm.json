@@ -2244,6 +2244,40 @@
 					"response": []
 				},
 				{
+					"name": "Register face",
+					"id": "197fd94c-5129-4746-b123-2631af1ce6e6",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"validFrom\": \"2025-04-20 15:14:00\",\r\n    \"validTo\": \"2025-04-20 15:14:10\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}:{{port}}/api/v1/device/add-qr-code"
+					},
+					"response": []
+				},
+				{
 					"name": "Get List of devices",
 					"id": "540ca1e6-9bec-4c43-8b17-45fde5a24e2a",
 					"protocolProfileBehavior": {
