@@ -2265,13 +2265,21 @@
 							}
 						],
 						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"validFrom\": \"2025-04-20 15:14:00\",\r\n    \"validTo\": \"2025-04-20 15:14:10\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user",
+									"value": "66f25de33fc4314a121b4ada",
+									"type": "text",
+									"uuid": "085ac2a5-0422-4a0c-be05-dbcf2fb39931"
+								},
+								{
+									"key": "file",
+									"type": "file",
+									"uuid": "9b010dea-c89f-4b84-a563-3e1c3aacf067",
+									"value": null
 								}
-							}
+							]
 						},
 						"url": "{{host}}:{{port}}/api/v1/device/add-qr-code"
 					},
