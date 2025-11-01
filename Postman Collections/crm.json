@@ -2286,6 +2286,48 @@
 					"response": []
 				},
 				{
+					"name": "Mark face attendance",
+					"id": "887df2f7-b55e-49b8-af7e-952a4932fa31",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user",
+									"value": "66f25de33fc4314a121b4ada",
+									"type": "text",
+									"uuid": "085ac2a5-0422-4a0c-be05-dbcf2fb39931"
+								},
+								{
+									"key": "file",
+									"type": "file",
+									"uuid": "9b010dea-c89f-4b84-a563-3e1c3aacf067",
+									"src": "/C:/Users/rajes/Pictures/Camera Roll/WIN_20251101_18_26_39_Pro.jpg"
+								}
+							]
+						},
+						"url": "{{host}}:{{port}}/api/v1/device/register-face"
+					},
+					"response": []
+				},
+				{
 					"name": "Get List of devices",
 					"id": "540ca1e6-9bec-4c43-8b17-45fde5a24e2a",
 					"protocolProfileBehavior": {
