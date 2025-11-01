@@ -2277,11 +2277,11 @@
 									"key": "file",
 									"type": "file",
 									"uuid": "9b010dea-c89f-4b84-a563-3e1c3aacf067",
-									"value": null
+									"src": "/C:/Users/rajes/Pictures/Camera Roll/WIN_20251101_18_26_39_Pro.jpg"
 								}
 							]
 						},
-						"url": "{{host}}:{{port}}/api/v1/device/add-qr-code"
+						"url": "{{host}}:{{port}}/api/v1/device/register-face"
 					},
 					"response": []
 				},
