@@ -2289,7 +2289,7 @@
 								"type": "text"
 							}
 						],
-						"url": "{{host}}:{{port}}/api/v1/device"
+						"url": "{{host}}:{{port}}/api/v1/device/user"
 					},
 					"response": []
 				},
