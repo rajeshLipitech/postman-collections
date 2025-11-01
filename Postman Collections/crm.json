@@ -2269,6 +2269,31 @@
 					"response": []
 				},
 				{
+					"name": "Get List of user",
+					"id": "2510e615-5c88-4a9b-98df-222db4f78011",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"url": "{{host}}:{{port}}/api/v1/device"
+					},
+					"response": []
+				},
+				{
 					"name": "Add device",
 					"id": "1c2733d6-4a7a-4045-b27f-9cab8fab1623",
 					"protocolProfileBehavior": {
