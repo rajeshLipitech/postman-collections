@@ -18178,7 +18178,7 @@
 										"type": "text"
 									}
 								],
-								"url": "{{host}}:{{port}}/api/v1/user/nutirtionist",
+								"url": "{{host}}:{{port}}/api/v1/user/member/nutirtionist",
 								"description": "Get LoggedIn User Information"
 							},
 							"response": []
