@@ -19486,7 +19486,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"password\": \"password\",\r\n    \"confirmPassword\": \"password\",\r\n    \"phone\": \"9874563210\",\r\n    \"altPhone\": \"8874563210\",\r\n    \"height\": \"6'5''\",\r\n    \"weight\": \"90\",\r\n    \"branch\": \"648b537f062978bb147b0556\",\r\n    \"reference\":\"Linkedin\",\r\n    \"gender\": \"M\",\r\n    \"firstName\": \"App\",\r\n    \"lastName\": \"User\",\r\n    \"email\": \"rajesh@gmail.com\",\r\n    \"state\": \"delhi\",\r\n    \"city\": \"delhi\",\r\n    \"designation\": \"653b9fb52619321c25d76ee7\"\r\n}",
+							"raw": "{\r\n    \"password\": \"password\",\r\n    \"confirmPassword\": \"password\",\r\n    \"phone\": \"9971451450\",\r\n    \"altPhone\": \"9971451450\",\r\n    \"gender\": \"M\",\r\n    \"firstName\": \"Rajesh\",\r\n    \"userType\": \"Nutritionist\",\r\n    \"lastName\": \"Nutritionist\",\r\n    \"email\": \"rajeshnutrition@gmail.com\",\r\n    \"state\": \"delhi\",\r\n    \"city\": \"delhi\",\r\n    \"specialisation\": [\"Weight Management\", \"Muscle Building\"],\r\n    \"qualifications\": [\"PH.D - Food and Nutrition, Pune\", \"M.phil - Food\"],\r\n    \"experience\": 10,\r\n    \"professionalMemberships\": [\"Certificate 1\", \"Certificate 2\"],\r\n    \"aboutMe\": \"I am expert, you must come to me, hahahaha\",\r\n    \"services\": [\"Lean muscles lelo\"],\r\n    \"languages\": [\"Chinese\", \"Japanese\", \"Marathi\", \"Hindi\"]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
