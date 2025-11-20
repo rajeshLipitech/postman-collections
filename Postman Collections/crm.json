@@ -18154,7 +18154,8 @@
 											""
 										],
 										"type": "text/javascript",
-										"packages": {}
+										"packages": {},
+										"requests": {}
 									}
 								}
 							],
@@ -18177,28 +18178,7 @@
 										"type": "text"
 									}
 								],
-								"url": {
-									"raw": "{{host}}:{{port}}/api/v1/user/bca/:id",
-									"host": [
-										"{{host}}"
-									],
-									"port": "{{port}}",
-									"path": [
-										"api",
-										"v1",
-										"user",
-										"bca",
-										":id"
-									],
-									"variable": [
-										{
-											"id": "e0097b89-ecec-47f3-8d8a-093a10187912",
-											"key": "id",
-											"value": "65f2a85e8957696fc80f0fb5",
-											"description": "this field is optional for the user but mandatory for the trainer"
-										}
-									]
-								},
+								"url": "{{host}}:{{port}}/api/v1/user/nutirtionist",
 								"description": "Get LoggedIn User Information"
 							},
 							"response": []
