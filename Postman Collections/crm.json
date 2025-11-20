@@ -18144,6 +18144,66 @@
 							"response": []
 						},
 						{
+							"name": "Get Nutritionist",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "03499e48-5752-4076-b963-23a297d11e4f",
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {}
+									}
+								}
+							],
+							"id": "f42d9a28-173a-4f02-9ca0-064baf17ab6b",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{host}}:{{port}}/api/v1/user/bca/:id",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"bca",
+										":id"
+									],
+									"variable": [
+										{
+											"id": "e0097b89-ecec-47f3-8d8a-093a10187912",
+											"key": "id",
+											"value": "65f2a85e8957696fc80f0fb5",
+											"description": "this field is optional for the user but mandatory for the trainer"
+										}
+									]
+								},
+								"description": "Get LoggedIn User Information"
+							},
+							"response": []
+						},
+						{
 							"name": "Get smart diet",
 							"event": [
 								{
