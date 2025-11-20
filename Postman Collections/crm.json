@@ -18218,7 +18218,27 @@
 										"type": "text"
 									}
 								],
-								"url": "{{host}}:{{port}}/api/v1/user/member/nutirtionist",
+								"url": {
+									"raw": "{{host}}:{{port}}/api/v1/user/member/nutirtionist/:id",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"v1",
+										"user",
+										"member",
+										"nutirtionist",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "691ed1a67b4fc2d9085c23a1"
+										}
+									]
+								},
 								"description": "Get LoggedIn User Information"
 							},
 							"response": []
