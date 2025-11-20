@@ -18184,6 +18184,46 @@
 							"response": []
 						},
 						{
+							"name": "Get Nutritionist detail",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "03499e48-5752-4076-b963-23a297d11e4f",
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
+									}
+								}
+							],
+							"id": "ebc0d5b1-2d80-4ecb-9ada-178786f957b4",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"url": "{{host}}:{{port}}/api/v1/user/member/nutirtionist",
+								"description": "Get LoggedIn User Information"
+							},
+							"response": []
+						},
+						{
 							"name": "Get smart diet",
 							"event": [
 								{
