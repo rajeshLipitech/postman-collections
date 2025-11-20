@@ -18219,7 +18219,7 @@
 									}
 								],
 								"url": {
-									"raw": "{{host}}:{{port}}/api/v1/user/member/nutirtionist/:id",
+									"raw": "{{host}}:{{port}}/api/v1/user/member/nutritionist/:id",
 									"host": [
 										"{{host}}"
 									],
@@ -18229,7 +18229,7 @@
 										"v1",
 										"user",
 										"member",
-										"nutirtionist",
+										"nutritionist",
 										":id"
 									],
 									"variable": [
