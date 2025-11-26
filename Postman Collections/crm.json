@@ -1383,505 +1383,10 @@
 			"id": "3efbe406-d316-4b8d-a5ae-d1018c194b1c"
 		},
 		{
-			"name": "Branch",
+			"name": "Banner Management",
 			"item": [
 				{
-					"name": "Targets",
-					"item": [
-						{
-							"name": "Add Target",
-							"id": "c1e960c6-9a5f-4f6a-b928-041172455647",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "{{token}}"
-									}
-								},
-								"method": "POST",
-								"header": [
-									{
-										"key": "Origin",
-										"value": "{{referer}}",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"branchId\": \"653ba3402619321c25d76fa8\",\r\n    \"month\": 1,\r\n    \"year\": 2024,\r\n    \"totalAmount\": 7500,\r\n    \"membershipNewSaleAmount\":  1000,\r\n    \"membershipRenewalAmount\": 500,\r\n    \"ptSaleAmount\": 2000,\r\n    \"ptRenewalAmount\": 500,\r\n    \"ansillarySaleAmount\": 3000,\r\n    \"ansillaryRenewalAmount\": 500\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{host}}:{{port}}/api/v1/branch/target"
-							},
-							"response": []
-						},
-						{
-							"name": "Get Target",
-							"id": "3944e4d7-1333-443c-be0c-4e86cdcf785f",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "{{token}}"
-									}
-								},
-								"method": "GET",
-								"header": [
-									{
-										"key": "Origin",
-										"value": "{{referer}}",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"month\": 11,\r\n    \"year\": 2023,\r\n    \"totalAmount\": 7500,\r\n    \"membershipNewSaleAmount\":  1000,\r\n    \"membershipRenewalAmount\": 500,\r\n    \"ptSaleAmount\": 2000,\r\n    \"ptRenewalAmount\": 500,\r\n    \"ansillarySaleAmount\": 3000,\r\n    \"ansillaryRenewalAmount\": 500\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{host}}:{{port}}/api/v1/branch/target?date=2024-01",
-									"host": [
-										"{{host}}"
-									],
-									"port": "{{port}}",
-									"path": [
-										"api",
-										"v1",
-										"branch",
-										"target"
-									],
-									"query": [
-										{
-											"key": "date",
-											"value": "2024-01"
-										}
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Update Target",
-							"id": "b71106cf-7349-45b2-8857-8605397a564f",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "{{token}}"
-									}
-								},
-								"method": "PATCH",
-								"header": [
-									{
-										"key": "Origin",
-										"value": "{{referer}}",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"branchId\": \"653ba3402619321c25d76fa8\",\r\n    \"month\": 1,\r\n    \"year\": 2024,\r\n    \"totalAmount\": 75000,\r\n    \"membershipNewSaleAmount\":  100000,\r\n    \"membershipRenewalAmount\": 500,\r\n    \"ptSaleAmount\": 2000,\r\n    \"ptRenewalAmount\": 500,\r\n    \"ansillarySaleAmount\": 3000,\r\n    \"ansillaryRenewalAmount\": 500\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{host}}:{{port}}/api/v1/branch/target/:id",
-									"host": [
-										"{{host}}"
-									],
-									"port": "{{port}}",
-									"path": [
-										"api",
-										"v1",
-										"branch",
-										"target",
-										":id"
-									],
-									"variable": [
-										{
-											"key": "id",
-											"value": "65b0a34c245b6e4ad8ec3ca8"
-										}
-									]
-								}
-							},
-							"response": []
-						}
-					],
-					"id": "3789c289-5ce6-44f4-aed0-2ff4c79f1189"
-				},
-				{
-					"name": "Timings",
-					"item": [
-						{
-							"name": "Add Timings",
-							"id": "f2e91f57-e022-4519-b00c-a4d7d864eb1b",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "{{token}}"
-									}
-								},
-								"method": "POST",
-								"header": [
-									{
-										"key": "Origin",
-										"value": "{{referer}}",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"days\": [1, 2, 3, 4,5, 6, 7],\r\n    \"startTime\": \"09:00\",\r\n    \"endTime\": \"10:00\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{host}}:{{port}}/api/v1/branch/timing/:id",
-									"host": [
-										"{{host}}"
-									],
-									"port": "{{port}}",
-									"path": [
-										"api",
-										"v1",
-										"branch",
-										"timing",
-										":id"
-									],
-									"variable": [
-										{
-											"key": "id",
-											"value": "64eb8331bff45463b300eb0d"
-										}
-									]
-								}
-							},
-							"response": [
-								{
-									"id": "134520eb-fbfe-46af-8d0e-c29596cd62da",
-									"name": "Add Timings",
-									"originalRequest": {
-										"method": "POST",
-										"header": [
-											{
-												"key": "Origin",
-												"value": "{{referer}}",
-												"type": "text"
-											}
-										],
-										"body": {
-											"mode": "raw",
-											"raw": "{\r\n    \"days\": [1, 2, 3, 4,5, 6, 7],\r\n    \"startTime\": \"09:00\",\r\n    \"endTime\": \"10:00\"\r\n}",
-											"options": {
-												"raw": {
-													"language": "json"
-												}
-											}
-										},
-										"url": {
-											"raw": "{{host}}:{{port}}/api/v1/branch/timing/:id",
-											"host": [
-												"{{host}}"
-											],
-											"port": "{{port}}",
-											"path": [
-												"api",
-												"v1",
-												"branch",
-												"timing",
-												":id"
-											],
-											"variable": [
-												{
-													"key": "id",
-													"value": "64eb8331bff45463b300eb0d"
-												}
-											]
-										}
-									},
-									"status": "OK",
-									"code": 200,
-									"_postman_previewlanguage": "json",
-									"header": [
-										{
-											"key": "X-Powered-By",
-											"value": "Express"
-										},
-										{
-											"key": "Access-Control-Allow-Origin",
-											"value": "*"
-										},
-										{
-											"key": "Content-Type",
-											"value": "application/json; charset=utf-8"
-										},
-										{
-											"key": "Content-Length",
-											"value": "960"
-										},
-										{
-											"key": "ETag",
-											"value": "W/\"3c0-+uHJ6Iy7Se11Qg82TrHaX1jPvCU\""
-										},
-										{
-											"key": "Date",
-											"value": "Sun, 27 Aug 2023 17:50:47 GMT"
-										},
-										{
-											"key": "Connection",
-											"value": "keep-alive"
-										},
-										{
-											"key": "Keep-Alive",
-											"value": "timeout=5"
-										}
-									],
-									"cookie": [],
-									"responseTime": null,
-									"body": "{\n    \"data\": [\n        {\n            \"branchId\": \"64eb8331bff45463b300eb0d\",\n            \"day\": 1,\n            \"startTime\": \"09:00\",\n            \"endTime\": \"10:00\",\n            \"_id\": \"64eb8cf7a9f68cfac2f17955\",\n            \"__v\": 0\n        },\n        {\n            \"branchId\": \"64eb8331bff45463b300eb0d\",\n            \"day\": 2,\n            \"startTime\": \"09:00\",\n            \"endTime\": \"10:00\",\n            \"_id\": \"64eb8cf7a9f68cfac2f17956\",\n            \"__v\": 0\n        },\n        {\n            \"branchId\": \"64eb8331bff45463b300eb0d\",\n            \"day\": 3,\n            \"startTime\": \"09:00\",\n            \"endTime\": \"10:00\",\n            \"_id\": \"64eb8cf7a9f68cfac2f17957\",\n            \"__v\": 0\n        },\n        {\n            \"branchId\": \"64eb8331bff45463b300eb0d\",\n            \"day\": 4,\n            \"startTime\": \"09:00\",\n            \"endTime\": \"10:00\",\n            \"_id\": \"64eb8cf7a9f68cfac2f17958\",\n            \"__v\": 0\n        },\n        {\n            \"branchId\": \"64eb8331bff45463b300eb0d\",\n            \"day\": 5,\n            \"startTime\": \"09:00\",\n            \"endTime\": \"10:00\",\n            \"_id\": \"64eb8cf7a9f68cfac2f17959\",\n            \"__v\": 0\n        },\n        {\n            \"branchId\": \"64eb8331bff45463b300eb0d\",\n            \"day\": 6,\n            \"startTime\": \"09:00\",\n            \"endTime\": \"10:00\",\n            \"_id\": \"64eb8cf7a9f68cfac2f1795a\",\n            \"__v\": 0\n        },\n        {\n            \"branchId\": \"64eb8331bff45463b300eb0d\",\n            \"day\": 7,\n            \"startTime\": \"09:00\",\n            \"endTime\": \"10:00\",\n            \"_id\": \"64eb8cf7a9f68cfac2f1795b\",\n            \"__v\": 0\n        }\n    ],\n    \"status\": \"Ok\",\n    \"message\": {\n        \"code\": \"BranchTimingCreateSuccess\"\n    }\n}"
-								}
-							]
-						},
-						{
-							"name": "Get Timings",
-							"id": "2c60c0f2-76c5-4847-b42d-16f5e2db2809",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "{{token}}"
-									}
-								},
-								"method": "GET",
-								"header": [
-									{
-										"key": "Origin",
-										"value": "{{referer}}",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"days\": [1, 2, 3, 4,5, 6, 7],\r\n    \"startTime\": \"09:00\",\r\n    \"endTime\": \"10:00\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{host}}:{{port}}/api/v1/branch/timing/:id",
-									"host": [
-										"{{host}}"
-									],
-									"port": "{{port}}",
-									"path": [
-										"api",
-										"v1",
-										"branch",
-										"timing",
-										":id"
-									],
-									"variable": [
-										{
-											"id": "03100214-cd8e-4737-97da-7c1be9fdd87d",
-											"key": "id",
-											"value": "64eb8331bff45463b300eb0d"
-										}
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Update Timing",
-							"id": "d6bddb35-0dde-4a14-8468-34d959755564",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "{{token}}"
-									}
-								},
-								"method": "PATCH",
-								"header": [
-									{
-										"key": "Origin",
-										"value": "{{referer}}",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\r\n    \"day\": 1,\r\n    \"startTime\": \"10:00\",\r\n    \"endTime\": \"11:00\"\r\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{host}}:{{port}}/api/v1/branch/timing/:id/:timingId",
-									"host": [
-										"{{host}}"
-									],
-									"port": "{{port}}",
-									"path": [
-										"api",
-										"v1",
-										"branch",
-										"timing",
-										":id",
-										":timingId"
-									],
-									"variable": [
-										{
-											"key": "id",
-											"value": "64eb8331bff45463b300eb0d"
-										},
-										{
-											"key": "timingId",
-											"value": "64eb8cf7a9f68cfac2f17955"
-										}
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Delete Timing",
-							"id": "2cc95972-8856-4ef4-8d81-caabdcf7659d",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "{{token}}"
-									}
-								},
-								"method": "DELETE",
-								"header": [
-									{
-										"key": "Origin",
-										"value": "{{referer}}",
-										"type": "text"
-									}
-								],
-								"url": {
-									"raw": "{{host}}:{{port}}/api/v1/branch/timing/:id/:timingId",
-									"host": [
-										"{{host}}"
-									],
-									"port": "{{port}}",
-									"path": [
-										"api",
-										"v1",
-										"branch",
-										"timing",
-										":id",
-										":timingId"
-									],
-									"variable": [
-										{
-											"key": "id",
-											"value": "64eb8331bff45463b300eb0d"
-										},
-										{
-											"key": "timingId",
-											"value": "64eb8cf7a9f68cfac2f17957"
-										}
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "Delete All Timings",
-							"id": "ea0f455f-be35-43d4-abf8-19a4ef22d5d8",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "{{token}}"
-									}
-								},
-								"method": "DELETE",
-								"header": [
-									{
-										"key": "Origin",
-										"value": "{{referer}}",
-										"type": "text"
-									}
-								],
-								"url": {
-									"raw": "{{host}}:{{port}}/api/v1/branch/timing/:id/",
-									"host": [
-										"{{host}}"
-									],
-									"port": "{{port}}",
-									"path": [
-										"api",
-										"v1",
-										"branch",
-										"timing",
-										":id",
-										""
-									],
-									"variable": [
-										{
-											"id": "f50576d6-c4a2-437c-a78a-68746044085d",
-											"key": "id",
-											"value": "64eb8331bff45463b300eb0d"
-										}
-									]
-								}
-							},
-							"response": []
-						}
-					],
-					"id": "e3607294-814a-4222-b290-e7f50aa23d1f"
-				},
-				{
-					"name": "Get List of branch",
+					"name": "Get List",
 					"id": "b104dcc1-63a5-438b-98da-1da72172bc1b",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -1901,54 +1406,12 @@
 								"type": "text"
 							}
 						],
-						"url": {
-							"raw": "{{host}}:{{port}}/api/v1/branch?status=ACTIVE",
-							"host": [
-								"{{host}}"
-							],
-							"port": "{{port}}",
-							"path": [
-								"api",
-								"v1",
-								"branch"
-							],
-							"query": [
-								{
-									"key": "status",
-									"value": "ACTIVE"
-								}
-							]
-						}
+						"url": "{{host}}:{{port}}/api/v1/banner-management"
 					},
 					"response": []
 				},
 				{
-					"name": "Get List of branch for members",
-					"id": "06ee0fa7-2fed-4379-8774-cfce50e8ea4b",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": {
-								"token": "{{token}}"
-							}
-						},
-						"method": "GET",
-						"header": [
-							{
-								"key": "Origin",
-								"value": "{{referer}}",
-								"type": "text"
-							}
-						],
-						"url": "{{host}}:{{port}}/api/v1/branch/list"
-					},
-					"response": []
-				},
-				{
-					"name": "Create Branch",
+					"name": "Create",
 					"id": "7154d454-dbdf-4c1c-9012-a77092d4f26a",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -1977,12 +1440,12 @@
 								}
 							}
 						},
-						"url": "{{host}}:{{port}}/api/v1/branch/"
+						"url": "{{host}}:{{port}}/api/v1/banner-management/"
 					},
 					"response": []
 				},
 				{
-					"name": "Update branch",
+					"name": "Update",
 					"id": "3a6670cf-8738-4981-aff3-9a5cc4f22565",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -2170,6 +1633,804 @@
 				}
 			],
 			"id": "49183bc1-da53-4172-bc5f-a9e1d3d7c6b8",
+			"description": "## User Operations related API's"
+		},
+		{
+			"name": "Branch",
+			"item": [
+				{
+					"name": "Targets",
+					"item": [
+						{
+							"name": "Add Target",
+							"id": "3c6b3674-074d-462a-9862-6bf461904755",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"branchId\": \"653ba3402619321c25d76fa8\",\r\n    \"month\": 1,\r\n    \"year\": 2024,\r\n    \"totalAmount\": 7500,\r\n    \"membershipNewSaleAmount\":  1000,\r\n    \"membershipRenewalAmount\": 500,\r\n    \"ptSaleAmount\": 2000,\r\n    \"ptRenewalAmount\": 500,\r\n    \"ansillarySaleAmount\": 3000,\r\n    \"ansillaryRenewalAmount\": 500\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{host}}:{{port}}/api/v1/branch/target"
+							},
+							"response": []
+						},
+						{
+							"name": "Get Target",
+							"id": "8352f789-7c46-4e16-9f26-ae0387e8d258",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"month\": 11,\r\n    \"year\": 2023,\r\n    \"totalAmount\": 7500,\r\n    \"membershipNewSaleAmount\":  1000,\r\n    \"membershipRenewalAmount\": 500,\r\n    \"ptSaleAmount\": 2000,\r\n    \"ptRenewalAmount\": 500,\r\n    \"ansillarySaleAmount\": 3000,\r\n    \"ansillaryRenewalAmount\": 500\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}:{{port}}/api/v1/branch/target?date=2024-01",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"v1",
+										"branch",
+										"target"
+									],
+									"query": [
+										{
+											"key": "date",
+											"value": "2024-01"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Target",
+							"id": "a948e298-1abe-462e-9d2e-218f20f89ed7",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"branchId\": \"653ba3402619321c25d76fa8\",\r\n    \"month\": 1,\r\n    \"year\": 2024,\r\n    \"totalAmount\": 75000,\r\n    \"membershipNewSaleAmount\":  100000,\r\n    \"membershipRenewalAmount\": 500,\r\n    \"ptSaleAmount\": 2000,\r\n    \"ptRenewalAmount\": 500,\r\n    \"ansillarySaleAmount\": 3000,\r\n    \"ansillaryRenewalAmount\": 500\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}:{{port}}/api/v1/branch/target/:id",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"v1",
+										"branch",
+										"target",
+										":id"
+									],
+									"variable": [
+										{
+											"id": "a4381605-6764-4967-a0ea-65aadc58264f",
+											"key": "id",
+											"value": "65b0a34c245b6e4ad8ec3ca8"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "933dade4-01ee-4daa-9692-1145b5a2237f"
+				},
+				{
+					"name": "Timings",
+					"item": [
+						{
+							"name": "Add Timings",
+							"id": "cc653629-ed50-411e-9118-83476b624600",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"days\": [1, 2, 3, 4,5, 6, 7],\r\n    \"startTime\": \"09:00\",\r\n    \"endTime\": \"10:00\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}:{{port}}/api/v1/branch/timing/:id",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"v1",
+										"branch",
+										"timing",
+										":id"
+									],
+									"variable": [
+										{
+											"id": "7497cdc8-2a17-4cdc-ac33-29dfdadcd0f1",
+											"key": "id",
+											"value": "64eb8331bff45463b300eb0d"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"id": "9d10739c-6cff-4e74-8eaf-942d177f7782",
+									"name": "Add Timings",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Origin",
+												"value": "{{referer}}",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"days\": [1, 2, 3, 4,5, 6, 7],\r\n    \"startTime\": \"09:00\",\r\n    \"endTime\": \"10:00\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{host}}:{{port}}/api/v1/branch/timing/:id",
+											"host": [
+												"{{host}}"
+											],
+											"port": "{{port}}",
+											"path": [
+												"api",
+												"v1",
+												"branch",
+												"timing",
+												":id"
+											],
+											"variable": [
+												{
+													"key": "id",
+													"value": "64eb8331bff45463b300eb0d"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "X-Powered-By",
+											"value": "Express"
+										},
+										{
+											"key": "Access-Control-Allow-Origin",
+											"value": "*"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json; charset=utf-8"
+										},
+										{
+											"key": "Content-Length",
+											"value": "960"
+										},
+										{
+											"key": "ETag",
+											"value": "W/\"3c0-+uHJ6Iy7Se11Qg82TrHaX1jPvCU\""
+										},
+										{
+											"key": "Date",
+											"value": "Sun, 27 Aug 2023 17:50:47 GMT"
+										},
+										{
+											"key": "Connection",
+											"value": "keep-alive"
+										},
+										{
+											"key": "Keep-Alive",
+											"value": "timeout=5"
+										}
+									],
+									"cookie": [],
+									"responseTime": null,
+									"body": "{\n    \"data\": [\n        {\n            \"branchId\": \"64eb8331bff45463b300eb0d\",\n            \"day\": 1,\n            \"startTime\": \"09:00\",\n            \"endTime\": \"10:00\",\n            \"_id\": \"64eb8cf7a9f68cfac2f17955\",\n            \"__v\": 0\n        },\n        {\n            \"branchId\": \"64eb8331bff45463b300eb0d\",\n            \"day\": 2,\n            \"startTime\": \"09:00\",\n            \"endTime\": \"10:00\",\n            \"_id\": \"64eb8cf7a9f68cfac2f17956\",\n            \"__v\": 0\n        },\n        {\n            \"branchId\": \"64eb8331bff45463b300eb0d\",\n            \"day\": 3,\n            \"startTime\": \"09:00\",\n            \"endTime\": \"10:00\",\n            \"_id\": \"64eb8cf7a9f68cfac2f17957\",\n            \"__v\": 0\n        },\n        {\n            \"branchId\": \"64eb8331bff45463b300eb0d\",\n            \"day\": 4,\n            \"startTime\": \"09:00\",\n            \"endTime\": \"10:00\",\n            \"_id\": \"64eb8cf7a9f68cfac2f17958\",\n            \"__v\": 0\n        },\n        {\n            \"branchId\": \"64eb8331bff45463b300eb0d\",\n            \"day\": 5,\n            \"startTime\": \"09:00\",\n            \"endTime\": \"10:00\",\n            \"_id\": \"64eb8cf7a9f68cfac2f17959\",\n            \"__v\": 0\n        },\n        {\n            \"branchId\": \"64eb8331bff45463b300eb0d\",\n            \"day\": 6,\n            \"startTime\": \"09:00\",\n            \"endTime\": \"10:00\",\n            \"_id\": \"64eb8cf7a9f68cfac2f1795a\",\n            \"__v\": 0\n        },\n        {\n            \"branchId\": \"64eb8331bff45463b300eb0d\",\n            \"day\": 7,\n            \"startTime\": \"09:00\",\n            \"endTime\": \"10:00\",\n            \"_id\": \"64eb8cf7a9f68cfac2f1795b\",\n            \"__v\": 0\n        }\n    ],\n    \"status\": \"Ok\",\n    \"message\": {\n        \"code\": \"BranchTimingCreateSuccess\"\n    }\n}"
+								}
+							]
+						},
+						{
+							"name": "Get Timings",
+							"id": "fe3bc3ef-46a6-486a-a58f-24739e6caf2d",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"days\": [1, 2, 3, 4,5, 6, 7],\r\n    \"startTime\": \"09:00\",\r\n    \"endTime\": \"10:00\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}:{{port}}/api/v1/branch/timing/:id",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"v1",
+										"branch",
+										"timing",
+										":id"
+									],
+									"variable": [
+										{
+											"id": "03100214-cd8e-4737-97da-7c1be9fdd87d",
+											"key": "id",
+											"value": "64eb8331bff45463b300eb0d"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Timing",
+							"id": "6d41fc4b-6686-4f27-ac77-4dc7a2d88323",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"day\": 1,\r\n    \"startTime\": \"10:00\",\r\n    \"endTime\": \"11:00\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}:{{port}}/api/v1/branch/timing/:id/:timingId",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"v1",
+										"branch",
+										"timing",
+										":id",
+										":timingId"
+									],
+									"variable": [
+										{
+											"id": "17572e6f-4473-46f6-846e-c1449fd1c717",
+											"key": "id",
+											"value": "64eb8331bff45463b300eb0d"
+										},
+										{
+											"id": "c50c87b9-379f-4c12-a6cd-d4bf3fbc7f1b",
+											"key": "timingId",
+											"value": "64eb8cf7a9f68cfac2f17955"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete Timing",
+							"id": "3fce1d0a-ca0d-4b0d-853e-56bba6615398",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{host}}:{{port}}/api/v1/branch/timing/:id/:timingId",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"v1",
+										"branch",
+										"timing",
+										":id",
+										":timingId"
+									],
+									"variable": [
+										{
+											"id": "5bcc4560-1f67-4b24-a24a-3a54fe1c1eb5",
+											"key": "id",
+											"value": "64eb8331bff45463b300eb0d"
+										},
+										{
+											"id": "4bc4bcaf-2f3b-4bb9-a6b1-396184961127",
+											"key": "timingId",
+											"value": "64eb8cf7a9f68cfac2f17957"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Delete All Timings",
+							"id": "f62082c0-62ae-4351-a7ee-54792bfe56cb",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{host}}:{{port}}/api/v1/branch/timing/:id/",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"v1",
+										"branch",
+										"timing",
+										":id",
+										""
+									],
+									"variable": [
+										{
+											"id": "f50576d6-c4a2-437c-a78a-68746044085d",
+											"key": "id",
+											"value": "64eb8331bff45463b300eb0d"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "2f661194-a107-4f98-82ed-b50cd2ccd1fe"
+				},
+				{
+					"name": "Get List of branch",
+					"id": "754c07c6-ea3d-440a-8b79-5b61c215095c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/branch?status=ACTIVE",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"branch"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "ACTIVE"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get List of branch for members",
+					"id": "89bfd500-c063-4ed8-a14c-513c52bd27f0",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"url": "{{host}}:{{port}}/api/v1/branch/list"
+					},
+					"response": []
+				},
+				{
+					"name": "Create Branch",
+					"id": "b25a9548-f936-47f9-9809-ace89abfeed0",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Branch 1\",\r\n    \"mobile\": \"9874563210\",\r\n    \"email\": \"test@gmail.com\",\r\n    \"gstName\": \"Test Gym\",\r\n    \"gstNumber\": \"D4545AAsfas\",\r\n    \"address\": \"Test address\",\r\n    \"city\": \"Delhi\",\r\n    \"pincode\": \"5454\",\r\n    \"logo\": \"64eb82c5491dd86ed6fe633d\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}:{{port}}/api/v1/branch/"
+					},
+					"response": []
+				},
+				{
+					"name": "Update branch",
+					"id": "c3421d8b-7d0b-4902-b607-46bbc72839aa",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"dataSync\":{\r\n        \"enabled\": true,\r\n        \"secret\": \"ASDF45AS4DF8ASFW33254A5SADF21A5\"\r\n    },\r\n    \"doAndDont\": [\r\n        {\r\n            \"text\": \"abc\",\r\n            \"category\": \"DO\"\r\n        },\r\n        {\r\n            \"text\": \"def\",\r\n            \"category\": \"DONT\"\r\n        }\r\n    ],\r\n    \"declarationContent\": \"sOME TEXT\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/branch/:id",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"branch",
+								":id"
+							],
+							"variable": [
+								{
+									"id": "d5c7243d-a507-421c-a6ba-3d53cd6cf5b7",
+									"key": "id",
+									"value": "65436af6e962542d79b7d90b"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Branch by id",
+					"id": "47f24233-d6f6-4a46-97c4-97fb683fb24f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/branch/:id",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"branch",
+								":id"
+							],
+							"variable": [
+								{
+									"id": "6feca45c-0143-4745-b39b-102d70dc250c",
+									"key": "id",
+									"value": "64eb8331bff45463b300eb0d"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"id": "cf8182b7-92a9-41f0-bb8b-04535404c45e",
+							"name": "Get Branch by id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}:{{port}}/api/v1/branch/:id",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"v1",
+										"branch",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "id",
+											"value": "64eb8331bff45463b300eb0d"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1316"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"524-3X2W4E0g1dm1A1d3+BHh79Wc4wY\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Aug 2023 17:34:41 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"responseTime": null,
+							"body": "{\n    \"data\": {\n        \"_id\": \"64eb8331bff45463b300eb0d\",\n        \"user\": \"648b521aa4b96fba401156b8\",\n        \"name\": \"Gym Branch 1\",\n        \"mobile\": \"9874563210\",\n        \"email\": \"test@gmail.com\",\n        \"gstName\": \"Test Gym\",\n        \"gstNumber\": \"D4545AAsfas\",\n        \"address\": \"Test address\",\n        \"city\": \"Delhi\",\n        \"pincode\": \"5454\",\n        \"logo\": \"64eb82c5491dd86ed6fe633d\",\n        \"status\": \"Active\",\n        \"slug\": \"gym-branch-1\",\n        \"__v\": 0,\n        \"timings\": [\n            {\n                \"_id\": \"64eb891f9ddab1d1dfc67847\",\n                \"branchId\": \"64eb8331bff45463b300eb0d\",\n                \"day\": \"mon\",\n                \"startTime\": \"09:00\",\n                \"endTime\": \"10:00\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"64eb891f9ddab1d1dfc67846\",\n                \"branchId\": \"64eb8331bff45463b300eb0d\",\n                \"day\": \"sun\",\n                \"startTime\": \"09:00\",\n                \"endTime\": \"10:00\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"64eb891f9ddab1d1dfc67849\",\n                \"branchId\": \"64eb8331bff45463b300eb0d\",\n                \"day\": \"wed\",\n                \"startTime\": \"09:00\",\n                \"endTime\": \"10:00\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"64eb891f9ddab1d1dfc6784a\",\n                \"branchId\": \"64eb8331bff45463b300eb0d\",\n                \"day\": \"thu\",\n                \"startTime\": \"09:00\",\n                \"endTime\": \"10:00\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"64eb891f9ddab1d1dfc67848\",\n                \"branchId\": \"64eb8331bff45463b300eb0d\",\n                \"day\": \"tue\",\n                \"startTime\": \"09:00\",\n                \"endTime\": \"10:00\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"64eb891f9ddab1d1dfc6784b\",\n                \"branchId\": \"64eb8331bff45463b300eb0d\",\n                \"day\": \"fri\",\n                \"startTime\": \"09:00\",\n                \"endTime\": \"10:00\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"64eb891f9ddab1d1dfc6784c\",\n                \"branchId\": \"64eb8331bff45463b300eb0d\",\n                \"day\": \"sat\",\n                \"startTime\": \"09:00\",\n                \"endTime\": \"10:00\",\n                \"__v\": 0\n            }\n        ]\n    },\n    \"status\": \"Ok\",\n    \"message\": {\n        \"code\": \"BranchDetailSuccess\"\n    }\n}"
+						}
+					]
+				}
+			],
+			"id": "6ca23ac2-5f6c-4c53-9f8b-a26d125c68c3",
 			"description": "## User Operations related API's"
 		},
 		{
