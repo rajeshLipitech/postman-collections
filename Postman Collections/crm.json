@@ -1411,6 +1411,31 @@
 					"response": []
 				},
 				{
+					"name": "Get List for user",
+					"id": "cc04f84f-08dd-4e61-8ffb-5256cdc57b0b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"url": "{{host}}:{{port}}/api/v1/banner-management/get"
+					},
+					"response": []
+				},
+				{
 					"name": "Create",
 					"id": "7154d454-dbdf-4c1c-9012-a77092d4f26a",
 					"protocolProfileBehavior": {
@@ -1467,7 +1492,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"dataSync\":{\r\n        \"enabled\": true,\r\n        \"secret\": \"ASDF45AS4DF8ASFW33254A5SADF21A5\"\r\n    },\r\n    \"doAndDont\": [\r\n        {\r\n            \"text\": \"abc\",\r\n            \"category\": \"DO\"\r\n        },\r\n        {\r\n            \"text\": \"def\",\r\n            \"category\": \"DONT\"\r\n        }\r\n    ],\r\n    \"declarationContent\": \"sOME TEXT\"\r\n}",
+							"raw": "{\r\n    \"image\": \"64eb82c5491dd86ed6fe633d\",\r\n    \"tag\": \"sample image\",\r\n    \"link\": \"google.com\",\r\n    \"startDate\": \"2025-11-26\",\r\n    \"endDate\": \"2026-11-26\",\r\n    \"description\": \"This is new banner image\",\r\n    \"shortDescription\": \"Something amazing\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -1475,7 +1500,7 @@
 							}
 						},
 						"url": {
-							"raw": "{{host}}:{{port}}/api/v1/branch/:id",
+							"raw": "{{host}}:{{port}}/api/v1/banner-management/:id",
 							"host": [
 								"{{host}}"
 							],
@@ -1483,7 +1508,7 @@
 							"path": [
 								"api",
 								"v1",
-								"branch",
+								"banner-management",
 								":id"
 							],
 							"variable": [
@@ -1495,141 +1520,6 @@
 						}
 					},
 					"response": []
-				},
-				{
-					"name": "Get Branch by id",
-					"id": "ac0217e4-b3a8-4ddb-a7ac-066f355fb56a",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": {
-								"token": "{{token}}"
-							}
-						},
-						"method": "GET",
-						"header": [
-							{
-								"key": "Origin",
-								"value": "{{referer}}",
-								"type": "text"
-							}
-						],
-						"body": {
-							"mode": "raw",
-							"raw": "",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "{{host}}:{{port}}/api/v1/branch/:id",
-							"host": [
-								"{{host}}"
-							],
-							"port": "{{port}}",
-							"path": [
-								"api",
-								"v1",
-								"branch",
-								":id"
-							],
-							"variable": [
-								{
-									"key": "id",
-									"value": "64eb8331bff45463b300eb0d"
-								}
-							]
-						}
-					},
-					"response": [
-						{
-							"id": "b5cfd2e8-3460-4abd-99d3-f699621a0525",
-							"name": "Get Branch by id",
-							"originalRequest": {
-								"method": "GET",
-								"header": [
-									{
-										"key": "Origin",
-										"value": "{{referer}}",
-										"type": "text"
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{host}}:{{port}}/api/v1/branch/:id",
-									"host": [
-										"{{host}}"
-									],
-									"port": "{{port}}",
-									"path": [
-										"api",
-										"v1",
-										"branch",
-										":id"
-									],
-									"variable": [
-										{
-											"key": "id",
-											"value": "64eb8331bff45463b300eb0d"
-										}
-									]
-								}
-							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "X-Powered-By",
-									"value": "Express"
-								},
-								{
-									"key": "Access-Control-Allow-Origin",
-									"value": "*"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json; charset=utf-8"
-								},
-								{
-									"key": "Content-Length",
-									"value": "1316"
-								},
-								{
-									"key": "ETag",
-									"value": "W/\"524-3X2W4E0g1dm1A1d3+BHh79Wc4wY\""
-								},
-								{
-									"key": "Date",
-									"value": "Sun, 27 Aug 2023 17:34:41 GMT"
-								},
-								{
-									"key": "Connection",
-									"value": "keep-alive"
-								},
-								{
-									"key": "Keep-Alive",
-									"value": "timeout=5"
-								}
-							],
-							"cookie": [],
-							"responseTime": null,
-							"body": "{\n    \"data\": {\n        \"_id\": \"64eb8331bff45463b300eb0d\",\n        \"user\": \"648b521aa4b96fba401156b8\",\n        \"name\": \"Gym Branch 1\",\n        \"mobile\": \"9874563210\",\n        \"email\": \"test@gmail.com\",\n        \"gstName\": \"Test Gym\",\n        \"gstNumber\": \"D4545AAsfas\",\n        \"address\": \"Test address\",\n        \"city\": \"Delhi\",\n        \"pincode\": \"5454\",\n        \"logo\": \"64eb82c5491dd86ed6fe633d\",\n        \"status\": \"Active\",\n        \"slug\": \"gym-branch-1\",\n        \"__v\": 0,\n        \"timings\": [\n            {\n                \"_id\": \"64eb891f9ddab1d1dfc67847\",\n                \"branchId\": \"64eb8331bff45463b300eb0d\",\n                \"day\": \"mon\",\n                \"startTime\": \"09:00\",\n                \"endTime\": \"10:00\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"64eb891f9ddab1d1dfc67846\",\n                \"branchId\": \"64eb8331bff45463b300eb0d\",\n                \"day\": \"sun\",\n                \"startTime\": \"09:00\",\n                \"endTime\": \"10:00\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"64eb891f9ddab1d1dfc67849\",\n                \"branchId\": \"64eb8331bff45463b300eb0d\",\n                \"day\": \"wed\",\n                \"startTime\": \"09:00\",\n                \"endTime\": \"10:00\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"64eb891f9ddab1d1dfc6784a\",\n                \"branchId\": \"64eb8331bff45463b300eb0d\",\n                \"day\": \"thu\",\n                \"startTime\": \"09:00\",\n                \"endTime\": \"10:00\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"64eb891f9ddab1d1dfc67848\",\n                \"branchId\": \"64eb8331bff45463b300eb0d\",\n                \"day\": \"tue\",\n                \"startTime\": \"09:00\",\n                \"endTime\": \"10:00\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"64eb891f9ddab1d1dfc6784b\",\n                \"branchId\": \"64eb8331bff45463b300eb0d\",\n                \"day\": \"fri\",\n                \"startTime\": \"09:00\",\n                \"endTime\": \"10:00\",\n                \"__v\": 0\n            },\n            {\n                \"_id\": \"64eb891f9ddab1d1dfc6784c\",\n                \"branchId\": \"64eb8331bff45463b300eb0d\",\n                \"day\": \"sat\",\n                \"startTime\": \"09:00\",\n                \"endTime\": \"10:00\",\n                \"__v\": 0\n            }\n        ]\n    },\n    \"status\": \"Ok\",\n    \"message\": {\n        \"code\": \"BranchDetailSuccess\"\n    }\n}"
-						}
-					]
 				}
 			],
 			"id": "49183bc1-da53-4172-bc5f-a9e1d3d7c6b8",
