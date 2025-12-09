@@ -313,12 +313,12 @@
 									"filesNotInWorkingDirectory": [
 										"/C:/Users/rajes/Pictures/031.jpg"
 									],
-									"src": "/C:/Users/rajes/Pictures/031.jpg"
+									"src": "/C:/Users/rajes/Downloads/file_example_MOV_1920_2_2MB.mov"
 								}
 							]
 						},
 						"url": {
-							"raw": "{{host}}:{{port}}/api/v1/asset/upload?private=true",
+							"raw": "{{host}}:{{port}}/api/v1/asset/upload",
 							"host": [
 								"{{host}}"
 							],
@@ -332,7 +332,8 @@
 							"query": [
 								{
 									"key": "private",
-									"value": "true"
+									"value": "true",
+									"disabled": true
 								}
 							]
 						}
@@ -1413,6 +1414,31 @@
 				{
 					"name": "Get List for user",
 					"id": "cc04f84f-08dd-4e61-8ffb-5256cdc57b0b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"url": "{{host}}:{{port}}/api/v1/banner-management/get"
+					},
+					"response": []
+				},
+				{
+					"name": "Capture click event",
+					"id": "6dcd6ccc-01ef-4938-896a-2f755cca0a82",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
