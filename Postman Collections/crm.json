@@ -1449,7 +1449,7 @@
 								"token": "{{token}}"
 							}
 						},
-						"method": "GET",
+						"method": "POST",
 						"header": [
 							{
 								"key": "Origin",
@@ -1457,7 +1457,26 @@
 								"type": "text"
 							}
 						],
-						"url": "{{host}}:{{port}}/api/v1/banner-management/get"
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/banner-management/impression/:id",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"banner-management",
+								"impression",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "69269309322154a9e320b9ae"
+								}
+							]
+						}
 					},
 					"response": []
 				},
