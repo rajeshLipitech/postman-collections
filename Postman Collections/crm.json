@@ -21849,7 +21849,7 @@
 					"response": []
 				},
 				{
-					"name": "Post data to fb",
+					"name": "Post data to wba",
 					"id": "a2d50f98-4090-4ff2-9e5a-793a4bcf9960",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -21870,7 +21870,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"entry\": [\r\n        {\r\n            \"id\": \"0\",\r\n            \"time\": 1705734331,\r\n            \"changes\": [\r\n                {\r\n                    \"field\": \"leadgen\",\r\n                    \"value\": {\r\n                        \"ad_id\": \"444444444\",\r\n                        \"form_id\": \"444444444444\",\r\n                        \"leadgen_id\": \"444444444444\",\r\n                        \"created_time\": 1705734330,\r\n                        \"page_id\": \"444444444444\",\r\n                        \"adgroup_id\": \"44444444444\"\r\n                    }\r\n                }\r\n            ]\r\n        }\r\n    ],\r\n    \"object\": \"page\"\r\n}",
+							"raw": "{\r\n    \"object\": \"whatsapp_business_account\",\r\n    \"entry\": [\r\n        {\r\n            \"id\": \"522625304272046\",\r\n            \"changes\": [\r\n                {\r\n                    \"value\": {\r\n                        \"messaging_product\": \"whatsapp\",\r\n                        \"metadata\": {\r\n                            \"display_phone_number\": \"918421077717\",\r\n                            \"phone_number_id\": \"515079605028518\"\r\n                        },\r\n                        \"contacts\": [\r\n                            {\r\n                                \"profile\": {\r\n                                    \"name\": \"Ashish\"\r\n                                },\r\n                                \"wa_id\": \"917875818062\"\r\n                            }\r\n                        ],\r\n                        \"messages\": [\r\n                            {\r\n                                \"context\": {\r\n                                    \"from\": \"918421077717\",\r\n                                    \"id\": \"wamid.HBgMOTE3ODc1ODE4MDYyFQIAERgSOENEMjU0NDYxRERBRUU5Q0NFAA==\"\r\n                                },\r\n                                \"from\": \"917875818062\",\r\n                                \"id\": \"wamid.HBgMOTE3ODc1ODE4MDYyFQIAEhggQUM1RTdEQkNBQjM1OTdGQzMyRkY5MzA0NDQzQTIwMkEA\",\r\n                                \"timestamp\": \"1768133898\",\r\n                                \"type\": \"button\",\r\n                                \"button\": {\r\n                                    \"payload\": \"Join today!\",\r\n                                    \"text\": \"Join today!\"\r\n                                }\r\n                            }\r\n                        ]\r\n                    },\r\n                    \"field\": \"messages\"\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -21878,7 +21878,7 @@
 							}
 						},
 						"url": {
-							"raw": "{{host}}:{{port}}/api/v1/webhook/:tenantId/facebook",
+							"raw": "{{host}}:{{port}}/api/v1/webhook/:tenantId/whatsapp",
 							"host": [
 								"{{host}}"
 							],
@@ -21888,11 +21888,10 @@
 								"v1",
 								"webhook",
 								":tenantId",
-								"facebook"
+								"whatsapp"
 							],
 							"variable": [
 								{
-									"id": "f0dd948f-c0d4-4cf7-b8a5-02db92caab0a",
 									"key": "tenantId",
 									"value": "94IL5WNMJRW5"
 								}
