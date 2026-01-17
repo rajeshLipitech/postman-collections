@@ -625,19 +625,10 @@
 						"disableBodyPruning": true
 					},
 					"request": {
-						"method": "POST",
+						"method": "GET",
 						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"offer\": \"67c32936a83e4d21ac16c6c6\",\r\n    \"user\": {\r\n        \"id\": \"65cc8d887747ea06991acd57\",\r\n        \"name\": \"Nibedita Swain416\",\r\n        \"provider\": \"Hyderbad Branch\"\r\n    },\r\n    \"image\": \"afasfiasdf9asdf9sad\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
 						"url": {
-							"raw": "{{host}}:{{port}}/api/v1/coupon",
+							"raw": "{{host}}:{{port}}/api/v1/coupon?status=DELIVERED",
 							"host": [
 								"{{host}}"
 							],
@@ -652,6 +643,10 @@
 									"key": "tenant",
 									"value": "67c1d71325d207797263da9e",
 									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "DELIVERED"
 								}
 							]
 						}
