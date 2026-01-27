@@ -14716,6 +14716,65 @@
 							"response": []
 						},
 						{
+							"name": "Get all Instant form",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "a7753cae-37cd-4593-be91-6d75c60eb513",
+										"exec": [
+											""
+										],
+										"type": "text/javascript",
+										"packages": {},
+										"requests": {}
+									}
+								}
+							],
+							"id": "8e4c85ba-8c92-4c25-be35-7e71336811e2",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{token}}"
+									}
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Origin",
+										"value": "{{referer}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{host}}:{{port}}/api/v1/social-app/instant-form",
+									"host": [
+										"{{host}}"
+									],
+									"port": "{{port}}",
+									"path": [
+										"api",
+										"v1",
+										"social-app",
+										"instant-form"
+									],
+									"query": [
+										{
+											"key": "sync",
+											"value": "true",
+											"description": "This field is used if we need to sync form data with meta",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
 							"name": "Get Instant form webhook datas",
 							"event": [
 								{
