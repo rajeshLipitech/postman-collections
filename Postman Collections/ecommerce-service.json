@@ -1312,6 +1312,15 @@
 					"request": {
 						"method": "POST",
 						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"payload\": {\r\n        \"payment\": {\r\n            \"entity\": {\r\n                \"order_id\": \"order_SBCSY3lq0nkpq9\"\r\n            }\r\n        }\r\n    },\r\n    \"event\": \"payment.authorized\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
 						"url": "{{host}}:{{port}}/api/v1/webhook/payment"
 					},
 					"response": []
