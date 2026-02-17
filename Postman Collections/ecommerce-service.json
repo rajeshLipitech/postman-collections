@@ -669,7 +669,7 @@
 						"auth": {
 							"type": "bearer",
 							"bearer": {
-								"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7Il9pZCI6IjY3YzFjY2YzZTVkOWM3OGViNWQ5ZjBjMyIsImVtYWlsIjoiZG9taW5vc0BnbWFpbC5jb20ifSwidGltZXN0YW1wIjoiMjAyNi0wMS0xN1QwNzo1NzozOC4wNTRaIiwiaWF0IjoxNzY4NjM2NjU4LCJleHAiOjE3Njg4OTU4NTgsImF1ZCI6Imdsb2JhbCJ9.Rh8HoHGqJaboToNI7_ZR0EBcr5CsUSOHSF1rnOiCNYU"
+								"token": "{{token}}"
 							}
 						},
 						"method": "GET",
