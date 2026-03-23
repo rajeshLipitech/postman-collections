@@ -2259,7 +2259,7 @@
 							}
 						},
 						"url": {
-							"raw": "{{host}}:{{port}}/api/v1/branch/:id",
+							"raw": "{{host}}:{{port}}/api/v1/branch/:id?lang=ja",
 							"host": [
 								"{{host}}"
 							],
@@ -2270,11 +2270,17 @@
 								"branch",
 								":id"
 							],
+							"query": [
+								{
+									"key": "lang",
+									"value": "ja",
+									"type": "text"
+								}
+							],
 							"variable": [
 								{
-									"id": "6feca45c-0143-4745-b39b-102d70dc250c",
 									"key": "id",
-									"value": "64eb8331bff45463b300eb0d"
+									"value": "653ba3402619321c25d76fa8"
 								}
 							]
 						}
