@@ -14708,7 +14708,7 @@
 					"response": []
 				},
 				{
-					"name": "Get Role List",
+					"name": "Get List",
 					"id": "ecbc7e91-2efb-4eb4-9af7-3e5590d5dadc",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -14738,7 +14738,7 @@
 							}
 						},
 						"url": {
-							"raw": "{{host}}:{{port}}/api/v1/role",
+							"raw": "{{host}}:{{port}}/api/v1/system-setting?type=HealthCondition",
 							"host": [
 								"{{host}}"
 							],
@@ -14746,13 +14746,18 @@
 							"path": [
 								"api",
 								"v1",
-								"role"
+								"system-setting"
 							],
 							"query": [
 								{
 									"key": "status",
 									"value": "Disable",
 									"disabled": true
+								},
+								{
+									"key": "type",
+									"value": "HealthCondition",
+									"type": "text"
 								}
 							]
 						}
