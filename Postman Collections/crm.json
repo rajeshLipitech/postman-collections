@@ -14652,6 +14652,205 @@
 			"id": "3d122b3c-0923-4d61-96da-bc184eb0d4fb"
 		},
 		{
+			"name": "System Settings",
+			"item": [
+				{
+					"name": "Get Role Detail",
+					"id": "bc3e88e4-bb20-48ae-aac1-22027ec3b77e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/role/:id",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"role",
+								":id"
+							],
+							"variable": [
+								{
+									"id": "f2810139-4c91-40f3-8e06-480acc6a5449",
+									"key": "id",
+									"value": "648b537f062978bb147b0556"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Role List",
+					"id": "ecbc7e91-2efb-4eb4-9af7-3e5590d5dadc",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/role",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"role"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "Disable",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create",
+					"id": "a7ba3d32-18c9-40f8-a34f-504df50725c0",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"ImageAndUserRole\",\r\n    \"modelPermissions\": {\r\n        \"Asset\": [\r\n            \"Read\",\r\n            \"Write\",\r\n            \"Edit\",\r\n            \"Remove\"\r\n        ],\r\n        \"User\": [\r\n            \"Read\",\r\n            \"Write\",\r\n            \"Edit\",\r\n            \"Remove\"\r\n        ]\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}:{{port}}/api/v1/system-setting"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Role",
+					"id": "a824f145-73ab-4b88-bfa0-e7c4a5714a93",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{token}}"
+							}
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{referer}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"modelPermissions\": {\n        \"Asset\": [\n            \"Read\",\n            \"Write\",\n            \"Edit\",\n            \"Remove\"\n        ],\n        \"Category\": [\n            \"Read\",\n            \"Write\",\n            \"Edit\",\n            \"Remove\"\n        ],\n        \"Epaper\": [\n            \"Read\",\n            \"Write\",\n            \"Edit\",\n            \"Remove\"\n        ]\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/role//:id",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"role",
+								"",
+								":id"
+							],
+							"variable": [
+								{
+									"id": "a8a91151-5d29-47d2-992a-51aa5dc0391d",
+									"key": "id",
+									"value": "631b1aaa0f9cc328a27abd69"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "2b620411-02dd-45b3-9eb3-2de080b579f0"
+		},
+		{
 			"name": "Social App",
 			"item": [
 				{
