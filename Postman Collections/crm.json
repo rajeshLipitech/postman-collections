@@ -3262,7 +3262,7 @@
 							}
 						],
 						"url": {
-							"raw": "{{host}}:{{port}}/api/v1/challenge?timeline=Future",
+							"raw": "{{host}}:{{port}}/api/v1/challenge?lang=ko&isRecent=true",
 							"host": [
 								"{{host}}"
 							],
@@ -3275,8 +3275,17 @@
 							"query": [
 								{
 									"key": "timeline",
-									"value": "Future",
-									"description": "Past | Future"
+									"value": "Past",
+									"description": "Past | Future",
+									"disabled": true
+								},
+								{
+									"key": "lang",
+									"value": "ko"
+								},
+								{
+									"key": "isRecent",
+									"value": "true"
 								}
 							]
 						}
