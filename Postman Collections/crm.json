@@ -5481,7 +5481,34 @@
 								"type": "text"
 							}
 						],
-						"url": "{{host}}:{{port}}/api/v1/diet-plan"
+						"url": {
+							"raw": "{{host}}:{{port}}/api/v1/diet-plan?from=2024-04-04&to=2024-04-04",
+							"host": [
+								"{{host}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"api",
+								"v1",
+								"diet-plan"
+							],
+							"query": [
+								{
+									"key": "from",
+									"value": "2024-04-04"
+								},
+								{
+									"key": "to",
+									"value": "2024-04-04"
+								},
+								{
+									"key": "",
+									"value": null,
+									"type": "text",
+									"disabled": true
+								}
+							]
+						}
 					},
 					"response": []
 				},
