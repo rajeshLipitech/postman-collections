@@ -1377,7 +1377,13 @@
 					},
 					"request": {
 						"method": "POST",
-						"header": [],
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "D3sOdPlHPAw0n4ok6QlsQfFy2HVOSWyz",
+								"type": "text"
+							}
+						],
 						"body": {
 							"mode": "raw",
 							"raw": "{\r\n    \"payload\": {\r\n        \"payment\": {\r\n            \"entity\": {\r\n                \"order_id\": \"order_SBCSY3lq0nkpq9\"\r\n            }\r\n        }\r\n    },\r\n    \"event\": \"payment.authorized\"\r\n}",
