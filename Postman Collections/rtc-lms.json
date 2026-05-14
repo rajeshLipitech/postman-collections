@@ -3375,27 +3375,7 @@
 								}
 							}
 						},
-						"url": {
-							"raw": "{{host}}:{{port}}/api/v1/webhook/:tenantId/facebook",
-							"host": [
-								"{{host}}"
-							],
-							"port": "{{port}}",
-							"path": [
-								"api",
-								"v1",
-								"webhook",
-								":tenantId",
-								"facebook"
-							],
-							"variable": [
-								{
-									"id": "f0dd948f-c0d4-4cf7-b8a5-02db92caab0a",
-									"key": "tenantId",
-									"value": "94IL5WNMJRW5"
-								}
-							]
-						}
+						"url": "{{host}}:{{port}}/api/v1/webhook/facebook"
 					},
 					"response": []
 				},
